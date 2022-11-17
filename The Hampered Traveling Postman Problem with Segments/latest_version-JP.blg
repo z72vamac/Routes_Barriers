@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: latest_version-JP.aux
+Reallocating 'name_of_file' (item size: 1) to 4 items.
+The style file: apa.bst
+Reallocating 'name_of_file' (item size: 1) to 17 items.
+Database file #1: bibliography.bib
+Warning--empty booktitle in moemke_approximating_2011
+You've used 17 entries,
+            1940 wiz_defined-function locations,
+            579 strings with 6901 characters,
+and the built_in function-call counts, 6823 in all, are:
+= -- 687
+> -- 257
+< -- 13
++ -- 90
+- -- 84
+* -- 595
+:= -- 1171
+add.period$ -- 59
+call.type$ -- 17
+change.case$ -- 126
+chr.to.int$ -- 17
+cite$ -- 18
+duplicate$ -- 258
+empty$ -- 474
+format.name$ -- 115
+if$ -- 1330
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 17
+newline$ -- 94
+num.names$ -- 51
+pop$ -- 103
+preamble$ -- 1
+purify$ -- 127
+quote$ -- 0
+skip$ -- 196
+stack$ -- 0
+substring$ -- 481
+swap$ -- 49
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 98
+warning$ -- 1
+while$ -- 58
+width$ -- 0
+write$ -- 233
+(There was 1 warning)

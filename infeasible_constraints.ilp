@@ -1,0 +1,13 @@
+\ Model Model: H-TSP-N_copy
+\ LP format - for model browsing. Use MPS format to capture full model detail.
+Minimize
+ 
+Subject To
+ R728972: d_inside[-11,0] <= 0.8859569931235163
+ R728973: - point[-11,0,1] + dif_inside[-11,0,1] >= 5.21
+ qc0: [ - d_inside[-11,0] ^2 + dif_inside[-11,0,0] ^2
+   + dif_inside[-11,0,1] ^2 ] <= 0
+Bounds
+ dif_inside[-11,0,0] free
+ dif_inside[-11,0,1] free
+End

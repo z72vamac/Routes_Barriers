@@ -1,0 +1,8 @@
+\ Model HTSPS_Model_copy
+\ LP format - for model browsing. Use MPS format to capture full model detail.
+Minimize
+ 
+Subject To
+ R0: >= 1
+Bounds
+End

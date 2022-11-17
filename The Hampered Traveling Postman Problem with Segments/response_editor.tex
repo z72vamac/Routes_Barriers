@@ -1,0 +1,139 @@
+\documentclass{article}
+\usepackage[most]{tcolorbox}
+\usepackage[a4paper,top=1in, bottom=1.25in, left=1.25in, right=1.25in]{geometry}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{capt-of}
+\usepackage{graphicx}
+\usepackage{caption,subcaption}
+\usepackage{url}
+\usepackage{multirow}
+%\usepackage{tikz}
+\usepackage{epstopdf}% To incorporate .eps illustrations using PDFLaTeX, etc.
+%\usepackage{subfigure}% Support for small, `sub' figures and tables
+\usepackage{nameref}
+\usepackage{zref-xr,zref-user}
+\zxrsetup{toltxlabel=true, tozreflabel=false}
+%\zexternaldocument*[original:]{TSC}
+\usepackage{xcite}
+\usepackage{hyperref}
+\usepackage{ulem}
+%\externalcitedocument[org:]{TSC}
+
+%\usepackage[table]{xcolor}
+%\usepackage{color}
+%\usepackage{colortbl}
+
+\definecolor{Gray}{gray}{0.9}
+\newcommand{\coldscr}{\cellcolor{Gray}}
+
+\newcommand{\initresponses}{\newcounter{pointcounter}}
+
+\newenvironment{reviewer}{\setcounter{pointcounter}{1}}{}
+
+\newenvironment{mybiblio}{\small}{}
+
+
+%\newcommand{\point}{{\textsl{\thepointcounter}. \stepcounter{pointcounter} #1}}
+
+%\newcommand{\point}[1]{\medskip \noindent \text{{\selectfont \thepointcounter} \stepcounter{pointcounter} #1}}
+
+\newcommand{\point}{\text{{\selectfont \thepointcounter} \stepcounter{pointcounter}}}
+
+
+\newcommand{\mynum}[1]{^{(#1)}}
+\newcommand{\myi}{\mynum{i}}
+\newcommand{\mym}{\mynum{m}}
+\newcommand{\mymi}{\mynum{m,i}}
+\newcommand{\myMi}{\mynum{M,i}}
+\newcommand{\myq}{\mynum{q,i}}
+\newcommand{\myzeroi}{\mynum{0,i}}
+\newcommand{\myduei}{^{(i)\;2}}
+\newcommand{\JP}[1]{{\color{blue}#1}}
+\newcommand{\LA}[1]{{\color{red}#1}}
+
+\begin{comment}
+	\usetikzlibrary{shapes.geometric,backgrounds,
+		positioning-plus,node-families,calc}
+	\tikzset{
+		basic box/.style = {
+			shape = rectangle,
+			align = center,
+			draw  = #1,
+			fill  = #1!25,
+			rounded corners},
+		header node/.style = {
+			Minimum Width = 0.4cm,
+			font          = \strut\scriptsize\ttfamily,
+			text depth    = +0pt,
+			fill          = white,
+			draw},
+		header/.style = {%
+			inner ysep = +1.5em,
+			append after command = {
+				\pgfextra{\let\TikZlastnode\tikzlastnode}
+				node [header node] (header-\TikZlastnode) at (\TikZlastnode.north) {#1}
+				node [span = (\TikZlastnode)(header-\TikZlastnode)]
+				at (fit bounding box) (h-\TikZlastnode) {}
+			}
+		},
+		hv/.style = {to path = {-|(\tikztotarget)\tikztonodes}},
+		vh/.style = {to path = {|-(\tikztotarget)\tikztonodes}},
+		fat blue line/.style = {ultra thick, blue}
+	}
+	
+	\tikzstyle{dummy} = [rectangle, text width=0.1em, draw=white, white,
+	minimum width=0.1em, minimum height=3em, opacity=0.0]
+	
+	\tikzstyle{mycircle} = [circle, draw=black, black, text width=1em, minimum height=1em]
+	
+	\tikzstyle{mydiamond} = [diamond, aspect=2, draw=gray, fill=gray!25, text width=6em, minimum height=1em]
+	
+	\tikzstyle{startend} =  [rectangle, font=\strut\scriptsize\ttfamily, text depth=+0pt, fill=white, draw=black]
+\end{comment}
+
+\hyphenation{dif-fe-rent}
+
+\title{EJOR-D-22-01088
+	\\
+	`The Hampered Traveling Salesman Problem with Neighbourhoods "}
+\author{Detailed Response to Reviewers}
+\begin{document}
+	\maketitle
+	%\begin{abstract}
+	%\todo[inline,color=green!50]
+	%{Abstract changed to adapt to format indicated in
+		%guidelines to authors. Text has beeen changed to
+		%reflect the update of Section 2 and Discussion.}
+	%\lipsum[1]
+	%\end{abstract}
+	%\section{Introduction}
+	%Really et al. (2010)
+	%\todo[color=blue!40]{Added citation}
+	%said some important suff.\lipsum[2]
+	%\lipsum[3]
+	
+	We wish to thank the Editor for his valuable comments and advices which allowed us to further improve the quality of our paper.
+	
+	We revised the manuscript by taking into account all the suggestions. We report below our changes inside the colored textboxes.
+	%{\bf We outlined in bold each change made in this new version of the paper}.
+	
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% EDITOR COMMENTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	\begin{tcolorbox}[breakable,enhanced,coltitle=black,colback=yellow!75!white,colframe=yellow!75!white,borderline={1pt}{0pt}{black},boxrule=0pt]
+		\textbf{Editors' Comments}
+		The main contribution of this paper is the proposal of a new TSP variant that combines neighbours and barriers. Alone, both of these variants have already been studied. At the same time it is, allegedly, the first time. Being a new variant of a very well-known problem, the practical motivation has to be clear, i.e., it has to be demonstrated that the problem is relevant in practice.  The Editors are now more demanding regarding the centrality of the innovative use of OR methodology to support decision-making problems.  However, you fail to demonstrate such relevance. It is several times generically stated that the problem "has a lot of applications in the delivery industry", then delivery by drones is invoked to justify the barriers, which is convincing. However, justifying neighbours as a way to model "uncertainty in the positioning of the entities to be visited" by the drones, does not seem to make sense. When taking into account that a single point of each neighbourhood has to be visited, of the choice of the model, this not seem to model any kind of uncertainty regarding the delivery point.
+		
+		If you are willing to better motivate the problem, a new submission would be welcomed. Otherwise, the paper might be better valued by the scientific community closer to the mathematical background of operational research.
+		
+	\end{tcolorbox}
+	
+	\initresponses
+	
+	\begin{tcolorbox}[breakable,enhanced,coltitle=black,colback=yellow!5!white,colframe=yellow!75!white,title=\textbf{Answer E},borderline={1pt}{0pt}{black},boxrule=0pt]
+		%We outlined in blue each change made in the revised version of the paper.
+		We revised the manuscript taking into account the Editor comments and suggestions. In particular, we made our best to motivate the applicability of our model. Specifically, we mention its application to the delivery industry and inspection and surveillance activities. We have inserted new paragraphs in the abstract, introduction and the description of the problem.
+	\end{tcolorbox}
+
+\end{document}

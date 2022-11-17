@@ -1,0 +1,41 @@
+PUNTOS A DISCUTIR CON JUSTO:
+
+- El with neighbourhoods, con n mayúscula o minúscula ? (es parte de las siglas) Todo el paper
+
+Cuando sea en el nombre con mayusculas. Compruébalo.
+
+Hecho
+
+- En la descripcion de los grafos, ponemos VB y EB, para el TSPN, conjuntos descritos ya previamente. Lo dejamos como un bloque completo o lo omitimos? Pagina 5
+
+Mejor dejarlo por tener toda la descripción como un bloque aunque se repita. 
+
+Hecho
+
+- Deberíamos cambiar el nombre de ETSP por ETSPV?? Paginas 5-6
+
+Si, creo que por coherencia debería ser así. Compruébalo.
+
+Hecho
+
+- Deberíamos cambiar E por EX, para ser consistente?  Pagina 7, 8 y 9
+
+Sí. Comprueba.
+
+Hecho
+
+- Shortest Path Problem está en mayus. Consistencia, Página 10
+
+Cambialo para que siempre aparezca igual !!!
+
+Hecho
+
+- Después de la descripción de los conjuntos, dos puntos o punto? Todo el paper
+
+Esto no lo entiendo ...
+
+- El TSPVN está descrito dos veces. Página 5-6 y Páginas 16-17
+
+Marcado en verde. Comprobar.
+
+Hecho
