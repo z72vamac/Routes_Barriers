@@ -19,12 +19,12 @@ dataframe = pd.DataFrame(columns=['Instance', 'n_N', 'n_B', 'Strength', 'A4', 'G
 A4s = [False, True]
 prepros = [False, True]
 
-start = False
+start = True
 
 num_rows = 0
 if start:
-    dataframe = pd.read_csv('./resultados/results_segments.csv')
-    num_rows = dataframe.shape[0] - 1
+    dataframe = pd.read_csv('./resultados/results_segments.csv').iloc[:, 1:]
+    num_rows = dataframe.shape[0]
 
 counter = 1
 

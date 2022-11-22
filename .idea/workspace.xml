@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be595d1b-55b0-43d9-8496-5156de0ff357" name="Changes" comment="Nuevo lavado de cara al HTSPN.">
-      <change afterPath="$PROJECT_DIR$/resultados/results_segments.csv" afterDir="false" />
+    <list default="true" id="be595d1b-55b0-43d9-8496-5156de0ff357" name="Changes" comment="Cambios en la estimacion de la M.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/estimacion_M.py" beforeDir="false" afterPath="$PROJECT_DIR$/estimacion_M.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resultados/results_segments.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resultados/results_segments.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routine_circles.py" beforeDir="false" afterPath="$PROJECT_DIR$/routine_circles.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routine_segments.py" beforeDir="false" afterPath="$PROJECT_DIR$/routine_segments.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -212,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668717930464</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Cambios en la estimacion de la M.">
+      <created>1669150705058</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1669150705058</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -229,6 +237,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Nuevo lavado de cara al HTSPN." />
-    <option name="LAST_COMMIT_MESSAGE" value="Nuevo lavado de cara al HTSPN." />
+    <MESSAGE value="Cambios en la estimacion de la M." />
+    <option name="LAST_COMMIT_MESSAGE" value="Cambios en la estimacion de la M." />
   </component>
 </project>

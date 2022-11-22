@@ -23,7 +23,7 @@ start = True
 
 num_rows = 0
 if start:
-    dataframe = pd.read_csv('./resultados/results_circles.csv')
+    dataframe = pd.read_csv('./resultados/results_circles.csv').iloc[:, 1:]
     num_rows = dataframe.shape[0] - 1
 
 counter = 1
