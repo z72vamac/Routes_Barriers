@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be595d1b-55b0-43d9-8496-5156de0ff357" name="Changes" comment="Nuevo lavado de cara al HTSPN.">
-      <change afterPath="$PROJECT_DIR$/resultados/results_circles.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resultados/results_segments.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/estimacion_M.py" beforeDir="false" afterPath="$PROJECT_DIR$/estimacion_M.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routine_circles.py" beforeDir="false" afterPath="$PROJECT_DIR$/routine_circles.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routine_segments.py" beforeDir="false" afterPath="$PROJECT_DIR$/routine_segments.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,14 +44,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/home/justopuerto/Cosas de carlos/Routes_Barriers/resultados/results_circles.csv",
-    "two.files.diff.last.used.file": "/home/justopuerto/Cosas de carlos/Routes_Barriers/resultados/results_circles.csv"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/justopuerto/Cosas de carlos/Routes_Barriers/resultados/results_circles.csv&quot;,
+    &quot;two.files.diff.last.used.file&quot;: &quot;/home/justopuerto/Cosas de carlos/Routes_Barriers/resultados/results_circles.csv&quot;
   }
-}]]></component>
+}</component>
   <component name="ReaderModeSettings">
     <option name="showLigatures" value="true" />
   </component>
@@ -231,16 +230,5 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Nuevo lavado de cara al HTSPN." />
     <option name="LAST_COMMIT_MESSAGE" value="Nuevo lavado de cara al HTSPN." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/routine_segments.py</url>
-          <line>21</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

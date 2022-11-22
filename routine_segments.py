@@ -1,7 +1,7 @@
 import gurobipy as gp
 import pdb
 # from HTSPS_with_prepro import HTSPS_with_prepro
-from neighborhood import Circle
+from neighborhood import Circle, Poligonal
 from tspn_b import tspn_b
 
 import numpy as np
@@ -52,7 +52,7 @@ for nP in [5, 10, 20, 30, 50, 80, 100]:
 
                     segmentos_visitar = np.genfromtxt('./instancias/segmentos_visitar' + str(nP) + '-' + str(instance) + '.csv', delimiter = ',')
 
-                    neighborhoods = [Circle(center = [centro1, centro2], radii = radio) for centro1, centro2, radio in segmentos_visitar]
+                    neighborhoods = [Poligonal(V=[np.array([lista[0], lista[1]]), np.array([lista[2], lista[3]])]) for lista in segmentos_visitar]
 
                     resultados = tspn_b(barriers, neighborhoods, prepro=prepro, A4 = a4, log=False, dominant = False, picture=False, time_limit=3600, init=False)
 
