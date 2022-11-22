@@ -45,14 +45,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/home/justopuerto/Cosas de carlos/Routes_Barriers/resultados/results_circles.csv",
-    "two.files.diff.last.used.file": "/home/justopuerto/Cosas de carlos/Routes_Barriers/resultados/results_circles.csv"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/justopuerto/Cosas de carlos/Routes_Barriers/resultados/results_circles.csv&quot;,
+    &quot;two.files.diff.last.used.file&quot;: &quot;/home/justopuerto/Cosas de carlos/Routes_Barriers/resultados/results_circles.csv&quot;
   }
-}]]></component>
+}</component>
   <component name="ReaderModeSettings">
     <option name="showLigatures" value="true" />
   </component>
