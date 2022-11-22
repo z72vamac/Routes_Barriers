@@ -119,11 +119,22 @@ def estima_M_alpha1(entorno, punto1, punto2):
 
         determinantes = [af.determinant([x[i], y[i]], punto1, punto2) for i in range(20)]
 
-        m = 2*min(determinantes)
-        M = 2*max(determinantes)
 
-        return m, M
 
+    if type(entorno) is neigh.Poligonal:
+
+        theta = np.linspace(0, 1, 20)
+
+        extreme_point = np.array(entorno.V[0])
+
+        x = extreme_point + theta*(np.array(entorno.V[1]) - extreme_point)
+
+        determinantes = [af.determinant([x[i][0], x[i][1]], punto1, punto2) for i in range(20)]
+
+    m = min(determinantes)/2
+    M = 2*max(determinantes)
+
+    return m, M
 def estima_M_alpha2(punto1, entorno, punto2):
     if type(entorno) is neigh.Circle:
 
@@ -139,10 +150,19 @@ def estima_M_alpha2(punto1, entorno, punto2):
 
         determinantes = [af.determinant(punto1, [x[i], y[i]], punto2) for i in range(20)]
 
-        m = 2*min(determinantes)
-        M = 2*max(determinantes)
+    if type(entorno) is neigh.Poligonal:
+        theta = np.linspace(0, 1, 20)
 
-        return m, M
+        extreme_point = np.array(entorno.V[0])
+
+        x = extreme_point + theta * (np.array(entorno.V[1]) - extreme_point)
+
+        determinantes = [af.determinant(punto1, [x[i][0], x[i][1]], punto2) for i in range(20)]
+
+    m = min(determinantes)/2
+    M = 2*max(determinantes)
+
+    return m, M
 
 def estima_M_alpha3(punto1, punto2, entorno):
     if type(entorno) is neigh.Circle:
@@ -159,10 +179,19 @@ def estima_M_alpha3(punto1, punto2, entorno):
 
         determinantes = [af.determinant(punto1, punto2, [x[i], y[i]]) for i in range(20)]
 
-        m = 2*min(determinantes)
-        M = 2*max(determinantes)
+    if type(entorno) is neigh.Poligonal:
+        theta = np.linspace(0, 1, 20)
 
-        return m, M
+        extreme_point = np.array(entorno.V[0])
+
+        x = extreme_point + theta * (np.array(entorno.V[1]) - extreme_point)
+
+        determinantes = [af.determinant(punto1, punto2, [x[i][0], x[i][1]]) for i in range(20)]
+
+    m = min(determinantes)/2
+    M = 2*max(determinantes)
+
+    return m, M
 
 def estima_M_alpha4(punto1, entorno1, entorno2):
     if type(entorno1) is neigh.Circle and type(entorno2) is neigh.Circle:
@@ -185,10 +214,23 @@ def estima_M_alpha4(punto1, entorno1, entorno2):
 
         determinantes = [af.determinant(punto1, [x1[i], y1[i]], [x2[j], y2[j]]) for i in range(20) for j in range(20)]
 
-        m = 2*min(determinantes)
-        M = 2*max(determinantes)
+    if type(entorno1) is neigh.Poligonal and type(entorno2) is neigh.Poligonal:
+        theta = np.linspace(0, 1, 20)
 
-        return m, M
+        extreme_point = np.array(entorno1.V[0])
+
+        x1 = extreme_point + theta * (np.array(entorno1.V[1]) - extreme_point)
+
+        extreme_point = np.array(entorno2.V[0])
+
+        x2 = extreme_point + theta * (np.array(entorno2.V[1]) - extreme_point)
+
+        determinantes = [af.determinant(punto1, [x1[i][0], x1[i][1]], [x2[j][0], x2[j][1]]) for i in range(20) for j in range(20)]
+
+    m = min(determinantes)/2
+    M = 2*max(determinantes)
+
+    return m, M
 
 # def estima_L(neighborhood, punto):
 #     if type(neighborhood) is neigh.Circle:
