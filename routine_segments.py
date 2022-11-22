@@ -54,7 +54,7 @@ for nP in [5, 10, 20, 30, 50, 80, 100]:
 
                     neighborhoods = [Circle(center = [centro1, centro2], radii = radio) for centro1, centro2, radio in segmentos_visitar]
 
-                    resultados = tspn_b(barriers, neighborhoods, prepro=True, A4 = a4, log=False, dominant = False, picture=False, time_limit=3600, init=False)
+                    resultados = tspn_b(barriers, neighborhoods, prepro=prepro, A4 = a4, log=False, dominant = False, picture=False, time_limit=3600, init=False)
 
                     serie = pd.Series([instance] + resultados, index = dataframe.columns)
 
