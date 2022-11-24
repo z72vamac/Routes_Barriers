@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be595d1b-55b0-43d9-8496-5156de0ff357" name="Changes" comment="Cambios en la estimacion de la M.">
+    <list default="true" id="be595d1b-55b0-43d9-8496-5156de0ff357" name="Changes" comment="Arreglada la rutina y la estimacion de la M.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimacion_M.py" beforeDir="false" afterPath="$PROJECT_DIR$/estimacion_M.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infeasible_constraints.ilp" beforeDir="false" afterPath="$PROJECT_DIR$/infeasible_constraints.ilp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resultados/results_segments.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resultados/results_segments.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routine_circles.py" beforeDir="false" afterPath="$PROJECT_DIR$/routine_circles.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routine_segments.py" beforeDir="false" afterPath="$PROJECT_DIR$/routine_segments.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,7 +218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669150705058</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Arreglada la rutina y la estimacion de la M.">
+      <created>1669153706334</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1669153706334</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -238,6 +243,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Nuevo lavado de cara al HTSPN." />
     <MESSAGE value="Cambios en la estimacion de la M." />
-    <option name="LAST_COMMIT_MESSAGE" value="Cambios en la estimacion de la M." />
+    <MESSAGE value="Arreglada la rutina y la estimacion de la M." />
+    <option name="LAST_COMMIT_MESSAGE" value="Arreglada la rutina y la estimacion de la M." />
   </component>
 </project>
