@@ -1,7 +1,7 @@
 import gurobipy as gp
 import pdb
 # from HTSPS_with_prepro import HTSPS_with_prepro
-from neighborhood import Circle
+from neighborhood import Circle, Poligonal
 from tspn_b import tspn_b
 
 import numpy as np
@@ -19,12 +19,12 @@ dataframe = pd.DataFrame(columns=['Instance', 'n_N', 'n_B', 'Strength', 'A4', 'G
 A4s = [False, True]
 prepros = [False, True]
 
-start = False
+start = True
 
 num_rows = 0
 if start:
-    dataframe = pd.read_csv('./resultados/results_segments.csv')
-    num_rows = dataframe.shape[0] - 1
+    dataframe = pd.read_csv('./resultados/results_segments.csv').iloc[:, 1:]
+    num_rows = dataframe.shape[0]
 
 counter = 1
 
@@ -52,9 +52,9 @@ for nP in [5, 10, 20, 30, 50, 80, 100]:
 
                     segmentos_visitar = np.genfromtxt('./instancias/segmentos_visitar' + str(nP) + '-' + str(instance) + '.csv', delimiter = ',')
 
-                    neighborhoods = [Circle(center = [centro1, centro2], radii = radio) for centro1, centro2, radio in segmentos_visitar]
+                    neighborhoods = [Poligonal(V=[np.array([lista[0], lista[1]]), np.array([lista[2], lista[3]])]) for lista in segmentos_visitar]
 
-                    resultados = tspn_b(barriers, neighborhoods, prepro=True, A4 = a4, log=False, dominant = False, picture=False, time_limit=3600, init=False)
+                    resultados = tspn_b(barriers, neighborhoods, prepro=prepro, A4 = a4, log=False, dominant = False, picture=False, time_limit=3600, init=False)
 
                     serie = pd.Series([instance] + resultados, index = dataframe.columns)
 

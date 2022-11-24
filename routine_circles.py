@@ -19,11 +19,11 @@ dataframe = pd.DataFrame(columns=['Instance', 'n_N', 'n_B', 'Strength', 'A4', 'G
 A4s = [False, True]
 prepros = [False, True]
 
-start = False
+start = True
 
 num_rows = 0
 if start:
-    dataframe = pd.read_csv('./resultados/results_circles.csv')
+    dataframe = pd.read_csv('./resultados/results_circles.csv').iloc[:, 1:]
     num_rows = dataframe.shape[0] - 1
 
 counter = 1
@@ -31,7 +31,7 @@ counter = 1
 for nP in [5, 10, 20, 30, 50, 80, 100]:
     for a4 in A4s:
         for prepro in prepros:
-            for instance in range(10):
+            for instance in range(5):
                 if counter > num_rows:
                     print('\n\nResolviendo la instancia ' + str(instance) + ' con un numero ' + str(nP) + ' de neighborhoods.\n\n')
 
@@ -54,7 +54,7 @@ for nP in [5, 10, 20, 30, 50, 80, 100]:
 
                     neighborhoods = [Circle(center = [centro1, centro2], radii = radio) for centro1, centro2, radio in bolas]
 
-                    resultados = tspn_b(barriers, neighborhoods, prepro=True, A4 = a4, log=False, dominant = False, picture=False, time_limit=3600, init=False)
+                    resultados = tspn_b(barriers, neighborhoods, prepro=prepro, A4 = a4, log=False, dominant = False, picture=False, time_limit=3600, init=False)
 
                     serie = pd.Series([instance] + resultados, index = dataframe.columns)
 
