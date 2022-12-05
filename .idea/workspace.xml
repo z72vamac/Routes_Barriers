@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="be595d1b-55b0-43d9-8496-5156de0ff357" name="Changes" comment="Nuevo lavado de cara al HTSPN.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infeasible_constraints.ilp" beforeDir="false" afterPath="$PROJECT_DIR$/infeasible_constraints.ilp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resultados/results_circles.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resultados/results_circles.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routine_circles.py" beforeDir="false" afterPath="$PROJECT_DIR$/routine_circles.py" afterDir="false" />
     </list>
@@ -218,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669150588677</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Nuevo lavado de cara al HTSPN.">
+      <created>1669153562807</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1669153562807</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

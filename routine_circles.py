@@ -19,7 +19,7 @@ dataframe = pd.DataFrame(columns=['Instance', 'n_N', 'n_B', 'Strength', 'A4', 'G
 A4s = [False, True]
 prepros = [False, True]
 
-start = False
+start = True
 
 num_rows = 0
 if start:
