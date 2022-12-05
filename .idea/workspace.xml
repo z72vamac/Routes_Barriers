@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be595d1b-55b0-43d9-8496-5156de0ff357" name="Changes" comment="Arreglada la rutina y la estimacion de la M.">
+    <list default="true" id="be595d1b-55b0-43d9-8496-5156de0ff357" name="Changes" comment="Nuevo lavado de cara al HTSPN.">
+      <change afterPath="$PROJECT_DIR$/spp_basic.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infeasible_constraints.ilp" beforeDir="false" afterPath="$PROJECT_DIR$/infeasible_constraints.ilp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/The Hampered Traveling Postman Problem with Segments/table_results.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/The Hampered Traveling Postman Problem with Segments/table_results.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resultados/results_segments.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resultados/results_segments.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,14 +44,6 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/justopuerto/Cosas de carlos/Routes_Barriers/resultados/results_circles.csv&quot;,
-    &quot;two.files.diff.last.used.file&quot;: &quot;/home/justopuerto/Cosas de carlos/Routes_Barriers/resultados/results_circles.csv&quot;
-  }
-}</component>
   <component name="ReaderModeSettings">
     <option name="showLigatures" value="true" />
   </component>
