@@ -1,0 +1,1 @@
+{"rule":"THE_SUPERLATIVE","sentence":"^\\QWe will deal with two problems in this paper: the Hampered Shortest Path Problem with Neighbourhoods and the Hampered Traveling Salesman Problem with Neighbourhoods .\\E$"}
