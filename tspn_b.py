@@ -226,7 +226,7 @@ def tspn_b(barriers,
                                 name='epsilon')
 
         # Modeling the conic neighborhoods
-        point = model.addVars(point_index, vtype=GRB.CONTINUOUS, name='point')
+        point = model.addVars(point_index, vtype=GRB.CONTINUOUS, lb = -1.0, name='point')
         d_inside = model.addVars(d_inside_index,
                                  vtype=GRB.CONTINUOUS,
                                  lb=0.0,
