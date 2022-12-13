@@ -30,13 +30,13 @@ from HTSPS_new_ven import HTSPS_ven
 
 
 
-segments = np.genfromtxt('./instancias/segmentos20-9.csv', delimiter = ',')
+segments = np.genfromtxt('./instancias/segmentos30-2.csv', delimiter = ',')
 
 barriers = []
 for lista in segments:
     barriers.append([[lista[0], lista[1]], [lista[2], lista[3]]])
 
-bolas = np.genfromtxt('./instancias/bolas20-9.csv', delimiter = ',')
+bolas = np.genfromtxt('./instancias/bolas30-2.csv', delimiter = ',')
 N = [neigh.Circle(center = [centro1, centro2], radii = radio) for centro1, centro2, radio in bolas]
 # # segmentos_visitar = np.genfromtxt('./instancias/segmentos_visitar50-8.csv', delimiter = ',')
 # # N = [Poligonal(V = [np.array([lista[0], lista[1]]), np.array([lista[2], lista[3]])]) for lista in segmentos_visitar] # 105.164
@@ -72,7 +72,7 @@ N = [neigh.Circle(center = [centro1, centro2], radii = radio) for centro1, centr
 
 # resultados = HTSPS_ven(barriers, N, picture=True)
 # resultados = HTSPS_without_prepro(barriers, N, log = False, timeLimit = 7200, init = False)
-resultados = tspn_b(barriers, N, A4 = True, dominant=False, prepro=False, log=False, picture=True, time_limit=600, init = False)
+resultados = tspn_b(barriers, N, A4 = True, dominant=False, prepro=True, log=False, picture=True, time_limit=600, init = False)
 
 
 # print(resultados)

@@ -128,6 +128,8 @@
 		
 		The well-known Traveling Salesman Problem with Neighbourhoods (TSPN) was introduced by \citet{arkin_approximation_1994}. These authors adressed this problem by proposing heuristic procedures that construct tours and prove that the length of these tours is within a constant factor of the length of an optimal tour. In \citet{gentilini_travelling_2013}, authors formulate this problem as a non-convex mixed-integer nonlinear program (MINLP) that yields a convex nonlinear program when the discrete variables are fixed. Moreover, \citet{yuan_towards_2017} combine strategically metaheuristics and classical TSP solvers to produce high quality solutions for the TSPN with arbitrary neighbourhoods. In \citet{glock_spatial_2022}, the concept of spatial coverage in routing and path planning is unified and defined and a categorization scheme of related problems is introduced. Other classical combinatorial problems as the Minimum Spanning Tree (MST) or the Crossing Postman Problem (XPP) that have been  extended to deal with neighbourhoods are developed in \citet{blanco_minimum_2017} and \citet{puerto_routing_2022}, respectively. 
 		
+		\CV{In \citet{mennell_heuristics_2009}, the Close-Enough Traveling Salesman Problem was introduced. This problem is a particular case of the TSPN where the neighbourhoods are represented by circles. In this dissertation, the authors also designed extensive computational experiments by solving instances developed by them. Authors in \citet{coutinho_branch-and-bound_2016} proposed an exact algorithm based on branch-and-bound and second-order cone programming. Finally, a metaheuristic approach was developed,  which computes both upper and lower bounds on the optimal solution value. This metaheuristic used a  discretization scheme and the Carousel Greedy algorithm to obtain high-quality solutions (see \citet{carrabs_adaptive_2020} for more details).}
+		
 		As far as we are concerned, the use of barriers in location problems has been widely considered (see \citet{klamroth_single-facility_2002}) but the corresponding routing problem with barriers  has attracted less attention in the Operations Research field. In spite of that, one can find connections with some problems in the area of computational geometry as the shortest path problem in polygons and the touring polytopes problem (see \citet{mitchell_shortest_2017}), in navigation games competition  as for instance the Physical Traveling Salesman Problem (see \citet{perez_solving_2014}), or in robot motion planning (see \citet{hwang_potential_1992} and \citet{laumond_motion_1994}).  Different complexity results are known and a lot of effective heuristic algorithms are developed for specific classes of problems. However, as far as we know, in all cases targets are points and no exact algorithms are provided. Moreover, at times, these problems can appear as  subproblems of some other combinatorial problems so that one would like to embed them into some mathematical programming formulation. Nevertheless, we are not aware of any mathematical programming formulation for these problems that permits it to be considered as a building block of more complex/integrated problems in real life applications, even without requiring target to be neighbourhoods.
 		
 		Our goal  in this paper is to deal with the TSP with Neighbourhoods and barriers that we call the Hampered Traveling Salesman with Neighbourhoods (\TSPN ). As commented above each one of these two elements (neighbourhoods and barriers) make the problem hard. Thus, mixing both together results in a new problem that, as far as we know, has not been addressed before but that has a lot of applications in the delivery industry and inspection and surveillance activities, as justified previously. Moreover, it also has implications from the methodological point of view because introduces non-fixed elements in network representation and the issue of obtacles (barriers) in the solution space in the same problem.
@@ -219,7 +221,7 @@
 		
 		\CV{
 		\subsection{Description of the Hampered Traveling Salesman Problem with Neighbourhoods}
-		For the general case, we do not require that the barriers separate neighbourhoods completely, i.e., when moving from one neighbourhood to another one it is possible to go following a straight line without crossing any barrier. The main difference lies in the description of edges for the graph induced by the neighbourhoods and endpoints of barriers.}
+		For the general case, the barriers are not required to separate neighbourhoods completely, i.e., when moving from one neighbourhood to another one it is possible to go following a straight line without crossing any barrier. The main difference lies in the description of edges for the graph induced by the neighbourhoods and endpoints of barriers.}
 
 		By taking the same approach, the sets that describe the graph in this case are:
 		
@@ -419,9 +421,9 @@
 		If there is, at least, a barrier $B''\in\B$ that intersects the segment $\overline{PQ}$, then $\deltacheck{P}{Q}{P^1_{B''}}{P^2_{B''}}$ is zero and the second inequality enforces $\varepsilon$ to be zero because the right hand side is fractional and the first inequality is non-positive. Nonetheless, if no barrier intersects the segment $\segment{P}{Q}$, then $\varepsilon$ is equals to one, because the left hand side of the first inequality is one and the right hand side of the second inequality too. 
 		
 		Based on the above description, we can identify the set of actual edges of graph $G$ by means of the $\varepsilon$ variables as follows:
-		$$ E_X = \{(P, Q):P,Q\in V_X\wedge\varepsilonvar{P}{Q}=1, P\neq Q\}, \quad X\in \{SPP,TSP,TSPV\}.$$
+		$$ E_X = \{(P, Q):P,Q\in V_X\wedge\varepsilonvar{P}{Q}=1, P\neq Q\}, \quad X\in \{SPP,TSPH,TSP\}.$$
 		
-		This representation of $E_X$ with $X\in \{SPP,TSP,TSPV\}$ will be exploited in the formulations that are described in the following subsections. 
+		This representation of $E_X$ with $X\in \{SPP,TSPH,TSP\}$ will be exploited in the formulations that are described in the following subsections. 
 		
 		
 		It is interesting to note that $\EB$ is a fixed set whose edges can be computed by using the Remark \ref{rem:determinants}. Then, $\varepsilon$ variables can be prefixed in advance. However, edges in $E_X\setminus \EB$ depend on the points selected in the neighbourhoods as shown in Figure \ref{fig:graph}.  The two subfigures show how the graph $\GSPP$ is generated. The blue dashed line segments represent the edges of $\ES$, the green ones, the edges of $\ET$ and the red dashed lines, the edges of $\EB$. A special case that can be highlighted  occurs when the neighbourhoods, $N_S$ and $N_T$, are points. In that case, the induced graph is completely fixed and it is only necessary to find which edges are included by keeping in mind that the graph must be planar, i.e., without crossings. This idea is later exploited in Subsection \ref{section:reformulation}.
@@ -965,7 +967,7 @@
 	\input{figures/Fixing_Variables}
 	
 	\section{Computational experiments}\label{section:experiments}
-	This section is devoted to studying the performance of \eqref{form:H-TSPHN} and \eqref{form:H-TSPN} formulationS proposed in Section \ref{section:formulations}. In the first subsection, the procedure for generating the considered random instances is described. The second subsection details the experiments that have been conducted. The third subsection reports the results obtained in these experiments.
+	This section is devoted to studying the performance of \eqref{form:H-TSPHN} and \eqref{form:H-TSPN} formulations proposed in Section \ref{section:formulations}. In the first subsection, the procedure for generating the considered random instances is described. The second subsection details the experiments that have been conducted. The third subsection reports the results obtained in these experiments.
 	
 	\subsection{Data generation}
 	%To generate the instances of our experiments, it is necessary that these instances verify the assumptions \ref{A1}-\ref{A4} stated in the Section \ref{section:description}. 
@@ -1021,8 +1023,8 @@
 				}
 			}
 			\For{$P\in points$}{
-				Set $r_{\text{min}}=\min_{\{P_B\in B: B \in\mathcal B\}} d(P, P_B).$\\
-				Generate a random $radii$ uniformly distributed in the interval $\left[\frac 1 2 r_{\text{min}}, r_{\text{min}}\right]$.\\
+				Set $r_{\text{max}}=\min_{\{P_B\in B: B \in\mathcal B\}} d(P, P_B).$\\
+				Generate a random $radii$ uniformly distributed in the interval $\left[\frac 1 2 r_{\text{max}}, r_{\text{max}}\right]$.\\
 				Set the ball $N$ whose centre is $P$ and radii is $radii$. \\
 				Include $N$ in $\mathcal N$.
 			}
