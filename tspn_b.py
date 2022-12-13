@@ -78,6 +78,8 @@ def tspn_b(
                         if not (intersect):
                             edges_barrier.append((v, i, w, j))
                             edges_barrier.append((w, j, v, i))
+                        else:
+                            pass
 
                     else:
                         edges_barrier.append((v, i, w, j))
@@ -227,7 +229,7 @@ def tspn_b(
         epsilon = model.addVars(epsilon_index, vtype=GRB.BINARY, name="epsilon")
 
         # Modeling the conic neighborhoods
-        point = model.addVars(point_index, vtype=GRB.CONTINUOUS, lb = -3*lb_max, name='point')
+        point = model.addVars(point_index, vtype=GRB.CONTINUOUS, name='point')
         d_inside = model.addVars(d_inside_index,
                                  vtype=GRB.CONTINUOUS,
                                  lb=0.0,
@@ -843,7 +845,7 @@ def tspn_b(
 
         if model.Status == 3:
             model.computeIIS()
-            model.write("infeasible_constraints.ilp")
+            # model.write("infeasible_constraints.ilp")
             return results
 
         if model.SolCount == 0:
