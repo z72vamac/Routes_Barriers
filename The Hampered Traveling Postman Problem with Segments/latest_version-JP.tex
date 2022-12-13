@@ -967,7 +967,7 @@
 	\input{figures/Fixing_Variables}
 	
 	\section{Computational experiments}\label{section:experiments}
-	This section is devoted to studying the performance of \eqref{form:H-TSPHN} and \eqref{form:H-TSPN} formulationS proposed in Section \ref{section:formulations}. In the first subsection, the procedure for generating the considered random instances is described. The second subsection details the experiments that have been conducted. The third subsection reports the results obtained in these experiments.
+	This section is devoted to studying the performance of \eqref{form:H-TSPHN} and \eqref{form:H-TSPN} formulations proposed in Section \ref{section:formulations}. In the first subsection, the procedure for generating the considered random instances is described. The second subsection details the experiments that have been conducted. The third subsection reports the results obtained in these experiments.
 	
 	\subsection{Data generation}
 	%To generate the instances of our experiments, it is necessary that these instances verify the assumptions \ref{A1}-\ref{A4} stated in the Section \ref{section:description}. 
@@ -1023,8 +1023,8 @@
 				}
 			}
 			\For{$P\in points$}{
-				Set $r_{\text{min}}=\min_{\{P_B\in B: B \in\mathcal B\}} d(P, P_B).$\\
-				Generate a random $radii$ uniformly distributed in the interval $\left[\frac 1 2 r_{\text{min}}, r_{\text{min}}\right]$.\\
+				Set $r_{\text{max}}=\min_{\{P_B\in B: B \in\mathcal B\}} d(P, P_B).$\\
+				Generate a random $radii$ uniformly distributed in the interval $\left[\frac 1 2 r_{\text{max}}, r_{\text{max}}\right]$.\\
 				Set the ball $N$ whose centre is $P$ and radii is $radii$. \\
 				Include $N$ in $\mathcal N$.
 			}

@@ -1,0 +1,20 @@
+\ Model Model: H-TSP-N_copy
+\ LP format - for model browsing. Use MPS format to capture full model detail.
+Minimize
+ 
+Subject To
+ R58: 4.003942815179877 alpha[0,1,1,0,-1,0]
+   + 11.07128365856267 point[-1,0,0] + 20.63157030754513 point[-1,0,1]
+   <= 1402.254837856985
+ R150: 15.0584531673236 alpha[1,1,0,1,-1,0]
+   - 18.01412965410105 point[-1,0,0] - 1.875320962800402 point[-1,0,1]
+   <= -1705.890829905389
+ R152: 26.76721657399609 alpha[1,1,-1,0,1,0]
+   + 6.942845995538377 point[-1,0,0] - 18.75624934474473 point[-1,0,1]
+   <= -1.431967552903259
+Bounds
+ point[-1,0,0] free
+ point[-1,0,1] free
+Binaries
+ alpha[0,1,1,0,-1,0] alpha[1,1,0,1,-1,0] alpha[1,1,-1,0,1,0]
+End
