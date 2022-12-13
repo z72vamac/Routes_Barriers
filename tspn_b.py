@@ -208,7 +208,7 @@ def tspn_b(barriers,
         # This is done to avoid the problem of the circles being too big.
         lb_min = 0
 
-        lb_max = max([ent.radii for ent in neighbourhoods if type(ent) is neigh.Circle] + [lb_min])  
+        lb_max = max([ent.radii for ent in neighborhoods if type(ent) is neigh.Circle] + [lb_min])  
 
         
 
