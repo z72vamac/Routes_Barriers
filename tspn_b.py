@@ -227,18 +227,20 @@ def tspn_b(
         epsilon = model.addVars(epsilon_index, vtype=GRB.BINARY, name="epsilon")
 
         # Modeling the conic neighborhoods
-        point = model.addVars(
-            point_index, vtype=GRB.CONTINUOUS, lb=-3*lb_max, name="point"
-        )
-        d_inside = model.addVars(
-            d_inside_index, vtype=GRB.CONTINUOUS, lb=0.0, name="d_inside"
-        )
-        dif_inside = model.addVars(
-            dif_inside_index, vtype=GRB.CONTINUOUS, lb=0.0, name="dif_inside"
-        )
-        landa = model.addVars(
-            d_inside_index, vtype=GRB.CONTINUOUS, lb=0.0, ub=1.0, name="landa"
-        )
+        point = model.addVars(point_index, vtype=GRB.CONTINUOUS, lb = -3*lb_max, name='point')
+        d_inside = model.addVars(d_inside_index,
+                                 vtype=GRB.CONTINUOUS,
+                                 lb=0.0,
+                                 name='d_inside')
+        dif_inside = model.addVars(dif_inside_index,
+                                   vtype=GRB.CONTINUOUS,
+                                   lb=0.0,
+                                   name='dif_inside')
+        landa = model.addVars(d_inside_index,
+                              vtype=GRB.CONTINUOUS,
+                              lb=0.0,
+                              ub=1.0,
+                              name='landa')
 
         # Modeling the route
         y = model.addVars(y_index, vtype=GRB.BINARY, name="y")

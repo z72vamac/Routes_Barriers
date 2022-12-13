@@ -86,13 +86,6 @@ Lobo, M.~S., Vandenberghe, L., Boyd, S., and Lebret, H. (1998).
 \newblock Applications of second-order cone programming.
 \newblock {\em Linear Algebra and its Applications}, 284(1):193--228.
 
-\bibitem[\protect\astroncite{Möemke and
-  Svensson}{2011}]{moemke_approximating_2011}
-Möemke, T. and Svensson, O. (2011).
-\newblock Approximating graphic tsp by matchings.
-\newblock pages 560--569. IEEE Computer Society.
-\newblock ISSN: 0272-5428.
-
 \bibitem[\protect\astroncite{Mennell}{2009}]{mennell_heuristics_2009}
 Mennell, W.~K. (2009).
 \newblock {\em Heuristics for solving three routing problems: {Close}-enough
@@ -107,6 +100,13 @@ Mitchell, J. S.~B. (2017).
 \newblock In {\em Handbook of {Discrete} and {Computational} {Geometry}}.
   Chapman and Hall/CRC, 3 edition.
 \newblock Num Pages: 38.
+
+\bibitem[\protect\astroncite{Möemke and
+  Svensson}{2011}]{moemke_approximating_2011}
+Möemke, T. and Svensson, O. (2011).
+\newblock Approximating graphic tsp by matchings.
+\newblock pages 560--569. IEEE Computer Society.
+\newblock ISSN: 0272-5428.
 
 \bibitem[\protect\astroncite{Perez et~al.}{2014}]{perez_solving_2014}
 Perez, D., Powley, E.~J., Whitehouse, D., Rohlfshagen, P., Samothrakis, S.,
