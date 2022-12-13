@@ -204,6 +204,14 @@ def tspn_b(barriers,
         if log:
             print("g_index = " + str(g_index))
 
+        # Adjusting the bounds of the circles. Computing the biggest radii in the problem.
+        # This is done to avoid the problem of the circles being too big.
+        lb_min = 0
+
+        lb_max = max([ent.radii for ent in neighbourhoods if type(ent) is neigh.Circle] + [lb_min])  
+
+        
+
         model = gp.Model('Model: H-TSP-N')
 
         # Modeling the distance
@@ -226,7 +234,7 @@ def tspn_b(barriers,
                                 name='epsilon')
 
         # Modeling the conic neighborhoods
-        point = model.addVars(point_index, vtype=GRB.CONTINUOUS, lb = -1.0, name='point')
+        point = model.addVars(point_index, vtype=GRB.CONTINUOUS, lb = -lb_max, name='point')
         d_inside = model.addVars(d_inside_index,
                                  vtype=GRB.CONTINUOUS,
                                  lb=0.0,
