@@ -518,7 +518,7 @@ def cansee(point, neighborhood, barriers):
         nr_u = np.array([-dr_u[1], dr_u[0]])
 
         # Generate a discretization of the diameter that is normal to the segment joining the center and the point
-        mus = np.linspace(-neighborhood.radii, neighborhood.radii, 20)
+        mus = np.linspace(-neighborhood.radii, neighborhood.radii, 100)
 
         for mu in mus:
             for barrier in barriers:

@@ -17,6 +17,22 @@ Boyd, S.~P. and Vandenberghe, L. (2004).
 \newblock {\em Convex optimization}.
 \newblock Cambridge University Press, Cambridge, UK ; New York.
 
+\bibitem[\protect\astroncite{Carrabs et~al.}{2020}]{carrabs_adaptive_2020}
+Carrabs, F., Cerrone, C., Cerulli, R., and Golden, B. (2020).
+\newblock An {Adaptive} {Heuristic} {Approach} to {Compute} {Upper} and {Lower}
+  {Bounds} for the {Close}-{Enough} {Traveling} {Salesman} {Problem}.
+\newblock {\em INFORMS Journal on Computing}, 32(4):1030--1048.
+\newblock Publisher: INFORMS.
+
+\bibitem[\protect\astroncite{Coutinho
+  et~al.}{2016}]{coutinho_branch-and-bound_2016}
+Coutinho, W.~P., Nascimento, R. Q.~d., Pessoa, A.~A., and Subramanian, A.
+  (2016).
+\newblock A {Branch}-and-{Bound} {Algorithm} for the {Close}-{Enough}
+  {Traveling} {Salesman} {Problem}.
+\newblock {\em INFORMS Journal on Computing}, 28(4):752--765.
+\newblock Publisher: INFORMS.
+
 \bibitem[\protect\astroncite{{G. van Rossum
   (Guido)}}{1995}]{g_van_rossum_guido_python_1995}
 {G. van Rossum (Guido)} (1995).
@@ -70,12 +86,13 @@ Lobo, M.~S., Vandenberghe, L., Boyd, S., and Lebret, H. (1998).
 \newblock Applications of second-order cone programming.
 \newblock {\em Linear Algebra and its Applications}, 284(1):193--228.
 
-\bibitem[\protect\astroncite{Möemke and
-  Svensson}{2011}]{moemke_approximating_2011}
-Möemke, T. and Svensson, O. (2011).
-\newblock Approximating {Graphic} {TSP} by {Matchings}.
-\newblock pages 560--569. IEEE Computer Society.
-\newblock ISSN: 0272-5428.
+\bibitem[\protect\astroncite{Mennell}{2009}]{mennell_heuristics_2009}
+Mennell, W.~K. (2009).
+\newblock {\em Heuristics for solving three routing problems: {Close}-enough
+  traveling salesman problem, close-enough vehicle routing problem, and
+  sequence-dependent team orienteering problem}.
+\newblock Ph.{D}., Ann Arbor, United States.
+\newblock ISBN: 9781109636239.
 
 \bibitem[\protect\astroncite{Mitchell}{2017}]{mitchell_shortest_2017}
 Mitchell, J. S.~B. (2017).
@@ -83,6 +100,13 @@ Mitchell, J. S.~B. (2017).
 \newblock In {\em Handbook of {Discrete} and {Computational} {Geometry}}.
   Chapman and Hall/CRC, 3 edition.
 \newblock Num Pages: 38.
+
+\bibitem[\protect\astroncite{Möemke and
+  Svensson}{2011}]{moemke_approximating_2011}
+Möemke, T. and Svensson, O. (2011).
+\newblock Approximating graphic tsp by matchings.
+\newblock pages 560--569. IEEE Computer Society.
+\newblock ISSN: 0272-5428.
 
 \bibitem[\protect\astroncite{Perez et~al.}{2014}]{perez_solving_2014}
 Perez, D., Powley, E.~J., Whitehouse, D., Rohlfshagen, P., Samothrakis, S.,

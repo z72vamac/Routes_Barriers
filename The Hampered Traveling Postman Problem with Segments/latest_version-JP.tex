@@ -46,8 +46,8 @@
 	
 	
 	\newcommand{\SPPN}{{\sf{H-SPPN}\xspace }}
+	\newcommand{\TSPHN}{{\sf{H-TSPHN}\xspace }}
 	\newcommand{\TSPN}{{\sf{H-TSPN}\xspace }}
-	\newcommand{\TSPVN}{{\sf{H-TSPVN}\xspace }}
 	\newcommand{\B}{{\mathcal B}}
 	\newcommand{\VB}{{V^{}_{\mathcal B}}}
 	\newcommand{\EB}{{E^{}_{\mathcal B}}}
@@ -63,6 +63,9 @@
 	\newcommand{\GTSP}{{G_{\text{TSP}}}}
 	\newcommand{\VTSP}{{V_{\text{TSP}}}}
 	\newcommand{\ETSP}{{E_{\text{TSP}}}}
+	\newcommand{\GTSPH}{{G_{\text{TSPH}}}}
+	\newcommand{\VTSPH}{{V_{\text{TSPH}}}}
+	\newcommand{\ETSPH}{{E_{\text{TSPH}}}}
 	\newcommand{\VSS}{{V^*_S}}
 	\newcommand{\ESS}{{E^*_S}}
 	\newcommand{\VTS}{{V^*_T}}
@@ -72,9 +75,9 @@
 	\newcommand{\GSPPS}{{G^{*}_{\text{SPP}}}}
 	\newcommand{\VSPPS}{{V^{*}_{\text{SPP}}}}
 	\newcommand{\ESPPS}{{E^{*}_{\text{SPP}}}}
-	\newcommand{\GTSPS}{{G^{*}_{\text{TSP}}}}
-	\newcommand{\VTSPS}{{V^{*}_{\text{TSP}}}}
-	\newcommand{\ETSPS}{{E^{*}_{\text{TSP}}}}
+	\newcommand{\GTSPHS}{{G^{*}_{\text{TSPH}}}}
+	\newcommand{\VTSPHS}{{V^{*}_{\text{TSPH}}}}
+	\newcommand{\ETSPHS}{{E^{*}_{\text{TSPH}}}}
 	
 	\newtheorem{remark}{Remark}
 	\newtheorem{notation}{Notation}
@@ -84,7 +87,7 @@
 	\definecolor{armygreen}{rgb}{0.19, 0.53, 0.43}
 	\definecolor{atomictangerine}{rgb}{1.0, 0.6, 0.4}
 	\newcommand{\JP}[1]{{\color{armygreen}#1}}
-	\newcommand{\CV}[1]{{\color{atomictangerine}#1}}
+	\newcommand{\CV}[1]{{\color{red}#1}}
 	\newcommand{\segment}[2]{\overline{#1#2}}
 	\newcommand{\determinant}[3]{\det({#1|#2#3})}
 	
@@ -125,6 +128,8 @@
 		
 		The well-known Traveling Salesman Problem with Neighbourhoods (TSPN) was introduced by \citet{arkin_approximation_1994}. These authors adressed this problem by proposing heuristic procedures that construct tours and prove that the length of these tours is within a constant factor of the length of an optimal tour. In \citet{gentilini_travelling_2013}, authors formulate this problem as a non-convex mixed-integer nonlinear program (MINLP) that yields a convex nonlinear program when the discrete variables are fixed. Moreover, \citet{yuan_towards_2017} combine strategically metaheuristics and classical TSP solvers to produce high quality solutions for the TSPN with arbitrary neighbourhoods. In \citet{glock_spatial_2022}, the concept of spatial coverage in routing and path planning is unified and defined and a categorization scheme of related problems is introduced. Other classical combinatorial problems as the Minimum Spanning Tree (MST) or the Crossing Postman Problem (XPP) that have been  extended to deal with neighbourhoods are developed in \citet{blanco_minimum_2017} and \citet{puerto_routing_2022}, respectively. 
 		
+		\CV{In \citet{mennell_heuristics_2009}, the Close-Enough Traveling Salesman Problem was introduced. This problem is a particular case of the TSPN where the neighbourhoods are represented by circles. In this dissertation, the authors also designed extensive computational experiments by solving instances developed by them. Authors in \citet{coutinho_branch-and-bound_2016} proposed an exact algorithm based on branch-and-bound and second-order cone programming. Finally, a metaheuristic approach was developed,  which computes both upper and lower bounds on the optimal solution value. This metaheuristic used a  discretization scheme and the Carousel Greedy algorithm to obtain high-quality solutions (see \citet{carrabs_adaptive_2020} for more details).}
+		
 		As far as we are concerned, the use of barriers in location problems has been widely considered (see \citet{klamroth_single-facility_2002}) but the corresponding routing problem with barriers  has attracted less attention in the Operations Research field. In spite of that, one can find connections with some problems in the area of computational geometry as the shortest path problem in polygons and the touring polytopes problem (see \citet{mitchell_shortest_2017}), in navigation games competition  as for instance the Physical Traveling Salesman Problem (see \citet{perez_solving_2014}), or in robot motion planning (see \citet{hwang_potential_1992} and \citet{laumond_motion_1994}).  Different complexity results are known and a lot of effective heuristic algorithms are developed for specific classes of problems. However, as far as we know, in all cases targets are points and no exact algorithms are provided. Moreover, at times, these problems can appear as  subproblems of some other combinatorial problems so that one would like to embed them into some mathematical programming formulation. Nevertheless, we are not aware of any mathematical programming formulation for these problems that permits it to be considered as a building block of more complex/integrated problems in real life applications, even without requiring target to be neighbourhoods.
 		
 		Our goal  in this paper is to deal with the TSP with Neighbourhoods and barriers that we call the Hampered Traveling Salesman with Neighbourhoods (\TSPN ). As commented above each one of these two elements (neighbourhoods and barriers) make the problem hard. Thus, mixing both together results in a new problem that, as far as we know, has not been addressed before but that has a lot of applications in the delivery industry and inspection and surveillance activities, as justified previously. Moreover, it also has implications from the methodological point of view because introduces non-fixed elements in network representation and the issue of obtacles (barriers) in the solution space in the same problem.
@@ -132,21 +137,30 @@
 		Our contribution is to provide exact mathematical programming formulations for the problem assuming polygonal barriers and neighbourhoods that are second-order cone (SOC) representable. These hypotheses give rise to mixed-integer SOC formulations that we preprocess and strengthen with valid inequalities. In our way to the formulations we deal with the associated Hampered Shortest Path Problem with Neighbourhoods (\SPPN ) which is used as a building block for the more difficult \TSPN . In spite that we prove that the \SPPN \ is polynomially solvable, we also give a formulation for this problem which highlights the constraints that are necessary for the \TSPN. The respective \TSPN \ is NP-hard. We give exact formulations using a geodesic shortest path representation that allows to solve medium size instances of this class of problems. Our computational tests show the difficulty of handling barriers and neighbourhoods together  but also that our formulation is useful for problems with 80 neighbourhoods and a range between 125-145 barriers.
 		
 	
-			The paper is organized in 8 sections. The first section is the introduction. In the second section, the problems to be dealt with are described and the notation followed in the rest of the paper is set. Section \ref{section:formulations} develops formulations for the problems defined in the manuscript. These initial formulations are later reformulated using finite dominating sets described along the paper.
-			Section \ref{section:strengthening}  strengthens these formulations  by preprocessing variables, developing  families of  valid inequalities to be added to the formulations and proposing some variable fixing strategies. A computational experience is reported in Section \ref{section:experiments}. The paper ends with a section devoted to conclusions and extensions, where some interesting further research connected with the problems addressed in this paper is discussed.
+		The paper is organized in 8 sections. The first section is the introduction. In the second section, the problems to be dealt with are described and the notation followed in the rest of the paper is set. Section \ref{section:formulations} develops formulations for the problems defined in the manuscript. These initial formulations are later reformulated using finite dominating sets described along the paper.
+		Section \ref{section:strengthening}  strengthens these formulations  by preprocessing variables, developing  families of  valid inequalities to be added to the formulations and proposing some variable fixing strategies. A computational experience is reported in Section \ref{section:experiments}. The paper ends with a section devoted to conclusions and extensions, where some interesting further research connected with the problems addressed in this paper is discussed.
 		
 		
 		\section{Preliminaries and Problems'  Description \label{section:description}}
 		This section is devoted to setting the hypothesis that describe the framework where we analyze the considered problems.
-		We will deal with two problems in this paper: the Hampered Shortest Path Problem with Neighbourhoods \SPPN \ and the Hampered Traveling Salesman Problem with Neighbourhoods \TSPN. Since we have in mind their applications to the drone delivery problem with uniformly distributed demand in regions and inspection problems, at times, we will refer to the moving object as the \textit{drone}. In both considered problems, we denote by $\mathcal{B}$ the set of line segments that model the barriers and we adopt the  assumptions that are listed below.
+		We will deal with two problems in this paper: the Hampered Shortest Path Problem with Neighbourhoods \SPPN \ and the Hampered Traveling Salesman Problem with Neighbourhoods \TSPN. Since we have in mind their applications to the drone delivery problem with uniformly distributed demand in regions and inspection problems, at times, we will refer to the moving object as the \textit{drone}. In both considered problems, we denote by $\mathcal{B}$ the set of line segments that model the barriers, and we adopt the  assumptions that are listed below.
 		
 		\begin{enumerate}[label=\textbf{A\arabic*},ref=\textbf{A\arabic*}]
-			\item \label{A1}The line segments of $\mathcal B$ are located in general position, i.e., the endpoints of these segments are not aligned. Although it is possible to model the most general case, one can always  slightly modify one of the endpoints so that the segments are in general position.
-			\item The line segments of $\mathcal B$ are open sets, that is, it is possible that the drone visits  endpoints of segments, but entering  in its interior is not allowed. Observe that without loss of generality, we can always slightly enlarge these segments to make them open.
-			\item  If there are two overlapping barriers, we assume that there is only one barrier given by the union of them.
-			\item \label{A4}There is no rectilinear path joining two neighbourhoods without crossing an obstacle.
+			\item \label{A1}The line segments of $\mathcal B$ are located in general position, i.e., the endpoints of these segments are not aligned. Although it is possible to model the most general case, one can always slightly modify one of the endpoints so that the segments are in general position.
+			\item The line segments of $\mathcal B$ are open sets, that is, it is possible that the drone visits endpoints of segments, but entering  in its interior is not allowed. Observe that without loss of generality, we can always slightly enlarge these segments to make them open.
+			\item \label{A3}If there are two overlapping barriers, we assume that there is only one barrier given by the union of them.
+			% \item \label{A4}There is no rectilinear path joining two neighbourhoods without crossing an obstacle.
 		\end{enumerate}
-		
+
+		\CV{In this work, a special for the \TSPN \ is studied by assuming that:
+		\begin{enumerate}[label=\textbf{A\arabic*}, ref=\textbf{A\arabic*}]
+			\setcounter{enumi}{3}
+			\item \label{A4}There is no rectilinear path joining two neighbourhoods without crossing an obstacle.
+		\end{enumerate} 
+		This problem is called the Hampered Traveling Salesman Problem with Hidden Neighbourhoods \TSPHN. The definition of this more constrained subproblem appeared as a natural way of extending the \SPPN. In \SPPN, the shortest path joining two neighbourhoods is sought by assuming \ref{A4}. Otherwise, it would be easily solved by finding the minimum distance between both neighbourhoods.
+
+		}
+
 		%In \SPPN, we have a source neighbourhood $N_S\subset\mathbb R^2$ and a target neighbourhood $N_T\subset\mathbb R^2$, that we assume to be convex sets and a set $\mathcal B$ of opened line segments located in general position that plays the role of barriers that the drone cannot cross, i.e., the drone can visit the endpoints of these barriers but it cannot be located in the interior points of the barriers. Note that, it is rational to assume that if there are two barriers that have a portion of them in common, it is only considered the smallest line segment that contains both barriers. The aim of the \SPPN is to find the best pair of points $(P_{S}, P_{T})\in N_S\times N_T$ in the source and target neighbourhoods that minimize the length of the path that joins both points without crossing any barrier of $\mathcal B$. In this problem, it is implicitly assumed that there is not a rectilinear path to go from $N_S$ to $N_T$, otherwise, the problem becomes straightforward and the solution is the minimum distance between both neighbourhoods. 
 		
 		To simplify the presentation, we introduce some general notation used along the paper.
@@ -189,10 +203,10 @@
 		%	\input{figures/Example_ H-SPP-S_ Second Figure A}
 		
 		
-		\subsection{Description of the Hampered Traveling Salesman Problem with Neighbourhoods\label{ssec:TSPN}}
-		The \TSPN \ is an extension of the \SPPN \ where the neighbourhood set $\mathcal N$ is considered to play the role of source and target  in the \SPPN \ and moreover, a set of given targets must be visited. The aim of the \TSPN \  is to seek for the shortest tour that visits each neighbourhood $N\in\mathcal N$ exactly once without crossing any barrier $B\in\mathcal B$ and assuming again \ref{A1}-\ref{A4}. 
+		\subsection{Description of the Hampered Traveling Salesman Problem with Hidden Neighbourhoods\label{ssec:TSPHN}}
+		The \TSPHN \ is an extension of the \SPPN \ where the neighbourhood set $\mathcal N$ is considered to play the role of source and target in the \SPPN \ and moreover, a set of given targets must be visited. The aim of the \TSPHN \  is to seek for the shortest tour that visits each neighbourhood $N\in\mathcal N$ exactly once without crossing any barrier $B\in\mathcal B$ and assuming again \ref{A1}-\ref{A4}. 
 		
-		To present our formulation for the \TSPN, the graph induced by the endpoints of the barriers and the neighbourhoods is different from the previous one for the \SPPN. For its description, we introduce the following sets:
+		To present our formulation for the \TSPHN, the graph induced by the endpoints of the barriers and the neighbourhoods is different from the previous one for the \SPPN. For its description, we introduce the following sets:
 		
 		\begin{itemize}
 			\item $\VN=\{P_N:N\in\mathcal N\}$. Set of the points selected in the neighbourhoods $\mathcal N$ to be visited.
@@ -201,26 +215,30 @@
 			\item $\EB=\{(P^{i}_B, P^{j}_{B'}):P^i_B, P^j_{B'}\in \VB \text{ and } \overline{P^i_B P^j_{B'}}\cap B''=\emptyset,\:\forall B''\in\mathcal B,\:i, j=1,2\}$. Set of edges formed by the line segments that join two vertices of $V_{\mathcal B}$ and do not cross any barrier in $\B$.
 		\end{itemize} 
 		
-		Following the same idea as before, we consider the graph $\GTSP=(\VTSP,\ETSP)$ induced by the barriers and neighbourhoods, where $\VTSP=\VN\cup\VB$ and $\ETSP=\EN\cup\EB$.
+		Following the same idea as before, we consider the graph $\GTSPH=(\VTSPH,\ETSPH)$ induced by the barriers and neighbourhoods, where $\VTSPH=\VN\cup\VB$ and $\ETSPH=\EN\cup\EB$.
 		
-		Note that, in this case, it may be also interesting to consider this problem without imposing assumption \ref{A4}. This more general version is called the Hampered Traveling Salesman Problem with Visible neighbourhoods \TSPVN. In this case, we do not require that the barriers separate neighbourhoods completely, i.e., when moving from one neighbourhood to another one it is possible to go following a straight line without crossing any barrier. The main difference lies in the description of edges for the graph induced by the neighbourhoods and endpoints of barriers.
+		%Note that, in this case, it may be also interesting to consider this problem without imposing assumption \ref{A4}. This more general version is called the Hampered Traveling Salesman Problem with Visible neighbourhoods \TSPN. 
 		
+		\CV{
+		\subsection{Description of the Hampered Traveling Salesman Problem with Neighbourhoods}
+		For the general case, the barriers are not required to separate neighbourhoods completely, i.e., when moving from one neighbourhood to another one it is possible to go following a straight line without crossing any barrier. The main difference lies in the description of edges for the graph induced by the neighbourhoods and endpoints of barriers.}
+
 		By taking the same approach, the sets that describe the graph in this case are:
 		
 		\begin{itemize}
 			\item $\VN=\{P_N:N\in\mathcal N\}$. Set of points in the neighbourhoods $\mathcal N$ that must be visited.
 			\item $\VB=\{P^1_B, P^2_B:B=\overline{P^1_B P^2_B}\in \mathcal B\}$. Set of vertices of the barriers of the problem.
-			\item $V_{\rm TSPV} = \VN \cup \VB$.
-			\item $E_{\rm TSPV}=\{(P, P'):P, P' \in V_{TSP} \text{ and } \overline{PP'}\cap B''=\emptyset,\forall B''\in\B\}$. Set of edges formed by the line segments that join every pair of points in $V_{TSP}$ that do not cross any barrier.
+			\item $V_{\rm TSP} = \VN \cup \VB$.
+			\item $E_{\rm TSP}=\{(P, P'):P, P' \in V_{TSP} \text{ and } \overline{PP'}\cap B''=\emptyset,\forall B''\in\B\}$. Set of edges formed by the line segments that join every pair of points in $V_{TSP}$ that do not cross any barrier.
 		\end{itemize} 
 		
-		Figure \ref{fig:initialdata} shows an example of each one of the three problems that are being considered. The left picture shows an instance of the \SPPN, where the blue neighbourhood represents the source, the green one the target and the red line segments show the barriers that the drone cannot cross. In the center picture, an instance of the \TSPN \  is shown, where the neighbourhoods are balls and the barriers are, again, the red line segments. Finally, the right most picture illustrates an instance of the \TSPVN \ where the orange and blue balls can be joined by a rectilinear path.
+		Figure \ref{fig:initialdata} shows an example of each one of the three problems that are being considered. The left picture shows an instance of the \SPPN, where the blue neighbourhood represents the source, the green one the target and the red line segments show the barriers that the drone cannot cross. In the center picture, an instance of the \TSPHN \  is shown, where the neighbourhoods are balls and the barriers are, again, the red line segments. Finally, the right most picture illustrates an instance of the \TSPN \ where the orange and blue balls can be joined by a rectilinear path.
 		
 		\input{figures/Example_ H-SPP-S_ First Figure}
 		
 		\section{MINLP Formulations}\label{section:formulations}
 		
-		This section proposes a mixed-integer NonLinear Programming formulation for the problems described in Section \ref{section:description}. First of all, we present the conic programming representation of the neighbourhoods and distance. Then,  we set the constraints that check if a segment is included in the set of edges $E_X$ with $X\in \{SPP, TSP, TSPV\}$. Finally, the formulations for the \SPPN, \TSPN \ and \TSPVN \ are described.
+		This section proposes a mixed-integer NonLinear Programming formulation for the problems described in Section \ref{section:description}. First of all, we present the conic programming representation of the neighbourhoods and distance. Then,  we set the constraints that check if a segment is included in the set of edges $E_X$ with $X\in \{SPP, TSPH, TSP\}$. Finally, the formulations for the \SPPN, \TSPHN \ and \TSPN \ are described.
 		
 		We would like to remark that having a mathematical programming representation for the \SPPN \ is very important even though we will prove in the following that this problem can be solved with a combinatorial algorithm in polynomial time. Indeed, we will need that type of representation to address some NP-hard problems that require computing shortest paths as building blocks, as for instance the location problem with barriers and 
 		neighbours and the \TSPN . Therefore, we will start providing two different mathematical programming formulations for the \SPPN \ able to be embedded in more complex problems.
@@ -262,7 +280,7 @@
 			\|P - Q\|\leq \dvar{P}{Q},\quad\forall (P,Q)\in E_X,
 		\end{equation*}
 		
-		where $E_X$ is the set of edges $\ESPP$, $\ETSP$ or $E_{\rm{TSPV}}$.
+		where $E_X$ is the set of edges $\ESPP$, $\ETSPH$ or $E_{\rm{TSP}}$.
 		
 		For the representation of neighbourhoods where points can be chosen, since we are assuming that the neighbourhoods are second-order cone (SOC) representable, they can be expressed by means of the constraints:
 		
@@ -281,7 +299,7 @@
 		
 		\subsection{Checking whether a segment is an edge of the induced graph}
 		
-		The goal of this subsection is to give a test to check whether given two arbitrary vertices $P, Q\in V_X$, the edge $(P, Q)\in E_X$, with $X\in\{SPP, TSP, TSPV\}$, i.e., whether the line segment $\overline{PQ}$ does not intersect with any barrier of $\mathcal B$. The following well-known computational geometry result can be used to check if two line segments intersect.
+		The goal of this subsection is to give a test to check whether given two arbitrary vertices $P, Q\in V_X$, the edge $(P, Q)\in E_X$, with $X\in\{SPP, TSPH, TSP\}$, i.e., whether the line segment $\overline{PQ}$ does not intersect with any barrier of $\mathcal B$. The following well-known computational geometry result can be used to check if two line segments intersect.
 		
 		
 		\begin{remark}\label{rem:determinants}
@@ -306,7 +324,7 @@
 		%	\input{figures/Example_ H-SPP-S_ Second Figure B}
 		
 		
-		Let $P,Q\in V_X$, where $V_X$ denotes the set of vertices $\VSPP$, $\VTSP$ or $V_{\rm{TSPV}}$. It is essential to model the conditions of the Remark \ref{rem:determinants} by using binary variables that check the sign of determinants, the equality of signs, and the disjunctive condition, since these determinants depend on the location of $P$ and $Q$.
+		Let $P,Q\in V_X$, where $V_X$ denotes the set of vertices $\VSPP$, $\VTSPH$ or $V_{\rm{TSP}}$. It is essential to model the conditions of the Remark \ref{rem:determinants} by using binary variables that check the sign of determinants, the equality of signs, and the disjunctive condition, since these determinants depend on the location of $P$ and $Q$.
 		
 		\newcommand{\LS}[3]{L(#1|#2#3)}
 		\newcommand{\US}[3]{U(#1|#2#3)}
@@ -403,9 +421,9 @@
 		If there is, at least, a barrier $B''\in\B$ that intersects the segment $\overline{PQ}$, then $\deltacheck{P}{Q}{P^1_{B''}}{P^2_{B''}}$ is zero and the second inequality enforces $\varepsilon$ to be zero because the right hand side is fractional and the first inequality is non-positive. Nonetheless, if no barrier intersects the segment $\segment{P}{Q}$, then $\varepsilon$ is equals to one, because the left hand side of the first inequality is one and the right hand side of the second inequality too. 
 		
 		Based on the above description, we can identify the set of actual edges of graph $G$ by means of the $\varepsilon$ variables as follows:
-		$$ E_X = \{(P, Q):P,Q\in V_X\wedge\varepsilonvar{P}{Q}=1, P\neq Q\}, \quad X\in \{SPP,TSP,TSPV\}.$$
+		$$ E_X = \{(P, Q):P,Q\in V_X\wedge\varepsilonvar{P}{Q}=1, P\neq Q\}, \quad X\in \{SPP,TSPH,TSP\}.$$
 		
-		This representation of $E_X$ with $X\in \{SPP,TSP,TSPV\}$ will be exploited in the formulations that are described in the following subsections. 
+		This representation of $E_X$ with $X\in \{SPP,TSPH,TSP\}$ will be exploited in the formulations that are described in the following subsections. 
 		
 		
 		It is interesting to note that $\EB$ is a fixed set whose edges can be computed by using the Remark \ref{rem:determinants}. Then, $\varepsilon$ variables can be prefixed in advance. However, edges in $E_X\setminus \EB$ depend on the points selected in the neighbourhoods as shown in Figure \ref{fig:graph}.  The two subfigures show how the graph $\GSPP$ is generated. The blue dashed line segments represent the edges of $\ES$, the green ones, the edges of $\ET$ and the red dashed lines, the edges of $\EB$. A special case that can be highlighted  occurs when the neighbourhoods, $N_S$ and $N_T$, are points. In that case, the induced graph is completely fixed and it is only necessary to find which edges are included by keeping in mind that the graph must be planar, i.e., without crossings. This idea is later exploited in Subsection \ref{section:reformulation}.
@@ -550,17 +568,17 @@
 		\end{proof}		
 		
 		
-		\subsection{A formulation for the \TSPN}
+		\subsection{A formulation for the \TSPHN}
 		
 		
-		The rationale of the formulation for the \TSPN \ is to consider the variant called Steiner TSP (STSP) (see \citet{letchford_compact_2013}), where some nodes in $\VB$ do not have to be visited, but if necessary they can be visited more than once. 
+		The rationale of the formulation for the \TSPHN \ is to consider the variant called Steiner TSP (STSP) (see \citet{letchford_compact_2013}), where some nodes in $\VB$ do not have to be visited, but if necessary they can be visited more than once. 
 		
-		It is well-known that it is possible to convert any instance of the STSP into an instance of the standard TSP, by computing the shortest paths between every pair of required nodes, when these nodes are fixed. However, in our problem, since the points in the neighbourhoods are not fixed, this simplification cannot be applied to obtain an optimal solution for the \TSPN, although it may produce an approximation to generate lower bounds for the \TSPN.
+		It is well-known that it is possible to convert any instance of the STSP into an instance of the standard TSP, by computing the shortest paths between every pair of required nodes, when these nodes are fixed. However, in our problem, since the points in the neighbourhoods are not fixed, this simplification cannot be applied to obtain an optimal solution for the \TSPHN, although it may produce an approximation to generate lower bounds for the \TSPHN.
 		
 		
 		\newcommand{\gvar}[2]{g(#1#2)}
 		
-		Our approach relies on adjusting a single-commodity flow formulation to ensure connectivity. We can assume wlog that the neighbourhood $N_1$ is required and the drone departs from that depot (assuming to be $N_1$) with $|\mathcal N|-1$ units of commodity. The idea is that the model must deliver one unit of commodity to each of the required neighbourhoods. Then, for each edge $(P, Q)\in \ETSP$, we define the following variables:
+		Our approach relies on adjusting a single-commodity flow formulation to ensure connectivity. We can assume wlog that the neighbourhood $N_1$ is required and the drone departs from that depot (assuming to be $N_1$) with $|\mathcal N|-1$ units of commodity. The idea is that the model must deliver one unit of commodity to each of the required neighbourhoods. Then, for each edge $(P, Q)\in \ETSPH$, we define the following variables:
 		
 		
 		\begin{itemize}
@@ -568,18 +586,18 @@
 			\item $\gvar{P}{Q}$, non-negative continuous variable that represents the amount of commodity passing through the edge $(P, Q)$.
 		\end{itemize}
 		
-		Hence, we can adjust the single-commodity flow formulation to the induced graph $\GTSP$ as follows:
+		Hence, we can adjust the single-commodity flow formulation to the induced graph $\GTSPH$ as follows:
 		
 		\begin{mini*}
-			{}{\sum_{(P,Q)\in \ETSP}\dvar{P}{Q}\yvar{P}{Q}}
-			{}{}\label{form:H-TSPN}\tag{H-TSPN}
+			{}{\sum_{(P,Q)\in \ETSPH}\dvar{P}{Q}\yvar{P}{Q}}
+			{}{}\label{form:H-TSPHN}\tag{H-TSPHN}
 			\addConstraint{\sum_{\{Q:(P_N, Q)\in \EN\}}\yvar{P_N}{Q}}{\geq 1,}{\quad\forall P_N\in \VN}
-			\addConstraint{\sum_{\{Q:(P, Q)\in \ETSP\}}\yvar{P}{Q}}{= \sum_{\{Q:(Q, P)\in \ETSP\}}\yvar{Q}{P},}{\quad\forall P\in \VTSP}
+			\addConstraint{\sum_{\{Q:(P, Q)\in \ETSPH\}}\yvar{P}{Q}}{= \sum_{\{Q:(Q, P)\in \ETSPH\}}\yvar{Q}{P},}{\quad\forall P\in \VTSPH}
 			\addConstraint{\sum_{\{Q:(Q, P_N)\in \EN\}}\gvar{Q}{P_N}-\sum_{\{Q:(P_N, Q)\in \EN\}}\gvar{P_N}{Q}}{= 1,}{\quad\forall P_N\in \VN\setminus\{P_{N_1}\}}
-			\addConstraint{\sum_{\{Q:(Q, P_B^i)\in \ETSP\}}\gvar{Q}{P_B^i}-\sum_{\{Q:(P_B^i, Q)\in \ETSP\}}\gvar{P_B^i}{Q}}{= 0,}{\quad\forall P_B^i\in \VB}
-			\addConstraint{\gvar{P}{Q}}{\leq (|\mathcal N|-1)\yvar{P}{Q},}{\quad\forall (P,Q)\in \ETSP}
-			\addConstraint{\eqref{eq:alphaC},\eqref{eq:betaC},\eqref{eq:gammaC},\eqref{eq:deltaC}}{\quad\forall P, Q\in \VTSP,\quad\forall P_B^1, P_B^2\in \VB}
-			\addConstraint{\eqref{eq:varepsilonC}, \eqref{eq:yC}, \eqref{eq:dC}}{\quad\forall P, Q\in \VTSP}
+			\addConstraint{\sum_{\{Q:(Q, P_B^i)\in \ETSPH\}}\gvar{Q}{P_B^i}-\sum_{\{Q:(P_B^i, Q)\in \ETSPH\}}\gvar{P_B^i}{Q}}{= 0,}{\quad\forall P_B^i\in \VB}
+			\addConstraint{\gvar{P}{Q}}{\leq (|\mathcal N|-1)\yvar{P}{Q},}{\quad\forall (P,Q)\in \ETSPH}
+			\addConstraint{\eqref{eq:alphaC},\eqref{eq:betaC},\eqref{eq:gammaC},\eqref{eq:deltaC}}{\quad\forall P, Q\in \VTSPH,\quad\forall P_B^1, P_B^2\in \VB}
+			\addConstraint{\eqref{eq:varepsilonC}, \eqref{eq:yC}, \eqref{eq:dC}}{\quad\forall P, Q\in \VTSPH}
 			\addConstraint{\eqref{eq:nC}}{\quad\forall P_N\in \VN.}
 		\end{mini*}
 		
@@ -588,14 +606,13 @@
 		\input{figures/Example_ H-TSP-S_ Solution}
 		
 		\begin{prop}
-			The \TSPN \ is NP-complete.
+			The \TSPHN \ is NP-complete.
 		\end{prop}
 		
-		Note that, once a point is fixed in each neighbourhood, the problem that results in the induced graph $\GTSP$ is the Steiner TSP (STSP), that is NP-complete.
+		Note that, once a point is fixed in each neighbourhood, the problem that results in the induced graph $\GTSPH$ is the Steiner TSP (STSP), that is NP-complete.
 		
-		
-		\subsubsection{Reformulating the \TSPN}
-		The idea of computing a dominating set that represents each of the neighbourhoods in the \SPPN \ can be adopted to reformulate the \TSPN \ in the same way. The dominating sets are stated in the next proposition.
+		\subsubsection{Reformulating the \TSPHN}
+		The idea of computing a dominating set that represents each of the neighbourhoods in the \SPPN \ can be adopted to reformulate the \TSPHN \ in the same way. The dominating sets are stated in the next proposition.
 		
 		\begin{prop}
 			Given a neighbourhood $N\in\mathcal N$, there exists a finite dominating set, $N^*$ of possible candidates to be in $N$. Moreover,
@@ -606,7 +623,7 @@
 		\begin{proof}
 			The way a drone visits a neighbourhood $N$ is
 			$$P_{B}^i\longrightarrow P_N\longrightarrow P_{B'}^j,$$
-			for some points $P_B^i,\, P_{B'}^j\in \VB$, since, by \ref{A4}, there does not exist a rectilinear path that joins any pair of neighbourhoods. Hence, the points chosen in an optimal solution for \TSPN \ must be those that produce the minimum distances to the points of the previously and next visited barriers in the optimal solution. Therefore, $N^*$ must be composed, at most, by the points in the set
+			for some points $P_B^i,\, P_{B'}^j\in \VB$, since, by \ref{A4}, there does not exist a rectilinear path that joins any pair of neighbourhoods. Hence, the points chosen in an optimal solution for \TSPHN \ must be those that produce the minimum distances to the points of the previously and next visited barriers in the optimal solution. Therefore, $N^*$ must be composed, at most, by the points in the set
 			$$
 			\{P_N(P_{B}^i, P_{B'}^j)=\argmin_{P_N\in N} \|P_B^i - P_N\| + \|P_N - P_{B'}^j\| :(P_B^i, P_N), (P_N, P_{B'}^j)\in \EN\},
 			$$
@@ -626,7 +643,7 @@
 			\item $E_N^*=E_N^{\text{int}}\cup E_N^{\text{ext}}$. Set of edges associated with the neighbourhood $N$.
 			\item $E_\mathcal N^*= \{E_N^*:N\in\mathcal N\}.$ Union of the edges of every neighbourhoods.
 		\end{itemize}
-		We define the graph $\GTSPS=(\VTSPS, \ETSPS)$, where $\VTSPS=\VTSP\cup V^*_\mathcal N$ and $\ETSPS=E^*_\mathcal N\cup\EB$.
+		We define the graph $\GTSPHS=(\VTSPHS, \ETSPHS)$, where $\VTSPHS=\VTSPH\cup V^*_\mathcal N$ and $\ETSPHS=E^*_\mathcal N\cup\EB$.
 		
 		%	Moreover, the points $P_N$ chosen in the solution can be represented by the points in $N^*$ as shown below:
 		%	
@@ -638,30 +655,43 @@
 		%	
 		%	where $\mu_N$ are indicator variables that select one of the points in $N^*$ in the solution. Last equality ensures that the path $P_B^i\longrightarrow P_N \longrightarrow P_{B'}^j$ is followed by the drone if and only if $P_N(P_B^i P_{B'}^j)$ is selected.
 		
-		Again the sets $N^*$ for each $N \in \mathcal N$  can be computed in advance so that the whole graph $\GTSPS$ will be fixed. The new formulation for the \TSPN \ can be represented as the next simplified program:
+		Again the sets $N^*$ for each $N \in \mathcal N$  can be computed in advance so that the whole graph $\GTSPHS$ will be fixed. The new formulation for the \TSPHN \ can be represented as the next simplified program:
 		
 		\begin{mini*}
-			{}{\sum_{(P,Q)\in \ETSPS}\dvar{P}{Q}\yvar{P}{Q}}
-			{}{}\label{eq:Example2b}\tag{H-TSPN$^*$}
+			{}{\sum_{(P,Q)\in \ETSPHS}\dvar{P}{Q}\yvar{P}{Q}}
+			{}{}\label{eq:Example2b}\tag{H-TSPHN$^*$}
 			\addConstraint{\sum_{\{Q:(P_N, Q)\in E^{\text{int}}_N\}}\yvar{P_N}{Q}}{\geq 1,}{\quad\forall P_N\in \VN}
-			\addConstraint{\sum_{\{Q:(P, Q)\in \ETSPS\}}\yvar{P}{Q}}{= \sum_{\{Q:(Q, P)\in \ETSPS\}}\yvar{Q}{P},}{\quad\forall P\in \VTSPS}
+			\addConstraint{\sum_{\{Q:(P, Q)\in \ETSPHS\}}\yvar{P}{Q}}{= \sum_{\{Q:(Q, P)\in \ETSPHS\}}\yvar{Q}{P},}{\quad\forall P\in \VTSPHS}
 			\addConstraint{\sum_{\{Q:(Q, P_N)\in E^{\text{int}}_N\}}\gvar{Q}{P_N}-\sum_{\{Q:(P_N, Q)\in E^{\text{int}}_N\}}\gvar{P_N}{Q}}{= 1,}{\quad\forall P_N\in \VN\setminus\{P_{N_1}\}}
-			\addConstraint{\sum_{\{Q:(Q, P)\in \ETSPS\}}\gvar{Q}{P}-\sum_{\{Q:(P, Q)\in \ETSPS\}}\gvar{P}{Q}}{= 0,}{\quad\forall P\in \VB\cup\VNS}
-			\addConstraint{\gvar{P}{Q}}{\leq (|\mathcal N|-1)\yvar{P}{Q},}{\quad\forall (P,Q)\in \ETSPS}
-			\addConstraint{\eqref{eq:dC}}{\quad\forall P, Q\in \VTSPS}
+			\addConstraint{\sum_{\{Q:(Q, P)\in \ETSPHS\}}\gvar{Q}{P}-\sum_{\{Q:(P, Q)\in \ETSPHS\}}\gvar{P}{Q}}{= 0,}{\quad\forall P\in \VB\cup\VNS}
+			\addConstraint{\gvar{P}{Q}}{\leq (|\mathcal N|-1)\yvar{P}{Q},}{\quad\forall (P,Q)\in \ETSPHS}
+			\addConstraint{\eqref{eq:dC}}{\quad\forall P, Q\in \VTSPHS}
 			\addConstraint{\eqref{eq:nC}}{\quad\forall P_N\in \VN.}
 		\end{mini*}
 		
-		The reader may note that the maximum number of dominating points associated with an instance $(\mathcal N, \mathcal B)$ of the \TSPN \ is $\frac{1}{2}|\mathcal N||\mathcal B|(|\mathcal B|-1)$. Therefore, to get all the sets $N^*$ for each $N \in \mathcal  N$, it is required to solve, at most,  $\frac{1}{2}|\mathcal N||\mathcal B|(|\mathcal B|-1)$ convex programs which may be computationally expensive but polynomial.
+		The reader may note that the maximum number of dominating points associated with an instance $(\mathcal N, \mathcal B)$ of the \TSPHN \ is $\frac{1}{2}|\mathcal N||\mathcal B|(|\mathcal B|-1)$. Therefore, to get all the sets $N^*$ for each $N \in \mathcal  N$, it is required to solve, at most,  $\frac{1}{2}|\mathcal N||\mathcal B|(|\mathcal B|-1)$ convex programs which may be computationally expensive but polynomial.
 		
 		
 		
-		\subsection{Relaxing the assumptions of the problem: The \TSPVN}
+		\subsection{Relaxing the assumptions of the problem: The \TSPN}
 		
-		In this subsection, we analyze the differences between the \TSPN \ and the \TSPVN, where going from one neighbourhood to another one is possible without crossing any barrier. The main difference lies in the description of the edges of the graph induced by the neighbourhoods and the endpoints of the barriers.
+		In this subsection, we analyze the differences between the \TSPHN \ and the \TSPN, where going from one neighbourhood to another one is possible without crossing any barrier. The main difference lies in the description of the edges of the graph induced by the neighbourhoods and the endpoints of the barriers.
 		
-		By taking the same approach as before, the sets that describe the graph in the new case are $\VN$, $\VB$, $V_{\rm TSPV}$ and $E_{\rm TSPV}$, as described in Subsection \ref{ssec:TSPN}.
-		
+		By taking the same approach as before, the sets that describe the graph in the new case are $\VN$, $\VB$, $V_{\rm{TSP}}$ and $E_{\rm{TSP}}$, as described in Subsection \ref{ssec:TSPHN}.
+				
+		\begin{mini*}
+			{}{\sum_{(P,Q)\in \ETSP}\dvar{P}{Q}\yvar{P}{Q}}
+			{}{}\label{form:H-TSPN}\tag{H-TSPN}
+			\addConstraint{\sum_{\{Q:(P_N, Q)\in \EN\}}\yvar{P_N}{Q}}{\geq 1,}{\quad\forall P_N\in \VN}
+			\addConstraint{\sum_{\{Q:(P, Q)\in \ETSP\}}\yvar{P}{Q}}{= \sum_{\{Q:(Q, P)\in \ETSP\}}\yvar{Q}{P},}{\quad\forall P\in \VTSP}
+			\addConstraint{\sum_{\{Q:(Q, P_N)\in \EN\}}\gvar{Q}{P_N}-\sum_{\{Q:(P_N, Q)\in \EN\}}\gvar{P_N}{Q}}{= 1,}{\quad\forall P_N\in \VN\setminus\{P_{N_1}\}}
+			\addConstraint{\sum_{\{Q:(Q, P_B^i)\in \ETSP\}}\gvar{Q}{P_B^i}-\sum_{\{Q:(P_B^i, Q)\in \ETSP\}}\gvar{P_B^i}{Q}}{= 0,}{\quad\forall P_B^i\in \VB}
+			\addConstraint{\gvar{P}{Q}}{\leq (|\mathcal N|-1)\yvar{P}{Q},}{\quad\forall (P,Q)\in \ETSP}
+			\addConstraint{\eqref{eq:alphaC},\eqref{eq:betaC},\eqref{eq:gammaC},\eqref{eq:deltaC}}{\quad\forall P, Q\in \VTSP,\quad\forall P_B^1, P_B^2\in \VB}
+			\addConstraint{\eqref{eq:varepsilonC}, \eqref{eq:yC}, \eqref{eq:dC}}{\quad\forall P, Q\in \VTSP}
+			\addConstraint{\eqref{eq:nC}}{\quad\forall P_N\in \VN.}
+		\end{mini*}
+
 %		\begin{itemize}
 %			\item $\VN=\{P_N:N\in\mathcal N\}$: set of points in the neighbourhoods $\mathcal N$ that must be visited.
 %			\item $\VB=\{P^1_B, P^2_B:B=\overline{P^1_B P^2_B}\in \mathcal B\}$: set of endpoints of the barriers in the problem.
@@ -669,8 +699,10 @@
 %			\item $E=\{(P, P'):P, P' \in V \text{ and } \overline{PP'}\cap B''=\emptyset,\forall B''\in\B\}$: set of edges formed by the line segments that join every pair of points in $V$ and that do not cross any barrier.
 %		\end{itemize} 
 		
-		The difference between the set of edges in the \TSPVN \ with respect to the graph in \TSPN \ is that, in the former case, the edges that join each pair of neighbourhoods must be considered. This fact leads to include product of continuous variables in the $\alpha$ constraints of the model that represent the determinants that determine if the segment joining the two variable points in the neighbourhoods cross any barrier or not. These products make the problem to become non-convex.
-		
+		The formulation described above is analogous to those detailed in \eqref{form:H-TSPHN}.
+		The difference between the set of edges in the \TSPN \ with respect to the graph in \TSPHN \ is that, in the former case, the edges that join each pair of neighbourhoods must be considered. This fact leads to include product of continuous variables in the $\alpha$ constraints of the model that represent the determinants that determine if the segment joining the two variable points in the neighbourhoods cross any barrier or not. These products make the problem to become \CV{non-convex quadratically constrained program.}
+
+
 		
 		%\textcolor{red}{¿Solucion del problema del TSP propuesto en el dibujo? }
 		
@@ -935,7 +967,7 @@
 	\input{figures/Fixing_Variables}
 	
 	\section{Computational experiments}\label{section:experiments}
-	This section is devoted to studying the performance of the \eqref{form:H-TSPN} formulation proposed in Section \ref{section:formulations}. In the first subsection, the procedure for generating the considered random instances is described. The second subsection details the experiments that have been conducted. The third subsection reports the results obtained in these experiments.
+	This section is devoted to studying the performance of \eqref{form:H-TSPHN} and \eqref{form:H-TSPN} formulations proposed in Section \ref{section:formulations}. In the first subsection, the procedure for generating the considered random instances is described. The second subsection details the experiments that have been conducted. The third subsection reports the results obtained in these experiments.
 	
 	\subsection{Data generation}
 	%To generate the instances of our experiments, it is necessary that these instances verify the assumptions \ref{A1}-\ref{A4} stated in the Section \ref{section:description}. 
@@ -944,7 +976,7 @@
 	
 	%		\JP{	
 		%		\begin{prop}
-			%			Under the hypothesis that balls are \CV{not} visible among them, the maximum number of balls that can be considered in \TSPN \ is $O(n^2)$.
+			%			Under the hypothesis that balls are \CV{not} visible among them, the maximum number of balls that can be considered in \TSPHN \ is $O(n^2)$.
 			%		\end{prop}
 		%		\begin{proof}
 			%			The proof is based on the properties of the visibility graph $VG(\cal B)$ of the configuration of barriers in $\cal B$:  It is clear that the maximum number of balls coincides with the number of faces, $f_{VG(\cal B)}$, of $VG(\cal B)$.  Recall that the number of vertices in $\cal B$ is $n$. Next, by the Euler formula, the number of faces $f_{VG(\cal B)}$ is $2+E_{VG(\cal B)}-n$. Since $E_{VG(\cal B)}=O(n^2)$, it follows that $f_{VG(\cal B)}=O(n^2)$.
@@ -953,7 +985,7 @@
 	
 	
 	\begin{prop}
-		Under assumptions \ref{A1}-\ref{A4}, the maximum number of balls that can be considered in \TSPN \ is $O(n^2)$.
+		Under assumptions \ref{A1}-\ref{A4}, the maximum number of balls that can be considered in \TSPHN \ is $O(n^2)$.
 	\end{prop}
 	\begin{proof}
 		The proof is based on the properties of the visibility graph $VG(\cal B)$ of the configuration of barriers in $\cal B$ \citep{mitchell_shortest_2017}:  It is clear that the maximum number of balls coincides with the number of faces, $f_{VG(\cal B)}$, of $VG(\cal B)$.  Recall that the number of vertices in $\cal B$ is $n$. Next, by the Euler formula the number of faces $f_{VG(\cal B)}$ is $2+E_{VG(\cal B)}-n$. Since $E_{VG(\cal B)}=O(n^2)$, it follows that $f_{VG(\cal B)}=O(n^2)$.
@@ -991,8 +1023,8 @@
 				}
 			}
 			\For{$P\in points$}{
-				Set $r_{\text{min}}=\min_{\{P_B\in B: B \in\mathcal B\}} d(P, P_B).$\\
-				Generate a random $radii$ uniformly distributed in the interval $\left[\frac 1 2 r_{\text{min}}, r_{\text{min}}\right]$.\\
+				Set $r_{\text{max}}=\min_{\{P_B\in B: B \in\mathcal B\}} d(P, P_B).$\\
+				Generate a random $radii$ uniformly distributed in the interval $\left[\frac 1 2 r_{\text{max}}, r_{\text{max}}\right]$.\\
 				Set the ball $N$ whose centre is $P$ and radii is $radii$. \\
 				Include $N$ in $\mathcal N$.
 			}
@@ -1003,17 +1035,17 @@
 	
 	% \textcolor{red}{Quizás evitar el uso $n$ sea adecuado para evitar confusiones}
 	\subsection{Configuration of the experiments}
-	Since no benchmark instances are available for this problem in the literature, we have generated ten instances with a number of neighbourhoods $|\mathcal N|\in\{5, 10, 20, 30, 50, 80, 100\}$ of two typologies: balls and line segments. We have distinguished the cases with and without preprocessing the variables of the formulations, as explained in Subsection \ref{subsection:preprocessing}, and we have reported the average results. 
+	Since no benchmark instances are available for this problem in the literature, we have generated ten instances with a number of neighbourhoods $|\mathcal N|\in\{5, 10, 20, 30, 50, 80, 100\}$ of two typologies: balls and line segments. We have distinguished the cases with and without \sout{preprocessing the variables of} \CV{strengthening} the formulations, as explained in Section \ref{section:strengthening}, and we have reported the average results. 
 	
 	The formulations were coded in Python 3.9.2 (\citet{g_van_rossum_guido_python_1995}) and solved in Gurobi 9.1.2 (\citet{gurobi_optimization_llc_gurobi_2022}) on an AMD® Epyc 7402p 8-core processor. A time limit of 1 hour was set in the experiments.
 	
 	\subsection{Results of the experiments}
-	We report the results of our experiments in Table \ref{table:results}. The layout is organised in 5 blocks of columns. The first one describes the number of neighbourhoods $|\mathcal{N}|$, the second (neighbourhood) describes the typology of neighbourhood used in the experiment (Balls or Segments), the third one (preprocessing)  informs whether the preprocessing is being applied or not (True or False). The next three blocks include information  on the number of barriers ($|\mathcal{B}|$), the  gap at termination (Gap) defined as $Gap=(upper\, bound - lower\, bound)/lower\, bound$, and the computing time (Runtime). The block $|\mathcal{B}|$ indicates the minimum and maximum number of barriers considered in each of the instances for each fixed number $|\mathcal{N}|$ of neighbours. The block Gap contains three columns reporting the average (mean), minimum (min), and maximum (max) gaps of the ten instances considered for each combination of parameters. Analogously, the block Runtime also includes three columns reporting the average (mean), minimum (min) and maximum (max) computing time of the ten instances considered for each combination of parameters.
-	By rows, Table \ref{table:results} reports results for instances with a number of neigbourhoods $|\mathcal{N}|$ in the set $\{5,10,20,30,50,80,100\}$. For each value of $|\mathcal{N}|$  we report results for two typologies of neigbourhoods, namely Balls and Segments, without preprocessing (False) and with preprocessing (True).
+	We report the results of our experiments in Table \ref{table:results}. The layout is organised in 5 blocks of columns. The first one describes the number of neighbourhoods $|\mathcal{N}|$, the second (neighbourhood) describes the typology of neighbourhood used in the experiment (Balls or Segments), the third one (strengthening)  informs whether the strengthening is being applied or not (True or False). The next three blocks include information  on the number of barriers ($|\mathcal{B}|$), the  gap at termination (Gap) defined as $Gap=(upper\, bound - lower\, bound)/lower\, bound$, and the computing time (Runtime). The block $|\mathcal{B}|$ indicates the minimum and maximum number of barriers considered in each of the instances for each fixed number $|\mathcal{N}|$ of neighbours. The block Gap contains three columns reporting the average (mean), minimum (min), and maximum (max) gaps of the ten instances considered for each combination of parameters. Analogously, the block Runtime also includes three columns reporting the average (mean), minimum (min) and maximum (max) computing time of the ten instances considered for each combination of parameters.
+	By rows, Table \ref{table:results} reports results for instances with a number of neigbourhoods $|\mathcal{N}|$ in the set $\{5,10,20,30,50,80,100\}$. For each value of $|\mathcal{N}|$  we report results for two typologies of neigbourhoods, namely Balls and Segments, without strengthening (False) and with strengthening (True).
 	
-	Analysing the results in Table \ref{table:results}, first of all we observe that solving the problem considering balls as neighbourhoods is harder than considering segments. Next, we also observe that our formulation solves to optimality all instances for segments up to $|\mathcal{N}|=30$ with preprocessing. In addition, both typologies of instances, up to $|\mathcal{N}|=50$, are almost solved by obtaining a small average gap. %and also almost all for balls leaving always a gap less than or equal to  1\%. 
-	We also observe that the use of preprocessing helps in solving the instances since in those cases where they are not solved to optimality the gap and the runtime are reduced. The situation for $|\mathcal{N}|\in \{80,100\}$ is slightly different. For $|\mathcal{N}|=80$ and balls as neighbourhoods, the preprocessing time takes more than an hour so that no results can be reported whereas without preprocessing the formulations are always able to find solutions with average gaps of ($\le 0.6$) within one hour of computing time.  % For segments we see that the use of preprocessing helps and the gaps are smaller within the time limit. 
-	Finally, for the case of $|\mathcal{N}|=100$ balls as neighbourhoods, none of the configurations with or without preprocessing is capable to find a feasible solution in 3600 seconds. The behaviour is different for segments. In this case, both configurations provide feasible solutions. In the last case, the use of preprocessing is rather heavy and consumes most of the 3600 seconds of computing time. This can be observed in the final gaps. The case without preprocessing reports better gaps, as leaving more time to the solver to find better solutions, and the average gap is $0.53$ rather than $0.81$ for the case with preprocessing.
+	Analysing the results in Table \ref{table:results}, first of all we observe that solving the problem considering balls as neighbourhoods is harder than considering segments. Next, we also observe that our formulation solves to optimality all instances for segments up to $|\mathcal{N}|=30$ with strengthening. In addition, both typologies of instances, up to $|\mathcal{N}|=50$, are almost solved by obtaining a small average gap. %and also almost all for balls leaving always a gap less than or equal to  1\%. 
+	We also observe that the use of strengthening helps in solving the instances since in those cases where they are not solved to optimality the gap and the runtime are reduced. The situation for $|\mathcal{N}|\in \{80,100\}$ is slightly different. For $|\mathcal{N}|=80$ and balls as neighbourhoods, the strengthening time takes more than an hour so that no results can be reported whereas without strengthening the formulations are always able to find solutions with average gaps of ($\le 0.6$) within one hour of computing time.  % For segments we see that the use of strengthening helps and the gaps are smaller within the time limit. 
+	Finally, for the case of $|\mathcal{N}|=100$ balls as neighbourhoods, none of the configurations with or without strengthening is capable to find a feasible solution in 3600 seconds. The behaviour is different for segments. In this case, both configurations provide feasible solutions. In the last case, the use of strengthening is rather heavy and consumes most of the 3600 seconds of computing time. This can be observed in the final gaps. The case without strengthening reports better gaps, as leaving more time to the solver to find better solutions, and the average gap is $0.53$ rather than $0.81$ for the case with strengthening.
 	
 	%% Table generated by Excel2LaTeX from sheet 'Hoja1'
 	%\begin{table}[htbp]
@@ -1022,7 +1054,7 @@
 	%	\resizebox{\textwidth}{!}{
 		%	\begin{tabular}{|c|c|c||cc|ccc|ccc|}
 			%		\hline
-			%		$\bm{|\mathcal N|}$ & \textbf{Typology} & \textbf{preprocessing} & \multicolumn{2}{c|}{$\bm{|\mathcal B|}$} & \multicolumn{3}{c|}{\textbf{Gap}} & \multicolumn{3}{c|}{\textbf{Runtime}} \bigstrut[t]\\
+			%		$\bm{|\mathcal N|}$ & \textbf{Typology} & \textbf{strengthening} & \multicolumn{2}{c|}{$\bm{|\mathcal B|}$} & \multicolumn{3}{c|}{\textbf{Gap}} & \multicolumn{3}{c|}{\textbf{Runtime}} \bigstrut[t]\\
 			%		&       &       & \textbf{min} & \textbf{max} & \textbf{mean} & \textbf{min} & \textbf{max} & \textbf{mean} & \textbf{min} & \textbf{max} \bigstrut[b]\\
 			%		\hline
 			%		\hline
@@ -1068,11 +1100,11 @@
 	% Table generated by Excel2LaTeX from sheet 'Hoja1'
 	\begin{table}[htbp]
 		\centering
-		\caption{Table of computational results obtained with the formulation \eqref{form:H-TSPN}}
+		\caption{Table of computational results obtained with the formulation \eqref{form:H-TSPHN}}
 		\resizebox{\textwidth}{!}{
 			\begin{tabular}{|c|c|c||cc|ccc|ccc|}
 				\hline
-				$\bm{|\mathcal N|}$ & \textbf{neighbourhood} & \textbf{preprocessing} & \multicolumn{2}{c|}{$\bm{|\mathcal B|}$} & \multicolumn{3}{c|}{\textbf{Gap}} & \multicolumn{3}{c|}{\textbf{Runtime}} \bigstrut[t]\\
+				$\bm{|\mathcal N|}$ & \textbf{neighbourhood} & \textbf{strengthening} & \multicolumn{2}{c|}{$\bm{|\mathcal B|}$} & \multicolumn{3}{c|}{\textbf{Gap}} & \multicolumn{3}{c|}{\textbf{Runtime}} \bigstrut[t]\\
 				&       &       & \textbf{min} & \textbf{max} & \textbf{mean} & \textbf{min} & \textbf{max} & \textbf{mean} & \textbf{min} & \textbf{max} \bigstrut[b]\\
 				\hline
 				\hline
@@ -1121,7 +1153,7 @@
 		\label{table:results}%
 	\end{table}%
 	
-	The same behaviour is also observed in Figure 9. The left subfigure reports the boxplot diagram for the experiments with segments as neighbourhoods, whereas the right one reports the boxplot diagram for balls as neighbourhoods. We see that preprocessing always helps since the corresponding boxes are below those without preprocessing, whenever the problems are solved well. Moreover,  we also observe in those cases where the model solves the instances  $|\mathcal{N}|\le 50$, that the problem with balls is harder than with segments since the boxes in the left subfigure are below the ones in the right subfigure.
+	The same behaviour is also observed in Figure 9. The left subfigure reports the boxplot diagram for the experiments with segments as neighbourhoods, whereas the right one reports the boxplot diagram for balls as neighbourhoods. We see that strengthening always helps since the corresponding boxes are below those without strengthening, whenever the problems are solved well. Moreover,  we also observe in those cases where the model solves the instances  $|\mathcal{N}|\le 50$, that the problem with balls is harder than with segments since the boxes in the left subfigure are below the ones in the right subfigure.
 	
 	
 	
@@ -1132,7 +1164,7 @@
 	
 	\section{Concluding Remarks}
 	
-	This paper has dealt with two problems, the \SPPN \ and the \TSPN. In both cases, we have assumed that barriers do not allow direct movements between neighbourhoods \ref{A4}. The more general case that does not assume \ref{A4} gives rise to non-convex mixed-integer problems. It is still an open problem whether there is some kind of finite dominating set with polynomial cardinality for the version of the \TSPVN \ which could help in a simplified formulation of the problem. These questions are very interesting but beyond the scope of this paper. Needless to say, that we plan to continue its analysis in a follow-up paper.
+	This paper has dealt with two problems, the \SPPN \ and the \TSPN. In both cases, we have assumed that barriers do not allow direct movements between neighbourhoods \ref{A4}. The more general case that does not assume \ref{A4} gives rise to non-convex mixed-integer problems. It is still an open problem whether there is some kind of finite dominating set with polynomial cardinality for the version of the \TSPN \ which could help in a simplified formulation of the problem. These questions are very interesting but beyond the scope of this paper. Needless to say, that we plan to continue its analysis in a follow-up paper.
 	
 	
 	It would also be interesting to combine in the same model different typologies of barriers such as polygonals and second-order cone representable sets. It is also interesting to consider the single or multiple facility location problem with barriers and neighbourhoods. 

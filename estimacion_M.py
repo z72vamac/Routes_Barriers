@@ -53,6 +53,7 @@ import auxiliar_functions as af
 #
 #     return BigM
 
+divisor = 1
 
 def estima_BigM_local(comp1, comp2):
         maximo = 0
@@ -131,8 +132,8 @@ def estima_M_alpha1(entorno, punto1, punto2):
 
         determinantes = [af.determinant(extreme_point + theta[i]*vector, punto1, punto2) for i in range(20)]
 
-    m = min(determinantes)/2
-    M = 2*max(determinantes)
+    m = min(determinantes)/divisor
+    M = divisor*max(determinantes)
 
     return m, M
 def estima_M_alpha2(punto1, entorno, punto2):
@@ -159,8 +160,10 @@ def estima_M_alpha2(punto1, entorno, punto2):
 
         determinantes = [af.determinant(punto1, extreme_point + theta[i]*vector, punto2) for i in range(20)]
 
-    m = min(determinantes)/2
-    M = 2*max(determinantes)
+    m = min(determinantes)/divisor
+    M = max(determinantes)*divisor
+
+    print((m, M))
 
     return m, M
 
@@ -188,8 +191,8 @@ def estima_M_alpha3(punto1, punto2, entorno):
 
         determinantes = [af.determinant(punto1, punto2, extreme_point + theta[i]*vector) for i in range(20)]
 
-    m = min(determinantes)/2
-    M = 2*max(determinantes)
+    m = min(determinantes)/divisor
+    M = divisor*max(determinantes)
 
     return m, M
 
@@ -227,8 +230,8 @@ def estima_M_alpha4(punto1, entorno1, entorno2):
 
         determinantes = [af.determinant(punto1, extreme_point1 + theta[i]*vector1, extreme_point2 + theta[j]*vector2) for i in range(20) for j in range(20)]
 
-    m = min(determinantes)/2
-    M = 2*max(determinantes)
+    m = min(determinantes)/divisor
+    M = divisor*max(determinantes)
 
     return m, M
 
@@ -294,8 +297,8 @@ def estima_M_complete(ent1, ent2):
 
         distancias = [np.linalg.norm(np.array([x1[i], y1[i]]) - np.array([x2[j], y2[j]])) for i in range(20) for j in range(20)]
 
-        L = min(distancias)/2
-        U = 2*max(distancias)
+        L = min(distancias)/divisor
+        U = divisor*max(distancias)
 
         return L, U
 
@@ -319,8 +322,8 @@ def estima_M_complete(ent1, ent2):
 
         distancias = [np.linalg.norm(np.array([x1[i], y1[i]]) - np.array([x2[j], y2[j]])) for i in range(20) for j in range(20)]
 
-        L = min(distancias)/2
-        U = 2*max(distancias)
+        L = min(distancias)/divisor
+        U = divisor*max(distancias)
 
         return L, U
 
@@ -338,8 +341,8 @@ def estima_M_complete(ent1, ent2):
 
         distancias = [np.linalg.norm(np.array([x[i], y[i]]) - np.array(ent2.V)) for i in range(20)]
 
-        L = min(distancias)/2
-        U = 2*max(distancias)
+        L = min(distancias)/divisor
+        U = divisor*max(distancias)
 
         return L, U
 
@@ -356,8 +359,8 @@ def estima_M_complete(ent1, ent2):
 
         distancias = [np.linalg.norm(np.array([x1[i], y1[i]]) - np.array(v)) for i in range(20) for v in ent2.V]
 
-        L = min(distancias)/2
-        U = 2*max(distancias)
+        L = min(distancias)/divisor
+        U = divisor*max(distancias)
 
         return L, U
 
@@ -383,8 +386,8 @@ def estima_M_complete(ent1, ent2):
 
         distancias = [np.linalg.norm(np.array([x1[i], y1[i]]) - np.array([x2[j], y2[j]])) for i in range(20) for j in range(20)]
 
-        L = min(distancias)/2
-        U = 2*max(distancias)
+        L = min(distancias)/divisor
+        U = divisor*max(distancias)
 
         return L, U
 
@@ -401,8 +404,8 @@ def estima_M_complete(ent1, ent2):
 
         distancias = [np.linalg.norm(np.array(ent2.V) - np.array([x[i], y[i]])) for i in range(20)]
 
-        L = min(distancias)/2
-        U = 2*max(distancias)
+        L = min(distancias)/divisor
+        U = divisor*max(distancias)
 
         return L, U
 
@@ -418,8 +421,8 @@ def estima_M_complete(ent1, ent2):
 
         distancias = [np.linalg.norm(np.array([x1[i], y1[i]]) - np.array(v)) for i in range(20) for v in ent2.V]
 
-        L = min(distancias)/2
-        U = 2*max(distancias)
+        L = min(distancias)/divisor
+        U = divisor*max(distancias)
 
         return L, U
 
@@ -431,15 +434,15 @@ def estima_M_complete(ent1, ent2):
         return estima_M_complete(ent2, ent1)
 
     if type(ent1) is neigh.Punto and type(ent2) is neigh.Punto:
-        L = np.linalg.norm(np.array(ent1.V) - np.array(ent2.V))/2
-        U = 2*L
+        L = np.linalg.norm(np.array(ent1.V) - np.array(ent2.V))/divisor
+        U = divisor*L
         return L, U
 
     if type(ent1) is neigh.Punto and (type(ent2) is neigh.Poligono or type(ent2) is neigh.Poligonal):
         distancias = [np.linalg.norm(np.array(ent1.V) - np.array(v)) for v in ent2.V]
 
-        L = min(distancias)/2
-        U = 2*max(distancias)
+        L = min(distancias)/divisor
+        U = divisor*max(distancias)
 
         return L, U
 
@@ -455,8 +458,8 @@ def estima_M_complete(ent1, ent2):
     if (type(ent1) is neigh.Poligono or type(ent1) is neigh.Poligonal) and (type(ent2) is neigh.Poligono or type(ent2) is neigh.Poligonal):
         distancias = [np.linalg.norm(np.array(v) - np.array(w)) for v in ent1.V for w in ent2.V]
 
-        L = min(distancias)/2
-        U = 2*max(distancias)
+        L = min(distancias)/divisor
+        U = divisor*max(distancias)
 
         return L, U
 

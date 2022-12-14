@@ -1,0 +1,2640 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.6.28) (preloaded format=pdftex 2021.9.3)  12 DEC 2022 12:06
+entering extended mode
+**"C:/Users/G731/UNIVERSIDAD DE SEVILLA/Grupo de Trabajo de Justo - General/Rou
+tes_Barriers/The Hampered Traveling Postman Problem with Segments/bibliography.
+bib"
+
+(C:/Users/G731/UNIVERSIDAD DE SEVILLA/Grupo de Trabajo de Justo - General/Route
+s_Barriers/The Hampered Traveling Postman Problem with Segments/bibliography.bi
+b
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.2 @misc{g_
+            van_rossum_guido_python_1995,
+? r
+OK, entering \nonstopmode...
+! Extra }, or forgotten $.
+l.14 }
+      
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.15 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (59.58817pt too wide) in paragraph at lines 2--15
+[]\tenrm @miscg$[]\teni an[]ossum[]uido[]ython[]\tenrm 995\teni ; title \tenrm 
+= []\teni ; url \tenrm = []\teni ; abstract \tenrm =|
+
+\hbox(7.5+2.86108)x469.75499
+.\hbox(0.0+0.0)x20.0
+.\tenrm @
+.\tenrm m
+.\tenrm i
+.\tenrm s
+.etc.
+
+
+Overfull \hbox (4295.67952pt too wide) in paragraph at lines 2--15
+[]\teni ; language \tenrm =|
+
+\hbox(7.51782+2.5)x469.75499
+.\hbox(7.51782+2.5)x4710.04211
+..\teni P
+..\kern1.3889
+..\teni y
+..\kern0.35878
+..\teni t
+..etc.
+.\teni ;
+.\glue(\thinmuskip) 1.66663
+.\teni l
+.\kern0.19678
+.etc.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.16 @article{letchford_
+                        compact_2013,
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Undefined control sequence.
+l.32 	file = {ScienceDirect Snapshot:C\:
+                                        \\Users\\G731\\Zotero\\storage\\3NSE...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Argument of \\ has an extra }.
+<inserted text> 
+                \par 
+<to be read again> 
+                   }
+l.32 ...teiner Traveling Sale.pdf:application/pdf}
+                                                  ,
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+Users\\G731\\Zotero\\storage\\3NSENCQF\\S037722171300091X.html:text/h\ETC.
+! Paragraph ended before \\ was complete.
+<to be read again> 
+                   \par 
+<to be read again> 
+                   }
+l.32 ...teiner Traveling Sale.pdf:application/pdf}
+                                                  ,
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+<to be read again> 
+                   }
+l.32 ...teiner Traveling Sale.pdf:application/pdf}
+                                                  ,
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+<to be read again> 
+                   \par 
+<to be read again> 
+                   }
+l.32 ...teiner Traveling Sale.pdf:application/pdf}
+                                                  ,
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (138.39926pt too wide) in paragraph at lines 16--32
+[]\tenrm @articleletchford$[]\teni ompact[]\tenrm 013\teni ; title \tenrm = []\
+teni ; volume \tenrm =|
+
+\hbox(6.94444+1.94444)x469.75499
+.\hbox(0.0+0.0)x20.0
+.\tenrm @
+.\tenrm a
+.\tenrm r
+.\tenrm t
+.etc.
+
+
+Overfull \hbox (23.10278pt too wide) in paragraph at lines 16--32
+[]\teni ; issn \tenrm = []\teni ; url \tenrm = []\teni ; doi \tenrm =|
+
+\hbox(7.5+2.5)x469.75499
+.\hbox(6.44444+0.0)x15.00005
+..\tenrm 2
+..\tenrm 2
+..\tenrm 8
+.\teni ;
+.\glue(\thinmuskip) 1.66663
+.\teni i
+.\teni s
+.etc.
+
+
+Overfull \hbox (2764.40056pt too wide) in paragraph at lines 16--32
+[]\teni ; abstract \tenrm = []\teni ; language \tenrm =|
+
+\hbox(7.5+2.5)x469.75499
+.\hbox(7.5+2.5)x116.4519
+..\tenrm 1
+..\tenrm 0
+..\teni :
+..\tenrm 1
+..\tenrm 0
+..etc.
+.\teni ;
+.\glue(\thinmuskip) 1.66663
+.\teni a
+.\teni b
+.etc.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.35 @book{boyd_
+                convex_2004,
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Undefined control sequence.
+l.44 ...erghe - 2004 - Convex optimization.pdf:C\:
+                                                  \\Users\\G731\\Zotero\\sto...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Argument of \\ has an extra }.
+<inserted text> 
+                \par 
+<to be read again> 
+                   }
+l.44 ...- Convex optimization.pdf:application/pdf}
+                                                  ,
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+Users\\G731\\Zotero\\storage\\EAY22V77\\Boyd y Vandenberghe - 2004 - \ETC.
+! Paragraph ended before \\ was complete.
+<to be read again> 
+                   \par 
+<to be read again> 
+                   }
+l.44 ...- Convex optimization.pdf:application/pdf}
+                                                  ,
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+<to be read again> 
+                   }
+l.44 ...- Convex optimization.pdf:application/pdf}
+                                                  ,
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+<to be read again> 
+                   \par 
+<to be read again> 
+                   }
+l.44 ...- Convex optimization.pdf:application/pdf}
+                                                  ,
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (170.1426pt too wide) in paragraph at lines 35--44
+[]\teni ; language \tenrm = []\teni ; publisher \tenrm = []\teni ; author \tenr
+m = []\teni ; year \tenrm =|
+
+\hbox(6.94444+1.94444)x469.75499
+.\hbox(6.44444+0.83333)x113.88875
+..\tenrm 9
+..\tenrm 7
+..\tenrm 8
+..\glue(\medmuskip) 2.22217 plus 1.11108 minus 2.22217
+..\tensy  
+..etc.
+.\teni ;
+.\glue(\thinmuskip) 1.66663
+.\teni l
+.\kern0.19678
+.etc.
+
+
+Overfull \hbox (113.11348pt too wide) in paragraph at lines 35--44
+[]\teni ; keywords \tenrm = []\teni ; file \tenrm = []$ |
+
+\hbox(6.94444+1.94444)x469.75499
+.\hbox(6.44444+0.0)x20.00006
+..\tenrm 2
+..\tenrm 0
+..\tenrm 0
+..\tenrm 4
+.\teni ;
+.\glue(\thinmuskip) 1.66663
+.\teni k
+.\kern0.3148
+.etc.
+
+! Too many }'s.
+l.45 }
+      
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.47 @article{lobo_
+                   applications_1998,
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Undefined control sequence.
+l.64 	file = {ScienceDirect Full Text PDF:C\:
+                                             \\Users\\G731\\Zotero\\storage\...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Argument of \\ has an extra }.
+<inserted text> 
+                \par 
+<to be read again> 
+                   }
+l.64 ...rder cone programming.pdf:application/pdf}
+                                                  ,
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+Users\\G731\\Zotero\\storage\\7XAHWPPW\\Lobo et al. - 1998 - Applicat\ETC.
+! Paragraph ended before \\ was complete.
+<to be read again> 
+                   \par 
+<to be read again> 
+                   }
+l.64 ...rder cone programming.pdf:application/pdf}
+                                                  ,
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+<to be read again> 
+                   }
+l.64 ...rder cone programming.pdf:application/pdf}
+                                                  ,
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+<to be read again> 
+                   \par 
+<to be read again> 
+                   }
+l.64 ...rder cone programming.pdf:application/pdf}
+                                                  ,
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+Missing character: There is no √ in font cmr10!
+Missing character: There is no © in font cmr10!
+
+Overfull \hbox (272.64018pt too wide) in paragraph at lines 47--64
+[]\tenrm @articlelobo$[]\teni pplications[]\tenrm 998\teni ; series \tenrm = []
+\teni ; title \tenrm =|
+
+\hbox(7.5+2.5)x469.75499
+.\hbox(0.0+0.0)x20.0
+.\tenrm @
+.\tenrm a
+.\tenrm r
+.\tenrm t
+.etc.
+
+
+Overfull \hbox (284.49646pt too wide) in paragraph at lines 47--64
+[]\teni ; volume \tenrm = []\teni ; issn \tenrm = []\teni ; url \tenrm = []\ten
+i ; doi \tenrm =|
+
+\hbox(7.5+2.5)x469.75499
+.\hbox(6.94444+1.94444)x215.29066
+..\teni A
+..\teni p
+..\teni p
+..\teni l
+..\kern0.19678
+..etc.
+.\teni ;
+.\glue(\thinmuskip) 1.66663
+.\teni v
+.\kern0.35878
+.etc.
+
+
+Overfull \hbox (5487.85022pt too wide) in paragraph at lines 47--64
+[]\teni ; abstract \tenrm = []\teni ; language \tenrm =|
+
+\hbox(7.5+2.5)x469.75499
+.\hbox(7.5+2.5)x156.70853
+..\tenrm 1
+..\tenrm 0
+..\teni :
+..\tenrm 1
+..\tenrm 0
+..etc.
+.\teni ;
+.\glue(\thinmuskip) 1.66663
+.\teni a
+.\teni b
+.etc.
+
+
+Overfull \hbox (363.05257pt too wide) in paragraph at lines 47--64
+[]\teni ; number \tenrm = 1\teni ; urldate \tenrm = []\teni ; journal \tenrm = 
+[]\teni ; author \tenrm = []\teni ; month \tenrm =|
+
+\hbox(6.94444+1.94444)x469.75499
+.\hbox(4.30554+0.0)x10.65862
+..\teni e
+..\teni n
+.\teni ;
+.\glue(\thinmuskip) 1.66663
+.\teni n
+.\teni u
+.etc.
+
+
+Overfull \hbox (149.3071pt too wide) in paragraph at lines 47--64
+\teni nov; year \tenrm = []\teni ; keywords \tenrm = []\teni ; pages \tenrm =|
+
+\hbox(6.94444+1.94444)x469.75499
+.\teni n
+.\teni o
+.\teni v
+.\kern0.35878
+.\teni ;
+.etc.
+
+! Too many }'s.
+l.65 }
+      
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.67 @article{laumond_
+                      motion_1994,
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Undefined control sequence.
+l.72 ...or nonholonomic motion planning.{\textless
+                                                  }{\textgreater}},
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.72 ...c motion planning.{\textless}{\textgreater
+                                                  }},
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.81 	file = {Versi√≥n aceptada:C\:
+                                   \\Users\\G731\\Zotero\\storage\\QPP9HG5G\...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Argument of \\ has an extra }.
+<inserted text> 
+                \par 
+<to be read again> 
+                   }
+l.81 ...\storage\\QHAAQ5MQ\\326564.html:text/html}
+                                                  ,
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+Users\\G731\\Zotero\\storage\\QPP9HG5G\\Laumond et al. - 1994 - A mot\ETC.
+! Paragraph ended before \\ was complete.
+<to be read again> 
+                   \par 
+<to be read again> 
+                   }
+l.81 ...\storage\\QHAAQ5MQ\\326564.html:text/html}
+                                                  ,
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+<to be read again> 
+                   }
+l.81 ...\storage\\QHAAQ5MQ\\326564.html:text/html}
+                                                  ,
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+<to be read again> 
+                   \par 
+<to be read again> 
+                   }
+l.81 ...\storage\\QHAAQ5MQ\\326564.html:text/html}
+                                                  ,
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+Missing character: There is no √ in font cmr10!
+Missing character: There is no ≥ in font cmr10!
+
+Overfull \hbox (11.91891pt too wide) in paragraph at lines 67--81
+[]\tenrm @articlelaumond$[]\teni otion[]\tenrm 994\teni ; title \tenrm = []\ten
+i ; volume \tenrm = []\teni ; issn \tenrm =|
+
+\hbox(6.94444+1.94444)x469.75499
+.\hbox(0.0+0.0)x20.0
+.\tenrm @
+.\tenrm a
+.\tenrm r
+.\tenrm t
+.etc.
+
+
+Overfull \hbox (4803.46498pt too wide) in paragraph at lines 67--81
+[]\teni ; doi \tenrm = []\teni ; abstract \tenrm = []\teni ; number \tenrm =|
+
+\hbox(7.5+2.5)x469.75499
+.\hbox(6.83331+0.83333)x56.29167
+..\tenrm 2
+..\tenrm 3
+..\tenrm 7
+..\tenrm 4
+..\glue(\medmuskip) 2.22217 plus 1.11108 minus 2.22217
+..etc.
+.\teni ;
+.\glue(\thinmuskip) 1.66663
+.\teni d
+.\teni o
+.etc.
+
+
+Overfull \hbox (172.06259pt too wide) in paragraph at lines 67--81
+\tenrm 5\teni ; journal \tenrm = []\teni ; author \tenrm = []\teni ; month \ten
+rm =|
+
+\hbox(6.94444+1.94444)x469.75499
+.\tenrm 5
+.\teni ;
+.\glue(\thinmuskip) 1.66663
+.\teni j
+.\kern0.57243
+.etc.
+
+
+Overfull \hbox (277.76875pt too wide) in paragraph at lines 67--81
+[]\teni ; pages \tenrm =|
+
+\hbox(6.94444+1.94444)x469.75499
+.\hbox(6.94444+1.94444)x707.73445
+..\teni C
+..\kern0.71527
+..\teni o
+..\teni m
+..\teni p
+..etc.
+.\teni ;
+.\glue(\thinmuskip) 1.66663
+.\teni p
+.\teni a
+.etc.
+
+! Too many }'s.
+l.82 }
+      
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.84 @article{hwang_
+                    potential_1992,
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Undefined control sequence.
+l.89 ...lly 5 to 30 min on a Sun 3/260).{\textless
+                                                  }{\textgreater}},
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.89 ...n on a Sun 3/260).{\textless}{\textgreater
+                                                  }},
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.98 	file = {IEEE Xplore Abstract Record:C\:
+                                             \\Users\\G731\\Zotero\\storage\...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Argument of \\ has an extra }.
+<inserted text> 
+                \par 
+<to be read again> 
+                   }
+l.98 ...\storage\\SQIAXJDL\\127236.html:text/html}
+                                                  ,
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+Users\\G731\\Zotero\\storage\\SQIAXJDL\\127236.html:text/html
+! Paragraph ended before \\ was complete.
+<to be read again> 
+                   \par 
+<to be read again> 
+                   }
+l.98 ...\storage\\SQIAXJDL\\127236.html:text/html}
+                                                  ,
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+<to be read again> 
+                   }
+l.98 ...\storage\\SQIAXJDL\\127236.html:text/html}
+                                                  ,
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+<to be read again> 
+                   \par 
+<to be read again> 
+                   }
+l.98 ...\storage\\SQIAXJDL\\127236.html:text/html}
+                                                  ,
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (62.66187pt too wide) in paragraph at lines 84--98
+[]\tenrm @articlehwang$[]\teni otential[]\tenrm 992\teni ; title \tenrm = []\te
+ni ; volume \tenrm = 8\teni ; issn \tenrm = []\teni ; doi \tenrm =|
+
+\hbox(6.94444+2.86108)x469.75499
+.\hbox(0.0+0.0)x20.0
+.\tenrm @
+.\tenrm a
+.\tenrm r
+.\tenrm t
+.etc.
+
+
+Overfull \hbox (4193.48543pt too wide) in paragraph at lines 84--98
+[]\teni ; abstract \tenrm = []\teni ; number \tenrm =|
+
+\hbox(7.51782+2.5)x469.75499
+.\hbox(7.5+2.5)x80.5558
+..\tenrm 1
+..\tenrm 0
+..\teni :
+..\tenrm 1
+..\tenrm 1
+..etc.
+.\teni ;
+.\glue(\thinmuskip) 1.66663
+.\teni a
+.\teni b
+.etc.
+
+
+Overfull \hbox (6.55898pt too wide) in paragraph at lines 84--98
+\tenrm 1\teni ; journal \tenrm = []\teni ; author \tenrm = []\teni ; month \ten
+rm =|
+
+\hbox(6.94444+1.94444)x469.75499
+.\tenrm 1
+.\teni ;
+.\glue(\thinmuskip) 1.66663
+.\teni j
+.\kern0.57243
+.etc.
+
+
+Overfull \hbox (205.4236pt too wide) in paragraph at lines 84--98
+[]\teni ; pages \tenrm =|
+
+\hbox(6.94444+1.94444)x469.75499
+.\hbox(6.94444+1.94444)x635.3893
+..\teni M
+..\kern1.09026
+..\teni o
+..\teni t
+..\teni i
+..etc.
+.\teni ;
+.\glue(\thinmuskip) 1.66663
+.\teni p
+.\teni a
+.etc.
+
+! Too many }'s.
+l.99 }
+      
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.101 @article{perez_
+                     solving_2014,
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Undefined control sequence.
+l.116 	file = {IEEE Xplore Abstract Record:C\:
+                                              \\Users\\G731\\Zotero\\storage...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Argument of \\ has an extra }.
+<inserted text> 
+                \par 
+<to be read again> 
+                   }
+l.116 ...g Salesman Problem T.pdf:application/pdf}
+                                                  ,
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+Users\\G731\\Zotero\\storage\\CSS8VFQQ\\6517274.html:text/html;Versi√\ETC.
+! Paragraph ended before \\ was complete.
+<to be read again> 
+                   \par 
+<to be read again> 
+                   }
+l.116 ...g Salesman Problem T.pdf:application/pdf}
+                                                  ,
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+<to be read again> 
+                   }
+l.116 ...g Salesman Problem T.pdf:application/pdf}
+                                                  ,
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+<to be read again> 
+                   \par 
+<to be read again> 
+                   }
+l.116 ...g Salesman Problem T.pdf:application/pdf}
+                                                  ,
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (101.57043pt too wide) in paragraph at lines 101--116
+[]\tenrm @articleperez$[]\teni olving[]\tenrm 014\teni ; title \tenrm = []\teni
+ ; volume \tenrm =|
+
+\hbox(6.94444+1.94444)x469.75499
+.\hbox(0.0+0.0)x20.0
+.\tenrm @
+.\tenrm a
+.\tenrm r
+.\tenrm t
+.etc.
+
+
+Overfull \hbox (121.53702pt too wide) in paragraph at lines 101--116
+\tenrm 6\teni ; issn \tenrm = []\teni ; shorttitle \tenrm = []\teni ; doi \tenr
+m = []\teni ; abstract \tenrm =|
+
+\hbox(7.5+2.5)x469.75499
+.\tenrm 6
+.\teni ;
+.\glue(\thinmuskip) 1.66663
+.\teni i
+.\teni s
+.etc.
+
+
+Overfull \hbox (3818.74869pt too wide) in paragraph at lines 101--116
+[]\teni ; number \tenrm =|
+
+\hbox(7.5+2.5)x469.75499
+.\hbox(7.5+2.5)x4239.2594
+..\teni T
+..\kern1.3889
+..\teni h
+..\teni i
+..\teni s
+..etc.
+.\teni ;
+.\glue(\thinmuskip) 1.66663
+.\teni n
+.\teni u
+.etc.
+
+
+Overfull \hbox (650.6068pt too wide) in paragraph at lines 101--116
+\tenrm 1\teni ; journal \tenrm = []\teni ; author \tenrm = []\teni ; month \ten
+rm =|
+
+\hbox(6.94444+1.94444)x469.75499
+.\tenrm 1
+.\teni ;
+.\glue(\thinmuskip) 1.66663
+.\teni j
+.\kern0.57243
+.etc.
+
+
+Overfull \hbox (82.10439pt too wide) in paragraph at lines 101--116
+\teni mar; year \tenrm = []\teni ; note \tenrm = []\teni ; keywords \tenrm =|
+
+\hbox(6.94444+1.94444)x469.75499
+.\teni m
+.\teni a
+.\teni r
+.\kern0.27779
+.\kern-0.55556
+.etc.
+
+
+Overfull \hbox (604.06404pt too wide) in paragraph at lines 101--116
+[]\teni ; pages \tenrm =|
+
+\hbox(6.94444+1.94444)x469.75499
+.\hbox(6.94444+1.94444)x1034.02974
+..\teni A
+..\teni c
+..\teni c
+..\teni e
+..\teni l
+..etc.
+.\teni ;
+.\glue(\thinmuskip) 1.66663
+.\teni p
+.\teni a
+.etc.
+
+! Too many }'s.
+l.117 }
+       
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.119 @incollection{mitchell_
+                             shortest_2017,
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+l.129 }
+       
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.130 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (116.15517pt too wide) in paragraph at lines 119--130
+[]\tenrm @incollectionmitchell$[]\teni hortest[]\tenrm 017\teni ; edition \tenr
+m = 3\teni ; title \tenrm = []\teni ; isbn \tenrm = []\teni ; abstract \tenrm =
+|
+
+\hbox(6.94444+1.94444)x469.75499
+.\hbox(0.0+0.0)x20.0
+.\tenrm @
+.\tenrm i
+.\tenrm n
+.\tenrm c
+.etc.
+
+
+Overfull \hbox (390.31691pt too wide) in paragraph at lines 119--130
+[]\teni ; booktitle \tenrm =|
+
+\hbox(7.5+2.5)x469.75499
+.\hbox(7.5+2.5)x807.06082
+..\teni C
+..\kern0.71527
+..\teni o
+..\teni m
+..\teni p
+..etc.
+.\teni ;
+.\glue(\thinmuskip) 1.66663
+.\teni b
+.\teni o
+.etc.
+
+
+Overfull \hbox (99.88278pt too wide) in paragraph at lines 119--130
+[]\teni ; publisher \tenrm = []\teni ; author \tenrm = []\teni ; year \tenrm =|
+
+
+\hbox(7.5+2.5)x469.75499
+.\hbox(6.94444+1.94444)x223.1472
+..\teni H
+..\kern0.81247
+..\teni a
+..\teni n
+..\teni d
+..etc.
+.\teni ;
+.\glue(\thinmuskip) 1.66663
+.\teni p
+.\teni u
+.etc.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.131 @book{klamroth_
+                     single-facility_2002,
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+l.142 }
+       
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.143 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (115.98691pt too wide) in paragraph at lines 131--143
+[]\tenrm @bookklamroth$[]\teni ingle \tensy   \teni facility[]\tenrm 002\teni ;
+ address \tenrm = []\teni ; title \tenrm = []\teni ; isbn \tenrm =|
+
+\hbox(6.94444+1.94444)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenrm @
+.\tenrm b
+.\kern0.27779
+.\tenrm o
+.etc.
+
+
+Overfull \hbox (24.9987pt too wide) in paragraph at lines 131--143
+[]\teni ; url \tenrm = []\teni ; urldate \tenrm =|
+
+\hbox(7.5+2.5)x469.75499
+.\hbox(6.44444+0.83333)x227.7775
+..\tenrm 9
+..\tenrm 7
+..\tenrm 8
+..\glue(\medmuskip) 2.22217 plus 1.11108 minus 2.22217
+..\tensy  
+..etc.
+.\teni ;
+.\glue(\thinmuskip) 1.66663
+.\teni u
+.\teni r
+.etc.
+
+
+Overfull \hbox (43.90637pt too wide) in paragraph at lines 131--143
+[]\teni ; publisher \tenrm = []\teni ; author \tenrm = []\teni ; year \tenrm = 
+[]\teni ; doi \tenrm = []\teni ; keywords \tenrm =|
+
+\hbox(7.5+2.5)x469.75499
+.\hbox(6.44444+0.83333)x64.4444
+..\tenrm 2
+..\tenrm 0
+..\tenrm 2
+..\tenrm 2
+..\glue(\medmuskip) 2.22217 plus 1.11108 minus 2.22217
+..etc.
+.\teni ;
+.\glue(\thinmuskip) 1.66663
+.\teni p
+.\teni u
+.etc.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.144 @inproceedings{yuan_
+                          towards_2017,
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Undefined control sequence.
+l.152 	file = {Texto completo:C\:
+                                 \\Users\\G731\\Zotero\\storage\\MHVQQEB4\\Y...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Argument of \\ has an extra }.
+<inserted text> 
+                \par 
+<to be read again> 
+                   }
+l.152 ...itrary Neighborhoods.pdf:application/pdf}
+                                                  ,
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+Users\\G731\\Zotero\\storage\\MHVQQEB4\\Yuan y Zhang - 2017 - Towards\ETC.
+! Paragraph ended before \\ was complete.
+<to be read again> 
+                   \par 
+<to be read again> 
+                   }
+l.152 ...itrary Neighborhoods.pdf:application/pdf}
+                                                  ,
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+<to be read again> 
+                   }
+l.152 ...itrary Neighborhoods.pdf:application/pdf}
+                                                  ,
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+<to be read again> 
+                   \par 
+<to be read again> 
+                   }
+l.152 ...itrary Neighborhoods.pdf:application/pdf}
+                                                  ,
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (81.27975pt too wide) in paragraph at lines 144--152
+[]\tenrm @inproceedingsyuan$[]\teni owards[]\tenrm 017\teni ; title \tenrm = []
+\teni ; doi \tenrm =|
+
+\hbox(6.94444+1.94444)x469.75499
+.\hbox(0.0+0.0)x20.0
+.\tenrm @
+.\tenrm i
+.\tenrm n
+.\tenrm p
+.etc.
+
+
+Overfull \hbox (5043.31354pt too wide) in paragraph at lines 144--152
+[]\teni ; abstract \tenrm = []\teni ; booktitle \tenrm =|
+
+\hbox(7.5+2.5)x469.75499
+.\hbox(7.5+2.5)x228.74252
+..\teni h
+..\teni t
+..\teni t
+..\teni p
+..\teni s
+..etc.
+.\teni ;
+.\glue(\thinmuskip) 1.66663
+.\teni a
+.\teni b
+.etc.
+
+
+Overfull \hbox (20.49428pt too wide) in paragraph at lines 144--152
+[]\teni ; author \tenrm = []\teni ; year \tenrm = []\teni ; pages \tenrm = []\t
+eni ; file \tenrm = []$ |
+
+\hbox(6.94444+1.94444)x469.75499
+.\hbox(6.83331+0.0)x42.71112
+..\teni A
+..\teni C
+..\kern0.71527
+..\teni A
+..\teni L
+..etc.
+.\teni ;
+.\glue(\thinmuskip) 1.66663
+.\teni a
+.\teni u
+.etc.
+
+[1{C:/Users/G731/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.155 @article{gentilini_
+                         travelling_2013,
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Undefined control sequence.
+l.173 	file = {Snapshot:C\:
+                           \\Users\\G731\\Zotero\\storage\\KKGW9PH8\\1055678...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Argument of \\ has an extra }.
+<inserted text> 
+                \par 
+<to be read again> 
+                   }
+l.173 ...m with neighbourhood.pdf:application/pdf}
+                                                  ,
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+Users\\G731\\Zotero\\storage\\KKGW9PH8\\10556788.2011.html:text/html;\ETC.
+! Paragraph ended before \\ was complete.
+<to be read again> 
+                   \par 
+<to be read again> 
+                   }
+l.173 ...m with neighbourhood.pdf:application/pdf}
+                                                  ,
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+<to be read again> 
+                   }
+l.173 ...m with neighbourhood.pdf:application/pdf}
+                                                  ,
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+<to be read again> 
+                   \par 
+<to be read again> 
+                   }
+l.173 ...m with neighbourhood.pdf:application/pdf}
+                                                  ,
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ñ in font cmr10!
+Missing character: There is no ù in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ñ in font cmr10!
+Missing character: There is no ù in font cmr10!
+Missing character: There is no √ in font cmr10!
+Missing character: There is no ß in font cmr10!
+
+Overfull \hbox (82.66072pt too wide) in paragraph at lines 155--173
+[]\tenrm @articlegentilini$[]\teni ravelling[]\tenrm 013\teni ; title \tenrm = 
+[]\teni ; volume \tenrm =|
+
+\hbox(6.94444+1.94444)x469.75499
+.\hbox(0.0+0.0)x20.0
+.\tenrm @
+.\tenrm a
+.\tenrm r
+.\tenrm t
+.etc.
+
+
+Overfull \hbox (189.94487pt too wide) in paragraph at lines 155--173
+[]\teni ; issn \tenrm = []\teni ; shorttitle \tenrm = []\teni ; url \tenrm = []
+\teni ; doi \tenrm =|
+
+\hbox(7.5+2.5)x469.75499
+.\hbox(6.44444+0.0)x10.00003
+..\tenrm 2
+..\tenrm 8
+.\teni ;
+.\glue(\thinmuskip) 1.66663
+.\teni i
+.\teni s
+.etc.
+
+
+Overfull \hbox (3553.66849pt too wide) in paragraph at lines 155--173
+[]\teni ; abstract \tenrm = []\teni ; number \tenrm =|
+
+\hbox(7.5+2.5)x469.75499
+.\hbox(7.5+2.5)x133.33374
+..\tenrm 1
+..\tenrm 0
+..\teni :
+..\tenrm 1
+..\tenrm 0
+..etc.
+.\teni ;
+.\glue(\thinmuskip) 1.66663
+.\teni a
+.\teni b
+.etc.
+
+
+Overfull \hbox (211.16455pt too wide) in paragraph at lines 155--173
+\tenrm 2\teni ; urldate \tenrm = []\teni ; journal \tenrm = []\teni ; author \t
+enrm = []\teni ; month \tenrm =|
+
+\hbox(6.94444+1.94444)x469.75499
+.\tenrm 2
+.\teni ;
+.\glue(\thinmuskip) 1.66663
+.\teni u
+.\teni r
+.etc.
+
+
+Overfull \hbox (74.14677pt too wide) in paragraph at lines 155--173
+\teni apr; year \tenrm = []\teni ; note \tenrm = []\teni ; keywords \tenrm =|
+
+\hbox(7.5+2.5)x469.75499
+.\teni a
+.\teni p
+.\teni r
+.\kern0.27779
+.\kern-0.55556
+.etc.
+
+
+Overfull \hbox (194.68259pt too wide) in paragraph at lines 155--173
+[]\teni ; pages \tenrm =|
+
+\hbox(6.94444+1.94444)x469.75499
+.\hbox(6.94444+1.94444)x624.64828
+..\tenrm 9
+..\tenrm 0
+..\teni C
+..\kern0.71527
+..\tenrm 2
+..etc.
+.\teni ;
+.\glue(\thinmuskip) 1.66663
+.\teni p
+.\teni a
+.etc.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.176 @article{arkin_
+                     approximation_1994,
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Undefined control sequence.
+l.191 	file = {ScienceDirect Snapshot:C\:
+                                         \\Users\\G731\\Zotero\\storage\\QSZ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Argument of \\ has an extra }.
+<inserted text> 
+                \par 
+<to be read again> 
+                   }
+l.191 ...he geometric coverin.pdf:application/pdf}
+                                                  ,
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+Users\\G731\\Zotero\\storage\\QSZMLT3Z\\0166218X94900086.html:text/ht\ETC.
+! Paragraph ended before \\ was complete.
+<to be read again> 
+                   \par 
+<to be read again> 
+                   }
+l.191 ...he geometric coverin.pdf:application/pdf}
+                                                  ,
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+<to be read again> 
+                   }
+l.191 ...he geometric coverin.pdf:application/pdf}
+                                                  ,
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+<to be read again> 
+                   \par 
+<to be read again> 
+                   }
+l.191 ...he geometric coverin.pdf:application/pdf}
+                                                  ,
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (84.90506pt too wide) in paragraph at lines 176--191
+[]\tenrm @articlearkin$[]\teni pproximation[]\tenrm 994\teni ; title \tenrm = [
+]\teni ; volume \tenrm =|
+
+\hbox(6.94444+1.94444)x469.75499
+.\hbox(0.0+0.0)x20.0
+.\tenrm @
+.\tenrm a
+.\tenrm r
+.\tenrm t
+.etc.
+
+
+Overfull \hbox (15.46387pt too wide) in paragraph at lines 176--191
+[]\teni ; issn \tenrm = []\teni ; url \tenrm = []\teni ; doi \tenrm =|
+
+\hbox(7.5+2.5)x469.75499
+.\hbox(6.44444+0.0)x10.00003
+..\tenrm 5
+..\tenrm 5
+.\teni ;
+.\glue(\thinmuskip) 1.66663
+.\teni i
+.\teni s
+.etc.
+
+
+Overfull \hbox (2418.31412pt too wide) in paragraph at lines 176--191
+[]\teni ; abstract \tenrm = []\teni ; language \tenrm =|
+
+\hbox(7.51782+2.5)x469.75499
+.\hbox(7.5+2.5)x154.06963
+..\tenrm 1
+..\tenrm 0
+..\teni :
+..\tenrm 1
+..\tenrm 0
+..etc.
+.\teni ;
+.\glue(\thinmuskip) 1.66663
+.\teni a
+.\teni b
+.etc.
+
+
+Overfull \hbox (151.49388pt too wide) in paragraph at lines 176--191
+[]\teni ; number \tenrm = 3\teni ; urldate \tenrm = []\teni ; journal \tenrm = 
+[]\teni ; author \tenrm = []\teni ; month \tenrm =|
+
+\hbox(6.94444+1.94444)x469.75499
+.\hbox(4.30554+0.0)x10.65862
+..\teni e
+..\teni n
+.\teni ;
+.\glue(\thinmuskip) 1.66663
+.\teni n
+.\teni u
+.etc.
+
+! Too many }'s.
+l.192 }
+       
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.194 @article{glock_
+                     spatial_2022,
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Undefined control sequence.
+l.207 	file = {ScienceDirect Snapshot:C\:
+                                         \\Users\\G731\\Zotero\\storage\\4UM...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Argument of \\ has an extra }.
+<inserted text> 
+                \par 
+<to be read again> 
+                   }
+l.207 ...d path planning prob.pdf:application/pdf}
+                                                  ,
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+Users\\G731\\Zotero\\storage\\4UMLBFP4\\S0377221722001369.html:text/h\ETC.
+! Paragraph ended before \\ was complete.
+<to be read again> 
+                   \par 
+<to be read again> 
+                   }
+l.207 ...d path planning prob.pdf:application/pdf}
+                                                  ,
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+<to be read again> 
+                   }
+l.207 ...d path planning prob.pdf:application/pdf}
+                                                  ,
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+<to be read again> 
+                   \par 
+<to be read again> 
+                   }
+l.207 ...d path planning prob.pdf:application/pdf}
+                                                  ,
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (41.94131pt too wide) in paragraph at lines 194--207
+[]\tenrm @articleglock$[]\teni patial[]\tenrm 022\teni ; title \tenrm = []\teni
+ ; issn \tenrm = []\teni ; url \tenrm =|
+
+\hbox(6.94444+1.94444)x469.75499
+.\hbox(0.0+0.0)x20.0
+.\tenrm @
+.\tenrm a
+.\tenrm r
+.\tenrm t
+.etc.
+
+
+Overfull \hbox (53.85843pt too wide) in paragraph at lines 194--207
+[]\teni ; doi \tenrm = []\teni ; abstract \tenrm =|
+
+\hbox(7.5+2.5)x469.75499
+.\hbox(7.5+2.5)x324.99664
+..\teni h
+..\teni t
+..\teni t
+..\teni p
+..\teni s
+..etc.
+.\teni ;
+.\glue(\thinmuskip) 1.66663
+.\teni d
+.\teni o
+.etc.
+
+
+Overfull \hbox (3766.9867pt too wide) in paragraph at lines 194--207
+[]\teni ; language \tenrm =|
+
+\hbox(6.94444+1.94444)x469.75499
+.\hbox(6.94444+1.94444)x4181.34929
+..\teni R
+..\kern0.07726
+..\teni o
+..\teni u
+..\teni t
+..etc.
+.\teni ;
+.\glue(\thinmuskip) 1.66663
+.\teni l
+.\kern0.19678
+.etc.
+
+
+Overfull \hbox (140.55972pt too wide) in paragraph at lines 194--207
+[]\teni ; urldate \tenrm = []\teni ; journal \tenrm = []\teni ; author \tenrm =
+ []\teni ; month \tenrm =|
+
+\hbox(6.94444+1.94444)x469.75499
+.\hbox(4.30554+0.0)x10.65862
+..\teni e
+..\teni n
+.\teni ;
+.\glue(\thinmuskip) 1.66663
+.\teni u
+.\teni r
+.etc.
+
+
+Overfull \hbox (259.40192pt too wide) in paragraph at lines 194--207
+\teni feb; year \tenrm = []\teni ; keywords \tenrm = []\teni ; file \tenrm =|
+
+\hbox(6.94444+1.94444)x469.75499
+.\teni f
+.\kern1.0764
+.\teni e
+.\teni b
+.\teni ;
+.etc.
+
+! Too many }'s.
+l.208 }
+       
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.210 @misc{gurobi_
+                   optimization_llc_gurobi_2022,
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+l.215 }
+       
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.216 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (109.38817pt too wide) in paragraph at lines 210--216
+[]\tenrm @miscgurobi$[]\teni ptimization[]lc[]urobi[]\tenrm 022\teni ; title \t
+enrm = []\teni ; url \tenrm = []\teni ; author \tenrm =|
+
+\hbox(7.5+2.86108)x469.75499
+.\hbox(0.0+0.0)x20.0
+.\tenrm @
+.\tenrm m
+.\tenrm i
+.\tenrm s
+.etc.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.217 @article{blanco_
+                      minimum_2017,
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Undefined control sequence.
+l.228 	file = {Texto completo:C\:
+                                 \\Users\\G731\\Zotero\\storage\\2JDSUPHI\\B...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Argument of \\ has an extra }.
+<inserted text> 
+                \par 
+<to be read again> 
+                   }
+l.228 ...eighborhoods Mathema.pdf:application/pdf}
+                                                  ,
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+Users\\G731\\Zotero\\storage\\2JDSUPHI\\Blanco et al. - 2017 - Minimu\ETC.
+! Paragraph ended before \\ was complete.
+<to be read again> 
+                   \par 
+<to be read again> 
+                   }
+l.228 ...eighborhoods Mathema.pdf:application/pdf}
+                                                  ,
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+<to be read again> 
+                   }
+l.228 ...eighborhoods Mathema.pdf:application/pdf}
+                                                  ,
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+<to be read again> 
+                   \par 
+<to be read again> 
+                   }
+l.228 ...eighborhoods Mathema.pdf:application/pdf}
+                                                  ,
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+Missing character: There is no √ in font cmr10!
+Missing character: There is no ≠ in font cmr10!
+Missing character: There is no √ in font cmr10!
+Missing character: There is no ° in font cmr10!
+
+Overfull \hbox (247.58098pt too wide) in paragraph at lines 217--228
+[]\tenrm @articleblanco$[]\teni inimum[]\tenrm 017\teni ; title \tenrm = []\ten
+i ; volume \tenrm =|
+
+\hbox(6.94444+1.94444)x469.75499
+.\hbox(0.0+0.0)x20.0
+.\tenrm @
+.\tenrm a
+.\tenrm r
+.\tenrm t
+.etc.
+
+
+Overfull \hbox (34.63846pt too wide) in paragraph at lines 217--228
+[]\teni ; doi \tenrm = []\teni ; number \tenrm = 3\teni ; journal \tenrm = []\t
+eni ; author \tenrm =|
+
+\hbox(7.5+2.5)x469.75499
+.\hbox(6.44444+0.0)x15.00005
+..\tenrm 2
+..\tenrm 6
+..\tenrm 2
+.\teni ;
+.\glue(\thinmuskip) 1.66663
+.\teni d
+.\teni o
+.etc.
+
+
+Overfull \hbox (66.73627pt too wide) in paragraph at lines 217--228
+[]\teni ; month \tenrm = \teni nov; year \tenrm = []\teni ; note \tenrm = []\te
+ni ; pages \tenrm =|
+
+\hbox(6.94444+1.94444)x469.75499
+.\hbox(6.94444+1.94444)x231.80025
+..\teni B
+..\kern0.50172
+..\teni l
+..\kern0.19678
+..\teni a
+..etc.
+.\teni ;
+.\glue(\thinmuskip) 1.66663
+.\teni m
+.\teni o
+.etc.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.231 @article{puerto_
+                      routing_2022,
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Undefined control sequence.
+l.248 	file = {Texto completo:C\:
+                                 \\Users\\G731\\Zotero\\storage\\7WVPLMND\\P...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Argument of \\ has an extra }.
+<inserted text> 
+                \par 
+<to be read again> 
+                   }
+l.248 ...6JK2RM\\S0377221721005920.html:text/html}
+                                                  ,
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+Users\\G731\\Zotero\\storage\\7WVPLMND\\Puerto y Valverde - 2022 - Ro\ETC.
+! Paragraph ended before \\ was complete.
+<to be read again> 
+                   \par 
+<to be read again> 
+                   }
+l.248 ...6JK2RM\\S0377221721005920.html:text/html}
+                                                  ,
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+<to be read again> 
+                   }
+l.248 ...6JK2RM\\S0377221721005920.html:text/html}
+                                                  ,
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+<to be read again> 
+                   \par 
+<to be read again> 
+                   }
+l.248 ...6JK2RM\\S0377221721005920.html:text/html}
+                                                  ,
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (30.56851pt too wide) in paragraph at lines 231--248
+[]\tenrm @articlepuerto$[]\teni outing[]\tenrm 022\teni ; title \tenrm = []\ten
+i ; volume \tenrm =|
+
+\hbox(6.94444+1.94444)x469.75499
+.\hbox(0.0+0.0)x20.0
+.\tenrm @
+.\tenrm a
+.\tenrm r
+.\tenrm t
+.etc.
+
+
+Overfull \hbox (241.27264pt too wide) in paragraph at lines 231--248
+[]\teni ; issn \tenrm = []\teni ; shorttitle \tenrm = []\teni ; url \tenrm = []
+\teni ; doi \tenrm =|
+
+\hbox(7.5+2.5)x469.75499
+.\hbox(6.44444+0.0)x15.00005
+..\tenrm 2
+..\tenrm 9
+..\tenrm 8
+.\teni ;
+.\glue(\thinmuskip) 1.66663
+.\teni i
+.\teni s
+.etc.
+
+
+Overfull \hbox (5872.98402pt too wide) in paragraph at lines 231--248
+[]\teni ; abstract \tenrm = []\teni ; language \tenrm =|
+
+\hbox(7.5+2.5)x469.75499
+.\hbox(7.5+2.5)x116.4519
+..\tenrm 1
+..\tenrm 0
+..\teni :
+..\tenrm 1
+..\tenrm 0
+..etc.
+.\teni ;
+.\glue(\thinmuskip) 1.66663
+.\teni a
+.\teni b
+.etc.
+
+
+Overfull \hbox (239.66473pt too wide) in paragraph at lines 231--248
+[]\teni ; month \tenrm = \teni apr; year \tenrm = []\teni ; keywords \tenrm = [
+]\teni ; pages \tenrm =|
+
+\hbox(6.94444+1.94444)x469.75499
+.\hbox(6.94444+1.94444)x153.88472
+..\teni P
+..\kern1.3889
+..\teni u
+..\teni e
+..\teni r
+..etc.
+.\teni ;
+.\glue(\thinmuskip) 1.66663
+.\teni m
+.\teni o
+.etc.
+
+! Too many }'s.
+l.249 }
+       
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.251 @inproceedings{moemke_
+                            approximating_2011,
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Undefined control sequence.
+l.265 	file = {Versi√≥n enviada:C\:
+                                   \\Users\\G731\\Zotero\\storage\\CXY22QHP\...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Argument of \\ has an extra }.
+<inserted text> 
+                \par 
+<to be read again> 
+                   }
+l.265 ...ge\\CCV28L4K\\12OmNqFJhTW.html:text/html}
+                                                  ,
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+Users\\G731\\Zotero\\storage\\CXY22QHP\\M√∂emke y Svensson - 2011 - A\ETC.
+! Paragraph ended before \\ was complete.
+<to be read again> 
+                   \par 
+<to be read again> 
+                   }
+l.265 ...ge\\CCV28L4K\\12OmNqFJhTW.html:text/html}
+                                                  ,
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+<to be read again> 
+                   }
+l.265 ...ge\\CCV28L4K\\12OmNqFJhTW.html:text/html}
+                                                  ,
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+<to be read again> 
+                   \par 
+<to be read again> 
+                   }
+l.265 ...ge\\CCV28L4K\\12OmNqFJhTW.html:text/html}
+                                                  ,
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+Missing character: There is no √ in font cmr10!
+Missing character: There is no ∂ in font cmr10!
+Missing character: There is no √ in font cmr10!
+Missing character: There is no ≥ in font cmr10!
+
+Overfull \hbox (129.55923pt too wide) in paragraph at lines 251--265
+[]\teni ; url \tenrm = []\teni ; doi \tenrm =|
+
+\hbox(7.5+2.5)x469.75499
+.\hbox(6.44444+0.83333)x113.88875
+..\tenrm 9
+..\tenrm 7
+..\tenrm 8
+..\glue(\medmuskip) 2.22217 plus 1.11108 minus 2.22217
+..\tensy  
+..etc.
+.\teni ;
+.\glue(\thinmuskip) 1.66663
+.\teni u
+.\teni r
+.etc.
+
+
+Overfull \hbox (3304.83406pt too wide) in paragraph at lines 251--265
+[]\teni ; abstract \tenrm = []\teni ; language \tenrm =|
+
+\hbox(7.5+2.5)x469.75499
+.\hbox(7.5+2.5)x103.0738
+..\tenrm 1
+..\tenrm 0
+..\teni :
+..\tenrm 1
+..\tenrm 1
+..etc.
+.\teni ;
+.\glue(\thinmuskip) 1.66663
+.\teni a
+.\teni b
+.etc.
+
+
+Overfull \hbox (88.19066pt too wide) in paragraph at lines 251--265
+[]\teni ; urldate \tenrm = []\teni ; publisher \tenrm = []\teni ; author \tenrm
+ = []\teni ; month \tenrm =|
+
+\hbox(6.94444+1.94444)x469.75499
+.\hbox(6.94444+1.94444)x36.16391
+..\teni E
+..\kern0.57637
+..\teni n
+..\teni g
+..\kern0.35878
+..etc.
+.\teni ;
+.\glue(\thinmuskip) 1.66663
+.\teni u
+.\teni r
+.etc.
+
+! Too many }'s.
+l.266 }
+       
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.268 @phdthesis{mennell_
+                         heuristics_2009,
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Undefined control sequence.
+l.283 	file = {Full Text PDF:C\:
+                                \\Users\\G731\\Zotero\\storage\\5I7TMABW\\Me...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Argument of \\ has an extra }.
+<inserted text> 
+                \par 
+<to be read again> 
+                   }
+l.283 ...routing problems Clo.pdf:application/pdf}
+                                                  ,
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+Users\\G731\\Zotero\\storage\\5I7TMABW\\Mennell - 2009 - Heuristics f\ETC.
+! Paragraph ended before \\ was complete.
+<to be read again> 
+                   \par 
+<to be read again> 
+                   }
+l.283 ...routing problems Clo.pdf:application/pdf}
+                                                  ,
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+<to be read again> 
+                   }
+l.283 ...routing problems Clo.pdf:application/pdf}
+                                                  ,
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+<to be read again> 
+                   \par 
+<to be read again> 
+                   }
+l.283 ...routing problems Clo.pdf:application/pdf}
+                                                  ,
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+Missing character: There is no √ in font cmr10!
+Missing character: There is no © in font cmr10!
+
+Overfull \hbox (809.73721pt too wide) in paragraph at lines 268--283
+[]\tenrm @phdthesismennell$[]\teni euristics[]\tenrm 009\teni ; address \tenrm 
+= []\teni ; type \tenrm = []\teni ; title \tenrm = []\teni ; copyright \tenrm =
+|
+
+\hbox(6.94444+1.94444)x469.75499
+.\hbox(0.0+0.0)x20.0
+.\tenrm @
+.\tenrm p
+.\tenrm h
+.\tenrm d
+.etc.
+
+
+Overfull \hbox (35.4363pt too wide) in paragraph at lines 268--283
+[]\teni ; shorttitle \tenrm =|
+
+\hbox(6.94444+1.94444)x469.75499
+.\hbox(6.94444+1.94444)x447.99037
+..\teni D
+..\kern0.27779
+..\teni a
+..\teni t
+..\teni a
+..etc.
+.\teni ;
+.\glue(\thinmuskip) 1.66663
+.\teni s
+.\teni h
+.etc.
+
+
+Overfull \hbox (180.3348pt too wide) in paragraph at lines 268--283
+[]\teni ; url \tenrm = []\teni ; abstract \tenrm =|
+
+\hbox(7.5+2.5)x469.75499
+.\hbox(6.94444+1.94444)x193.89203
+..\teni H
+..\kern0.81247
+..\teni e
+..\teni u
+..\teni r
+..etc.
+.\teni ;
+.\glue(\thinmuskip) 1.66663
+.\teni u
+.\teni r
+.etc.
+
+
+Overfull \hbox (4267.4977pt too wide) in paragraph at lines 268--283
+[]\teni ; language \tenrm =|
+
+\hbox(7.5+2.5)x469.75499
+.\hbox(7.5+2.5)x4681.86029
+..\teni I
+..\kern0.7847
+..\teni n
+..\teni t
+..\teni h
+..etc.
+.\teni ;
+.\glue(\thinmuskip) 1.66663
+.\teni l
+.\kern0.19678
+.etc.
+
+
+Overfull \hbox (92.35527pt too wide) in paragraph at lines 268--283
+[]\teni ; urldate \tenrm = []\teni ; author \tenrm = []\teni ; year \tenrm = []
+\teni ; note \tenrm = []\teni ; keywords \tenrm =|
+
+\hbox(6.94444+1.94444)x469.75499
+.\hbox(6.94444+1.94444)x24.17943
+..\teni I
+..\kern0.7847
+..\teni n
+..\teni g
+..\kern0.35878
+..etc.
+.\teni ;
+.\glue(\thinmuskip) 1.66663
+.\teni u
+.\teni r
+.etc.
+
+
+Overfull \hbox (134.46793pt too wide) in paragraph at lines 268--283
+[]\teni ; file \tenrm =|
+
+\hbox(6.94444+1.94444)x469.75499
+.\hbox(6.94444+1.94444)x571.96877
+..\teni A
+..\teni p
+..\teni p
+..\teni l
+..\kern0.19678
+..etc.
+.\teni ;
+.\glue(\thinmuskip) 1.66663
+.\teni f
+.\kern1.0764
+.etc.
+
+! Too many }'s.
+l.284 }
+       
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.286 @article{coutinho_
+                        branch-and-bound_2016,
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Undefined control sequence.
+l.302 	file = {Full Text PDF:C\:
+                                \\Users\\G731\\Zotero\\storage\\IH9UQKV7\\Co...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Argument of \\ has an extra }.
+<inserted text> 
+                \par 
+<to be read again> 
+                   }
+l.302 ...or the Close-Enough .pdf:application/pdf}
+                                                  ,
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+Users\\G731\\Zotero\\storage\\IH9UQKV7\\Coutinho et al. - 2016 - A Br\ETC.
+! Paragraph ended before \\ was complete.
+<to be read again> 
+                   \par 
+<to be read again> 
+                   }
+l.302 ...or the Close-Enough .pdf:application/pdf}
+                                                  ,
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+<to be read again> 
+                   }
+l.302 ...or the Close-Enough .pdf:application/pdf}
+                                                  ,
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+<to be read again> 
+                   \par 
+<to be read again> 
+                   }
+l.302 ...or the Close-Enough .pdf:application/pdf}
+                                                  ,
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (204.50104pt too wide) in paragraph at lines 286--302
+[]\tenrm @articlecoutinho$[]\teni ranch \tensy   \teni and \tensy   \teni bound
+[]\tenrm 016\teni ; title \tenrm = []\teni ; volume \tenrm =|
+
+\hbox(6.94444+1.94444)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenrm @
+.\tenrm a
+.\tenrm r
+.\tenrm t
+.etc.
+
+
+Overfull \hbox (115.23897pt too wide) in paragraph at lines 286--302
+[]\teni ; issn \tenrm = []\teni ; url \tenrm = []\teni ; doi \tenrm = []\teni ;
+ abstract \tenrm =|
+
+\hbox(7.5+2.5)x469.75499
+.\hbox(6.44444+0.0)x10.00003
+..\tenrm 2
+..\tenrm 8
+.\teni ;
+.\glue(\thinmuskip) 1.66663
+.\teni i
+.\teni s
+.etc.
+
+
+Overfull \hbox (1947.5361pt too wide) in paragraph at lines 286--302
+[]\teni ; number \tenrm =|
+
+\hbox(7.5+2.5)x469.75499
+.\hbox(7.5+2.5)x2368.04681
+..\teni T
+..\kern1.3889
+..\teni h
+..\teni i
+..\teni s
+..etc.
+.\teni ;
+.\glue(\thinmuskip) 1.66663
+.\teni n
+.\teni u
+.etc.
+
+
+Overfull \hbox (436.29573pt too wide) in paragraph at lines 286--302
+\tenrm 4\teni ; urldate \tenrm = []\teni ; journal \tenrm = []\teni ; author \t
+enrm = []\teni ; month \tenrm =|
+
+\hbox(6.94444+1.94444)x469.75499
+.\tenrm 4
+.\teni ;
+.\glue(\thinmuskip) 1.66663
+.\teni u
+.\teni r
+.etc.
+
+
+Overfull \hbox (288.72932pt too wide) in paragraph at lines 286--302
+\teni nov; year \tenrm = []\teni ; note \tenrm = []\teni ; keywords \tenrm = []
+\teni ; pages \tenrm =|
+
+\hbox(6.94444+1.94444)x469.75499
+.\teni n
+.\teni o
+.\teni v
+.\kern0.35878
+.\teni ;
+.etc.
+
+[2]
+! Too many }'s.
+l.303 }
+       
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.305 @article{carrabs_
+                       adaptive_2020,
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.312 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   $
+<to be read again> 
+                   \par 
+l.312 
+      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (283.67532pt too wide) in paragraph at lines 305--312
+[]\tenrm @articlecarrabs$[]\teni daptive[]\tenrm 020\teni ; title \tenrm = []\t
+eni ; volume \tenrm =|
+
+\hbox(6.94444+1.94444)x469.75499
+.\hbox(0.0+0.0)x20.0
+.\tenrm @
+.\tenrm a
+.\tenrm r
+.\tenrm t
+.etc.
+
+
+Overfull \hbox (134.50403pt too wide) in paragraph at lines 305--312
+[]\teni ; issn \tenrm = []\teni ; url \tenrm = []\teni ; doi \tenrm = []\teni ;
+ abstract \tenrm =|
+
+\hbox(7.5+2.5)x469.75499
+.\hbox(6.44444+0.0)x10.00003
+..\tenrm 3
+..\tenrm 2
+.\teni ;
+.\glue(\thinmuskip) 1.66663
+.\teni i
+.\teni s
+.etc.
+
+
+Overfull \hbox (3052.9153pt too wide) in paragraph at lines 305--312
+[]$ |
+
+\hbox(6.94444+1.94444)x469.75499
+.\hbox(6.94444+1.94444)x3522.67029
+..\teni T
+..\kern1.3889
+..\teni h
+..\teni i
+..\teni s
+..etc.
+.\mathoff
+.\penalty 10000
+.\glue(\parfillskip) 0.0 plus 1.0fil
+.\glue(\rightskip) 0.0
+.etc.
+
+! Undefined control sequence.
+l.323 	file = {Full Text PDF:C\:
+                                \\Users\\G731\\Zotero\\storage\\CFRFGAAK\\Ca...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Argument of \\ has an extra }.
+<inserted text> 
+                \par 
+<to be read again> 
+                   }
+l.323 ... to Compute Upper an.pdf:application/pdf}
+                                                  ,
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+Users\\G731\\Zotero\\storage\\CFRFGAAK\\Carrabs et al. - 2020 - An Ad\ETC.
+! Paragraph ended before \\ was complete.
+<to be read again> 
+                   \par 
+<to be read again> 
+                   }
+l.323 ... to Compute Upper an.pdf:application/pdf}
+                                                  ,
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Too many }'s.
+l.324 }
+       
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+)
+! Emergency stop.
+<*> ...man Problem with Segments/bibliography.bib"
+                                                  
+*** (job aborted, no legal \end found)
+
+!  ==> Fatal error occurred, no output PDF file produced!

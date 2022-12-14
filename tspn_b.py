@@ -15,13 +15,26 @@ import estimacion_M as eM
 from heuristic import heuristic
 from heuristic2 import heuristic2
 
-def tspn_b(barriers, neighborhoods, prepro=True, A4=True, dominant = False, log=False, picture=False, time_limit=7200, init=False):
 
-    if not(dominant):
+def tspn_b(
+    barriers,
+    neighborhoods,
+    prepro=True,
+    A4=True,
+    dominant=False,
+    log=False,
+    picture=False,
+    time_limit=7200,
+    init=False,
+):
+
+    if not (dominant):
         first_time = time.time()
 
         # Indices of the vertices identified with the neighborhoods
-        vertices_neighborhood = list(itertools.product(range(-len(neighborhoods), 0), range(1)))
+        vertices_neighborhood = list(
+            itertools.product(range(-len(neighborhoods), 0), range(1))
+        )
         vertices_neighborhood = vertices_neighborhood[::-1]
 
         # Indices of the vertices identificed with the vertices of the barriers
@@ -62,9 +75,11 @@ def tspn_b(barriers, neighborhoods, prepro=True, A4=True, dominant = False, log=
                                 intersect = True
                                 break
 
-                        if not(intersect):
+                        if not (intersect):
                             edges_barrier.append((v, i, w, j))
                             edges_barrier.append((w, j, v, i))
+                        else:
+                            pass
 
                     else:
                         edges_barrier.append((v, i, w, j))
@@ -85,7 +100,6 @@ def tspn_b(barriers, neighborhoods, prepro=True, A4=True, dominant = False, log=
                         edges_source_target.append((a, b, c, d))
                         # edges_source_target.append((c, d, a, b))
 
-
         # Completed graph
         vertices_total = vertices_neighborhood + vertices_barrier
         edges_total = edges_neighborhood + edges_barrier + edges_source_target
@@ -104,14 +118,13 @@ def tspn_b(barriers, neighborhoods, prepro=True, A4=True, dominant = False, log=
             for dim in range(2):
                 point_index.append((a, b, dim))
 
-
         # Alpha index
         alpha_index = []
 
         for a, b in vertices_barrier:
             for c, d, e, f in edges_total:
                 # if c < 0:
-                    alpha_index.append((a, b, c, d, e, f))
+                alpha_index.append((a, b, c, d, e, f))
 
         for a, b in vertices_total:
             for (c, d, e, f) in indices_barriers:
@@ -126,7 +139,6 @@ def tspn_b(barriers, neighborhoods, prepro=True, A4=True, dominant = False, log=
             for e, f, g, h in edges_total:
                 beta_index.append((a, b, c, d, e, f, g, h))
                 beta_index.append((e, f, g, h, a, b, c, d))
-
 
         if log:
             print("beta = " + str(beta_index))
@@ -146,13 +158,12 @@ def tspn_b(barriers, neighborhoods, prepro=True, A4=True, dominant = False, log=
 
         for a, b, c, d in edges_total:
             # if a < 0:
-                epsilon_index.append((a, b, c, d))
+            epsilon_index.append((a, b, c, d))
 
         y_index = edges_total
 
         if log:
             print("y_index = " + str(y_index))
-
 
         p_index = edges_total
 
@@ -160,7 +171,6 @@ def tspn_b(barriers, neighborhoods, prepro=True, A4=True, dominant = False, log=
             print("p_index = " + str(p_index))
 
         dist_index = edges_total
-
 
         if log:
             print("dist = " + str(dist_index))
@@ -197,37 +207,62 @@ def tspn_b(barriers, neighborhoods, prepro=True, A4=True, dominant = False, log=
         if log:
             print("g_index = " + str(g_index))
 
-        model = gp.Model('Model: H-TSP-N')
+        # Adjusting the bounds of the circles. Computing the biggest radii in the problem.
+        # This is done to avoid the problem of the circles being too big.
+        lb_min = 0
+
+        lb_max = max(
+            [ent.radii for ent in neighborhoods if type(ent) is neigh.Circle] + [lb_min]
+        )
+
+        model = gp.Model("Model: H-TSP-N")
 
         # Modeling the distance
-        dist = model.addVars(dist_index, vtype=GRB.CONTINUOUS, lb=0.0, name='dist')
-        dif = model.addVars(dif_index, vtype=GRB.CONTINUOUS, lb=0.0, name='dif')
+        dist = model.addVars(dist_index, vtype=GRB.CONTINUOUS, lb=0.0, name="dist")
+        dif = model.addVars(dif_index, vtype=GRB.CONTINUOUS, lb=0.0, name="dif")
 
         # Modeling determinants
-        alpha = model.addVars(alpha_index, vtype = GRB.BINARY, name = 'alpha')
-        beta = model.addVars(beta_index, vtype = GRB.BINARY, name = 'beta')
-        gamma = model.addVars(gamma_index, vtype=GRB.BINARY, name='gamma')
-        delta = model.addVars(delta_index, vtype=GRB.BINARY, name='delta')
-        epsilon = model.addVars(epsilon_index, vtype=GRB.BINARY, name='epsilon')
+        alpha = model.addVars(alpha_index, vtype=GRB.BINARY, name="alpha")
+        beta = model.addVars(beta_index, vtype=GRB.BINARY, name="beta")
+        gamma = model.addVars(gamma_index, vtype=GRB.BINARY, name="gamma")
+        delta = model.addVars(delta_index, vtype=GRB.BINARY, name="delta")
+        epsilon = model.addVars(epsilon_index, vtype=GRB.BINARY, name="epsilon")
 
         # Modeling the conic neighborhoods
         point = model.addVars(point_index, vtype=GRB.CONTINUOUS, name='point')
-        d_inside = model.addVars(d_inside_index, vtype=GRB.CONTINUOUS, lb=0.0, name='d_inside')
-        dif_inside = model.addVars(dif_inside_index, vtype=GRB.CONTINUOUS, lb=0.0, name='dif_inside')
-        landa = model.addVars(d_inside_index, vtype=GRB.CONTINUOUS, lb=0.0, ub=1.0, name='landa')
+        d_inside = model.addVars(d_inside_index,
+                                 vtype=GRB.CONTINUOUS,
+                                 lb=0.0,
+                                 name='d_inside')
+        dif_inside = model.addVars(dif_inside_index,
+                                   vtype=GRB.CONTINUOUS,
+                                   lb=0.0,
+                                   name='dif_inside')
+        landa = model.addVars(d_inside_index,
+                              vtype=GRB.CONTINUOUS,
+                              lb=0.0,
+                              ub=1.0,
+                              name='landa')
 
         # Modeling the route
-        y = model.addVars(y_index, vtype=GRB.BINARY, name='y')
-        g_var = model.addVars(g_index, vtype=GRB.CONTINUOUS, lb=0.0, name='g')
+        y = model.addVars(y_index, vtype=GRB.BINARY, name="y")
+        g_var = model.addVars(g_index, vtype=GRB.CONTINUOUS, lb=0.0, name="g")
 
         # Modeling the product
-        p = model.addVars(p_index, vtype=GRB.CONTINUOUS, lb=0.0, name='p')
+        p = model.addVars(p_index, vtype=GRB.CONTINUOUS, lb=0.0, name="p")
 
         model.update()
 
         if init:
             # Creamos un heuristico como el de la k-mediana. Cogiendo los centros de los entornos.
-            results_h, y_indices, g_indices = heuristic2(barriers, neighborhoods, prepro=True, log=False, dominant = False, picture=False)
+            results_h, y_indices, g_indices = heuristic2(
+                barriers,
+                neighborhoods,
+                prepro=True,
+                log=False,
+                dominant=False,
+                picture=False,
+            )
 
             time_h, objval_h = results_h[0], results_h[1]
 
@@ -238,7 +273,6 @@ def tspn_b(barriers, neighborhoods, prepro=True, A4=True, dominant = False, log=
             for a, b, c, d in g_indices:
                 g_var[a, b, c, d].start = g_indices[a, b, c, d]
             # model.read('initial_sol.sol')
-
 
         # Alpha constraint
         L = -100000
@@ -254,7 +288,9 @@ def tspn_b(barriers, neighborhoods, prepro=True, A4=True, dominant = False, log=
                 if (a, b) in vertices_neighborhood:
                     if prepro:
                         # Estimating L, U for this case
-                        L, U = eM.estima_M_alpha1(neighborhoods[abs(a)-1], barriers[c][d], barriers[e][f])
+                        L, U = eM.estima_M_alpha1(
+                            neighborhoods[abs(a) - 1], barriers[c][d], barriers[e][f]
+                        )
 
                         # If U is negative, the whole neighborhood is in the hyperplane generated by the segment
                         if U < 0:
@@ -264,14 +300,45 @@ def tspn_b(barriers, neighborhoods, prepro=True, A4=True, dominant = False, log=
                         elif L > 0:
                             alpha[a, b, c, d, e, f] = 1
                         else:
-                            model.addConstr((1 - alpha[a, b, c, d, e, f]) * L <= af.determinant([point[a, b, 0], point[a, b, 1]], barriers[c][d], barriers[e][f]))
-                            model.addConstr(af.determinant([point[a, b, 0], point[a, b, 1]], barriers[c][d], barriers[e][f]) <= U * alpha[a, b, c, d, e, f])
+                            model.addConstr(
+                                (1 - alpha[a, b, c, d, e, f]) * L
+                                <= af.determinant(
+                                    [point[a, b, 0], point[a, b, 1]],
+                                    barriers[c][d],
+                                    barriers[e][f],
+                                )
+                            )
+                            model.addConstr(
+                                af.determinant(
+                                    [point[a, b, 0], point[a, b, 1]],
+                                    barriers[c][d],
+                                    barriers[e][f],
+                                )
+                                <= U * alpha[a, b, c, d, e, f]
+                            )
                     else:
-                        model.addConstr((1 - alpha[a, b, c, d, e, f]) * L <= af.determinant([point[a, b, 0], point[a, b, 1]], barriers[c][d], barriers[e][f]))
-                        model.addConstr(af.determinant([point[a, b, 0], point[a, b, 1]], barriers[c][d], barriers[e][f]) <= U * alpha[a, b, c, d, e, f])
+                        model.addConstr(
+                            (1 - alpha[a, b, c, d, e, f]) * L
+                            <= af.determinant(
+                                [point[a, b, 0], point[a, b, 1]],
+                                barriers[c][d],
+                                barriers[e][f],
+                            )
+                        )
+                        model.addConstr(
+                            af.determinant(
+                                [point[a, b, 0], point[a, b, 1]],
+                                barriers[c][d],
+                                barriers[e][f],
+                            )
+                            <= U * alpha[a, b, c, d, e, f]
+                        )
 
                 elif (a, b) in vertices_barrier:
-                    if af.determinant(barriers[a][b], barriers[c][d], barriers[e][f]) <= 0:
+                    if (
+                        af.determinant(barriers[a][b], barriers[c][d], barriers[e][f])
+                        <= 0
+                    ):
                         alpha[a, b, c, d, e, f] = 0
                     else:
                         alpha[a, b, c, d, e, f] = 1
@@ -283,7 +350,11 @@ def tspn_b(barriers, neighborhoods, prepro=True, A4=True, dominant = False, log=
                 if (c, d, e, f) in edges_neighborhood:
                     if (c, d) in vertices_neighborhood:
                         if prepro:
-                            L, U = eM.estima_M_alpha2(barriers[a][b], neighborhoods[abs(c)-1], barriers[e][f])
+                            L, U = eM.estima_M_alpha2(
+                                barriers[a][b],
+                                neighborhoods[abs(c) - 1],
+                                barriers[e][f],
+                            )
 
                             # If U is negative, the whole neighborhood is in the hyperplane generated by the segment
                             if U < 0:
@@ -292,23 +363,47 @@ def tspn_b(barriers, neighborhoods, prepro=True, A4=True, dominant = False, log=
                             elif L > 0:
                                 alpha[a, b, c, d, e, f] = 1
                             else:
-                                model.addConstr((1 - alpha[a, b, c, d, e, f]) * L <= af.determinant(barriers[a][b],
-                                                                                                    [point[c, d, 0],
-                                                                                                     point[c, d, 1]],
-                                                                                                    barriers[e][f]))
-                                model.addConstr(af.determinant(barriers[a][b], [point[c, d, 0], point[c, d, 1]],
-                                                               barriers[e][f]) <= U * alpha[a, b, c, d, e, f])
+                                model.addConstr(
+                                    (1 - alpha[a, b, c, d, e, f]) * L
+                                    <= af.determinant(
+                                        barriers[a][b],
+                                        [point[c, d, 0], point[c, d, 1]],
+                                        barriers[e][f],
+                                    )
+                                )
+                                model.addConstr(
+                                    af.determinant(
+                                        barriers[a][b],
+                                        [point[c, d, 0], point[c, d, 1]],
+                                        barriers[e][f],
+                                    )
+                                    <= U * alpha[a, b, c, d, e, f]
+                                )
                         else:
-                            model.addConstr((1 - alpha[a, b, c, d, e, f]) * L <= af.determinant(barriers[a][b],
-                                                                                                [point[c, d, 0],
-                                                                                                 point[c, d, 1]],
-                                                                                                barriers[e][f]))
-                            model.addConstr(af.determinant(barriers[a][b], [point[c, d, 0], point[c, d, 1]],
-                                                           barriers[e][f]) <= U * alpha[a, b, c, d, e, f])
+                            model.addConstr(
+                                (1 - alpha[a, b, c, d, e, f]) * L
+                                <= af.determinant(
+                                    barriers[a][b],
+                                    [point[c, d, 0], point[c, d, 1]],
+                                    barriers[e][f],
+                                )
+                            )
+                            model.addConstr(
+                                af.determinant(
+                                    barriers[a][b],
+                                    [point[c, d, 0], point[c, d, 1]],
+                                    barriers[e][f],
+                                )
+                                <= U * alpha[a, b, c, d, e, f]
+                            )
 
                     elif (e, f) in vertices_neighborhood:
                         if prepro:
-                            L, U = eM.estima_M_alpha3(barriers[a][b], barriers[c][d], neighborhoods[abs(e) - 1])
+                            L, U = eM.estima_M_alpha3(
+                                barriers[a][b],
+                                barriers[c][d],
+                                neighborhoods[abs(e) - 1],
+                            )
 
                             # If U is negative, the whole neighborhood is in the hyperplane generated by the segment
                             if U < 0:
@@ -318,30 +413,56 @@ def tspn_b(barriers, neighborhoods, prepro=True, A4=True, dominant = False, log=
                             elif L > 0:
                                 alpha[a, b, c, d, e, f] = 1
                             else:
-                                model.addConstr((1 - alpha[a, b, c, d, e, f]) * L <= af.determinant(barriers[a][b],
-                                                                                                    barriers[c][d],
-                                                                                                    [point[e, f, 0],
-                                                                                                     point[e, f, 1]]))
-                                model.addConstr(af.determinant(barriers[a][b], barriers[c][d], [point[e, f, 0], point[e, f, 1]])<= U * alpha[a, b, c, d, e, f])
+                                model.addConstr(
+                                    (1 - alpha[a, b, c, d, e, f]) * L
+                                    <= af.determinant(
+                                        barriers[a][b],
+                                        barriers[c][d],
+                                        [point[e, f, 0], point[e, f, 1]],
+                                    )
+                                )
+                                model.addConstr(
+                                    af.determinant(
+                                        barriers[a][b],
+                                        barriers[c][d],
+                                        [point[e, f, 0], point[e, f, 1]],
+                                    )
+                                    <= U * alpha[a, b, c, d, e, f]
+                                )
                         else:
-                            model.addConstr((1 - alpha[a, b, c, d, e, f]) * L <= af.determinant(barriers[a][b],
-                                                                                                barriers[c][d],
-                                                                                                [point[e, f, 0],
-                                                                                                 point[e, f, 1]]))
                             model.addConstr(
-                                af.determinant(barriers[a][b], barriers[c][d], [point[e, f, 0], point[e, f, 1]])
-                                <= U * alpha[a, b, c, d, e, f])
-
+                                (1 - alpha[a, b, c, d, e, f]) * L
+                                <= af.determinant(
+                                    barriers[a][b],
+                                    barriers[c][d],
+                                    [point[e, f, 0], point[e, f, 1]],
+                                )
+                            )
+                            model.addConstr(
+                                af.determinant(
+                                    barriers[a][b],
+                                    barriers[c][d],
+                                    [point[e, f, 0], point[e, f, 1]],
+                                )
+                                <= U * alpha[a, b, c, d, e, f]
+                            )
 
                 elif (c, d, e, f) in edges_barrier:
-                    if af.determinant(barriers[a][b], barriers[c][d], barriers[e][f]) <= 0:
+                    if (
+                        af.determinant(barriers[a][b], barriers[c][d], barriers[e][f])
+                        <= 0
+                    ):
                         alpha[a, b, c, d, e, f] = 0
                     else:
                         alpha[a, b, c, d, e, f] = 1
 
                 elif (c, d, e, f) in edges_source_target:
                     if prepro:
-                        L, U = eM.estima_M_alpha4(barriers[a][b], neighborhoods[abs(c)-1], neighborhoods[abs(e)-1])
+                        L, U = eM.estima_M_alpha4(
+                            barriers[a][b],
+                            neighborhoods[abs(c) - 1],
+                            neighborhoods[abs(e) - 1],
+                        )
 
                         # If U is negative, the whole neighborhood is in the hyperplane generated by the segment
                         if U < 0:
@@ -351,39 +472,82 @@ def tspn_b(barriers, neighborhoods, prepro=True, A4=True, dominant = False, log=
                         elif L > 0:
                             alpha[a, b, c, d, e, f] = 1
                         else:
-                            model.addConstr((1 - alpha[a, b, c, d, e, f]) * L <= af.determinant(barriers[a][b],
-                                                                                                [point[c, d, 0],
-                                                                                                 point[c, d, 1]],
-                                                                                                [point[e, f, 0],
-                                                                                                 point[e, f, 1]]))
-                            model.addConstr(af.determinant(barriers[a][b], [point[c, d, 0], point[c, d, 1]],
-                                                           [point[e, f, 0], point[e, f, 1]]) <= U * alpha[a, b, c, d, e, f])
+                            model.addConstr(
+                                (1 - alpha[a, b, c, d, e, f]) * L
+                                <= af.determinant(
+                                    barriers[a][b],
+                                    [point[c, d, 0], point[c, d, 1]],
+                                    [point[e, f, 0], point[e, f, 1]],
+                                )
+                            )
+                            model.addConstr(
+                                af.determinant(
+                                    barriers[a][b],
+                                    [point[c, d, 0], point[c, d, 1]],
+                                    [point[e, f, 0], point[e, f, 1]],
+                                )
+                                <= U * alpha[a, b, c, d, e, f]
+                            )
                     else:
-                        model.addConstr((1 - alpha[a, b, c, d, e, f]) * L <= af.determinant(barriers[a][b],
-                                                                                            [point[c, d, 0],
-                                                                                             point[c, d, 1]],
-                                                                                            [point[e, f, 0],
-                                                                                             point[e, f, 1]]))
-                        model.addConstr(af.determinant(barriers[a][b], [point[c, d, 0], point[c, d, 1]],
-                                                       [point[e, f, 0], point[e, f, 1]]) <= U * alpha[a, b, c, d, e, f])
+                        model.addConstr(
+                            (1 - alpha[a, b, c, d, e, f]) * L
+                            <= af.determinant(
+                                barriers[a][b],
+                                [point[c, d, 0], point[c, d, 1]],
+                                [point[e, f, 0], point[e, f, 1]],
+                            )
+                        )
+                        model.addConstr(
+                            af.determinant(
+                                barriers[a][b],
+                                [point[c, d, 0], point[c, d, 1]],
+                                [point[e, f, 0], point[e, f, 1]],
+                            )
+                            <= U * alpha[a, b, c, d, e, f]
+                        )
 
         for a, b, c, d, e, f, g, h in beta_index:
             if (a, b, c, d) in indices_barriers or (e, f, g, h) in indices_barriers:
-                model.addConstr(beta[a, b, c, d, e, f, g, h] == 2 * gamma[a, b, c, d, e, f, g, h] - alpha[a, b, e, f, g, h] - alpha[c, d, e, f, g, h] + 1)
-                model.addConstr(gamma[a, b, c, d, e, f, g, h] <= alpha[a, b, e, f, g, h])
-                model.addConstr(gamma[a, b, c, d, e, f, g, h] <= alpha[c, d, e, f, g, h])
-                model.addConstr(gamma[a, b, c, d, e, f, g, h] >= alpha[a, b, e, f, g, h] + alpha[c, d, e, f, g, h] - 1)
+                model.addConstr(
+                    beta[a, b, c, d, e, f, g, h]
+                    == 2 * gamma[a, b, c, d, e, f, g, h]
+                    - alpha[a, b, e, f, g, h]
+                    - alpha[c, d, e, f, g, h]
+                    + 1
+                )
+                model.addConstr(
+                    gamma[a, b, c, d, e, f, g, h] <= alpha[a, b, e, f, g, h]
+                )
+                model.addConstr(
+                    gamma[a, b, c, d, e, f, g, h] <= alpha[c, d, e, f, g, h]
+                )
+                model.addConstr(
+                    gamma[a, b, c, d, e, f, g, h]
+                    >= alpha[a, b, e, f, g, h] + alpha[c, d, e, f, g, h] - 1
+                )
 
             if (e, f, g, h) in indices_barriers:
 
-                model.addConstr(0.5 * (beta[a, b, c, d, e, f, g, h] + beta[e, f, g, h, a, b, c, d]) <= delta[a, b, c, d, e, f, g, h])
-                model.addConstr(2 * (beta[a, b, c, d, e, f, g, h] + beta[e, f, g, h, a, b, c, d]) >= delta[a, b, c, d, e, f, g, h])
+                model.addConstr(
+                    0.5 * (beta[a, b, c, d, e, f, g, h] + beta[e, f, g, h, a, b, c, d])
+                    <= delta[a, b, c, d, e, f, g, h]
+                )
+                model.addConstr(
+                    2 * (beta[a, b, c, d, e, f, g, h] + beta[e, f, g, h, a, b, c, d])
+                    >= delta[a, b, c, d, e, f, g, h]
+                )
 
         for a, b, c, d in epsilon_index:
-            model.addConstr(delta.sum(a, b, c, d, '*', '*', '*', '*') - len(barriers) + 1 <= epsilon[a, b, c, d])
-            model.addConstr(len(barriers) * epsilon[a, b, c, d] <= delta.sum(a, b, c, d, '*', '*', '*', '*'))
+            model.addConstr(
+                delta.sum(a, b, c, d, "*", "*", "*", "*") - len(barriers) + 1
+                <= epsilon[a, b, c, d]
+            )
+            model.addConstr(
+                len(barriers) * epsilon[a, b, c, d]
+                <= delta.sum(a, b, c, d, "*", "*", "*", "*")
+            )
 
-            model.addConstr(y[a, b, c, d] + y[c, d, a, b] <= 2*epsilon[a, b, c, d])
+            model.addConstr(y[a, b, c, d] + y[c, d, a, b] <= 2 * epsilon[a, b, c, d])
 
             # model.addConstr(len(barriers)*(y[a, b, c, d] + y[c, d, a, b]) <= 2 * gp.quicksum(delta[a, b, c, d, e, f, g, h] for e, f, g, h in indices_barriers))
 
@@ -400,37 +564,90 @@ def tspn_b(barriers, neighborhoods, prepro=True, A4=True, dominant = False, log=
             neighborhood = neighborhoods[abs(a) - 1]
 
             if type(neighborhood) is neigh.Circle:
-                model.addConstr(dif_inside[a, b, dim] >= point[a, b, dim] - neighborhoods[abs(a) - 1].center[dim])
-                model.addConstr(dif_inside[a, b, dim] >= neighborhoods[abs(a) - 1].center[dim] - point[a, b, dim])
+                model.addConstr(
+                    dif_inside[a, b, dim]
+                    >= point[a, b, dim] - neighborhoods[abs(a) - 1].center[dim]
+                )
+                model.addConstr(
+                    dif_inside[a, b, dim]
+                    >= neighborhoods[abs(a) - 1].center[dim] - point[a, b, dim]
+                )
 
-                model.addConstr(gp.quicksum(dif_inside[a, b, dim] * dif_inside[a, b, dim] for dim in range(2)) <= d_inside[a, b] * d_inside[a, b])
+                model.addConstr(
+                    gp.quicksum(
+                        dif_inside[a, b, dim] * dif_inside[a, b, dim]
+                        for dim in range(2)
+                    )
+                    <= d_inside[a, b] * d_inside[a, b]
+                )
                 model.addConstr(d_inside[a, b] <= neighborhoods[abs(a) - 1].radii)
 
             if type(neighborhood) is neigh.Poligonal:
-                model.addConstrs(point[a, b, dim] == landa[a, b] * neighborhood.V[0][dim] + (1 - landa[a, b]) * neighborhood.V[1][dim] for dim in range(2))
+                model.addConstrs(
+                    point[a, b, dim]
+                    == landa[a, b] * neighborhood.V[0][dim]
+                    + (1 - landa[a, b]) * neighborhood.V[1][dim]
+                    for dim in range(2)
+                )
 
         # dist constraints
         for a, b, c, d in dist_index:
 
             if (a, b, c, d) in edges_barrier:
-                dist[a, b, c, d] = np.linalg.norm(np.array(barriers[a][b]) - np.array(barriers[c][d]))
+                dist[a, b, c, d] = np.linalg.norm(
+                    np.array(barriers[a][b]) - np.array(barriers[c][d])
+                )
 
             elif (a, b, c, d) in edges_neighborhood:
                 if (a, b) in vertices_neighborhood:
-                    model.addConstrs(dif[a, b, c, d, dim] >= point[a, b, dim] - barriers[c][d][dim] for dim in range(2))
-                    model.addConstrs(dif[a, b, c, d, dim] >= - point[a, b, dim] + barriers[c][d][dim] for dim in range(2))
-                    model.addConstr(gp.quicksum(dif[a, b, c, d, dim] * dif[a, b, c, d, dim] for dim in range(2)) <= dist[a, b, c, d] * dist[a, b, c, d])
+                    model.addConstrs(
+                        dif[a, b, c, d, dim] >= point[a, b, dim] - barriers[c][d][dim]
+                        for dim in range(2)
+                    )
+                    model.addConstrs(
+                        dif[a, b, c, d, dim] >= -point[a, b, dim] + barriers[c][d][dim]
+                        for dim in range(2)
+                    )
+                    model.addConstr(
+                        gp.quicksum(
+                            dif[a, b, c, d, dim] * dif[a, b, c, d, dim]
+                            for dim in range(2)
+                        )
+                        <= dist[a, b, c, d] * dist[a, b, c, d]
+                    )
 
                 elif (c, d) in vertices_neighborhood:
-                    model.addConstrs(dif[a, b, c, d, dim] >= point[c, d, dim] - barriers[a][b][dim] for dim in range(2))
-                    model.addConstrs(dif[a, b, c, d, dim] >= - point[c, d, dim] + barriers[a][b][dim] for dim in range(2))
-                    model.addConstr(gp.quicksum(dif[a, b, c, d, dim] * dif[a, b, c, d, dim] for dim in range(2)) <= dist[a, b, c, d] * dist[a, b, c, d])
+                    model.addConstrs(
+                        dif[a, b, c, d, dim] >= point[c, d, dim] - barriers[a][b][dim]
+                        for dim in range(2)
+                    )
+                    model.addConstrs(
+                        dif[a, b, c, d, dim] >= -point[c, d, dim] + barriers[a][b][dim]
+                        for dim in range(2)
+                    )
+                    model.addConstr(
+                        gp.quicksum(
+                            dif[a, b, c, d, dim] * dif[a, b, c, d, dim]
+                            for dim in range(2)
+                        )
+                        <= dist[a, b, c, d] * dist[a, b, c, d]
+                    )
 
             elif (a, b, c, d) in edges_source_target:
-                model.addConstrs(dif[a, b, c, d, dim] >= point[a, b, dim] - point[c, d, dim] for dim in range(2))
-                model.addConstrs(dif[a, b, c, d, dim] >= - point[a, b, dim] + point[c, d, dim] for dim in range(2))
-                model.addConstr(gp.quicksum(dif[a, b, c, d, dim] * dif[a, b, c, d, dim] for dim in range(2)) <= dist[a, b, c, d] * dist[a, b, c, d])
-
+                model.addConstrs(
+                    dif[a, b, c, d, dim] >= point[a, b, dim] - point[c, d, dim]
+                    for dim in range(2)
+                )
+                model.addConstrs(
+                    dif[a, b, c, d, dim] >= -point[a, b, dim] + point[c, d, dim]
+                    for dim in range(2)
+                )
+                model.addConstr(
+                    gp.quicksum(
+                        dif[a, b, c, d, dim] * dif[a, b, c, d, dim] for dim in range(2)
+                    )
+                    <= dist[a, b, c, d] * dist[a, b, c, d]
+                )
 
         l_out = 0
         u_out = 100000
@@ -452,8 +669,12 @@ def tspn_b(barriers, neighborhoods, prepro=True, A4=True, dominant = False, log=
                         l_out, u_out = eM.estima_M_complete(neighborhood, punto)
 
                 elif (a, b, c, d) in edges_barrier:
-                    l_out = np.linalg.norm(np.array(barriers[a][b]) - np.array(barriers[c][d]))
-                    u_out = np.linalg.norm(np.array(barriers[a][b]) - np.array(barriers[c][d]))
+                    l_out = np.linalg.norm(
+                        np.array(barriers[a][b]) - np.array(barriers[c][d])
+                    )
+                    u_out = np.linalg.norm(
+                        np.array(barriers[a][b]) - np.array(barriers[c][d])
+                    )
 
                 elif (a, b, c, d) in edges_source_target:
                     neighborhood1 = neighborhoods[abs(a) - 1]
@@ -463,7 +684,9 @@ def tspn_b(barriers, neighborhoods, prepro=True, A4=True, dominant = False, log=
 
             # print((l_out, u_out))
             model.addConstr(p[a, b, c, d] >= l_out * y[a, b, c, d])
-            model.addConstr(p[a, b, c, d] >= dist[a, b, c, d] - u_out * (1 - y[a, b, c, d]))
+            model.addConstr(
+                p[a, b, c, d] >= dist[a, b, c, d] - u_out * (1 - y[a, b, c, d])
+            )
 
             # model.addConstr(p[a, b, c, d] <= dist[a, b, c, d]* u_out)
 
@@ -471,30 +694,68 @@ def tspn_b(barriers, neighborhoods, prepro=True, A4=True, dominant = False, log=
 
         # Restriccion 1
         for v_n, j in vertices_neighborhood:
-            model.addConstr(gp.quicksum(y[v, i, v_n, j] for v, i in vertices_total if (v, i, v_n, j) in edges_neighborhood + edges_source_target) >= 1)
+            model.addConstr(
+                gp.quicksum(
+                    y[v, i, v_n, j]
+                    for v, i in vertices_total
+                    if (v, i, v_n, j) in edges_neighborhood + edges_source_target
+                )
+                >= 1
+            )
 
         # Restriccion 2
         for v, i in vertices_total:
-            model.addConstr(gp.quicksum(y[v, i, v_p, j] for v_p, j in vertices_total if (v, i, v_p, j) in edges_total)
-                         == gp.quicksum(y[v_p, j, v, i] for v_p, j in vertices_total if (v_p, j, v, i) in edges_total))
+            model.addConstr(
+                gp.quicksum(
+                    y[v, i, v_p, j]
+                    for v_p, j in vertices_total
+                    if (v, i, v_p, j) in edges_total
+                )
+                == gp.quicksum(
+                    y[v_p, j, v, i]
+                    for v_p, j in vertices_total
+                    if (v_p, j, v, i) in edges_total
+                )
+            )
 
         # Restriccion 3
         for v_n, i in vertices_neighborhood:
             if v_n <= -2:
-                model.addConstr(gp.quicksum(g_var[v_n, i, v, j] for v, j in vertices_total if
-                                            (v_n, i, v, j) in edges_neighborhood + edges_source_target) - gp.quicksum(
-                    g_var[v, j, v_n, i] for v, j in vertices_total if
-                    (v, j, v_n, i) in edges_neighborhood + edges_source_target) == 1)
+                model.addConstr(
+                    gp.quicksum(
+                        g_var[v_n, i, v, j]
+                        for v, j in vertices_total
+                        if (v_n, i, v, j) in edges_neighborhood + edges_source_target
+                    )
+                    - gp.quicksum(
+                        g_var[v, j, v_n, i]
+                        for v, j in vertices_total
+                        if (v, j, v_n, i) in edges_neighborhood + edges_source_target
+                    )
+                    == 1
+                )
 
         # Restriccion 4
         for v_b, i in vertices_barrier:
-            model.addConstr(gp.quicksum(g_var[(w, j, v_b, i)] for w, j in vertices_total if
-                                        (w, j, v_b, i) in edges_total) - gp.quicksum(
-                g_var[(v_b, i, w, j)] for w, j in vertices_total if
-                (v_b, i, w, j) in edges_total) == 0)
+            model.addConstr(
+                gp.quicksum(
+                    g_var[(w, j, v_b, i)]
+                    for w, j in vertices_total
+                    if (w, j, v_b, i) in edges_total
+                )
+                - gp.quicksum(
+                    g_var[(v_b, i, w, j)]
+                    for w, j in vertices_total
+                    if (v_b, i, w, j) in edges_total
+                )
+                == 0
+            )
 
         # Restriccion 5
-        model.addConstrs(g_var[a, b, c, d] <= (len(neighborhoods) - 1) * y[a, b, c, d] for a, b, c, d in g_var.keys())
+        model.addConstrs(
+            g_var[a, b, c, d] <= (len(neighborhoods) - 1) * y[a, b, c, d]
+            for a, b, c, d in g_var.keys()
+        )
         # model.addConstrs(gp.quicksum(y[v, i, vertices_neighborhood] for v, i in vertices_barrier) == 1 for
         # vertices_neighborhood in vertices_neighborhood) model.addConstrs(gp.quicksum(y[vertices_neighborhood, v,
         # i] for v, i in vertices_barrier) == 1 for vertices_neighborhood in vertices_neighborhood)
@@ -544,46 +805,58 @@ def tspn_b(barriers, neighborhoods, prepro=True, A4=True, dominant = False, log=
         model.update()
 
         model.Params.Threads = 6
-#        model.Params.timeLimit = time_limit - time_elapsed
-        model.Params.timeLimit = time_limit 
-       
+        #        model.Params.timeLimit = time_limit - time_elapsed
+        model.Params.timeLimit = time_limit
+
         # model.Params.LazyConstraints = 1
         model.Params.NumericFocus = 1
 
-        if not(A4):
+        if not (A4):
             model.Params.NonConvex = 2
 
         # p = model.presolve()
         # p.write('presolved.lp')
         # model.write('prueba.lp')
 
-#        model.write('prueba.mps')
+        #        model.write('prueba.mps')
 
         model.optimize()
 
-        results = [len(neighborhoods), len(barriers), prepro, A4, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan]
+        results = [
+            len(neighborhoods),
+            len(barriers),
+            prepro,
+            A4,
+            np.nan,
+            np.nan,
+            np.nan,
+            np.nan,
+            np.nan,
+            np.nan,
+            np.nan,
+        ]
 
         if init:
             try:
                 results[9] = time_h
                 results[10] = objval_h
             except:
-                print('No solution obtained by the heuristic')
+                print("No solution obtained by the heuristic")
 
         if model.Status == 3:
             model.computeIIS()
-            model.write('infeasible_constraints.ilp')
+            # model.write("infeasible_constraints.ilp")
             return results
 
         if model.SolCount == 0:
             return results
 
-#        model.write('solution.sol')
+        #        model.write('solution.sol')
 
-        results[4] = model.getAttr('MIPGap')
+        results[4] = model.getAttr("MIPGap")
         results[5] = model.Runtime
         results[6] = time_elapsed
-        results[7] = model.getAttr('NodeCount')
+        results[7] = model.getAttr("NodeCount")
         results[8] = model.ObjVal
 
         y_indices = []
@@ -608,12 +881,12 @@ def tspn_b(barriers, neighborhoods, prepro=True, A4=True, dominant = False, log=
             fig, ax = plt.subplots()
 
             for b in barriers:
-                ax.plot([b[0][0], b[1][0]], [b[0][1], b[1][1]], c='red')
+                ax.plot([b[0][0], b[1][0]], [b[0][1], b[1][1]], c="red")
 
             for n in neighborhoods:
                 ax.add_artist(n.artist)
 
-            p_vals = model.getAttr('x', point)
+            p_vals = model.getAttr("x", point)
             print(p_vals)
 
             points = []
@@ -624,7 +897,7 @@ def tspn_b(barriers, neighborhoods, prepro=True, A4=True, dominant = False, log=
             print(points)
 
             for i in points:
-                ax.scatter(i[0], i[1], s=10, c='black')
+                ax.scatter(i[0], i[1], s=10, c="black")
 
             # print(points)
 
@@ -634,26 +907,60 @@ def tspn_b(barriers, neighborhoods, prepro=True, A4=True, dominant = False, log=
                 if (a, b, c, d) in edges_neighborhood:
                     if (a, b) in vertices_neighborhood:
                         segments.append(
-                            [points[abs(a) - 1][0], barriers[c][d][0], points[abs(a) - 1][1], barriers[c][d][1]])
+                            [
+                                points[abs(a) - 1][0],
+                                barriers[c][d][0],
+                                points[abs(a) - 1][1],
+                                barriers[c][d][1],
+                            ]
+                        )
                     if (c, d) in vertices_neighborhood:
                         segments.append(
-                            [barriers[a][b][0], points[abs(c) - 1][0], barriers[a][b][1], points[abs(c) - 1][1]])
+                            [
+                                barriers[a][b][0],
+                                points[abs(c) - 1][0],
+                                barriers[a][b][1],
+                                points[abs(c) - 1][1],
+                            ]
+                        )
                 if (a, b, c, d) in edges_barrier:
-                    segments.append([barriers[a][b][0], barriers[c][d][0], barriers[a][b][1], barriers[c][d][1]])
+                    segments.append(
+                        [
+                            barriers[a][b][0],
+                            barriers[c][d][0],
+                            barriers[a][b][1],
+                            barriers[c][d][1],
+                        ]
+                    )
 
                 if (a, b, c, d) in edges_source_target:
-                    segments.append([points[abs(a) - 1][0], points[abs(c) - 1][0], points[abs(a) - 1][1], points[abs(c)-1][1]])
+                    segments.append(
+                        [
+                            points[abs(a) - 1][0],
+                            points[abs(c) - 1][0],
+                            points[abs(a) - 1][1],
+                            points[abs(c) - 1][1],
+                        ]
+                    )
                 # if (a, b, c, d) in ENN:
 
             # print(segments)
             for segment in segments:
-                ax.arrow(segment[0], segment[2], segment[1] - segment[0], segment[3] - segment[2], width=0.1,
-                         head_width=1, length_includes_head=True, color='black')
+                ax.arrow(
+                    segment[0],
+                    segment[2],
+                    segment[1] - segment[0],
+                    segment[3] - segment[2],
+                    width=0.1,
+                    head_width=1,
+                    length_includes_head=True,
+                    color="black",
+                )
 
             # plt.axis([-5, 105, -5, 105])
             # plt.axis([0, 100, 0, 100])
 
-            ax.set_aspect('equal')
+            ax.set_aspect("equal")
             plt.show()
     # else:
     #     first_time = time.time()
