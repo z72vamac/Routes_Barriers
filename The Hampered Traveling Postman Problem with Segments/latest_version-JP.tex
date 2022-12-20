@@ -91,6 +91,7 @@
 	\newcommand{\segment}[2]{\overline{#1#2}}
 	\newcommand{\determinant}[3]{\det({#1|#2#3})}
 	
+
 	\begin{document}
 		
 		\begin{frontmatter}
@@ -152,7 +153,7 @@
 			% \item \label{A4}There is no rectilinear path joining two neighbourhoods without crossing an obstacle.
 		\end{enumerate}
 
-		\CV{In this work, a special for the \TSPN \ is studied by assuming that:
+		\CV{In this work, a special for the \TSPN \ is studied by assuming, in addition, that:
 		\begin{enumerate}[label=\textbf{A\arabic*}, ref=\textbf{A\arabic*}]
 			\setcounter{enumi}{3}
 			\item \label{A4}There is no rectilinear path joining two neighbourhoods without crossing an obstacle.
@@ -211,7 +212,7 @@
 		\begin{itemize}
 			\item $\VN=\{P_N:N\in\mathcal N\}$. Set of the points selected in the neighbourhoods $\mathcal N$ to be visited.
 			\item $\VB=\{P^1_B, P^2_B:B=\overline{P^1_B P^2_B}\in \mathcal B\}$. Set of vertices of the barriers of the problem.
-			\item $\EN=\{(P_N, P^i_{B}):P^i_B\in V_\B\text{ and } \overline{P_NP^i_B}\cap B''=\emptyset,\forall B''\in\B,\:i=1,2\}$. Set of edges formed by the line segments that join each point selected in the neighbourhoods of $\mathcal N$ with every endpoint in the barriers and do not cross any barrier in $\B$.
+			\item $\EN=\{(P_N, P^i_{B}):P_N\in\VN, P^i_B\in V_\B\text{ and } \overline{P_NP^i_B}\cap B''=\emptyset,\forall B''\in\B,\:i=1,2\}$. Set of edges formed by the line segments that join each point selected in the neighbourhoods of $\mathcal N$ with every endpoint in the barriers and do not cross any barrier in $\B$.
 			\item $\EB=\{(P^{i}_B, P^{j}_{B'}):P^i_B, P^j_{B'}\in \VB \text{ and } \overline{P^i_B P^j_{B'}}\cap B''=\emptyset,\:\forall B''\in\mathcal B,\:i, j=1,2\}$. Set of edges formed by the line segments that join two vertices of $V_{\mathcal B}$ and do not cross any barrier in $\B$.
 		\end{itemize} 
 		
@@ -635,7 +636,7 @@
 		\end{align*}
 		
 		
-		The  graph induced by the precomputed dominating sets is described in terms of the following sets
+		The  graph induced by the precomputed dominating sets is described in terms of the following sets:
 		\begin{itemize}
 			\item $V_\mathcal N^*=\{N^*:N\in\mathcal N\}$. Union of the dominating sets associated with each neighbourhood.
 			\item $E_N^{\text{int}}=\{(P_N(P_B^i, P_{B'}^j), P_N), (P_N, P_N(P_B^i, P_{B'}^j)) :P_B^i\in\VB,\,P_N\in N\text{ and }P_{B'}^j\in\VB\}.$ Set of edges joining the point selected $P_N\in N$ with each point $P_N(P_B^i, P_{B'}^j)$ in the dominating set $N^*$.
@@ -911,7 +912,7 @@
 	\subsubsection{Lower and upper bounds when the neighbourhoods are line segments}
 	In this case, the segment whose endpoints are $P^1_{N}$ and $P^2_{N}$ can be expressed as the following convex set:
 	$$N=\{(x,y)\in\mathbb R^2:(x,y)=\mu P^1_{N}+(1-\mu)P^2_{N}, \; 0\leq\mu\leq1\}.$$
-	Since we optimise a linear function in a compact set, we can conclude that the objective function in \eqref{eq:L-Problem} achieves its minimum and its maximum at the extreme points of $N$, that is, in $P^1_{N}$ and $P^2_{N}$. 
+	Since we optimise a linear function in a compact set, we can conclude that the objective function in \eqref{eq:L-Problem} achieves its minimum and maximum at the extreme points of $N$, that is, in $P^1_{N}$ and $P^2_{N}$. 
 	
 	\subsubsection{Lower and upper bounds when the neighbourhoods are ellipses}\label{subsection:bounds}
 	The next case considered is that when $N$ is an ellipse, that is, $N$ is represented by the following inequality:
@@ -1035,7 +1036,7 @@
 	
 	% \textcolor{red}{Quizás evitar el uso $n$ sea adecuado para evitar confusiones}
 	\subsection{Configuration of the experiments}
-	Since no benchmark instances are available for this problem in the literature, we have generated ten instances with a number of neighbourhoods $|\mathcal N|\in\{5, 10, 20, 30, 50, 80, 100\}$ of two typologies: balls and line segments. We have distinguished the cases with and without \sout{preprocessing the variables of} \CV{strengthening} the formulations, as explained in Section \ref{section:strengthening}, and we have reported the average results. 
+	Since no benchmark instances are available for this problem in the literature, we have generated five instances with a number of neighbourhoods $|\mathcal N|\in\{5, 10, 20, 30, 50, 80, 100\}$ of two typologies: balls and line segments. We have distinguished the cases with and without \sout{preprocessing the variables of} \CV{strengthening} the formulations, as explained in Section \ref{section:strengthening}, and we have reported the average results. 
 	
 	The formulations were coded in Python 3.9.2 (\citet{g_van_rossum_guido_python_1995}) and solved in Gurobi 9.1.2 (\citet{gurobi_optimization_llc_gurobi_2022}) on an AMD® Epyc 7402p 8-core processor. A time limit of 1 hour was set in the experiments.
 	
