@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="712f3f4d-af51-4f22-a88b-8203b6392243" name="Changes" comment="Añadidos los resultados smith." />
+    <list default="true" id="712f3f4d-af51-4f22-a88b-8203b6392243" name="Changes" comment="Resultados de los circulos actualizada.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estimacion_M.py" beforeDir="false" afterPath="$PROJECT_DIR$/estimacion_M.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resultados/results_smith.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resultados/results_smith.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routine_smith.py" beforeDir="false" afterPath="$PROJECT_DIR$/routine_smith.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,19 +17,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN"
-  }
-}]]></component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="f98d89a3-a123-431e-a82b-318d5f196707" />
-        <option name="url" value="https://github.com/z72vamac/Routes_Barriers.git" />
-      </UrlAndAccount>
-    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -80,12 +72,12 @@
       <option name="presentableId" value="Default" />
       <updated>1670933145620</updated>
     </task>
-    <task id="LOCAL-00001" summary="Añadidos los resultados smith.">
-      <created>1671549705054</created>
+    <task id="LOCAL-00001" summary="Resultados de los circulos actualizada.">
+      <created>1670950704722</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1671549705054</updated>
+      <updated>1670950704722</updated>
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
@@ -102,7 +94,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Añadidos los resultados smith." />
-    <option name="LAST_COMMIT_MESSAGE" value="Añadidos los resultados smith." />
+    <MESSAGE value="Resultados de los circulos actualizada." />
+    <option name="LAST_COMMIT_MESSAGE" value="Resultados de los circulos actualizada." />
   </component>
 </project>

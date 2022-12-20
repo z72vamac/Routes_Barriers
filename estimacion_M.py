@@ -163,6 +163,7 @@ def estima_M_alpha2(punto1, entorno, punto2):
     m = min(determinantes)/divisor
     M = max(determinantes)*divisor
 
+
     return m, M
 
 def estima_M_alpha3(punto1, punto2, entorno):
