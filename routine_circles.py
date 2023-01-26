@@ -23,12 +23,12 @@ start = True
 
 num_rows = 0
 if start:
-    dataframe = pd.read_csv('./resultados/results_circles.csv').iloc[:, 1:]
+    dataframe = pd.read_csv('./resultados/results_circles_70.csv').iloc[:, 1:]
     num_rows = dataframe.shape[0] - 1
 
 counter = 1
 
-for nP in [5, 10, 20, 30, 50, 80, 100]:
+for nP in [70, 75, 80]: #[5, 10, 20, 30, 50, 80, 100]:
     for a4 in A4s:
         for prepro in prepros:
             for instance in range(5):
@@ -59,7 +59,7 @@ for nP in [5, 10, 20, 30, 50, 80, 100]:
                     serie = pd.Series([instance] + resultados, index = dataframe.columns)
 
                     dataframe = dataframe.append(serie, ignore_index=True)
-                    dataframe.to_csv('./resultados/results_circles.csv')
+                    dataframe.to_csv('./resultados/results_circles_70.csv')
 
                 counter += 1
 

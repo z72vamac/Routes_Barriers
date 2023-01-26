@@ -19,16 +19,16 @@ dataframe = pd.DataFrame(columns=['Instance', 'n_N', 'n_B', 'Strength', 'A4', 'G
 A4s = [False, True]
 prepros = [False, True]
 
-start = True
+start = False
 
 num_rows = 0
 if start:
-    dataframe = pd.read_csv('./resultados/results_segments.csv').iloc[:, 1:]
+    dataframe = pd.read_csv('./resultados/results_segments-60-75.csv').iloc[:, 1:]
     num_rows = dataframe.shape[0]
 
 counter = 1
 
-for nP in [5, 10, 20, 30, 50, 80, 100]:
+for nP in [60, 65, 70, 75]:
     for a4 in A4s:
         for prepro in prepros:
             for instance in range(5):
@@ -59,7 +59,7 @@ for nP in [5, 10, 20, 30, 50, 80, 100]:
                     serie = pd.Series([instance] + resultados, index = dataframe.columns)
 
                     dataframe = dataframe.append(serie, ignore_index=True)
-                    dataframe.to_csv('./resultados/results_segments.csv')
+                    dataframe.to_csv('./resultados/results_segments-60-75.csv')
 
                 counter += 1
 

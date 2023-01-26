@@ -5,47 +5,46 @@ Reallocating 'name_of_file' (item size: 1) to 4 items.
 The style file: apa.bst
 Reallocating 'name_of_file' (item size: 1) to 17 items.
 Database file #1: bibliography.bib
-Warning--empty booktitle in moemke_approximating_2011
-Warning--empty school in mennell_heuristics_2009
-You've used 20 entries,
+Warning--I didn't find a database entry for ""
+You've used 21 entries,
             1940 wiz_defined-function locations,
-            599 strings with 7710 characters,
-and the built_in function-call counts, 8074 in all, are:
-= -- 812
-> -- 310
-< -- 14
-+ -- 112
-- -- 102
-* -- 714
-:= -- 1392
-add.period$ -- 71
-call.type$ -- 20
-change.case$ -- 150
-chr.to.int$ -- 20
-cite$ -- 22
-duplicate$ -- 298
-empty$ -- 553
-format.name$ -- 136
-if$ -- 1562
+            605 strings with 7848 characters,
+and the built_in function-call counts, 8656 in all, are:
+= -- 863
+> -- 340
+< -- 15
++ -- 123
+- -- 111
+* -- 781
+:= -- 1484
+add.period$ -- 70
+call.type$ -- 21
+change.case$ -- 157
+chr.to.int$ -- 21
+cite$ -- 21
+duplicate$ -- 318
+empty$ -- 601
+format.name$ -- 150
+if$ -- 1679
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 19
-newline$ -- 112
-num.names$ -- 60
-pop$ -- 119
+missing$ -- 22
+newline$ -- 113
+num.names$ -- 65
+pop$ -- 127
 preamble$ -- 1
-purify$ -- 151
+purify$ -- 159
 quote$ -- 0
-skip$ -- 225
+skip$ -- 237
 stack$ -- 0
-substring$ -- 577
-swap$ -- 55
+substring$ -- 632
+swap$ -- 59
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 116
-warning$ -- 2
-while$ -- 68
+type$ -- 120
+warning$ -- 0
+while$ -- 75
 width$ -- 0
-write$ -- 278
-(There were 2 warnings)
+write$ -- 288
+(There was 1 warning)

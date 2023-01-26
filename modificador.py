@@ -19,7 +19,7 @@ np.random.seed(10)
 
 
 
-for nP in [90, 100]:
+for nP in [60, 65, 70, 75]:
     for instance in range(10):
         
         segmentos_visitar = []
