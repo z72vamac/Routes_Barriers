@@ -1,12 +1,14 @@
 \pgfplotsset{compat=1.15}
 \usetikzlibrary{arrows}
-\begin{figure}[h!]
-\caption{The construction of the graph $G=(V,E)$}
-\centering
 \definecolor{qqffqq}{rgb}{0,1,0}
 \definecolor{qqqqff}{rgb}{0,0,1}
 \definecolor{ffqqqq}{rgb}{1,0,0}
-\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm, scale=0.65]
+\begin{figure}[h!]
+\centering
+\begin{minipage}{.4\linewidth}
+	\centering
+\caption{Generation of the visibility graph $\GSPP$. Case 1}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm, scale=0.5]
 \begin{axis}[
 x=0.1cm,y=0.1cm,
 axis lines=middle,
@@ -14,9 +16,9 @@ xmin=-5,
 xmax=105,
 ymin=-5,
 ymax=105,
-xtick={-30,-20,...,160},
-ytick={-30,-20,...,100},]
-\clip(-30.537729395742623,-31.914778968980123) rectangle (160.8609499148995,105.01143884235292);
+xtick={-30, -20,...,100},
+ytick={-30, -20,...,100},]
+\clip(-30.537729395742623,-36.63351803502969) rectangle (160.8609499148995,109.73017790840248);
 \draw [line width=1pt,color=ffqqqq] (20,80)-- (40,30);
 \draw [line width=1pt,color=ffqqqq] (70,95)-- (40,70);
 \draw [line width=1pt,color=ffqqqq] (95,60)-- (60,70);
@@ -78,16 +80,22 @@ ytick={-30,-20,...,100},]
 \end{scriptsize}
 \end{axis}
 \end{tikzpicture}
-\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm, scale=0.65]
+\label{fig:graph1}
+\end{minipage}
+\hspace{1 cm}
+\begin{minipage}{.4\linewidth}
+	\centering
+\caption{Generation of the visibility graph $\GSPP$. Case 2}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm, scale=0.5]
 \begin{axis}[
-x=0.1cm,y=0.1cm,
-axis lines=middle,
-xmin=-5,
-xmax=105,
-ymin=-5,
-ymax=105,
-xtick={-30,-20,...,160},
-ytick={-30,-20,...,95},]
+	x=0.1cm,y=0.1cm,
+	axis lines=middle,
+	xmin=-5,
+	xmax=105,
+	ymin=-5,
+	ymax=105,
+	xtick={-30,-20,...,160},
+	ytick={-30,-20,...,100},]
 \clip(-30.537729395742623,-36.63351803502969) rectangle (160.8609499148995,109.73017790840248);
 \draw [line width=1pt,color=ffqqqq] (20,80)-- (40,30);
 \draw [line width=1pt,color=ffqqqq] (70,95)-- (40,70);
@@ -152,5 +160,6 @@ ytick={-30,-20,...,95},]
 \end{scriptsize}
 \end{axis}
 \end{tikzpicture}
-\label{fig:graph}
+\label{fig:graph2}
+\end{minipage}
 \end{figure}

@@ -1,0 +1,128 @@
+\documentclass[a4paper,  review, authoryear, 1p.]{elsarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[normalem]{ulem}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{mathtools,amssymb}
+\usepackage{subfigure}
+\usepackage{optidef}
+\usepackage{xcolor}
+\usepackage[normalem]{ulem}
+\usepackage{amsthm}
+\usepackage{comment}
+%\usepackage[numbers]{natbib}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{mathrsfs}
+\usepackage{float}
+\usepackage{bm}
+%\usepackage{booktabs}
+\usepackage{bigstrut}
+\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+%\usepackage[noend]{algpseudocode}
+%\usepackage{ulem}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumitem}
+\usepackage{mathrsfs}
+\usepackage{xspace}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{colortbl}
+\setlength{\extrarowheight}{.5ex}
+
+
+\usepackage{threeparttable}
+
+\usepackage[utf8]{inputenc}
+
+
+
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+
+
+\newcommand{\SPPN}{{\sf{H-SPPN}\xspace }}
+\newcommand{\TSPHN}{{\sf{H-TSPHN}\xspace }}
+\newcommand{\TSPN}{{\sf{H-TSPN}\xspace }}
+\newcommand{\B}{{\mathcal B}}
+\newcommand{\VB}{{V^{}_{\mathcal B}}}
+\newcommand{\EB}{{E^{}_{\mathcal B}}}
+\newcommand{\VS}{{V^{}_{S}}}
+\newcommand{\ES}{{E^{}_{S}}}
+\newcommand{\VT}{{V^{}_{T}}}
+\newcommand{\ET}{{E^{}_{T}}}
+\newcommand{\VN}{{V^{}_{\mathcal N}}}
+\newcommand{\EN}{{E^{}_{\mathcal N}}}
+\newcommand{\GSPP}{{G_{\text{SPP}}}}
+\newcommand{\VSPP}{{V_{\text{SPP}}}}
+\newcommand{\ESPP}{{E_{\text{SPP}}}}
+\newcommand{\GTSP}{{G_{\text{TSP}}}}
+\newcommand{\VTSP}{{V_{\text{TSP}}}}
+\newcommand{\ETSP}{{E_{\text{TSP}}}}
+\newcommand{\GTSPH}{{G_{\text{TSPH}}}}
+\newcommand{\VTSPH}{{V_{\text{TSPH}}}}
+\newcommand{\ETSPH}{{E_{\text{TSPH}}}}
+\newcommand{\VSS}{{V^*_S}}
+\newcommand{\ESS}{{E^*_S}}
+\newcommand{\VTS}{{V^*_T}}
+\newcommand{\ETS}{{E^*_T}}
+\newcommand{\VNS}{{V^*_{\mathcal N}}}
+\newcommand{\ENS}{{E^*_{\mathcal N}}}
+\newcommand{\GSPPS}{{G^{*}_{\text{SPP}}}}
+\newcommand{\VSPPS}{{V^{*}_{\text{SPP}}}}
+\newcommand{\ESPPS}{{E^{*}_{\text{SPP}}}}
+\newcommand{\GTSPHS}{{G^{*}_{\text{TSPH}}}}
+\newcommand{\VTSPHS}{{V^{*}_{\text{TSPH}}}}
+\newcommand{\ETSPHS}{{E^{*}_{\text{TSPH}}}}
+
+\newtheorem{remark}{Remark}
+\newtheorem{notation}{Notation}
+
+\newtheorem{prop}{Proposition}
+
+\definecolor{armygreen}{rgb}{0.19, 0.53, 0.43}
+\definecolor{atomictangerine}{rgb}{1.0, 0.6, 0.4}
+\newcommand{\JP}[1]{{\color{armygreen}#1}}
+\newcommand{\CV}[1]{{\color{red}#1}}
+\newcommand{\segment}[2]{\overline{#1#2}}
+\newcommand{\determinant}[3]{\det({#1|#2#3})}
+
+
+\begin{document}
+	
+	\begin{frontmatter}
+		
+		\title{The Hampered Travelling Salesman Problem with Neighbourhoods\tnoteref{t1}}
+		
+		\author[1]{Justo Puerto \fnref{fn1}}%
+		\ead{puerto@us.es}
+		
+		\author[2]{Carlos Valverde\corref{cor1} \fnref{fn2}}
+		\ead{cvalverde@us.es}
+		
+		\address[1]{Department of Statistics and Operations Research, University of Seville, Seville, 41012, Spain}
+		\address[2]{Department of Statistics and Operations Research, University of Seville, Seville, 41012, Spain}
+		
+		\tnotetext[t1]{This research has been partially supported by the Agencia Estatal de Investigación (AEI) and the European Regional Development Fund (ERDF): PID2020-114594GB-C21; and Regional Government of Andalusia: project P18-FR-1422.}
+		\cortext[cor1]{Corresponding author}
+		\fntext[fn1, fn2]{Equally contributing authors}
+		
+		\date{\today}
+		
+		
+		\begin{abstract}
+			This paper deals with two different route design problems in a continuous space with neighbours and barriers: the shortest path and the travelling salesman problems with neighbours and barriers. Each one of these two elements, neighbours and barriers, makes the problems harder than their standard counterparts. Therefore, mixing both together results in a new challenging problem that, as far as we know, has not been addressed before but that has applications for inspection and surveillance activities and the delivery industry assuming uniformly distributed demand in some regions.
+			We provide exact mathematical programming formulations for both problems assuming polygonal barriers and neighbours that are second-order cone (SOC) representable. These hypotheses give rise to mixed integer SOC formulations that we preprocess and strengthen with valid inequalities. The paper also reports computational experiments showing that our exact method can solve instances with 75 neighbourhoods and a range between 125-145 barriers.
+		\end{abstract}
+		
+		\begin{keyword}
+			Routing \sep Travelling salesman \sep Networks \sep Conic programming and interior point methods
+		\end{keyword}
+		
+	\end{frontmatter}
+
+\end{document}
