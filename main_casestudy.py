@@ -29,7 +29,7 @@ from HTSPS_new_ven import HTSPS_ven
 # from HTSPS_without_prepro import HTSPS_without_prepro
 
 
-blocks = [1, 2]
+blocks = [2]
 barriers = []
 
 for i in blocks:
@@ -39,11 +39,12 @@ for i in blocks:
     for lista in segments:
         barriers.append([[lista[0], lista[1]], [lista[2], lista[3]]])
 
+print(len(barriers)) 
 bolas = [[52, 65, 15], [57, 108, 8.5], [77, 120, 4], [98, 115, 5], [117, 100, 7]]
 
 N = [neigh.Circle(center = [centro1, centro2], radii = radio) for centro1, centro2, radio in bolas]
 
-resultados = tspn_b(barriers, N, A4 = True, dominant=False, prepro=True, log=False, picture=True, time_limit=600, init = False)
+resultados = tspn_b(barriers, N, A4 = False, dominant=False, prepro=False, log=False, picture=True, time_limit=3*3600, init = True)
 
 
 # print(resultados)

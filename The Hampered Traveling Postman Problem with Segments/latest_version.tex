@@ -150,13 +150,17 @@
 	
 	
 	\section{Preliminaries and Problems'  Description \label{section:description}}
+
 	This section is devoted to setting the hypotheses that describe the framework where we analyse the considered problems.
-	We will deal with two problems in this paper: the Hampered Shortest Path Problem with Neighbourhoods \SPPN \ and the Hampered Travelling Salesman Problem with Neighbourhoods \TSPN. Since we have in mind their applications to the drone delivery problem with uniformly distributed demand in regions and inspection problems, at times, we will refer to the moving object as \textit{drone}. In both problems considered, we denote by $\mathcal{B}$ the set of line segments that model the barriers and adopt the assumptions listed below.
+	We will deal with two problems in this paper: the Hampered Shortest Path Problem with Neighbourhoods \SPPN \ and the Hampered Travelling Salesman Problem with Neighbourhoods \TSPN. Since we have in mind their applications to the drone delivery problem with uniformly distributed demand in regions and inspection problems, at times, we will refer to the moving object as \textit{drone}. 
+	
+	\CV{\subsection{Assumptions and notation}}
+	In both problems considered, we denote by $\mathcal{B}$ the set of line segments that model the barriers and adopt the assumptions listed below.
 	
 	\begin{enumerate}[label=\textbf{A\arabic*},ref=\textbf{A\arabic*}]
 		\item \label{A1}The line segments of $\mathcal B$ are located in a general position, i.e., the endpoints of these segments are not aligned. Although it is possible to model the aligned case, one can always slightly modify one of the endpoints so that the segments are not aligned.
 		\item The line segments of $\mathcal B$ are open sets, that is, it is possible that the drone visits the endpoints of the segments, but entering into its interior is not allowed. Observe that without loss of generality, we can always slightly enlarge these segments to make them open.
-		\item \label{A3}If there are two \CV{aligned} overlapping barriers, we assume that there is only one barrier \sout{given by the union} \CV{containing both of} of them.
+		\item \label{A3}If there are two \CV{aligned} overlapping barriers, we assume that there is only one barrier \sout{given by the union of} \CV{containing both of} them.
 		% \item \label{A4}There is no rectilinear path joining two neighbourhoods without crossing an obstacle.
 	\end{enumerate}
 	
@@ -167,7 +171,7 @@
 	\end{enumerate} 
 	This problem is called the Hampered Traveling Salesman Problem with Hidden Neighbourhoods \TSPHN. The consideration of this more constrained subproblem appears as a natural extension of the \SPPN. Indeed, in \SPPN, the shortest path that joins two neighbourhoods is sought by assuming \ref{A4}. Otherwise, it would be trivially solved by finding the standard shortest path between both neighbourhoods since no obstacles would block its use.
 	
-	\CV{Figures \ref{fig:spp}, \ref{fig:tsph} and \ref{fig:tsp} show an example of each of the three problems that are being considered, respectively. Figure \ref{fig:spp} shows an instance of the \SPPN, where the blue neighbourhood represents the source, the green represents the target, and the red line segments show the barriers that the drone cannot cross. In Figure \ref{fig:tsph}, an instance of the \TSPHN \  is shown, where the neighbourhoods are balls and the barriers are, again, the red line segments. Finally, Figure \ref{fig:tsp} illustrates an example of the \TSPN, where the orange and blue balls can be joined by a rectilinear path.}
+	\CV{Figures \ref{fig:spp}, \ref{fig:tsph} and \ref{fig:tsp} show an example of each of the three problems that are being considered, respectively. Figure \ref{fig:spp} shows an instance of the \SPPN, where the blue neighbourhood represents the source, the green one represents the target, and the red line segments show the barriers that the drone cannot cross. In Figure \ref{fig:tsph}, an instance of the \TSPHN \  is shown, where the neighbourhoods are balls and the barriers are, again, the red line segments. Finally, Figure \ref{fig:tsp} illustrates an example of the \TSPN, where the orange and blue balls can be joined by a rectilinear path.}
 	
 	\input{figures/Example_ H-SPP-S_ First Figure}
 	%In \SPPN, we have a source neighbourhood $N_S\subset\mathbb R^2$ and a target neighbourhood $N_T\subset\mathbb R^2$, which we assume to be convex sets and a set $\mathcal B$ of opened line segments located in general position that plays the role of barriers that the drone cannot cross, i.e., the drone can visit the endpoints of these barriers but it cannot be located in the interior points of the barriers. Note that, it is rational to assume that if there are two barriers that have a portion of them in common, it is only considered the smallest line segment that contains both barriers. The aim of the \SPPN is to find the best pair of points $(P_{S}, P_{T})\in N_S\times N_T$ in the source and target neighbourhoods that minimize the length of the path that joins both points without crossing any barrier of $\mathcal B$. In this problem, it is implicitly assumed that there is not a rectilinear path to go from $N_S$ to $N_T$, otherwise, the problem becomes straightforward and the solution is the minimum distance between both neighbourhoods. 
@@ -190,9 +194,9 @@
 		The sign of $\determinant{P^1}{P^2}{P^3}$ gives the orientation of the point $P^1$ with respect to the line segment $\segment{P^2}{P^3}.$ Note that $\determinant{P^1}{P^2}{P^3}\neq 0$ by \ref{A1}. 
 	\end{itemize}
 	
-	\CV{Once defined the problems treated in this work, the following subsections describe the construction of the \emph{visibility graphs} that are used to develop some mathematical programming formulations that solve the problem exactly. These objects represent the set of possible rectilinear paths the drone can take without crossing any barrier. For these problems, the visibility graphs are not fixed. They depend on the points selected in the neighbourhoods, as shown in Figures \ref{fig:graph1} and \ref{fig:graph2}}.
+	\CV{Once defined the problems treated in this work, the following subsections describe the construction of the \emph{visibility graphs} that are used to develop some mathematical programming formulations that solve the problem exactly. These objects represent the set of possible rectilinear paths the drone can \JP{follow} without crossing any barrier. For these problems, the visibility graphs are not fixed. They depend on the points selected in the neighbourhoods, as shown in Figures \ref{fig:graph1} and \ref{fig:graph2}}.
 	
-	
+		
 	\subsection{Description of the Hampered Shortest Path Problem with Neighbourhoods}\label{subsection:descriptionHSPPN}
 	In \SPPN, we have a source neighbourhood $N_S\subset\mathbb R^2$ and a target neighbourhood $N_T\subset\mathbb R^2$, which we assume to be second-order cone-representable sets and a set $\mathcal B$ of line segments that play the role of barriers that the drone cannot cross. 
 	
@@ -334,7 +338,7 @@
 		\right.
 	\end{equation}
 	where $U_N^j$ is a big M constant on the maximal distance between two points in the union of sets.
-	The reader may observe that \eqref{eq:nC} can be replaced by \eqref{eq:uC} without altering the validity of the formulations. However, for the sake of simplicity, only the SOC-representable sets are considered in the paper.
+	\CV{The reader may observe that \eqref{eq:nC} can be replaced by \eqref{eq:uC} without altering the validity of the formulations. However, for the sake of simplicity, only the SOC-representable sets are considered in the paper.}
 	
 	%	\textcolor{red}{Puede ser muy interesante el caso 3D pero quizás en otro trabajo, no?}
 	
@@ -535,12 +539,27 @@
 		as claimed.
 	\end{proof}
 	\noindent
-	Therefore, we can compute, \textit{`a priori'},  the sets $N_S^*$ and $N_T^*$ by solving a convex problem for each endpoint of the barriers:
-	\begin{align*}
-		N_S^*&=\{P_S(P_B^i):P_S(P_B^i)=\argmin_{P_S\in N_S} \|P_S - P_B^i\|\text{ and }\varepsilonvar{P_S}{P_B^i}=1\},\\
-		N_T^*&=\{P_T(P_B^i):P_T(P_B^i)=\argmin_{P_T\in N_T} \|P_B^i - P_T\|\text{ and }\varepsilonvar{P_B^i}{P_T}=1\}.
-	\end{align*}
 	
+	
+%	Therefore, we can compute, \textit{`a priori'},  the sets $N_S^*$ and $N_T^*$ by solving a convex problem for each endpoint of the barriers:
+%	\begin{align*}
+%		N_S^*&=\{P_S(P_B^i):P_S(P_B^i)=\argmin_{P_S\in N_S} \|P_S - P_B^i\|\text{ and }\varepsilonvar{P_S}{P_B^i}=1\},\\
+%		N_T^*&=\{P_T(P_B^i):P_T(P_B^i)=\argmin_{P_T\in N_T} \|P_B^i - P_T\|\text{ and }\varepsilonvar{P_B^i}{P_T}=1\}.
+%	\end{align*}
+	\CV{
+	Therefore, we can compute, \textit{`a priori'},  the sets $N_X^*$, $X\in\{S,T\}$. For each $P_B^i\in\VB$, the corresponding point in the source neighbourhood $P_X(P_B^i)$ is computed by solving the following convex problem:
+	\begin{argmini*}
+		{P_X\in N_X}{d(P_XP_B^i)}
+		{}{P_X(P_B^i)=}\label{eq:computing_n}\tag{$N_X^*$}
+		\addConstraint{\eqref{eq:alphaC},\eqref{eq:betaC},\eqref{eq:gammaC},\eqref{eq:deltaC},}{\quad\forall P_B^1, P_B^2\in \VB}
+		\addConstraint{\eqref{eq:varepsilonC}}{}
+		\addConstraint{\varepsilonvar{P_X}{P_B^i}=1}
+		\addConstraint{	\|P_X - P_B^i\|\leq \dvar{P_X}{P_B^i}.}{}
+	\end{argmini*}
+	
+	Then, the visibility graph is constructed by means of these dominating sets.
+	This} graph, required to address the new formulation, uses the previous graph $\GSPP$ \sout{and then} \CV{in which} we increase the new edges that connect the initial and terminal points $P_S\in N_S$ and $P_T\in N_T$, respectively, with the corresponding points in $N_S^*$ and $N_T^*$. Moreover, we also augment the edges connecting the points in the dominating sets with the extreme points of the segments where the minimal distances are attained. The reader may note that since the optimisation model minimises the overall distance, in an optimal solution $P_S$ must belong to $N_S^*$ and $P_T$ to $N_T^*$.
+
 	%	Moreover, the points chosen in the solution, $P_S$ and $P_T$, can be represented by \CV{the constraints \eqref{eq:nCs} for the point $P_S$ in $N_S$ and \eqref{eq:nCt} for $P_T$ in $N_T$}:
 	
 	%	\begin{minipage}{.5\linewidth}
@@ -558,11 +577,8 @@
 			%	\end{align*}
 		%	\end{minipage}
 	
-	\bigskip
+%	\bigskip
 	
-	
-	
-	The graph required to address the new formulation uses the previous graph $\GSPP$ and then we increase the new edges that connect the initial and terminal points $P_S\in N_S$ and $P_T\in N_T$, respectively, with the corresponding points in $N_S^*$ and $N_T^*$. Moreover, we also augment the edges connecting the points in the dominating sets with the extreme points of the segments where the minimal distances are attained. The reader may note that since the optimisation model minimises the overall distance, in an optimal solution $P_S$ must belong to $N_S^*$ and $P_T$ to $N_T^*$.
 	Therefore, the following sets are needed to build the new \CV{visibility} graph induced by the dominating sets.
 	\begin{itemize}
 		\item $V_S^*=N^*_S$. Dominating set of points associated with the neighbourhood $N_S$.
@@ -613,9 +629,10 @@
 	
 	
 	The rationale of the formulation for the \TSPHN \ is to consider the variant called Steiner TSP (STSP) (see \citet{letchford2013}), where some nodes in $\VB$ do not have to be visited, but if necessary, they can be visited more than once. 
+%	
+%	It is well known that it is possible to convert any instance of the STSP into an instance of the standard TSP, by computing the shortest paths between every pair of required nodes, when these nodes are fixed. However, in our problem, since the points in the neighbourhoods are not fixed, this simplification cannot be applied to obtain an optimal solution for the \TSPHN, although it may produce an approximation to generate lower bounds for the \TSPHN.
 	
-	It is well known that it is possible to convert any instance of the STSP into an instance of the standard TSP, by computing the shortest paths between every pair of required nodes, when these nodes are fixed. However, in our problem, since the points in the neighbourhoods are not fixed, this simplification cannot be applied to obtain an optimal solution for the \TSPHN, although it may produce an approximation to generate lower bounds for the \TSPHN.
-	
+	It is well known that it is possible to convert any instance of the STSP into an instance of the standard TSP, by computing the shortest paths between every pair of required nodes, when these nodes are fixed. However, in our problem, since the points in the neighbourhoods are not fixed, \CV{the \SPPN} cannot be \CV{used directly} to \CV{derive} an optimal solution for the \TSPHN, although it may produce \CV{a good} approximation to generate lower bounds for the \TSPHN \ \CV{that allows to solve larger instances}.
 	
 	\newcommand{\gvar}[2]{g(#1#2)}
 	
@@ -1148,9 +1165,9 @@ The second case focuses on the effectiveness of the exact model for the \TSPN \ 
 
 % \textcolor{red}{Quizás evitar el uso $n$ sea adecuado para evitar confusiones}
 \subsection{Configuration of the experiments}
-In this work, two experiments are designed to study the behaviour of the models \TSPHN \ and \TSPN. In the first experiment, we generate five instances for each number of randomly-sized neighbourhoods in $|\mathcal N|\in\{5, 10, 20, 30, 50, 60, 65, 70, 75, 80, 100\}$ within $R=[0,100]\times[0, 100]$. These neighbourhoods are balls and line segments that have been created using the Algorithm \ref{alg:Algorithm5}. For each instance, we run the models with and without strengthening the formulations.
+In this work, two experiments are designed to study the behaviour of the models \TSPHN \ and \TSPN. In the first experiment, we generate five instances for each number of randomly-sized neighbourhoods in $|\mathcal N|\in\{5, 10, 20, 30, 50, 60, 65, 70, 75, 80, 100\}$ within $R=[0,100]\times[0, 100]$. These neighbourhoods are balls and line segments that have been created using the Algorithm \ref{alg:Algorithm5}. \CV{In addition, barriers are generated according to Algorithm \ref{alg:Algorithm4}. \boldsymbol{$|\mathcal B|$} reports the average number of barriers generated for each experiment.} For each instance, we run the models with and without strengthening the formulations.
 
-In the second experiment, based on \cite{behdani2014}, we generate five instances with a number $N$ in $|\mathcal N|\in\{6, 8, 10, 12, 14, 16, 18, 20\}$ of fixed circles. The centres are drawn in $R=[0, 0]\times[16, 10]$. The fixed $radii$ considered are $0.25$, $0.5$, and $1$. Therefore, the overlap ratios are $0.015625$, $0.03125$ and $0.0625$, respectively. We run \TSPN \ with strengthening to see the performance of our methods when neighbourhoods overlap.
+In the second experiment, based on \cite{behdani2014}, we generate \textcolor{red}{ten instances} with a number $N$ in $|\mathcal N|\in\{6, 8, 10, 12, 14, 16, 18, 20\}$ of fixed circles. The centres are drawn in $R=[0, 0]\times[16, 10]$. The fixed $radii$ considered are $0.25$, $0.5$, and $1$. Therefore, the overlap ratios are $0.015625$, $0.03125$ and $0.0625$, respectively. We run \TSPN \ with strengthening to see the performance of our methods when neighbourhoods overlap.
 
 Formulations are coded in Python 3.9.2 (\citet{vanrossum2009}) and solved in Gurobi 9.1.2 (\citet{gurobioptimizationllc2022}) on an AMD® Epyc 7402p 8-core processor.
 
@@ -1159,9 +1176,9 @@ The values obtained by solver that are reported in our tables are:
 \begin{itemize}
 \item \boldsymbol{$\#Found$}: number of instances in which the solver finds a feasible solution.
 \item \boldsymbol{$Gap$}: gap between the best incumbent solution with respect to the best bound found by the solver. It is computed as $Gap=(upper\, bound - lower\, bound)/lower\, bound$.
-\item \boldsymbol{$Time_{model}$}: time spent by the solver to obtain the best solution found.
-\item \boldsymbol{$Time_{prepro}$}: time spent by Python to set up the model, including the strengthening of the formulation.
-\item \boldsymbol{$Time_{total}$}: overall time to solve the model.
+\item \boldsymbol{$Time_{model}$}: time \CV{(in seconds)} spent by the solver to obtain the best solution found.
+\item \boldsymbol{$Time_{prepro}$}: time \CV{(in seconds)} spent by Python to set up the model, including the strengthening of the formulation.
+\item \boldsymbol{$Time_{total}$}: overall time \CV{(in seconds)} to solve the model.
 \end{itemize}
 
 For all the experiments, a time limit of 1 hour of solver time was set in the branch-and-bound procedure.

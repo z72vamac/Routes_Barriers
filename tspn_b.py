@@ -756,6 +756,11 @@ def tspn_b(
             g_var[a, b, c, d] <= (len(neighborhoods) - 1) * y[a, b, c, d]
             for a, b, c, d in g_var.keys()
         )
+
+        # indices = [(-1, 0, -2, 0), (-2, 0, -3, 0), (-3, 0, -4, 0), (-4, 0, -5, 0)]
+        # for index in indices:
+        #     y[index].start = 1
+        
         # model.addConstrs(gp.quicksum(y[v, i, vertices_neighborhood] for v, i in vertices_barrier) == 1 for
         # vertices_neighborhood in vertices_neighborhood) model.addConstrs(gp.quicksum(y[vertices_neighborhood, v,
         # i] for v, i in vertices_barrier) == 1 for vertices_neighborhood in vertices_neighborhood)
@@ -804,7 +809,8 @@ def tspn_b(
 
         model.update()
 
-        model.Params.Threads = 6
+        model.Params.Threads = 1
+        # model.Params.Threads = 6
         #        model.Params.timeLimit = time_limit - time_elapsed
         model.Params.timeLimit = time_limit
 
@@ -865,8 +871,8 @@ def tspn_b(
             if y[index].X > 0.5:
                 y_indices.append(index)
 
-        if log:
-            print(y_indices)
+        # if log:
+        print(y_indices)
 
         g_indices = []
 
