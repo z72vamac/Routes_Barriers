@@ -69,17 +69,18 @@ def tspn_b(
                     if prepro:
                         barrier = [barriers[v][i], barriers[w][j]]
 
-                        intersect = False
-                        for barrieri in barriers:
-                            if af.intersect(barrieri, barrier):
-                                intersect = True
-                                break
+                        if np.linalg.norm(np.array(barriers[v][i]) - np.array(barriers[w][j])) >= 0.5:
+                            intersect = False
+                            for barrieri in barriers:
+                                if af.intersect(barrieri, barrier):
+                                    intersect = True
+                                    break
 
-                        if not (intersect):
-                            edges_barrier.append((v, i, w, j))
-                            edges_barrier.append((w, j, v, i))
-                        else:
-                            pass
+                            if not (intersect):
+                                edges_barrier.append((v, i, w, j))
+                                edges_barrier.append((w, j, v, i))
+                            else:
+                                pass
 
                     else:
                         edges_barrier.append((v, i, w, j))

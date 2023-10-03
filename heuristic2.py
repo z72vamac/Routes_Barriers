@@ -58,16 +58,16 @@ def heuristic2(barriers, neighborhoods, prepro=True, log=False, dominant=False, 
             if v < w:
                 # if prepro:
                 barrier = [barriers[v][i], barriers[w][j]]
+                if np.linalg.norm(np.array(barriers[v][i]) - np.array(barriers[w][j])) >= 0.5:
+                    intersect = False
+                    for barrieri in barriers:
+                        if af.intersect(barrieri, barrier):
+                            intersect = True
+                            break
 
-                intersect = False
-                for barrieri in barriers:
-                    if af.intersect(barrieri, barrier):
-                        intersect = True
-                        break
-
-                if not (intersect):
-                    edges_barrier.append((v, i, w, j))
-                    edges_barrier.append((w, j, v, i))
+                    if not (intersect):
+                        edges_barrier.append((v, i, w, j))
+                        edges_barrier.append((w, j, v, i))
 
                 # else:
                 #     edges_barrier.append((v, i, w, j))
