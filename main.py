@@ -30,14 +30,14 @@ from HTSPS_new_ven import HTSPS_ven
 
 
 
-segments = np.genfromtxt('./instancias/segmentos30-2.csv', delimiter = ',')
+# segments = np.genfromtxt('./instancias/segmentos30-2.csv', delimiter = ',')
 
-barriers = []
-for lista in segments[25:28]:
-    barriers.append([[lista[0], lista[1]], [lista[2], lista[3]]])
+# barriers = []
+# for lista in segments[25:28]:
+#     barriers.append([[lista[0], lista[1]], [lista[2], lista[3]]])
 
-bolas = np.genfromtxt('./instancias/bolas30-2.csv', delimiter = ',')[2:4]
-N = [neigh.Circle(center = [centro1, centro2], radii = radio) for centro1, centro2, radio in bolas]
+# bolas = np.genfromtxt('./instancias/bolas30-2.csv', delimiter = ',')[2:4]
+# N = [neigh.Circle(center = [centro1, centro2], radii = radio) for centro1, centro2, radio in bolas]
 # segmentos_visitar = np.genfromtxt('./instancias/segmentos_visitar30-2.csv', delimiter = ',')
 # N = [neigh.Poligonal(V = [np.array([lista[0], lista[1]]), np.array([lista[2], lista[3]])]) for lista in segmentos_visitar] # 105.164
 # # resultados = tspn_b(barriers, N, prepro = False, log = True, time_limit = 30)
@@ -47,24 +47,24 @@ N = [neigh.Circle(center = [centro1, centro2], radii = radio) for centro1, centr
 # print(N)
 
 
-# barrier1 = [[20, 80], [40, 30]]
-# barrier2 = [[70, 95], [40, 70]]
-# barrier3 = [[95, 60], [60, 70]]
-# barrier4 = [[60, 50], [90, 10]]
-# barrier5 = [[10, 70], [20, 50]]
-# # barrier6 = [[30, 70], [70, 20]]
+barrier1 = [[20, 80], [40, 30]]
+barrier2 = [[70, 95], [40, 70]]
+barrier3 = [[95, 60], [60, 70]]
+barrier4 = [[60, 50], [90, 10]]
+barrier5 = [[10, 70], [20, 50]]
+barrier6 = [[30, 70], [70, 20]]
 #
 # barriers = [barrier1, barrier2, barrier3, barrier4, barrier5]
-# barriers = [barrier1, barrier3, barrier4, barrier5]
+barriers = [barrier2, barrier3, barrier4, barrier5]
 # # barriers = [barrier1, barrier4]
 # # barriers = [barrier3]
-#
-# N1 = neigh.Circle(center=[20, 10], radii=10)
-# N2 = neigh.Circle(center=[90, 90], radii=5)
-# N3 = neigh.Circle(center=[35, 85], radii=9)
-# N4 = neigh.Circle(center=[85, 40], radii=11)
-#
-# N = [N1, N2, N3, N4]
+
+N1 = neigh.Circle(center=[20, 10], radii=10)
+N2 = neigh.Circle(center=[90, 90], radii=5)
+N3 = neigh.Circle(center=[35, 85], radii=9)
+N4 = neigh.Circle(center=[85, 40], radii=11)
+
+N = [N1, N2, N3, N4]
 # N = [N1, N4]
 
 # af.dominant_set(N, barriers)
@@ -72,7 +72,7 @@ N = [neigh.Circle(center = [centro1, centro2], radii = radio) for centro1, centr
 
 # resultados = HTSPS_ven(barriers, N, picture=True)
 # resultados = HTSPS_without_prepro(barriers, N, log = False, timeLimit = 7200, init = False)
-resultados = tspn_b(barriers, N, A4 = True, dominant=False, prepro=True, log=False, picture=True, time_limit=600, init = False)
+resultados = tspn_b(barriers, N, A4 = False, dominant=False, prepro=True, log=False, picture=True, time_limit=600, init = False)
 
 
 # print(resultados)

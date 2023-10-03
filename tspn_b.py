@@ -685,8 +685,7 @@ def tspn_b(
             # print((l_out, u_out))
             model.addConstr(p[a, b, c, d] >= l_out * y[a, b, c, d])
             model.addConstr(
-                p[a, b, c, d] >= dist[a, b, c, d] - u_out * (1 - y[a, b, c, d])
-            )
+                p[a, b, c, d] >= dist[a, b, c, d] - u_out * (1 - y[a, b, c, d]))
 
             # model.addConstr(p[a, b, c, d] <= dist[a, b, c, d]* u_out)
 
