@@ -130,7 +130,7 @@
 	\end{frontmatter}
 	
 	\section{Introduction}
-	Routing problems are considered classical problems at the core of combinatorial optimisation. Among them, the Travelling Salesman Problem (TSP) is one of its most important representations, and it has been studied extensively in many different forms. The problem is well known to be NP-hard. Its analysis has led in the last decades to methodological advances and new optimisation techniques that have allowed solving real life instances that few years ago were beyond solvable limits. The TSP has been studied in its geometric and pure combinatorial forms because of its algorithmic and practical implications. One very interesting extension arises when we require the tour to visit a set of regions rather than points. This version of the problem is called the TSP with Neighbours (see  \citet{arkin1994a}) which is APX-hard to approximate even for regions that are (intersecting) line segments.  They can represent regions that the drone must reach and where customers are willing to pick up the orders (they can be seen as uniform probability densities) in the delivery industry. Moreover, they can also be used for modelling some areas that must be inspected by the drone (whenever visiting a point of these areas, it suffices to consider them as inspected).  On the other hand, the graphic TSP (see \citet{t.moemke22}), where distances are measures by geodesics (shortest paths in the respective metric space), has also attracted the attention of many researchers since it models, in a natural way, TSP routes among forbidden barriers, robot motion planning and automatic navigation in computer games. 
+	Routing problems are considered classical problems at the core of combinatorial optimisation. Among them, the Travelling Salesman Problem (TSP) is one of its most important representations, and it has been studied extensively in many different forms. The problem is \JP{well-known} to be NP-hard. Its analysis has led in the last decades to methodological advances and new optimisation techniques that have allowed solving real life instances that few years ago were beyond solvable limits. The TSP has been studied in its geometric and pure combinatorial forms because of its algorithmic and practical implications. One very interesting extension arises when we require the tour to visit a set of regions rather than points. This version of the problem is called the TSP with Neighbours (see  \citet{arkin1994a}) which is APX-hard to approximate even for regions that are (intersecting) line segments.  They can represent regions that the drone must reach and where customers are willing to pick up the orders (they can be seen as uniform probability densities) in the delivery industry. Moreover, they can also be used for modelling some areas that must be inspected by the drone (whenever visiting a point of these areas, it suffices to consider them as inspected).  On the other hand, the graphic TSP (see \citet{t.moemke22}), where distances are measures by geodesics (shortest paths in the respective metric space), has also attracted the attention of many researchers since it models, in a natural way, TSP routes among forbidden barriers, robot motion planning and automatic navigation in computer games. 
 	
 	For the above mentioned reasons, it is very important to analyse the mathematical implications of barriers to the geometry and computation of routes in a continuous space. Beyond the mathematical relevance due to the intrinsic difficulty of the resulting models (non-convexities), the importance of this topic also comes from its many real-life applications and, more specifically, drone delivery with uniformly distributed demand and drone inspection and surveillance in urban areas with buildings or similar barriers.  Most of the classical methods in route design are based on an underlying network structure. Our approach is essentially different since, on top of assuming the existence of barriers, we also assume that the locations of targets to be visited are uniformly distributed in neighbourhoods, giving rise to challenging problems in the continuous space. Nevertheless, the resulting problems still retain geometric elements that must be exploited to partially overcome the difficulties of solution approaches and algorithms in the design of routes among neighbourhoods with barriers.
 	
@@ -171,9 +171,9 @@
 	\end{enumerate} 
 	This problem is called the Hampered Traveling Salesman Problem with Hidden Neighbourhoods \TSPHN. The consideration of this more constrained subproblem appears as a natural extension of the \SPPN. Indeed, in \SPPN, the shortest path that joins two neighbourhoods is sought by assuming \ref{A4}. Otherwise, it would be trivially solved by finding the standard shortest path between both neighbourhoods since no obstacles would block its use.
 	
-	\CV{Figures \ref{fig:spp}, \ref{fig:tsph} and \ref{fig:tsp} show an example of each of the three problems that are being considered, respectively. Figure \ref{fig:spp} shows an instance of the \SPPN, where the blue neighbourhood represents the source, the green one represents the target, and the red line segments show the barriers that the drone cannot cross. In Figure \ref{fig:tsph}, an instance of the \TSPHN \  is shown, where the neighbourhoods are balls and the barriers are, again, the red line segments. Finally, Figure \ref{fig:tsp} illustrates an example of the \TSPN, where the orange and blue balls can be joined by a rectilinear path.}
+	\CV{Figures \ref{fig:spp}, \ref{fig:tsph} and \ref{fig:tsp} show an example of each \JP{one} of the three problems that are being considered, respectively. Figure \ref{fig:spp} shows an instance of the \SPPN, where the blue neighbourhood represents the source, the green one represents the target, and the red line segments show the barriers that the drone cannot cross. In Figure \ref{fig:tsph}, an instance of the \TSPHN \  is shown, where the neighbourhoods are balls and the barriers are, again, the red line segments. Finally, Figure \ref{fig:tsp} illustrates an example of the \TSPN, where the orange and blue balls can be joined by a rectilinear path.}
 	
-	\input{figures/Example_ H-SPP-S_ First Figure}
+	\input{figures/Example_ Problems_ First Figure}
 	%In \SPPN, we have a source neighbourhood $N_S\subset\mathbb R^2$ and a target neighbourhood $N_T\subset\mathbb R^2$, which we assume to be convex sets and a set $\mathcal B$ of opened line segments located in general position that plays the role of barriers that the drone cannot cross, i.e., the drone can visit the endpoints of these barriers but it cannot be located in the interior points of the barriers. Note that, it is rational to assume that if there are two barriers that have a portion of them in common, it is only considered the smallest line segment that contains both barriers. The aim of the \SPPN is to find the best pair of points $(P_{S}, P_{T})\in N_S\times N_T$ in the source and target neighbourhoods that minimize the length of the path that joins both points without crossing any barrier of $\mathcal B$. In this problem, it is implicitly assumed that there is not a rectilinear path to go from $N_S$ to $N_T$, otherwise, the problem becomes straightforward and the solution is the minimum distance between both neighbourhoods. 
 	
 	To simplify the presentation, we introduce some general notation used throughout the paper.
@@ -230,7 +230,7 @@
 	
 	\begin{itemize}
 		\item $\VN=\{P_N:N\in\mathcal N\}$. Set of points selected in the neighbourhoods $\mathcal N$ to be visited.
-		\item $\VB=\{P^1_B, P^2_B:B=\overline{P^1_B P^2_B}\in \mathcal B\}$. Set of vertices of the barriers of the problem.
+		\item $\VB=\{P^1_B, P^2_B:B=\overline{P^1_B P^2_B}\in \mathcal B\}$. Set of \JP{endpoints \sout{vertices}} of the barriers of the problem.
 		\item $\EN=\{(P_N, P^i_{B}):P_N\in\VN, P^i_B\in V_\B\text{ and } \overline{P_NP^i_B}\cap B''=\emptyset,\forall B''\in\B,\:i=1,2\}$. Set of edges formed by line segments that join each point selected in the neighbourhoods of $\mathcal N$ with each endpoint on the barriers and do not cross any barrier in $\B$.
 		\item $\EB=\{(P^{i}_B, P^{j}_{B'}):P^i_B, P^j_{B'}\in \VB \text{ and } \overline{P^i_B P^j_{B'}}\cap B''=\emptyset,\:\forall B''\in\mathcal B,\:i, j=1,2\}$. Set of edges formed by line segments that join two vertices of $V_{\mathcal B}$ and do not cross any barrier in $\B$.
 	\end{itemize} 
@@ -242,11 +242,11 @@
 	\subsection{Description of the Hampered Travelling Salesman Problem with Neighbourhoods}
 	For the general case, barriers are not required to completely separate all neighbourhoods, i.e., when moving from one neighbourhood to another, sometimes it is possible to follow a straight line without crossing any barrier. The main difference lies in the description of the edges of the graph induced by the neighbourhoods and endpoints of the barriers.
 	
-	By following the same approach that before, the sets that describe the graph in this case are:
+	By following the same approach that before, the sets that describe the \JP{visibility} graph in this case are:
 	
 	\begin{itemize}
 		\item $\VN=\{P_N:N\in\mathcal N\}$. Set of points in the neighbourhoods $\mathcal N$ that must be visited.
-		\item $\VB=\{P^1_B, P^2_B:B=\overline{P^1_B P^2_B}\in \mathcal B\}$. Set of vertices of the barriers of the problem.
+		\item $\VB=\{P^1_B, P^2_B:B=\overline{P^1_B P^2_B}\in \mathcal B\}$. Set of \JP{endpoints \sout{vertices}} of the barriers of the problem.
 		\item $V_{\rm TSP} = \VN \cup \VB$.
 		\item $E_{\rm TSP}=\{(P, P'):P, P' \in V_{TSP} \text{ and } \overline{PP'}\cap B''=\emptyset,\forall B''\in\B\}$. Set of edges formed by the line segments that join every pair of points in $V_{TSP}$ that do not cross any barrier.
 	\end{itemize} 
@@ -256,7 +256,7 @@
 	This section proposes a mixed integer nonlinear programming formulation for the problems described in Section \ref{section:description}. First of all, we present the conic programming representation of the neighbourhoods and distance. Then,  we set the constraints that check if a segment is included in the set of edges $E_X$ with $X\in \{SPP, TSPH, TSP\}$. Finally, the formulations for the \SPPN, \TSPHN \ and \TSPN \ are described.
 	
 	We would like to remark that having a mathematical programming representation for the \SPPN \ is very important, even though we will prove in the following that this problem can be solved with a polynomial-time combinatorial algorithm. Indeed, we will need this type of representation to address some NP-hard problems that require computing shortest paths as building blocks, such as, for example, the location problem with barriers and 
-	neighbours and the \TSPN. Therefore, we will start to provide two different mathematical programming formulations for the \SPPN \ capable of being embedded in more complex problems.
+	neighbours and the \TSPN. Therefore, we will start \JP{providing} two different mathematical programming formulations for the \SPPN \ capable of being embedded in more complex problems.
 	
 	
 	First, we introduce the decision variables that represent the problem. These are summarised in Table \ref{table:variables}.
@@ -291,12 +291,12 @@
 	
 	Then, a second-order cone constraint is defined as
 	\begin{equation*}
-		\|A_ix-b_i\|\leq c_i^tx -d_i \Leftrightarrow (A_ix-b_i, c_i^t x-d_i)\in \mathcal L^{k_i+1},\quad i=1,\ldots,m,
+		\|A_ix-b_i\|_2\leq c_i^tx -d_i \Leftrightarrow (A_ix-b_i, c_i^t x-d_i)\in \mathcal L^{k_i+1},\quad i=1,\ldots,m,
 	\end{equation*}
 	
 	where $A_i\in\mathbb R^{k_i\times n} , b_i\in\mathbb R^{k_i}, c_i\in \mathbb R^n$ and $d_i\in \mathbb R$ are the problem parameters. 
 	
-	Second-order cone constraints can be used to represent common convex restrictions. If $A_i\equiv 0$ and $b_i\equiv 0$,  for some $i\in 1,\ldots, m$, the corresponding second-order cone constraint is reduced to a linear. On the other hand, if $c_i\equiv 0$ and $d_i\leq 0$, the constraint is reduced to a convex quadratic constraint that can represent ellipsoids or hyperbolic constraints (see \citet{lobo1998a} and \citet{boyd2004} for more information). The advantages of second-order constraints are the fully symmetric duality, heavily utilised by solution algorithms, the existence of polynomial-time interior point methods and its extremely powerful expressive abilities \citep{nesterov1994a}. }
+	Second-order cone constraints can be used to represent common convex \JP{constraints}. If $A_i\equiv 0$ and $b_i\equiv 0$,  for some $i\in 1,\ldots, m$, the corresponding second-order cone constraint is reduced to a linear \JP{one}. On the other hand, if $c_i\equiv 0$ and $d_i\leq 0$, the constraint is reduced to a convex quadratic constraint that can represent ellipsoids or hyperbolic constraints (see \citet{lobo1998a} and \citet{boyd2004} for more information). The advantages of second-order constraints are the fully symmetric duality, heavily utilised by solution algorithms, the existence of polynomial-time interior point methods and its extremely powerful \JP{modeling possibilities \sout{expressive abilities}} \citep{nesterov1994a}. }
 	
 	In the two problems considered, namely \SPPN \ and \TSPN, there exist two second-order cone constraints that model the distance between pairs of points $P$ and $Q$, as well as the representation of neighbourhoods where the points can be chosen.
 	
@@ -519,7 +519,7 @@
 	
 	The objective function minimises the length of the path followed by the drone at the edges of the induced graph $\GSPP$. The first constraints are the flow conservation constraints that ensure the path is connected, the second constraints represent the sets $\ES$ and $\ET$ and the third ones state that the selected points must be in their respective neighbourhoods.
 	
-	\input{figures/Example_ H-SPP-S_ Solution}
+%	\input{figures/Example_ H-SPP-S_ Solution}
 	
 	\subsubsection{Reformulating the \SPPN}\label{section:reformulation}
 	The formulation for the \SPPN \ presented above can be simplified taking into account the following observation.
@@ -593,7 +593,7 @@
 	We define the graph $\GSPPS=(\VSPPS, \ESPPS)$, where $\VSPPS=V^*_S\cup\VSPP\cup V^*_T$ and $\ESPPS=E^*_S\cup\EB\cup E^*_T.$
 	
 	
-	The major advantage of this approach is that, once the sets $N_S^*$ and $N_T^*$ are calculated beforehand, the entire graph $\GSPPS$ is fixed because the incident edges can be computed for each point $P_S(P_B^i)$ and $P_T(P_B^i)$, $P_B^i\in V_{\mathcal B}$, separately. Figure \ref{fig:dominatingset} shows how the dominating sets $N_S^*$ and $N_T^*$ are calculated for an instance of the \SPPN.
+	The major advantage of this approach is that, once the sets $N_S^*$ and $N_T^*$ are calculated beforehand, the entire graph $\GSPPS$ is fixed because the incident edges can be computed for each point $P_S(P_B^i)$ and $P_T(P_B^i)$, $P_B^i\in V_{\mathcal B}$, separately. Figure \ref{fig:dominatingset} shows how the dominating sets $N_S^*$ and $N_T^*$ are calculated for an instance of the \SPPN. \JP{**Parece que faltan dos puntos azules**}
 	
 	\input{figures/Example_ H-SPP-S_ Dominating}
 	
@@ -612,15 +612,15 @@
 		\addConstraint{\eqref{eq:nC}}{\quad\forall P\in \VS\cup\VT.}
 	\end{mini*}
 	
-	
+	\JP{Let us assume that the finite dominating sets $N^*_{S}$ and $N^*_{T}$ are given.}
 	\begin{prop}
 		Let $n=|\cal B|$. The \SPPN \ can be solved in polynomial time $O(n^3)$.
 	\end{prop}
 	\begin{proof}
-		The proof follows using the finite dominating sets $N^*_{S}$ and $N^*_{T}$. First, it is clear that the cardinality of these finite dominating sets is $O(n)$ since there is one point in each set for each vertex of a segment in $\cal B$. Next, we recall that given a set of polygonal obstacles with $O(n)$ vertices, the shortest linear size map from any given point can be computed in 
+		The proof follows using the finite dominating sets $N^*_{S}$ and $N^*_{T}$. First, it is clear that the cardinality of these finite dominating sets is $O(n)$ since there is one point in each set for each  \JP{endpoint} of a segment in $\cal B$. Next, we recall that given a set of polygonal obstacles with $O(n)$ vertices, the shortest linear size map from any given point can be computed in 
 		$O(n\log n)$ time. Once you have that map, finding the shortest path to any other point in the region is done in $O(n)$ time \citep{mitchell2017a}. Therefore, the \SPPN \ can be solved as follows.
 		
-		For each point $P_S(P_B^i) \in N^*_S$ we compute the shortest path map of linear size and solve the problem of the shortest path with respect to all $O(n)$ points in $N^*_T$. In general, this operation takes $O(n\log n + n^2)$. The same operation has to be repeated for all $O(n)$ points in $N^*_S$. Therefore, the overall complexity to solve \SPPN is $O(n^3)$.
+		For each point $P_S(P_B^i) \in N^*_S$ we compute the shortest path map of linear size and solve the problem of the shortest path with respect to all $O(n)$ points in $N^*_T$. In general, this operation takes $O(n\log n + n^2)$. The same operation has to be repeated for all $O(n)$ points in $N^*_S$. \JP{The best among all those paths is the shortest path from $S$ to $T$.} Therefore, the overall complexity to solve \SPPN is $O(n^3)$.
 		
 	\end{proof}		
 	
@@ -632,7 +632,7 @@
 %	
 %	It is well known that it is possible to convert any instance of the STSP into an instance of the standard TSP, by computing the shortest paths between every pair of required nodes, when these nodes are fixed. However, in our problem, since the points in the neighbourhoods are not fixed, this simplification cannot be applied to obtain an optimal solution for the \TSPHN, although it may produce an approximation to generate lower bounds for the \TSPHN.
 	
-	It is well known that it is possible to convert any instance of the STSP into an instance of the standard TSP, by computing the shortest paths between every pair of required nodes, when these nodes are fixed. However, in our problem, since the points in the neighbourhoods are not fixed, \CV{the \SPPN} cannot be \CV{used directly} to \CV{derive} an optimal solution for the \TSPHN, although it may produce \CV{a good} approximation to generate lower bounds for the \TSPHN \ \CV{that allows to solve larger instances}.
+	It is well-known that it is possible to convert any instance of the STSP into an instance of the standard TSP, by computing the shortest paths between every pair of required nodes, when these nodes are fixed. However, in our problem, since the points in the neighbourhoods are not fixed, \CV{the \SPPN} cannot be \CV{used directly} to \CV{derive} an optimal solution for the \TSPHN, although it may produce \CV{a good} approximation to generate lower bounds for the \TSPHN \ \CV{that allows to solve larger instances}.
 	
 	\newcommand{\gvar}[2]{g(#1#2)}
 	
@@ -661,7 +661,7 @@
 	
 	The first group of constraints imposes that the drone departs from each neighbourhood. The second block of constraints is the flow-conservation constraints. The third inequalities ensure that one unit of commodity is delivered to each of the required neighbourhood. The fourth ensures that the fictitious nodes at the end of the barriers do not consume commodity. Finally, the last inequalities enforce that some commodity goes throughout an edge only if this edge is used in the tour. The inequalities \eqref{eq:alphaC}, \eqref{eq:betaC}, \eqref{eq:gammaC}, \eqref{eq:deltaC}, \eqref{eq:varepsilonC}, \eqref{eq:yC}, \eqref{eq:dC}, \eqref{eq:nC} require the variables of the problem to be well defined.
 	
-	\input{figures/Example_ H-TSP-S_ Solution}
+%	\input{figures/Example_ H-TSPH-S_ Solution}
 	
 	\begin{prop}
 		The \TSPHN \ is NP-complete.
@@ -760,7 +760,7 @@
 	The formulation described above is analogous to those detailed in \eqref{form:H-TSPHN}.
 	The difference between the set of edges in the \TSPN \ with respect to the graph in \TSPHN \ is that, in the former case, the edges that join each pair of neighbourhoods must be considered. This fact leads to including the product of continuous variables in the constraints $\alpha$ of the model that represent the determinants that determine whether the segment joining the two variable points in the neighbourhoods crosses any barrier or not. These products make the problem a non-convex, quadratically constrained program.
 	
-	
+	\input{figures/Example_ Problems_ Solution}
 	
 	%\textcolor{red}{¿Solucion del problema del TSP propuesto en el dibujo? }
 	
@@ -1171,7 +1171,7 @@ In the second experiment, based on \cite{behdani2014}, we generate \textcolor{re
 
 Formulations are coded in Python 3.9.2 (\citet{vanrossum2009}) and solved in Gurobi 9.1.2 (\citet{gurobioptimizationllc2022}) on an AMD® Epyc 7402p 8-core processor.
 
-The values obtained by solver that are reported in our tables are:
+The values obtained by the solver that are reported in our tables are:
 
 \begin{itemize}
 \item \boldsymbol{$\#Found$}: number of instances in which the solver finds a feasible solution.
@@ -1422,7 +1422,8 @@ All the above-mentioned problems are natural extensions of the ones considered i
 %\section*{Acknowledgements}
 %This research has been partially supported by the Agencia Estatal de Investigación (AEI) and the European Regional Development Fund (ERDF): PID2020-114594GB-C21; and Regional Government of Andalusia: project P18-FR-1422.
 
-\bibliographystyle{apa}
+%\bibliographystyle{apa}
+\bibliographystyle{apalike}
 \bibliography{bibliography.bib}
 
 \end{document}
