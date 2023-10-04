@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.4.24)  4 OCT 2023 15:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.4.24)  4 OCT 2023 17:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1124,36 +1124,36 @@ Overfull \hbox (6.05168pt too wide) detected at line 339
  []
 
 [9] [10]
-Overfull \hbox (17.22168pt too wide) in paragraph at lines 417--431
+Overfull \hbox (17.22168pt too wide) in paragraph at lines 419--433
 []$[]$ $[]$ 
  []
 
-[11] [12] [13] (figures/Example_ H-SPP-S_ Dominating.tex) [14]
-Overfull \hbox (38.42998pt too wide) detected at line 660
+[11] [12] [13] (figures/Example_ H-SPP-S_ Dominating.tex) [14] [15]
+Overfull \hbox (38.42998pt too wide) detected at line 662
 []
  []
 
-[15]
-Overfull \hbox (4.5606pt too wide) detected at line 679
+
+Overfull \hbox (4.5606pt too wide) detected at line 681
 []
  []
 
 [16]
-Overfull \hbox (15.40367pt too wide) detected at line 693
+Overfull \hbox (15.40367pt too wide) detected at line 695
 []
  []
 
 
-Overfull \hbox (22.32634pt too wide) detected at line 728
+Overfull \hbox (22.32634pt too wide) detected at line 730
 []
  []
 
 [17]
-Overfull \hbox (23.72523pt too wide) detected at line 751
+Overfull \hbox (23.72523pt too wide) detected at line 753
 []
  []
 
-(figures/Example_ Problems_ Solution.tex
+[18] (figures/Example_ Problems_ Solution.tex
 Overfull \hbox (9.44376pt too wide) in paragraph at lines 51--53
  [][] 
  []
@@ -1168,16 +1168,16 @@ Overfull \hbox (9.44376pt too wide) in paragraph at lines 173--175
  [][] 
  []
 
+) [19]
+<figures/cones.png, id=95, 787.44188pt x 490.08093pt>
+File: figures/cones.png Graphic file (type png)
+<use figures/cones.png>
+Package pdftex.def Info: figures/cones.png  used on input line 860.
+(pdftex.def)             Requested size: 339.72592pt x 211.43362pt.
+ [20 <./figures/cones.png>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) [18]
-<figures/cones.png, id=91, 787.44188pt x 490.08093pt>
-File: figures/cones.png Graphic file (type png)
-<use figures/cones.png>
-Package pdftex.def Info: figures/cones.png  used on input line 858.
-(pdftex.def)             Requested size: 339.72592pt x 211.43362pt.
- [19 <./figures/cones.png>] [20] [21]
 (figures/Preprocessing - First case.tex
 (C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendla
 yer/tikz/libraries\tikzlibrarycalc.code.tex
@@ -1190,8 +1190,12 @@ File: tikzlibrarymatrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendla
 yer/tikz/libraries\tikzlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)) [22] [23]
-Overfull \hbox (38.2824pt too wide) detected at line 1010
+)
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) [21] [22] [23]
+Overfull \hbox (38.2824pt too wide) detected at line 1012
 []
  []
 
@@ -1227,68 +1231,61 @@ ply log. on input line 828.
  [warning /pgfplots/warning/illegal user argument in log axis]
 Package pgfplots info on input line 828: Using 'lua backend=false' for axis: ym
 ode=log unsupported (yet).
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-) (gap_boxplot_first_experiment.tex
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-) [28] [29] [30] (latest_version.bbl [31]) [32] (latest_version.aux) ) 
+[28]) (gap_boxplot_first_experiment.tex) [29] [30] (latest_version.bbl [31]
+[32]) [33] (latest_version.aux) ) 
 Here is how much of TeX's memory you used:
- 31907 strings out of 476331
- 784856 string characters out of 5784425
- 1989660 words of memory out of 5000000
- 51744 multiletter control sequences out of 15000+600000
+ 31908 strings out of 476331
+ 784873 string characters out of 5784425
+ 2001660 words of memory out of 5000000
+ 51745 multiletter control sequences out of 15000+600000
  537706 words of font info for 101 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,28n,88p,2343b,2346s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\User
-s\Justo Puerto\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbi1000
-.pk> <C:\Users\Justo Puerto\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dp
-i600\ecbx0700.pk> <C:\Users\Justo Puerto\AppData\Local\MiKTeX\fonts/pk/ljfour/j
-knappen/ec/dpi600\ecrm0500.pk> <C:\Users\Justo Puerto\AppData\Local\MiKTeX\font
-s/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\Justo Puerto\AppData\Loca
-l\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss0800.pk> <C:\Users\Justo Puerto
-\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss1000.pk> <C:\Users
-\Justo Puerto\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.
-pk> <C:\Users\Justo Puerto\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi
-600\ectt0800.pk> <C:\Users\Justo Puerto\AppData\Local\MiKTeX\fonts/pk/ljfour/jk
-nappen/ec/dpi600\ecrm0800.pk> <C:\Users\Justo Puerto\AppData\Local\MiKTeX\fonts
-/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk> <C:\Users\Justo Puerto\AppData\Local
-\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\Justo Puerto\
-AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti0800.pk> <C:\Users\
-Justo Puerto\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti0600.p
-k> <C:\Users\Justo Puerto\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi6
-00\ecrm0700.pk> <C:\Users\Justo Puerto\AppData\Local\MiKTeX\fonts/pk/ljfour/jkn
-appen/ec/dpi600\ecrm1000.pk> <C:\Users\Justo Puerto\AppData\Local\MiKTeX\fonts/
-pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk><C:/Users/Justo Puerto/AppData/Local/P
-rograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><C:/Users/Justo Puert
-o/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/U
-sers/Justo Puerto/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmbx7.pfb><C:/Users/Justo Puerto/AppData/Local/Programs/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmex10.pfb><C:/Users/Justo Puerto/AppData/Local/Programs/MiKTeX/
-fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Justo Puerto/AppData/Local/
-Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/Justo Puerto
-/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Use
-rs/Justo Puerto/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
-mi7.pfb><C:/Users/Justo Puerto/AppData/Local/Programs/MiKTeX/fonts/type1/public
-/amsfonts/cm/cmmi8.pfb><C:/Users/Justo Puerto/AppData/Local/Programs/MiKTeX/fon
-ts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/Justo Puerto/AppData/Local/Pr
-ograms/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb><C:/Users/Justo Pu
-erto/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:
-/Users/Justo Puerto/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
-m/cmr5.pfb><C:/Users/Justo Puerto/AppData/Local/Programs/MiKTeX/fonts/type1/pub
-lic/amsfonts/cm/cmr7.pfb><C:/Users/Justo Puerto/AppData/Local/Programs/MiKTeX/f
-onts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Justo Puerto/AppData/Local/P
-rograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/Justo Puerto/
-AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/User
-s/Justo Puerto/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cms
-y7.pfb><C:/Users/Justo Puerto/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-amsfonts/symbols/msbm10.pfb>
-Output written on latest_version.pdf (32 pages, 508707 bytes).
+ <C:\Users\Justo Puerto\AppData\Local\MiKTeX\f
+onts/pk/ljfour/jknappen/ec/dpi600\ecbi1000.pk> <C:\Users\Justo Puerto\AppData\L
+ocal\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0700.pk> <C:\Users\Justo Pue
+rto\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0500.pk> <C:\Us
+ers\Justo Puerto\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm10
+00.pk> <C:\Users\Justo Puerto\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/
+dpi600\ecss0800.pk> <C:\Users\Justo Puerto\AppData\Local\MiKTeX\fonts/pk/ljfour
+/jknappen/ec/dpi600\ecss1000.pk> <C:\Users\Justo Puerto\AppData\Local\MiKTeX\fo
+nts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\Justo Puerto\AppData\Lo
+cal\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0800.pk> <C:\Users\Justo Puer
+to\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Use
+rs\Justo Puerto\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti100
+0.pk> <C:\Users\Justo Puerto\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/d
+pi600\ecbx1000.pk> <C:\Users\Justo Puerto\AppData\Local\MiKTeX\fonts/pk/ljfour/
+jknappen/ec/dpi600\ecti0800.pk> <C:\Users\Justo Puerto\AppData\Local\MiKTeX\fon
+ts/pk/ljfour/jknappen/ec/dpi600\ecti0600.pk> <C:\Users\Justo Puerto\AppData\Loc
+al\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\Justo Puert
+o\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\User
+s\Justo Puerto\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440
+.pk><C:/Users/Justo Puerto/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmbsy10.pfb><C:/Users/Justo Puerto/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Justo Puerto/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Users/Justo Puerto/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/J
+usto Puerto/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10
+.pfb><C:/Users/Justo Puerto/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
+sfonts/cm/cmmi5.pfb><C:/Users/Justo Puerto/AppData/Local/Programs/MiKTeX/fonts/
+type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Justo Puerto/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Justo Puerto/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Just
+o Puerto/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.p
+fb><C:/Users/Justo Puerto/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
+onts/cmextra/cmmib7.pfb><C:/Users/Justo Puerto/AppData/Local/Programs/MiKTeX/fo
+nts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Justo Puerto/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/Justo Puerto/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Ju
+sto Puerto/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.
+pfb><C:/Users/Justo Puerto/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmsy5.pfb><C:/Users/Justo Puerto/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Justo Puerto/AppData/Local/Programs
+/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Justo Puerto/AppData
+/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on latest_version.pdf (33 pages, 510017 bytes).
 PDF statistics:
- 639 PDF objects out of 1000 (max. 8388607)
+ 642 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 

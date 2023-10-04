@@ -389,6 +389,8 @@
 	
 	\noindent where $L$ and $U$ are the lower and upper bounds of the value of the corresponding determinants, respectively. If a determinant is positive, then $\alpha$ must be one to make the second inequality feasible. Analogously, if the determinant is not positive, $\alpha$ must be zero to enforce the correct condition.
 	
+	\CV{The fact of considering the possibility of going directly from one to other neighbourhood leads to include product of continuous variables in the $\alpha$ constraints of the model that represent the determinants. These products make the \TSPN \ to become non-convex. However, in the \TSPHN, since two of the three arguments of the determinant are fixed, the $\alpha$ constraints become linear. It motivates the comparison between two formulations in terms of computational cost of considering the more general version, studied in Section \ref{section:experiments}.}
+		
 	\newcommand{\betamas}[4]{\beta(#1#2|#3#4)}
 	%\newcommand{\betamenos}[4]{\beta^{-}(#1#2|#3#4)}
 	%\newcommand{\betacero}[4]{\beta^{0\,}(#1#2|#3#4)}
@@ -517,7 +519,7 @@
 		%		\addConstraint{\eqref{eq:dC}, \eqref{eq:nC}.}{ }
 	\end{mini*}
 	
-	The objective function minimises the length of the path followed by the drone at the edges of the induced graph $\GSPP$. The first constraints are the flow conservation constraints that ensure the path is connected, the second constraints represent the sets $\ES$ and $\ET$ and the third ones state that the selected points must be in their respective neighbourhoods.
+	The objective function minimises the length of the path followed by the drone at the edges of the induced graph $\GSPP$. The first constraints are the flow conservation constraints that ensure the path is connected, the second constraints represent the sets $\ES$ and $\ET$ and the third ones state that the selected points must be in their respective neighbourhoods. \CV{Figure \ref{fig:solution_spp} reports the optimal solution for the example of the \SPPN\xspace.}
 	
 %	\input{figures/Example_ H-SPP-S_ Solution}
 	
@@ -620,7 +622,7 @@
 		The proof follows using the finite dominating sets $N^*_{S}$ and $N^*_{T}$. First, it is clear that the cardinality of these finite dominating sets is $O(n)$ since there is one point in each set for each  \JP{endpoint} of a segment in $\cal B$. Next, we recall that given a set of polygonal obstacles with $O(n)$ vertices, the shortest linear size map from any given point can be computed in 
 		$O(n\log n)$ time. Once you have that map, finding the shortest path to any other point in the region is done in $O(n)$ time \citep{mitchell2017a}. Therefore, the \SPPN \ can be solved as follows.
 		
-		For each point $P_S(P_B^i) \in N^*_S$ we compute the shortest path map of linear size and solve the problem of the shortest path with respect to all $O(n)$ points in $N^*_T$. In general, this operation takes $O(n\log n + n^2)$. The same operation has to be repeated for all $O(n)$ points in $N^*_S$. \JP{The best among all those paths is the shortest path from $S$ to $T$.} Therefore, the overall complexity to solve \SPPN is $O(n^3)$.
+		For each point $P_S(P_B^i) \in N^*_S$ we compute the shortest path map of linear size and solve the problem of the shortest path with respect to all $O(n)$ points in $N^*_T$. In general, this operation takes $O(n\log n + n^2)$. The same operation has to be repeated for all $O(n)$ points in $N^*_S$. \JP{The best among all those paths is the shortest path from $S$ to $T$.} Therefore, the overall complexity to solve \SPPN \ is $O(n^3)$.
 		
 	\end{proof}		
 	
@@ -628,8 +630,8 @@
 	\subsection{A formulation for the \TSPHN}
 	
 	
-	The rationale of the formulation for the \TSPHN \ is to consider the variant called Steiner TSP (STSP) (see \citet{letchford2013}), where some nodes in $\VB$ do not have to be visited, but if necessary, they can be visited more than once. 
-%	
+	The rationale of the formulation for the \TSPHN \ is to consider the variant called Steiner TSP (STSP) (see \citet{letchford2013}). \CV{In this problem, the task is to find a minimal cost route that visits a set of required nodes ($\VN$). During the route, vertices ($\VTSPH$) can be visited more than once, and edges ($\ETSPH$) may be traversed more than once.}
+
 %	It is well known that it is possible to convert any instance of the STSP into an instance of the standard TSP, by computing the shortest paths between every pair of required nodes, when these nodes are fixed. However, in our problem, since the points in the neighbourhoods are not fixed, this simplification cannot be applied to obtain an optimal solution for the \TSPHN, although it may produce an approximation to generate lower bounds for the \TSPHN.
 	
 	It is well-known that it is possible to convert any instance of the STSP into an instance of the standard TSP, by computing the shortest paths between every pair of required nodes, when these nodes are fixed. However, in our problem, since the points in the neighbourhoods are not fixed, \CV{the \SPPN} cannot be \CV{used directly} to \CV{derive} an optimal solution for the \TSPHN, although it may produce \CV{a good} approximation to generate lower bounds for the \TSPHN \ \CV{that allows to solve larger instances}.
@@ -659,7 +661,7 @@
 		\addConstraint{\eqref{eq:nC}}{\quad\forall P_N\in \VN.}
 	\end{mini*}
 	
-	The first group of constraints imposes that the drone departs from each neighbourhood. The second block of constraints is the flow-conservation constraints. The third inequalities ensure that one unit of commodity is delivered to each of the required neighbourhood. The fourth ensures that the fictitious nodes at the end of the barriers do not consume commodity. Finally, the last inequalities enforce that some commodity goes throughout an edge only if this edge is used in the tour. The inequalities \eqref{eq:alphaC}, \eqref{eq:betaC}, \eqref{eq:gammaC}, \eqref{eq:deltaC}, \eqref{eq:varepsilonC}, \eqref{eq:yC}, \eqref{eq:dC}, \eqref{eq:nC} require the variables of the problem to be well defined.
+	The first group of constraints imposes that the drone departs from each neighbourhood. The second block of constraints is the flow-conservation constraints. The third inequalities ensure that one unit of commodity is delivered to each of the required neighbourhood. The fourth ensures that the fictitious nodes at the end of the barriers do not consume commodity. Finally, the last inequalities enforce that some commodity goes throughout an edge only if this edge is used in the tour. The inequalities \eqref{eq:alphaC}, \eqref{eq:betaC}, \eqref{eq:gammaC}, \eqref{eq:deltaC}, \eqref{eq:varepsilonC}, \eqref{eq:yC}, \eqref{eq:dC}, \eqref{eq:nC} require the variables of the problem to be well defined. \CV{Figure \ref{fig:solution_tsph} shows the optimal solution for the example of the \TSPHN\xspace.}
 	
 %	\input{figures/Example_ H-TSPH-S_ Solution}
 	
@@ -758,7 +760,7 @@
 		%		\end{itemize} 
 	
 	The formulation described above is analogous to those detailed in \eqref{form:H-TSPHN}.
-	The difference between the set of edges in the \TSPN \ with respect to the graph in \TSPHN \ is that, in the former case, the edges that join each pair of neighbourhoods must be considered. This fact leads to including the product of continuous variables in the constraints $\alpha$ of the model that represent the determinants that determine whether the segment joining the two variable points in the neighbourhoods crosses any barrier or not. These products make the problem a non-convex, quadratically constrained program.
+	The difference between the set of edges in the \TSPN \ with respect to the graph in \TSPHN \ is that, in the former case, the edges that join each pair of neighbourhoods must be considered. This fact leads to including the product of continuous variables in the constraints $\alpha$ of the model that represent the determinants that determine whether the segment joining the two variable points in the neighbourhoods crosses any barrier or not. These products make the problem a non-convex, quadratically constrained program. \CV{In Figure \ref{fig:solution_tsp}, the optimal solution for the example of the \TSPN\xspace is represented. It shows a direct path joining the blue and orange neighbourhoods.}
 	
 	\input{figures/Example_ Problems_ Solution}
 	
@@ -880,7 +882,7 @@
 	$$r_N:P_N^1+\lambda\overrightarrow{P_N^1P_N^2},\qquad\lambda\in\mathbb R.$$
 	
 	
-	\begin{algorithm}[H]
+	\begin{algorithm}[h!]
 		\caption{Checking computationally whether $(P^{}_N, P^i_B)\not\in \EN$ when $N$ is a segment.}
 		\label{alg:Algorithm1}
 		\SetKwInOut{Input}{Initialization}\SetKwInOut{Output}{output}
