@@ -805,8 +805,8 @@ def tspn_b(
 
         model.update()
 
-        model.Params.Threads = 1
-        # model.Params.Threads = 6
+        # model.Params.Threads = 1
+        model.Params.Threads = 6
         #        model.Params.timeLimit = time_limit - time_elapsed
         model.Params.timeLimit = time_limit
 

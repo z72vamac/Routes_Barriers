@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="712f3f4d-af51-4f22-a88b-8203b6392243" name="Changes" comment="Resultados de los circulos actualizada.">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estimacion_M.py" beforeDir="false" afterPath="$PROJECT_DIR$/estimacion_M.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resultados/results_smith.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resultados/results_smith.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routine_smith.py" beforeDir="false" afterPath="$PROJECT_DIR$/routine_smith.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tspn_b.py" beforeDir="false" afterPath="$PROJECT_DIR$/tspn_b.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +20,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
+}]]></component>
   <component name="ProjectId" id="2IrIC63YTydTUVzYvTLhc6kRlU3" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
