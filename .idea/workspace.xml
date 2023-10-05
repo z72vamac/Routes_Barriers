@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="712f3f4d-af51-4f22-a88b-8203b6392243" name="Changes" comment="Resultados de los circulos actualizada.">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="712f3f4d-af51-4f22-a88b-8203b6392243" name="Changes" comment="Hilos puestos a 6.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tspn_b.py" beforeDir="false" afterPath="$PROJECT_DIR$/tspn_b.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resultados/results_smith_marginal.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resultados/results_smith_marginal.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routine_marginal.py" beforeDir="false" afterPath="$PROJECT_DIR$/routine_marginal.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +81,15 @@
       <option name="project" value="LOCAL" />
       <updated>1670950704722</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Hilos puestos a 6.">
+      <option name="closed" value="true" />
+      <created>1696429177440</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1696429177441</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -97,6 +105,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Resultados de los circulos actualizada." />
-    <option name="LAST_COMMIT_MESSAGE" value="Resultados de los circulos actualizada." />
+    <MESSAGE value="Hilos puestos a 6." />
+    <option name="LAST_COMMIT_MESSAGE" value="Hilos puestos a 6." />
   </component>
 </project>

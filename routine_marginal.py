@@ -29,7 +29,7 @@ counter = 1
 
 for nP in [10]:
     for instance in range(10):
-        for radii in [1]:
+        for radii in [0.5]:
             if counter > num_rows:
                 print('\n\nResolviendo la instancia ' + str(instance) + ' con un numero ' + str(nP) + ' de neighborhoods.\n\n')
 
