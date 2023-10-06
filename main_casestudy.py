@@ -40,7 +40,7 @@ for i in blocks:
         barriers.append([[lista[0], lista[1]], [lista[2], lista[3]]])
 
 print(len(barriers)) 
-bolas = [[52, 65, 15], [57, 108, 8.5], [77, 120, 4], [98, 115, 5], [117, 100, 7]]
+bolas = [[59.5, 57.5, 7.5], [(57+65.5)/2, 200-(92+100.5)/2, 4.25], [(77+81)/2, 200-82, 2], [(98+103)/2, 200-(85+90)/2, 2.5], [(117+124)/2, 200-(100+107)/2, 3.5]]
 
 N = [neigh.Circle(center = [centro1, centro2], radii = radio) for centro1, centro2, radio in bolas]
 
