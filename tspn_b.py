@@ -304,7 +304,7 @@ def tspn_b(
                         L, U = L_first, U_first
 
                     model.addConstr(
-                        (1 - alpha[a, b, c, d, e, f]) * L <= af.determinant([point[a, b, 0], point[a, b, 1]], barriers[c][d], barriers[e][f]))
+                        af.determinant([point[a, b, 0], point[a, b, 1]], barriers[c][d], barriers[e][f]) >= (1 - alpha[a, b, c, d, e, f]) * L)
                     
                     model.addConstr(
                         af.determinant([point[a, b, 0], point[a, b, 1]], barriers[c][d], barriers[e][f]) <= U * alpha[a, b, c, d, e, f])
@@ -330,9 +330,9 @@ def tspn_b(
                             pass
                         else:
                             L, U = L_first, U_first                       
-
+                        
                         model.addConstr(
-                            (1 - alpha[a, b, c, d, e, f]) * L <= af.determinant(barriers[a][b], [point[c, d, 0], point[c, d, 1]], barriers[e][f]))
+                            af.determinant(barriers[a][b], [point[c, d, 0], point[c, d, 1]], barriers[e][f]) >= (1 - alpha[a, b, c, d, e, f]) * L)
                         
                         model.addConstr(
                             af.determinant(barriers[a][b], [point[c, d, 0], point[c, d, 1]], barriers[e][f]) <= U * alpha[a, b, c, d, e, f])
@@ -354,7 +354,7 @@ def tspn_b(
                             L, U = L_first, U_first
                             
                         model.addConstr(
-                            (1 - alpha[a, b, c, d, e, f]) * L <= af.determinant(barriers[a][b], barriers[c][d], [point[e, f, 0], point[e, f, 1]]))
+                            af.determinant(barriers[a][b], barriers[c][d], [point[e, f, 0], point[e, f, 1]]) >= (1 - alpha[a, b, c, d, e, f]) * L)
                             
                         model.addConstr(
                             af.determinant(barriers[a][b], barriers[c][d], [point[e, f, 0], point[e, f, 1]]) <= U * alpha[a, b, c, d, e, f])
@@ -382,7 +382,7 @@ def tspn_b(
                         L, U = L_first, U_first
 
                     model.addConstr(
-                        (1 - alpha[a, b, c, d, e, f]) * L <= af.determinant(barriers[a][b], [point[c, d, 0], point[c, d, 1]], [point[e, f, 0], point[e, f, 1]]))
+                        af.determinant(barriers[a][b], [point[c, d, 0], point[c, d, 1]], [point[e, f, 0], point[e, f, 1]]) >= (1 - alpha[a, b, c, d, e, f]) * L)
                     
                     model.addConstr(
                         af.determinant(barriers[a][b], [point[c, d, 0], point[c, d, 1]], [point[e, f, 0], point[e, f, 1]]) <= U * alpha[a, b, c, d, e, f])
