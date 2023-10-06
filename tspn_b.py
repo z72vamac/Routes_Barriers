@@ -72,6 +72,7 @@ def tspn_b(
                         barrier = [barriers[v][i], barriers[w][j]]
 
                         if np.linalg.norm(np.array(barriers[v][i]) - np.array(barriers[w][j])) >= 0.5:
+
                             intersect = False
                             for barrieri in barriers:
                                 if af.intersect(barrieri, barrier):
@@ -638,9 +639,15 @@ def tspn_b(
             for a, b, c, d in g_var.keys()
         )
 
-        # indices = [(-1, 0, -2, 0), (-2, 0, -3, 0), (-3, 0, -4, 0), (-4, 0, -5, 0)]
+        # indices = [(-1, 0, -2, 0), (-2, 0, -3, 0), (-3, 0, -4, 0), (-4, 0, -5, 0), (-5, 0, 66, 0), (66, 0, 65, 0), (65, 0, 9, 0), (9, 0, -1, 0)]
         # for index in indices:
-        #     y[index].start = 1
+        #     model.addConstr(y[index] >= 0.5)
+
+        # model.addConstr(y[59, 1, 57, 1] + y[57, 1, 59, 1] + y[60, 0, 57, 1] + y[58, 0, 59, 1] + y[59, 1, 58, 0] + y[60, 0, 58, 0] + y[58, 0, 60, 0] + y[57, 1, 60, 0] <= 0.5)
+
+        # model.addConstr(epsilon[65,0,9,0] >= 0.5)
+        # model.addConstr(delta[65, 0, 9, 0, 0, 0, 0, 1] >= 0.5)
+        # model.addConstr(beta[0,0,0,1,65,0,9,0] >= 0.5)
         
         # model.addConstrs(gp.quicksum(y[v, i, vertices_neighborhood] for v, i in vertices_barrier) == 1 for
         # vertices_neighborhood in vertices_neighborhood) model.addConstrs(gp.quicksum(y[vertices_neighborhood, v,
@@ -734,7 +741,7 @@ def tspn_b(
 
         if model.Status == 3:
             model.computeIIS()
-            # model.write("infeasible_constraints.ilp")
+            model.write("infeasible_constraints.ilp")
             return results
 
         if model.SolCount == 0:
