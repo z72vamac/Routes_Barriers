@@ -11,7 +11,7 @@ Section 2 introduces important preliminary notions and notations that will be us
 Section 3 is a very long section (pages 7 to 20) devoted to modelling problems in the form of a mixed nonlinear programme (MINLP). This is the heart of the article. This part is very well written, and the reader is led progressively through the modelling of the various problems and the proof of their complexity. Well-chosen figures illustrate the subject and make it easier to understand. Thank you.
 
 Section 4 strengthens the formulation presented in the previous section by focusing on three proposals: removing unnecessary edges, adjusting the value of big-M, and fixing some variables.
-- The results presented in the next section will show the interest of these strengthening. It might be interesting to know the marginal contribution of each of these proposals to improving the solver's behaviour. It is not possible :( without running all the experiments.
+- The results presented in the next section will show the interest of these strengthening. It might be interesting to know the marginal contribution of each of these proposals to improving the solver's behaviour. 
 
 The results are presented in section 5. The datasets are presented first, with two classes of instances. The first is completely generated and contains instances of 20 to 100 neighbourhoods to visit. The second is generated using instances from the literature for the "close-enough TSP", and adding obstacles. The results show the effectiveness of the solver (and also its limitations)
 - I invite the authors to make the instances they have generated available to the community.
