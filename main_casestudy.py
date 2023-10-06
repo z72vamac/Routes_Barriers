@@ -44,7 +44,7 @@ bolas = [[59.5, 57.5, 7.5], [(57+65.5)/2, 200-(92+100.5)/2, 4.25], [(77+81)/2, 2
 
 N = [neigh.Circle(center = [centro1, centro2], radii = radio) for centro1, centro2, radio in bolas]
 
-resultados = tspn_b(barriers, N, A4 = False, dominant=False, prepro=True, log=False, picture=True, time_limit=3*3600, init = False)
+resultados = tspn_b(barriers, N, A4 = False, dominant=False, log=False, picture=True, time_limit=3*3600, init = False)
 
 
 # print(resultados)
