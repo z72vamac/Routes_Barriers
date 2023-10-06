@@ -30,90 +30,125 @@ counter = 1
 for nP in [10]:
     for instance in range(10):
         for radii in [0.5]:
+            # if counter > num_rows:
+            #     print('\n\nResolviendo la instancia ' + str(instance) + ' con un numero ' + str(nP) + ' de neighborhoods.\n\n')
+            #
+            #     segments = np.genfromtxt('./instancias_smith/barreras'+ str(nP) + '-' + str(instance) + '-' + str(radii) + '.csv', delimiter = ',')
+            #
+            #     print('A4 = ' + str(False))
+            #     print('Removing edges: ' + str(True))
+            #     print('Fixing variables: ' + str(False))
+            #     print('Estimating BigM: ' + str(False))
+            #
+            #     barriers = []
+            #     for lista in segments:
+            #         barriers.append([[lista[0], lista[1]], [lista[2], lista[3]]])
+            #
+            #     nB = len(barriers)
+            #
+            #     bolas = np.genfromtxt('./instancias_smith/bolas'+ str(nP) + '-' + str(instance) + '-' + str(radii) + '.csv', delimiter = ',')
+            #
+            #     neighborhoods = [Circle(center = [centro1, centro2], radii = radio) for centro1, centro2, radio in bolas]
+            #
+            #     resultados = tspn_b(barriers, neighborhoods, A4=False, edge_removing=True, variable_fixing=False, bigM_estimation=False, log=False, dominant = False, picture=False, time_limit=3600, init=False)
+            #
+            #     serie = pd.Series([instance, radii] + resultados, index = dataframe.columns)
+            #
+            #     dataframe = dataframe.append(serie, ignore_index=True)
+            #     dataframe.to_csv('./resultados/results_smith_marginal.csv')
+            #
+            # counter +=1
+            #
+            # if counter > num_rows:
+            #     print('\n\nResolviendo la instancia ' + str(instance) + ' con un numero ' + str(nP) + ' de neighborhoods.\n\n')
+            #
+            #     segments = np.genfromtxt('./instancias_smith/barreras'+ str(nP) + '-' + str(instance) + '-' + str(radii) + '.csv', delimiter = ',')
+            #
+            #     print('A4 = ' + str(False))
+            #     print('Removing edges: ' + str(False))
+            #     print('Fixing variables: ' + str(True))
+            #     print('Estimating BigM: ' + str(False))
+            #
+            #     barriers = []
+            #     for lista in segments:
+            #         barriers.append([[lista[0], lista[1]], [lista[2], lista[3]]])
+            #
+            #     nB = len(barriers)
+            #
+            #     bolas = np.genfromtxt('./instancias_smith/bolas'+ str(nP) + '-' + str(instance) + '-' + str(radii) + '.csv', delimiter = ',')
+            #
+            #     neighborhoods = [Circle(center = [centro1, centro2], radii = radio) for centro1, centro2, radio in bolas]
+            #
+            #     resultados = tspn_b(barriers, neighborhoods, A4=False, edge_removing=False, variable_fixing=True, bigM_estimation=False, log=False, dominant = False, picture=False, time_limit=3600, init=False)
+            #
+            #     serie = pd.Series([instance, radii] + resultados, index = dataframe.columns)
+            #
+            #     dataframe = dataframe.append(serie, ignore_index=True)
+            #     dataframe.to_csv('./resultados/results_smith_marginal.csv')
+            #
+            # counter += 1
+            #
+            # if counter > num_rows:
+            #     print('\n\nResolviendo la instancia ' + str(instance) + ' con un numero ' + str(nP) + ' de neighborhoods.\n\n')
+            #
+            #     segments = np.genfromtxt('./instancias_smith/barreras'+ str(nP) + '-' + str(instance) + '-' + str(radii) + '.csv', delimiter = ',')
+            #
+            #     print('A4 = ' + str(False))
+            #     print('Removing edges: ' + str(False))
+            #     print('Fixing variables: ' + str(False))
+            #     print('Estimating BigM: ' + str(True))
+            #
+            #     barriers = []
+            #     for lista in segments:
+            #         barriers.append([[lista[0], lista[1]], [lista[2], lista[3]]])
+            #
+            #     nB = len(barriers)
+            #
+            #     bolas = np.genfromtxt('./instancias_smith/bolas'+ str(nP) + '-' + str(instance) + '-' + str(radii) + '.csv', delimiter = ',')
+            #
+            #     neighborhoods = [Circle(center = [centro1, centro2], radii = radio) for centro1, centro2, radio in bolas]
+            #
+            #     resultados = tspn_b(barriers, neighborhoods, A4=False, edge_removing=False, variable_fixing=False, bigM_estimation=True, log=False, dominant = False, picture=False, time_limit=3600, init=False)
+            #
+            #     serie = pd.Series([instance, radii] + resultados, index = dataframe.columns)
+            #
+            #     dataframe = dataframe.append(serie, ignore_index=True)
+            #     dataframe.to_csv('./resultados/results_smith_marginal.csv')
+            #
+            # counter += 1
+
             if counter > num_rows:
-                print('\n\nResolviendo la instancia ' + str(instance) + ' con un numero ' + str(nP) + ' de neighborhoods.\n\n')
+                print('\n\nResolviendo la instancia ' + str(instance) + ' con un numero ' + str(
+                    nP) + ' de neighborhoods.\n\n')
 
-                segments = np.genfromtxt('./instancias_smith/barreras'+ str(nP) + '-' + str(instance) + '-' + str(radii) + '.csv', delimiter = ',')
-
-                print('A4 = ' + str(False))
-                print('Removing edges: ' + str(True))
-                print('Fixing variables: ' + str(False))
-                print('Estimating BigM: ' + str(False))
-                
-                barriers = []
-                for lista in segments:
-                    barriers.append([[lista[0], lista[1]], [lista[2], lista[3]]])
-
-                nB = len(barriers)
-
-                bolas = np.genfromtxt('./instancias_smith/bolas'+ str(nP) + '-' + str(instance) + '-' + str(radii) + '.csv', delimiter = ',')
-
-                neighborhoods = [Circle(center = [centro1, centro2], radii = radio) for centro1, centro2, radio in bolas]
-
-                resultados = tspn_b(barriers, neighborhoods, A4=False, edge_removing=True, variable_fixing=False, bigM_estimation=False, log=False, dominant = False, picture=False, time_limit=3600, init=False)
-
-                serie = pd.Series([instance, radii] + resultados, index = dataframe.columns)
-
-                dataframe = dataframe.append(serie, ignore_index=True)
-                dataframe.to_csv('./resultados/results_smith_marginal.csv')
-
-            counter +=1
-
-            if counter > num_rows:
-                print('\n\nResolviendo la instancia ' + str(instance) + ' con un numero ' + str(nP) + ' de neighborhoods.\n\n')
-
-                segments = np.genfromtxt('./instancias_smith/barreras'+ str(nP) + '-' + str(instance) + '-' + str(radii) + '.csv', delimiter = ',')
+                segments = np.genfromtxt(
+                    './instancias_smith/barreras' + str(nP) + '-' + str(instance) + '-' + str(radii) + '.csv',
+                    delimiter=',')
 
                 print('A4 = ' + str(False))
                 print('Removing edges: ' + str(False))
-                print('Fixing variables: ' + str(True))
-                print('Estimating BigM: ' + str(False))
-                
-                barriers = []
-                for lista in segments:
-                    barriers.append([[lista[0], lista[1]], [lista[2], lista[3]]])
-
-                nB = len(barriers)
-
-                bolas = np.genfromtxt('./instancias_smith/bolas'+ str(nP) + '-' + str(instance) + '-' + str(radii) + '.csv', delimiter = ',')
-
-                neighborhoods = [Circle(center = [centro1, centro2], radii = radio) for centro1, centro2, radio in bolas]
-
-                resultados = tspn_b(barriers, neighborhoods, A4=False, edge_removing=False, variable_fixing=True, bigM_estimation=False, log=False, dominant = False, picture=False, time_limit=3600, init=False)
-
-                serie = pd.Series([instance, radii] + resultados, index = dataframe.columns)
-
-                dataframe = dataframe.append(serie, ignore_index=True)
-                dataframe.to_csv('./resultados/results_smith_marginal.csv')
-
-            counter += 1
-
-            if counter > num_rows:
-                print('\n\nResolviendo la instancia ' + str(instance) + ' con un numero ' + str(nP) + ' de neighborhoods.\n\n')
-
-                segments = np.genfromtxt('./instancias_smith/barreras'+ str(nP) + '-' + str(instance) + '-' + str(radii) + '.csv', delimiter = ',')
-
-                print('A4 = ' + str(False))
-                print('Removing edges: ' + str(False))
                 print('Fixing variables: ' + str(False))
-                print('Estimating BigM: ' + str(True))
-                
+                print('Estimating BigM: ' + str(False))
+
                 barriers = []
                 for lista in segments:
                     barriers.append([[lista[0], lista[1]], [lista[2], lista[3]]])
 
                 nB = len(barriers)
 
-                bolas = np.genfromtxt('./instancias_smith/bolas'+ str(nP) + '-' + str(instance) + '-' + str(radii) + '.csv', delimiter = ',')
+                bolas = np.genfromtxt(
+                    './instancias_smith/bolas' + str(nP) + '-' + str(instance) + '-' + str(radii) + '.csv',
+                    delimiter=',')
 
-                neighborhoods = [Circle(center = [centro1, centro2], radii = radio) for centro1, centro2, radio in bolas]
+                neighborhoods = [Circle(center=[centro1, centro2], radii=radio) for centro1, centro2, radio in bolas]
 
-                resultados = tspn_b(barriers, neighborhoods, A4=False, edge_removing=False, variable_fixing=False, bigM_estimation=True, log=False, dominant = False, picture=False, time_limit=3600, init=False)
+                resultados = tspn_b(barriers, neighborhoods, A4=False, edge_removing=False, variable_fixing=False,
+                                    bigM_estimation=False, log=False, dominant=False, picture=False, time_limit=3600,
+                                    init=False)
 
-                serie = pd.Series([instance, radii] + resultados, index = dataframe.columns)
+                serie = pd.Series([instance, radii] + resultados, index=dataframe.columns)
 
                 dataframe = dataframe.append(serie, ignore_index=True)
-                dataframe.to_csv('./resultados/results_smith_marginal.csv')
+                dataframe.to_csv('./resultados/results_smith_marginal2.csv')
 
             counter += 1
-
