@@ -389,7 +389,9 @@
 	
 	\noindent where $L$ and $U$ are the lower and upper bounds of the value of the corresponding determinants, respectively. If a determinant is positive, then $\alpha$ must be one to make the second inequality feasible. Analogously, if the determinant is not positive, $\alpha$ must be zero to enforce the correct condition.
 	
-	\CV{The fact of considering the possibility of going directly from one to other neighbourhood leads to include product of continuous variables in the $\alpha$ constraints of the model that represent the determinants. These products make the \TSPN \ to become non-convex. However, in the \TSPHN, since two of the three arguments of the determinant are fixed, the $\alpha$ constraints become linear. It motivates the comparison between two formulations in terms of computational cost of considering the more general version, studied in Section \ref{section:experiments}.}
+	\CV{The fact of considering the possibility of going directly from one to other neighbourhood leads to include product of continuous variables in the determinants of these constraints of the model. These products make the \TSPN \ to become non-convex. However, in the \TSPHN, since two of the three arguments of each determinant are fixed, the $\alpha$ constraints become linear. It motivates the comparison between two formulations in terms of computational cost of considering the more general version, studied in Section \ref{section:experiments}.}
+	
+
 		
 	\newcommand{\betamas}[4]{\beta(#1#2|#3#4)}
 	%\newcommand{\betamenos}[4]{\beta^{-}(#1#2|#3#4)}
@@ -560,7 +562,7 @@
 	\end{argmini*}
 	
 	Then, the visibility graph is constructed by means of these dominating sets.
-	This} graph, required to address the new formulation, uses the previous graph $\GSPP$ \sout{and then} \CV{in which} we increase the new edges that connect the initial and terminal points $P_S\in N_S$ and $P_T\in N_T$, respectively, with the corresponding points in $N_S^*$ and $N_T^*$. Moreover, we also augment the edges connecting the points in the dominating sets with the extreme points of the segments where the minimal distances are attained. The reader may note that since the optimisation model minimises the overall distance, in an optimal solution $P_S$ must belong to $N_S^*$ and $P_T$ to $N_T^*$.
+	This graph, required to address the new formulation, uses the previous graph $\GSPP$ \sout{and then} \CV{in which} we increase the new edges that connect the initial and terminal points $P_S\in N_S$ and $P_T\in N_T$, respectively, with the corresponding points in $N_S^*$ and $N_T^*$. Moreover, we also augment the edges connecting the points in the dominating sets with the extreme points of the segments where the minimal distances are attained. The reader may note that since the optimisation model minimises the overall distance, in an optimal solution $P_S$ must belong to $N_S^*$ and $P_T$ to $N_T^*$.}
 
 	%	Moreover, the points chosen in the solution, $P_S$ and $P_T$, can be represented by \CV{the constraints \eqref{eq:nCs} for the point $P_S$ in $N_S$ and \eqref{eq:nCt} for $P_T$ in $N_T$}:
 	
