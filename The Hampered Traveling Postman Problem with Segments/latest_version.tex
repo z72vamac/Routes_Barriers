@@ -769,7 +769,7 @@
 	
 	\CV{
 		\subsubsection{Real-world scenario}
-		In this subsection,	we include an example from a real neighbourhood of the city map of Cordoba in the south of Spain. In order to make surveillance drone activities in some parks of the district, the neighbourhoods, represented as circles, must be visited by the drone by taking into account buildings that can not be crossed. Figure \ref{fig:realworld1} shows a part of the district that contains three parks that must be inspected and the buildings the drone cannot cross. Figure \ref{fig:realworld2} represents a block view that includes, in a simpler way, the barriers and neighbourhoods that must be visited. Finally, the optimal solution for the \TSPN \ for this real scenario is given by the path included in Figure \ref{fig:realworld3}.
+		In this subsection,	we include an example from a real neighbourhood of the city map of Cordoba in the south of Spain. In order to make surveillance drone activities in some parks of the district, the neighbourhoods, represented as circles, must be visited by the drone by taking into account buildings that can not be crossed. Figure \ref{fig:realworld1} shows a part of the district that contains three parks that must be inspected and the buildings the drone cannot cross. Figure \ref{fig:realworld2} represents a block view that includes, in a simpler way, the barriers and neighbourhoods that must be visited. Finally, the optimal solution for the \TSPN \ for this real scenario is given by the \JP{tour} included in Figure \ref{fig:realworld3}.
 		
 		\begin{figure}
 			\centering
@@ -1079,7 +1079,7 @@ To generate the instances of our experiments, we assume assumptions \ref{A1}-\re
 	Under assumptions \ref{A1}-\ref{A4}, the maximum number of balls that can be considered in \TSPHN \ is $O(n^2)$.
 \end{prop}
 \begin{proof}
-	\CV{Let $G_{\mathcal B}=(\VB, \EB)$ the visibility graph of the barrier configuration in $\mathcal B$. The proof is based on the properties of this visibility graph described in \cite{mitchell2017a}.  It is clear that the maximum number of balls coincides with the number of faces, $f_{G_{\mathcal B}}$, of $G_{\mathcal B}$.  Recall that the number of vertices in $\cal B$ is $n$. Next, by the Euler formula, the number of faces $f_{G_{\mathcal B}}$ is $2+E_{G_{\mathcal B}}-n$. Since $\EB=O(n^2)$, it follows that $f_{G_{\mathcal B}}=O(n^2)$.}
+	\CV{Let $G_{\mathcal B}=(\VB, \EB)$ the visibility graph of the barrier configuration in $\mathcal B$. The proof is based on the properties of this visibility graph described in \cite{mitchell2017a}, \JP{where it is proven that for a graph with $n$ vertices $\EB =O(n^2)$.}.  It is clear that the maximum number of balls coincides with the number of faces, $f_{G_{\mathcal B}}$, of $G_{\mathcal B}$.  Recall that the number of vertices in $\cal B$ is $n$. Next, by the Euler formula, the number of faces $f_{G_{\mathcal B}}$ is $2+E_{G_{\mathcal B}}-n$. Since $\EB=O(n^2)$, it follows that $f_{G_{\mathcal B}}=O(n^2)$.}
 \end{proof}
 
 Algorithm \ref{alg:Algorithm3} describes a general way to construct instances where neighbourhoods are balls.
@@ -1214,7 +1214,7 @@ The values obtained by the solver that are reported in our tables are:
 \item \boldsymbol{$\#Found$}: number of instances in which the solver finds a feasible solution.
 \item \boldsymbol{$Gap$}: gap between the best incumbent solution with respect to the best bound found by the solver. It is computed as $Gap=(upper\, bound - lower\, bound)/lower\, bound$.
 \item \boldsymbol{$Time_{model}$}: time \CV{(in seconds)} spent by the solver to obtain the best solution found.
-\CV{\item \boldsymbol{$Time_{marginal}$}: time \CV{(in seconds)} spent by Python to set up the model, includes only a strengthening subprocess.}
+\CV{\item \boldsymbol{$Time_{marginal}$}: time \CV{(in seconds)} spent by Python to set up the model, including only a strengthening subprocess.}
 \item \boldsymbol{$Time_{prepro}$}: time \CV{(in seconds)} spent by Python to set up the model, including all the strengthening process.
 \item \boldsymbol{$Time_{total}$}: overall time \CV{(in seconds)} to solve the model.
 \end{itemize}

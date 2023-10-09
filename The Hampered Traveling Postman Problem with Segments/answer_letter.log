@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.9.19)  6 OCT 2023 21:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.9.19)  8 OCT 2023 08:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1029,10 +1029,10 @@ Package rerunfilecheck Info: File `answer_letter.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 30101 strings out of 476331
- 615580 string characters out of 5788237
+ 30100 strings out of 476331
+ 615561 string characters out of 5788237
  1879660 words of memory out of 5000000
- 50014 multiletter control sequences out of 15000+600000
+ 50013 multiletter control sequences out of 15000+600000
  523122 words of font info for 69 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
  101i,17n,104p,637b,1047s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1052,7 +1052,7 @@ fb><C:/Users/G731/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmsy10.pfb><C:/Users/G731/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
 onts/cm/cmsy7.pfb><C:/Users/G731/AppData/Local/Programs/MiKTeX/fonts/type1/publ
 ic/amsfonts/cm/cmti10.pfb>
-Output written on answer_letter.pdf (5 pages, 203217 bytes).
+Output written on answer_letter.pdf (5 pages, 203578 bytes).
 PDF statistics:
  139 PDF objects out of 1000 (max. 8388607)
  7 named destinations out of 1000 (max. 500000)
