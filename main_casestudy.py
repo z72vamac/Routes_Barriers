@@ -29,8 +29,9 @@ from HTSPS_new_ven import HTSPS_ven
 # from HTSPS_without_prepro import HTSPS_without_prepro
 
 
-blocks = [2]
+blocks = [3]
 barriers = []
+neighbourhoods = []
 
 for i in blocks:
 
@@ -39,14 +40,13 @@ for i in blocks:
     for lista in segments:
         barriers.append([[lista[0], lista[1]], [lista[2], lista[3]]])
 
-print(len(barriers)) 
-bolas = [[59.5, 57.5, 7.5], [(57+65.5)/2, 200-(92+100.5)/2, 4.25], [(77+81)/2, 200-82, 2], [(98+103)/2, 200-(85+90)/2, 2.5], [(117+124)/2, 200-(100+107)/2, 3.5]]
+    balls = np.genfromtxt('./case_study/balls{0}.csv'.format(i), delimiter = ',')
 
-N = [neigh.Circle(center = [centro1, centro2], radii = radio) for centro1, centro2, radio in bolas]
+    for x_coord, y_coord, radii in balls:
+        neighbourhoods.append(neigh.Circle(center = [x_coord, y_coord], radii = radii))
 
-resultados = tspn_b(barriers, N, A4 = False, dominant=False, variable_fixing = False, log=False, picture=True, time_limit=0.05*3600, init = False)
+# bolas = [[59.5, 57.5, 7.5], [(57+65.5)/2, 200-(92+100.5)/2, 4.25], [(77+81)/2, 200-82, 2], [(98+103)/2, 200-(85+90)/2, 2.5], [(117+124)/2, 200-(100+107)/2, 3.5]]
 
+# N = [neigh.Circle(center = [centro1, centro2], radii = radio) for centro1, centro2, radio in bolas]
 
-# print(resultados)
-
-# HTSPS_with_prepro(barriers, N)
+resultados = tspn_b(barriers, neighbourhoods, A4 = False, dominant=False, variable_fixing = False, log=False, picture=True, time_limit=0.05*3600, init = False)

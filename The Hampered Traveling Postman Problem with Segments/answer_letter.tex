@@ -19,6 +19,8 @@
 \usepackage{xcite}
 \usepackage{hyperref}
 \usepackage{ulem}
+\usepackage{bm}
+\usepackage{optidef}
 %\externalcitedocument[org:]{TSC}
 
 %\usepackage[table]{xcolor}
@@ -158,7 +160,23 @@
 		\end{itshape}
 		
 		\begin{tcolorbox}[breakable,enhanced,coltitle=black,colback=red!5!white,colframe=red!75!black,title=\textbf{Answer R1.\point},borderline={1pt}{0pt}{black},boxrule=0pt]
-
+		In Page 13, we have rewritten this paragraph to state clearly how the dominating sets are built. The new paragraph is:
+		
+		\medskip
+		
+		Therefore, we can compute, \textit{`a priori'},  the sets $N_X^*$, $X\in\{S,T\}$. For each $P_B^i\in V_{\mathcal B}$, the corresponding point in the source neighbourhood $P_X(P_B^i)$ is computed by solving the following convex problem:
+		\begin{argmini*}
+			{P_X\in N_X}{d(P_XP_B^i)}
+			{}{P_X(P_B^i)=}\label{eq:computing_n}\tag{$N_X^*$}
+			\addConstraint{(\alpha-C),(\beta-C),(\gamma-C),(\delta-C),}{\quad\forall P_B^1, P_B^2\in V_\mathcal B}
+			\addConstraint{(\varepsilon-C)}{}
+			\addConstraint{\varepsilon(P_XP_B^i)=1}
+			\addConstraint{	\|P_X - P_B^i\|\leq d(P_XP_B^i).}{}
+		\end{argmini*}
+		
+		Then, the visibility graph is constructed by means of these dominating sets.
+		This graph, required to address the new formulation, uses the previous graph $G_{\text{SPP}}$ in which we increase the new edges that connect the initial and terminal points $P_S\in N_S$ and $P_T\in N_T$, respectively, with the corresponding points in $N_S^*$ and $N_T^*$. Moreover, we also augment the edges connecting the points in the dominating sets with the extreme points of the segments where the minimal distances are attained. The reader may note that since the optimisation model minimises the overall distance, in an optimal solution $P_S$ must belong to $N_S^*$ and $P_T$ to $N_T^*$.
+			
 
 		\end{tcolorbox}
 		
@@ -178,7 +196,11 @@
 		\end{itshape}
 		
 		\begin{tcolorbox}[breakable,enhanced,coltitle=black,colback=red!5!white,colframe=red!75!black,title=\textbf{Answer R1.\point},borderline={1pt}{0pt}{black},boxrule=0pt]
-
+		In Page 10, we have described the difference between these formulations in terms of the $\alpha$ constraints by including the following paragraph:
+		
+		\medskip
+		
+		The fact of considering the possibility of going directly from one to other neighbourhood leads to include product of continuous variables in the determinants of these constraints of the model. These products make the H-TSPN to become non-convex. However, in the H-TSPHN, since two of the three arguments of each determinant are fixed, the $\alpha$ constraints become linear. It motivates the comparison between two formulations in terms of computational cost of considering the more general version, studied in Section 5.
 		\end{tcolorbox}
 		
 		
@@ -213,9 +235,30 @@
 			
 		\end{itshape}
 
-				
+		\begin{tcolorbox}[breakable,enhanced,coltitle=black,colback=red!5!white,colframe=red!75!black,title=\textbf{Answer R1.\point},borderline={1pt}{0pt}{black},boxrule=0pt]
+			\begin{itemize}
+				\item \textbf{Page 3:} Corrected both typos.
+				\item \textbf{Page 5:} ``Endnodes'' are used instead of vertices.
+				\item \textbf{Page 11:} Done.
+				\item \textbf{Page 12:} ($N$-C) is used in the formulations for the sake of simplicity, as exposed in the first paragraph of Page 10.
+				\item \textbf{Page 23}: Corrected.
+				\item \textbf{Page 27}: 
+				\begin{itemize}
+					\item A definition of visibility graphs is included in Page 5 before describing these objects for each problem studied in the manuscript.
+					\item After Algorithm 3, in Page 26, a paragraph connecting Algorithms 4 and 5 with steps 2 and 3, is included.
+				\end{itemize}
+				\item \textbf{Page 29}:
+				\begin{itemize}
+					\item Yes. We have corrected the typo to say that the number instances for each setting is ten.
+					\item Done.
+					\item Yes. In the configuration of the experiments, we specify that \boldsymbol{$|\mathcal B|$} represents the average number of barriers for each setting.
+				\end{itemize}
+			\end{itemize}
+		\end{tcolorbox}
+		
 	\end{reviewer}
 	
+	\newpage
 	\begin{reviewer}
 		
 		\begin{tcolorbox}[breakable,enhanced,coltitle=black,colback=green!75!black,colframe=green!75!black,borderline={1pt}{0pt}{black},boxrule=0pt]
@@ -256,27 +299,18 @@
 		\begin{itshape}
 			Section 3 is a very long section (pages 7 to 20) devoted to modelling problems in the form of a mixed nonlinear programme (MINLP). This is the heart of the article. This part is very well written, and the reader is led progressively through the modelling of the various problems and the proof of their complexity. Well-chosen figures illustrate the subject and make it easier to understand.
 		\end{itshape}
-		We thank again the referee for his/her positive  appreciation.
+
 
 		\begin{tcolorbox}[breakable,enhanced,coltitle=black,colback=green!5!white,colframe=green!75!black,title=\textbf{Answer R2.\point},borderline={1pt}{0pt}{black},boxrule=0pt]
-
+			We thank again the referee for his/her positive  appreciation.
 		\end{tcolorbox}
-		
-\JP{REPETIDO ****		\begin{itshape}
-			Section 3 is a very long section (pages 7 to 20) devoted to modelling problems in the form of a mixed nonlinear programme (MINLP). This is the heart of the article. This part is very well written, and the reader is led progressively through the modelling of the various problems and the proof of their complexity. Well-chosen figures illustrate the subject and make it easier to understand.
-		\end{itshape}
-				
-		\begin{tcolorbox}[breakable,enhanced,coltitle=black,colback=green!5!white,colframe=green!75!black,title=\textbf{Answer R2.\point},borderline={1pt}{0pt}{black},boxrule=0pt]
-			
-		\end{tcolorbox}
-}
 		
 		\begin{itshape}
 			Section 4 strengthens the formulation presented in the previous section by focusing on three proposals: removing unnecessary edges, adjusting the value of big-M, and fixing some variables. The results presented in the next section will show the interest of these strengthening. It might be interesting to know the marginal contribution of each of these proposals to improving the solver's behaviour.
 		\end{itshape}
 		
 		\begin{tcolorbox}[breakable,enhanced,coltitle=black,colback=green!5!white,colframe=green!75!black,title=\textbf{Answer R2.\point},borderline={1pt}{0pt}{black},boxrule=0pt]
-			In order to show the usefulness of our strengthenings we have designed a pilot computational study choosing a representative type of problem with xx neighbouhoods and yy barriers and we have compared the gaps obtained by the solver using the formulation and each one of the proposed improvements. These new results are gathered in table zzz.
+			In order to show the usefulness of our strengthenings we have designed a pilot computational study choosing a representative type of problem with 10 neighbouhoods and an average number of 18 barriers and we have compared the gaps obtained by the solver using the formulation and each one of the proposed improvements. These new results are gathered in table zzz.
 		\end{tcolorbox}
 		
 		\begin{itshape}
@@ -300,10 +334,6 @@
 		\begin{itshape}
 			The conclusion gives both theoretical and practical perspectives to this work.
 		\end{itshape}
-		
-		\begin{tcolorbox}[breakable,enhanced,coltitle=black,colback=green!5!white,colframe=green!75!black,title=\textbf{Answer R2.\point},borderline={1pt}{0pt}{black},boxrule=0pt]
-			
-		\end{tcolorbox}
 		
 		\begin{itshape}
 			A general comment: The H-SPPN is a polynomial variant that is not considered at all in the experimental part. At the end of the reading, I did not understand the interest of this variant and its contribution to the solution of the two other variants. I recommend that the authors improve or better explain how knowing how to solve the H-SPPN can help to solve the two other problems.
