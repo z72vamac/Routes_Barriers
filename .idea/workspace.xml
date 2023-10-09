@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="712f3f4d-af51-4f22-a88b-8203b6392243" name="Changes" comment="Cambios en el case study.">
+    <list default="true" id="712f3f4d-af51-4f22-a88b-8203b6392243" name="Changes" comment="Guardando resultados.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auxiliar_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/auxiliar_functions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infeasible_constraints.ilp" beforeDir="false" afterPath="$PROJECT_DIR$/infeasible_constraints.ilp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_casestudy.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_casestudy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tspn_b.py" beforeDir="false" afterPath="$PROJECT_DIR$/tspn_b.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resultados/results_smith_marginal.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resultados/results_smith_marginal.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resultados/results_smith_marginal2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resultados/results_smith_marginal2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routine_marginal.py" beforeDir="false" afterPath="$PROJECT_DIR$/routine_marginal.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,12 +19,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "z72vamac"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;z72vamac&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -113,7 +113,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696584460625</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Guardando resultados.">
+      <option name="closed" value="true" />
+      <created>1696666135810</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1696666135810</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -131,6 +139,7 @@
     <MESSAGE value="Resultados de los circulos actualizada." />
     <MESSAGE value="Hilos puestos a 6." />
     <MESSAGE value="Cambios en el case study." />
-    <option name="LAST_COMMIT_MESSAGE" value="Cambios en el case study." />
+    <MESSAGE value="Guardando resultados." />
+    <option name="LAST_COMMIT_MESSAGE" value="Guardando resultados." />
   </component>
 </project>
