@@ -549,8 +549,11 @@ def cansee(point, neighborhood, barriers):
         for mu in mus:
             intersection_local = False
             for barrier in barriers:
-                if not(intersect([point, extreme_point + mu * drs_u], barrier)):
-                    return True
+                if intersect([point, extreme_point + mu * drs_u], barrier):
+                    intersection_local = True
+
+            if not (intersection_local):
+                return True
 
         return False
 

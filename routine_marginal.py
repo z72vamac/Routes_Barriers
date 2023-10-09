@@ -18,7 +18,7 @@ init = False
 dataframe = pd.DataFrame(columns=['Instance', 'Radii', 'n_N', 'n_B', 'A4', 'edge_removing', 'variable_fixing', 'bigM_estimation', 'Gap', 'Runtime', 'Time_Prepro', 'NodeCount', 'ObjVal', 'Runtime_h', 'ObjVal_h'])
 
 
-start = False
+start = True
 
 num_rows = 0
 if start:
