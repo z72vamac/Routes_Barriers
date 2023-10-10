@@ -40,41 +40,33 @@ from HTSPS_new_ven import HTSPS_ven
 # N = [neigh.Circle(center = [centro1, centro2], radii = radio) for centro1, centro2, radio in bolas]
 # segmentos_visitar = np.genfromtxt('./instancias/segmentos_visitar30-2.csv', delimiter = ',')
 # N = [neigh.Poligonal(V = [np.array([lista[0], lista[1]]), np.array([lista[2], lista[3]])]) for lista in segmentos_visitar] # 105.164
-# # resultados = tspn_b(barriers, N, prepro = False, log = True, time_limit = 30)
-# resultados = HTSPS_ven(barriers, N, prepro = False, log = True, time_limit = 60)
 
 
-# print(N)
+# Example of Figures 2 and 3
+figure = 2 # or 3
 
+segments = np.genfromtxt('./instance_example/barriers{0}.csv'.format(figure), delimiter = ',')
 
-barrier1 = [[20, 80], [40, 30]]
-barrier2 = [[70, 95], [40, 70]]
-barrier3 = [[95, 60], [60, 70]]
-barrier4 = [[60, 50], [90, 10]]
-barrier5 = [[10, 70], [20, 50]]
-barrier6 = [[30, 70], [70, 20]]
-#
-# barriers = [barrier1, barrier2, barrier3, barrier4, barrier5]
-barriers = [barrier2, barrier3, barrier4, barrier5]
-# # barriers = [barrier1, barrier4]
-# # barriers = [barrier3]
+barriers = []
+for segment in segments:
+    barriers.append([[segment[0], segment[1]], [segment[2], segment[3]]])
 
-N1 = neigh.Circle(center=[20, 10], radii=10)
-N2 = neigh.Circle(center=[90, 90], radii=5)
-N3 = neigh.Circle(center=[35, 85], radii=9)
-N4 = neigh.Circle(center=[85, 40], radii=11)
+circles = np.genfromtxt('./instance_example/circles.csv'.format(figure), delimiter = ',')
 
-N = [N1, N2, N3, N4]
-# N = [N1, N4]
+neighbourhoods = [neigh.Circle(center = [centerx, centery], radii = radius) for centerx, centery, radius in circles]
 
-# af.dominant_set(N, barriers)
-# resultados = tspn_b(barriers, N, prepro=False, log=1, time_limit=10)
+# Random instances
+instance = 5
+neighbourhood_size = 10
 
-# resultados = HTSPS_ven(barriers, N, picture=True)
-# resultados = HTSPS_without_prepro(barriers, N, log = False, timeLimit = 7200, init = False)
-resultados = tspn_b(barriers, N, A4 = False, dominant=False, prepro=True, log=False, picture=True, time_limit=600, init = False)
+segments = np.genfromtxt('./instances_random/barriers/barriers{0}-{1}.csv'.format(neighbourhood_size, instance), delimiter = ',')
 
+barriers = []
+for segment in segments:
+    barriers.append([[segment[0], segment[1]], [segment[2], segment[3]]])
 
-# print(resultados)
+circles = np.genfromtxt('./instances_random/circles/circles{0}-{1}.csv'.format(neighbourhood_size, instance), delimiter = ',')
 
-# HTSPS_with_prepro(barriers, N)
+neighbourhoods = [neigh.Circle(center = [centerx, centery], radii = radius) for centerx, centery, radius in circles]
+
+resultados = tspn_b(barriers, neighbourhoods, A4 = False, dominant=False, log=False, picture=True, time_limit=600, init = False)
