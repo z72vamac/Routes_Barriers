@@ -43,6 +43,22 @@
   keywords = {Combinatorial Optimization,Minimum Spanning Trees,Mixed Integer Non Linear Programming,Neighborhoods,{Second order cone programming,}}
 }
 
+@article{boissonnat2000,
+  title = {Efficient Algorithms for Line and Curve Segment Intersection Using Restricted Predicates},
+  author = {Boissonnat, Jean-Daniel and Snoeyink, Jack},
+  year = {2000},
+  month = may,
+  journal = {Computational Geometry},
+  volume = {16},
+  number = {1},
+  pages = {35--52},
+  issn = {0925-7721},
+  doi = {10.1016/S0925-7721(99)00057-7},
+  urldate = {2023-10-11},
+  abstract = {We consider whether restricted sets of geometric predicates support efficient algorithms to solve line and curve segment intersection problems in the plane. Our restrictions are based on the notion of algebraic degree, proposed by Preparata and others as a way to guide the search for efficient algorithms that can be implemented in more realistic computational models than the Real RAM. Suppose that n (pseudo-)segments have k intersections at which they cross. We show that intersection algorithms for monotone curves that use only comparisons and above/below tests for endpoints, and intersection tests, must take at least {$\Omega$}(nk) time. There are optimal O(nlogn+k) algorithms that use a higher-degree test comparing x coordinates of an endpoint and intersection point; for line segments we show that this test can be simulated using CCW() tests with a logarithmic loss of efficiency. We also give an optimal O(nlogn+k) algorithms for red/blue line and pseudo-segment intersection, in which the segments are colored red and blue so that there are no red/red or blue/blue crossings.},
+  file = {C\:\\Users\\G731\\Zotero\\storage\\56HNH62T\\Boissonnat and Snoeyink - 2000 - Efficient algorithms for line and curve segment in.pdf;C\:\\Users\\G731\\Zotero\\storage\\FK6E6GQC\\S0925772199000577.html}
+}
+
 @book{boyd2004,
   title = {Convex {{Optimization}}},
   author = {Boyd, Stephen and Vandenberghe, Lieven},
@@ -228,6 +244,35 @@
   keywords = {approximation,convex programming,interior-point methods,optimization,quadratic programming}
 }
 
+@incollection{orourke2017,
+  title = {Chapter 33: {{Visibility}}},
+  shorttitle = {Chapter 33},
+  booktitle = {Handbook of {{Discrete}} and {{Computational Geometry}}},
+  author = {O'Rourke, Joseph},
+  year = {2017},
+  edition = {3},
+  publisher = {{Chapman and Hall/CRC}},
+  abstract = {In a geometric context, two objects are ``visible'' to each other if there is a line segment connecting them that does not cross any obstacles. Over 500 papers have been published on aspects of visibility in computational geometry in the last},
+  isbn = {978-1-315-11960-1}
+}
+
+@article{papadimitriou1977,
+  title = {On the {{Complexity}} of {{Local Search}} for the {{Traveling Salesman Problem}}},
+  author = {Papadimitriou, Christos H. and Steiglitz, Kenneth},
+  year = {1977},
+  month = mar,
+  journal = {SIAM Journal on Computing},
+  volume = {6},
+  number = {1},
+  pages = {76--83},
+  publisher = {{Society for Industrial and Applied Mathematics}},
+  issn = {0097-5397},
+  doi = {10.1137/0206005},
+  urldate = {2023-10-12},
+  abstract = {Several polynomial time algorithms finding ``good,'' but not necessarily optimal, tours for the traveling salesman problem are considered. We measure the closeness of a tour by the ratio of the obtained tour length to the minimal tour length. For the nearest neighbor method, we show the ratio is bounded above by a logarithmic function of the number of nodes. We also provide a logarithmic lower bound on the worst case. A class of approximation methods we call insertion methods are studied, and these are also shown to have a logarithmic upper bound. For two specific insertion methods, which we call nearest insertion and cheapest insertion, the ratio is shown to have a constant upper bound of 2, and examples are provided that come arbitrarily close to this upper bound. It is also shown that for any \$n\textbackslash geqq 8\$, there are traveling salesman problems with n nodes having tours which cannot be improved by making \$n/4\$ edge changes, but for which the ratio is \$2(1-1/n)\$.},
+  file = {C:\Users\G731\Zotero\storage\5B858P6K\Papadimitriou y Steiglitz - 1977 - On the Complexity of Local Search for the Travelin.pdf}
+}
+
 @article{puerto2022c,
   title = {Routing for Unmanned Aerial Vehicles: {{Touring}} Dimensional Sets},
   author = {Puerto, Justo and Valverde, Carlos},
@@ -243,11 +288,23 @@
   keywords = {Conic programming and interior point methods,Logistics,Networks,Routing}
 }
 
+@misc{puerto2023a,
+  title = {Instances for the {{Hampered Travelling Salesman Problem}} with {{Neighbourhoods}}},
+  author = {Puerto, Justo and Valverde, Carlos},
+  year = {2023},
+  month = oct,
+  publisher = {{Zenodo}},
+  doi = {10.5281/zenodo.8434327},
+  urldate = {2023-10-12},
+  abstract = {This repository contains the instances used for studying~the Hampered Travelling Salesman Problem~with Neighborhoods (TSPN). The instances~are saved in .csv~format. For each folder, a README.txt is included to load the instances to include to the model.},
+  file = {C:\Users\G731\Zotero\storage\86P9JWMR\hx.html}
+}
+
 @inproceedings{t.moemke22,
   title = {Approximating {{Graphic TSP}} by {{Matchings}}},
   booktitle = {2011 {{IEEE}} 52nd {{Annual Symposium}} on {{Foundations}} of {{Computer Science}}},
-  author = {Moemke, T and Svensson, O},
-  year = {2022},
+  author = {{T. Moemke} and {O. Svensson}},
+  year = {22},
   pages = {560--569},
   doi = {10.1109/FOCS.2011.56},
   isbn = {0272-5428}

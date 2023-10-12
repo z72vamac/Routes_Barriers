@@ -1,41 +1,47 @@
 \begin{thebibliography}{}
 
-\bibitem[Arkin and Hassin, 1994]{arkin1994a}
+\bibitem[\protect\astroncite{Arkin and Hassin}{1994}]{arkin1994a}
 Arkin, E.~M. and Hassin, R. (1994).
 \newblock Approximation algorithms for the geometric covering salesman problem.
 \newblock {\em Discrete Applied Mathematics}, 55(3):197--218.
 
-\bibitem[Behdani and Smith, 2014]{behdani2014}
+\bibitem[\protect\astroncite{Behdani and Smith}{2014}]{behdani2014}
 Behdani, B. and Smith, J.~C. (2014).
 \newblock An {{Integer-Programming-Based Approach}} to the {{Close-Enough
   Traveling Salesman Problem}}.
 \newblock {\em INFORMS Journal on Computing}, 26(3):415--432.
 
-\bibitem[Blanco et~al., 2017]{blanco2017}
+\bibitem[\protect\astroncite{Blanco et~al.}{2017}]{blanco2017}
 Blanco, V., Fern{\'a}ndez, E., and Puerto, J. (2017).
 \newblock Minimum {{Spanning Trees}} with neighborhoods: {{Mathematical}}
   programming formulations and solution methods.
 \newblock {\em European Journal of Operational Research}, 262(3):863--878.
 
-\bibitem[Boyd and Vandenberghe, 2004]{boyd2004}
+\bibitem[\protect\astroncite{Boissonnat and Snoeyink}{2000}]{boissonnat2000}
+Boissonnat, J.-D. and Snoeyink, J. (2000).
+\newblock Efficient algorithms for line and curve segment intersection using
+  restricted predicates.
+\newblock {\em Computational Geometry}, 16(1):35--52.
+
+\bibitem[\protect\astroncite{Boyd and Vandenberghe}{2004}]{boyd2004}
 Boyd, S. and Vandenberghe, L. (2004).
 \newblock {\em Convex {{Optimization}}}.
 \newblock {Cambridge University Press}, {Cambridge}.
 
-\bibitem[Carrabs et~al., 2020]{carrabs2020}
+\bibitem[\protect\astroncite{Carrabs et~al.}{2020}]{carrabs2020}
 Carrabs, F., Cerrone, C., Cerulli, R., and Golden, B. (2020).
 \newblock An {{Adaptive Heuristic Approach}} to {{Compute Upper}} and {{Lower
   Bounds}} for the {{Close-Enough Traveling Salesman Problem}}.
 \newblock {\em INFORMS Journal on Computing}, 32(4):1030--1048.
 
-\bibitem[Coutinho et~al., 2016]{coutinho2016}
+\bibitem[\protect\astroncite{Coutinho et~al.}{2016}]{coutinho2016}
 Coutinho, W.~P., do~Nascimento, R.~Q., Pessoa, A.~A., and Subramanian, A.
   (2016).
 \newblock A {{Branch-and-Bound Algorithm}} for the {{Close-Enough Traveling
   Salesman Problem}}.
 \newblock {\em INFORMS Journal on Computing}, 28(4):752--765.
 
-\bibitem[{D. Perez} et~al., 2014]{d.perez2014}
+\bibitem[\protect\astroncite{{D. Perez} et~al.}{2014}]{d.perez2014}
 {D. Perez}, {E. J. Powley}, {D. Whitehouse}, {P. Rohlfshagen}, {S.
   Samothrakis}, {P. I. Cowling}, and {S. M. Lucas} (2014).
 \newblock Solving the {{Physical Traveling Salesman Problem}}: {{Tree Search}}
@@ -43,44 +49,46 @@ Coutinho, W.~P., do~Nascimento, R.~Q., Pessoa, A.~A., and Subramanian, A.
 \newblock {\em IEEE Transactions on Computational Intelligence and AI in
   Games}, 6(1):31--45.
 
-\bibitem[Gentilini et~al., 2013]{gentilini2013}
+\bibitem[\protect\astroncite{Gentilini et~al.}{2013}]{gentilini2013}
 Gentilini, I., Margot, F., and Shimada, K. (2013).
 \newblock The travelling salesman problem with neighbourhoods: {{MINLP}}
   solution.
 \newblock {\em Optimization Methods and Software}, 28(2):364--378.
 
-\bibitem[Glock and Meyer, 2023]{glock2023}
+\bibitem[\protect\astroncite{Glock and Meyer}{2023}]{glock2023}
 Glock, K. and Meyer, A. (2023).
 \newblock Spatial coverage in routing and path planning problems.
 \newblock {\em European Journal of Operational Research}, 305(1):1--20.
 
-\bibitem[{Gurobi Optimization LLC}, 2022]{gurobioptimizationllc2022}
+\bibitem[\protect\astroncite{{Gurobi Optimization
+  LLC}}{2022}]{gurobioptimizationllc2022}
 {Gurobi Optimization LLC} (2022).
 \newblock Gurobi {{Optimizer Reference Manual}}.
 
-\bibitem[{J. . -P. Laumond} et~al., 1994]{j..-p.laumond1994}
+\bibitem[\protect\astroncite{{J. . -P. Laumond}
+  et~al.}{1994}]{j..-p.laumond1994}
 {J. . -P. Laumond}, {P. E. Jacobs}, {M. Taix}, and {R. M. Murray} (1994).
 \newblock A motion planner for nonholonomic mobile robots.
 \newblock {\em IEEE Transactions on Robotics and Automation}, 10(5):577--593.
 
-\bibitem[Klamroth, 2002]{klamroth2002a}
+\bibitem[\protect\astroncite{Klamroth}{2002}]{klamroth2002a}
 Klamroth, K. (2002).
 \newblock {\em Single-{{Facility Location Problems}} with {{Barriers}}}.
 \newblock {Springer}, {New York, NY}.
 
-\bibitem[Letchford et~al., 2013]{letchford2013}
+\bibitem[\protect\astroncite{Letchford et~al.}{2013}]{letchford2013}
 Letchford, A.~N., Nasiri, S.~D., and Theis, D.~O. (2013).
 \newblock Compact formulations of the {{Steiner Traveling Salesman Problem}}
   and related problems.
 \newblock {\em European Journal of Operational Research}, 228(1):83--92.
 
-\bibitem[Lobo et~al., 1998]{lobo1998a}
+\bibitem[\protect\astroncite{Lobo et~al.}{1998}]{lobo1998a}
 Lobo, M.~S., Vandenberghe, L., Boyd, S., and Lebret, H. (1998).
 \newblock Applications of second-order cone programming.
 \newblock {\em International Linear Algebra Society (ILAS) Symposium on Fast
   Algorithms for Control, Signals and Image Processing}, 284(1):193--228.
 
-\bibitem[Mennell, 2009]{mennell2009a}
+\bibitem[\protect\astroncite{Mennell}{2009}]{mennell2009a}
 Mennell, W.~K. (2009).
 \newblock {\em Heuristics for Solving Three Routing Problems: {{Close-enough}}
   Traveling Salesman Problem, Close-Enough Vehicle Routing Problem, and
@@ -88,41 +96,60 @@ Mennell, W.~K. (2009).
 \newblock PhD thesis, University of Maryland, College Park, {United States --
   Maryland}.
 
-\bibitem[Mitchell, 2017]{mitchell2017a}
+\bibitem[\protect\astroncite{Mitchell}{2017}]{mitchell2017a}
 Mitchell, J. S.~B. (2017).
 \newblock Shortest {{Paths}} and {{Networks}}.
 \newblock In {\em Handbook of {{Discrete}} and {{Computational Geometry}}}.
   {Chapman and Hall/CRC}, 3 edition.
 
-\bibitem[Moemke and Svensson, 2022]{t.moemke22}
-Moemke, T. and Svensson, O. (2022).
-\newblock Approximating {{Graphic TSP}} by {{Matchings}}.
-\newblock In {\em 2011 {{IEEE}} 52nd {{Annual Symposium}} on {{Foundations}} of
-  {{Computer Science}}}, pages 560--569.
-
-\bibitem[Nesterov and Nemirovski, 1994]{nesterov1994a}
+\bibitem[\protect\astroncite{Nesterov and Nemirovski}{1994}]{nesterov1994a}
 Nesterov, Y. and Nemirovski, A. (1994).
 \newblock {\em Interior-{{Point Polynomial Algorithms}} in {{Convex
   Programming}}}.
 \newblock Studies in {{Applied}} and {{Numerical Mathematics}}. {Society for
   Industrial and Applied Mathematics}.
 
-\bibitem[Puerto and Valverde, 2022]{puerto2022c}
+\bibitem[\protect\astroncite{O'Rourke}{2017}]{orourke2017}
+O'Rourke, J. (2017).
+\newblock Chapter 33: {{Visibility}}.
+\newblock In {\em Handbook of {{Discrete}} and {{Computational Geometry}}}.
+  {Chapman and Hall/CRC}, 3 edition.
+
+\bibitem[\protect\astroncite{Papadimitriou and
+  Steiglitz}{1977}]{papadimitriou1977}
+Papadimitriou, C.~H. and Steiglitz, K. (1977).
+\newblock On the {{Complexity}} of {{Local Search}} for the {{Traveling
+  Salesman Problem}}.
+\newblock {\em SIAM Journal on Computing}, 6(1):76--83.
+
+\bibitem[\protect\astroncite{Puerto and Valverde}{2022}]{puerto2022c}
 Puerto, J. and Valverde, C. (2022).
 \newblock Routing for unmanned aerial vehicles: {{Touring}} dimensional sets.
 \newblock {\em European Journal of Operational Research}, 298(1):118--136.
 
-\bibitem[Van~Rossum and Drake, 2009]{vanrossum2009}
+\bibitem[\protect\astroncite{Puerto and Valverde}{2023}]{puerto2023a}
+Puerto, J. and Valverde, C. (2023).
+\newblock Instances for the {{Hampered Travelling Salesman Problem}} with
+  {{Neighbourhoods}}.
+
+\bibitem[\protect\astroncite{{T. Moemke} and {O. Svensson}}{22}]{t.moemke22}
+{T. Moemke} and {O. Svensson} (22).
+\newblock Approximating {{Graphic TSP}} by {{Matchings}}.
+\newblock In {\em 2011 {{IEEE}} 52nd {{Annual Symposium}} on {{Foundations}} of
+  {{Computer Science}}}, pages 560--569.
+
+\bibitem[\protect\astroncite{Van~Rossum and Drake}{2009}]{vanrossum2009}
 Van~Rossum, G. and Drake, F.~L. (2009).
 \newblock {\em Python 3 {{Reference Manual}}}.
 \newblock {CreateSpace}, {Scotts Valley, CA}.
 
-\bibitem[{Y. K. Hwang} and {N. Ahuja}, 1992]{y.k.hwang1992}
+\bibitem[\protect\astroncite{{Y. K. Hwang} and {N.
+  Ahuja}}{1992}]{y.k.hwang1992}
 {Y. K. Hwang} and {N. Ahuja} (1992).
 \newblock A potential field approach to path planning.
 \newblock {\em IEEE Transactions on Robotics and Automation}, 8(1):23--32.
 
-\bibitem[Yuan and Zhang, 2017]{yuan2017}
+\bibitem[\protect\astroncite{Yuan and Zhang}{2017}]{yuan2017}
 Yuan, B. and Zhang, T. (2017).
 \newblock Towards {{Solving TSPN}} with {{Arbitrary Neighborhoods}}: {{A Hybrid
   Solution}}.

@@ -1,201 +1,159 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.4.24)  10 OCT 2023 12:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.12.23)  12 OCT 2023 14:44
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
-**./latest_version.tex
-(latest_version.tex
-LaTeX2e <2022-11-01> patch level 1
-L3 programming layer <2023-03-30>
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/elsarticle\elsar
-ticle.cls
-Document Class: elsarticle 2020/11/20, 3.3: Elsevier Ltd
+**latest_version.tex
+(./latest_version.tex
+LaTeX2e <2020-02-02> patch level 5
+L3 programming layer <2020-03-06>
+(/usr/local/texlive/2020/texmf-dist/tex/latex/elsarticle/elsarticle.cls
+Document Class: elsarticle 2019/02/25, 3.2: Elsevier Ltd
+\@bls=\dimen134
+(/usr/local/texlive/2020/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
+(/usr/local/texlive/2020/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+)
+\c@part=\count167
+\c@section=\count168
+\c@subsection=\count169
+\c@subsubsection=\count170
+\c@paragraph=\count171
+\c@subparagraph=\count172
+\c@figure=\count173
+\c@table=\count174
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen135
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
 
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.s
-ty
-Package: expl3 2023-03-30 L3 programming layer (loader) 
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
 
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3back
-end-pdftex.def
-File: l3backend-pdftex.def 2023-03-30 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count185
-\l__pdf_internal_box=\box51
-))
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xpars
-e\xparse.sty
-Package: xparse 2023-02-02 L3 Experimental document command parser
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbo
-x.sty
-Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count186
-)
-\@bls=\dimen140
-
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
-Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo
-File: size10.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
-)
-\c@part=\count187
-\c@section=\count188
-\c@subsection=\count189
-\c@subsubsection=\count190
-\c@paragraph=\count191
-\c@subparagraph=\count192
-\c@figure=\count193
-\c@table=\count194
-\abovecaptionskip=\skip48
-\belowcaptionskip=\skip49
-\bibindent=\dimen141
-)
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphic
-x.sty
-Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
-
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.
-sty
-Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
-\KV@toks@=\toks16
-)
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphic
-s.sty
-Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
-
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.st
-y
-Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
-)
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\gra
-phics.cfg
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 107.
+Package graphics Info: Driver file: pdftex.def on input line 105.
 
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdf
-tex.def
-File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen142
-\Gin@req@width=\dimen143
+\Gin@req@height=\dimen136
+\Gin@req@width=\dimen137
 )
-\c@tnote=\count195
-\c@fnote=\count196
-\c@cnote=\count197
-\c@ead=\count198
-\c@author=\count199
-\@eadauthor=\toks17
-\c@affn=\count266
-\absbox=\box52
-\elsarticlehighlightsbox=\box53
-\elsarticlegrabsbox=\box54
-\keybox=\box55
-\Columnwidth=\dimen144
-\space@left=\dimen145
-\els@boxa=\box56
-\els@boxb=\box57
-\leftMargin=\dimen146
-\@enLab=\toks18
-\@sep=\skip50
-\@@sep=\skip51
- (latest_version.spl)
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/natbib\natbib.st
-y
+\c@tnote=\count175
+\c@fnote=\count176
+\c@cnote=\count177
+\c@ead=\count178
+\c@author=\count179
+\@eadauthor=\toks16
+\c@affn=\count180
+\absbox=\box45
+\elsarticlehighlightsbox=\box46
+\elsarticlegrabsbox=\box47
+\keybox=\box48
+\Columnwidth=\dimen138
+\space@left=\dimen139
+\els@boxa=\box49
+\els@boxb=\box50
+\leftMargin=\dimen140
+\@enLab=\toks17
+\@sep=\skip49
+\@@sep=\skip50
+
+(./latest_version.spl)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip52
-\bibsep=\skip53
+\bibhang=\skip51
+\bibsep=\skip52
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count267
+\c@NAT@ctr=\count181
 )
 \splwrite=\write3
 \openout3 = `latest_version.spl'.
 
-\appnamewidth=\dimen147
+\appnamewidth=\dimen141
 )
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.st
-y
-Package: inputenc 2021/02/14 v1.3d Input encoding file
-\inpenc@prehook=\toks19
-\inpenc@posthook=\toks20
+(/usr/local/texlive/2020/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks18
+\inpenc@posthook=\toks19
 )
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
-Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+(/usr/local/texlive/2020/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
 )
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.
-sty
-Package: amsmath 2022/04/08 v2.17n AMS math features
-\@mathmargin=\skip54
+(/usr/local/texlive/2020/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2020/01/20 v2.17e AMS math features
+\@mathmargin=\skip53
 
 For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
 
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.
-sty
-Package: amstext 2021/08/26 v2.01 AMS text
-
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.s
-ty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks21
-\ex@=\dimen148
+\@emptytoks=\toks20
+\ex@=\dimen142
 ))
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.s
-ty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen149
+\pmbraise@=\dimen143
 )
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.s
-ty
-Package: amsopn 2022/04/08 v2.04 operator names
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count268
-LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count269
-\leftroot@=\count270
-LaTeX Info: Redefining \overline on input line 399.
-LaTeX Info: Redefining \colon on input line 410.
-\classnum@=\count271
-\DOTSCASE@=\count272
-LaTeX Info: Redefining \ldots on input line 496.
-LaTeX Info: Redefining \dots on input line 499.
-LaTeX Info: Redefining \cdots on input line 620.
-\Mathstrutbox@=\box58
-\strutbox@=\box59
-LaTeX Info: Redefining \big on input line 722.
-LaTeX Info: Redefining \Big on input line 723.
-LaTeX Info: Redefining \bigg on input line 724.
-LaTeX Info: Redefining \Bigg on input line 725.
-\big@size=\dimen150
-LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count273
-LaTeX Info: Redefining \bmod on input line 905.
-LaTeX Info: Redefining \pmod on input line 910.
-LaTeX Info: Redefining \smash on input line 940.
-LaTeX Info: Redefining \relbar on input line 970.
-LaTeX Info: Redefining \Relbar on input line 971.
-\c@MaxMatrixCols=\count274
+\inf@bad=\count182
+LaTeX Info: Redefining \frac on input line 227.
+\uproot@=\count183
+\leftroot@=\count184
+LaTeX Info: Redefining \overline on input line 389.
+\classnum@=\count185
+\DOTSCASE@=\count186
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
+\Mathstrutbox@=\box51
+\strutbox@=\box52
+\big@size=\dimen144
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+\macc@depth=\count187
+\c@MaxMatrixCols=\count188
 \dotsspace@=\muskip16
-\c@parentequation=\count275
-\dspbrk@lvl=\count276
-\tag@help=\toks22
-\row@=\count277
-\column@=\count278
-\maxfields@=\count279
-\andhelp@=\toks23
-\eqnshift@=\dimen151
-\alignsep@=\dimen152
-\tagshift@=\dimen153
-\tagwidth@=\dimen154
-\totwidth@=\dimen155
-\lineht@=\dimen156
-\@envbody=\toks24
-\multlinegap=\skip55
-\multlinetaggap=\skip56
-\mathdisplay@stack=\toks25
-LaTeX Info: Redefining \[ on input line 2953.
-LaTeX Info: Redefining \] on input line 2954.
+\c@parentequation=\count189
+\dspbrk@lvl=\count190
+\tag@help=\toks21
+\row@=\count191
+\column@=\count192
+\maxfields@=\count193
+\andhelp@=\toks22
+\eqnshift@=\dimen145
+\alignsep@=\dimen146
+\tagshift@=\dimen147
+\tagwidth@=\dimen148
+\totwidth@=\dimen149
+\lineht@=\dimen150
+\@envbody=\toks23
+\multlinegap=\skip54
+\multlinetaggap=\skip55
+\mathdisplay@stack=\toks24
+LaTeX Info: Redefining \[ on input line 2859.
+LaTeX Info: Redefining \] on input line 2860.
 )
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfont
-s.sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
@@ -203,819 +161,768 @@ LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/ulem\ulem.sty
-\UL@box=\box60
-\UL@hyphenbox=\box61
-\UL@skip=\skip57
-\UL@hook=\toks26
-\UL@height=\dimen157
-\UL@pe=\count280
-\UL@pixel=\dimen158
-\ULC@box=\box62
+(/usr/local/texlive/2020/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box53
+\UL@hyphenbox=\box54
+\UL@skip=\skip56
+\UL@hook=\toks25
+\UL@height=\dimen151
+\UL@pe=\count194
+\UL@pixel=\dimen152
+\ULC@box=\box55
 Package: ulem 2019/11/18
-\ULdepth=\dimen159
+\ULdepth=\dimen153
 )
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb
-.sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 )
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mathto
-ols.sty
-Package: mathtools 2022/06/29 v1.29 mathematical typesetting tools
+(/usr/local/texlive/2020/texmf-dist/tex/latex/mathtools/mathtools.sty
+Package: mathtools 2020/03/24 v1.24 mathematical typesetting tools
 
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count281
-\calc@Bcount=\count282
-\calc@Adimen=\dimen160
-\calc@Bdimen=\dimen161
-\calc@Askip=\skip58
-\calc@Bskip=\skip59
+\calc@Acount=\count195
+\calc@Bcount=\count196
+\calc@Adimen=\dimen154
+\calc@Bdimen=\dimen155
+\calc@Askip=\skip57
+\calc@Bskip=\skip58
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count283
-\calc@Cskip=\skip60
+\calc@Ccount=\count197
+\calc@Cskip=\skip59
 )
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mhsetu
-p.sty
-Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/mathtools/mhsetup.sty
+Package: mhsetup 2017/03/31 v1.3 programming setup (MH)
 )
-\g_MT_multlinerow_int=\count284
-\l_MT_multwidth_dim=\dimen162
-\origjot=\skip61
-\l_MT_shortvdotswithinadjustabove_dim=\dimen163
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen164
-\l_MT_above_intertext_sep=\dimen165
-\l_MT_below_intertext_sep=\dimen166
-\l_MT_above_shortintertext_sep=\dimen167
-\l_MT_below_shortintertext_sep=\dimen168
-\xmathstrut@box=\box63
-\xmathstrut@dim=\dimen169
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
+\g_MT_multlinerow_int=\count198
+\l_MT_multwidth_dim=\dimen156
+\origjot=\skip60
+\l_MT_shortvdotswithinadjustabove_dim=\dimen157
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen158
+\l_MT_above_intertext_sep=\dimen159
+\l_MT_below_intertext_sep=\dimen160
+\l_MT_above_shortintertext_sep=\dimen161
+\l_MT_below_shortintertext_sep=\dimen162
+\xmathstrut@box=\box56
+\xmathstrut@dim=\dimen163
 )
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/subfigure\subfig
-ure.sty
-Package: subfigure 2002/07/30 v2.1.4 subfigure package
-\subfigtopskip=\skip62
-\subfigcapskip=\skip63
-\subfigcaptopadj=\dimen170
-\subfigbottomskip=\skip64
-\subfigcapmargin=\dimen171
-\subfiglabelskip=\skip65
-\c@subfigure=\count285
-\c@lofdepth=\count286
-\c@subtable=\count287
-\c@lotdepth=\count288
+(/usr/local/texlive/2020/texmf-dist/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip61
+\subfigcapskip=\skip62
+\subfigcaptopadj=\dimen164
+\subfigbottomskip=\skip63
+\subfigcapmargin=\dimen165
+\subfiglabelskip=\skip64
+\c@subfigure=\count199
+\c@lofdepth=\count266
+\c@subtable=\count267
+\c@lotdepth=\count268
 
 ****************************************
 * Local config file subfigure.cfg used *
 ****************************************
-
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/subfigure\subfig
-ure.cfg)
-\subfig@top=\skip66
-\subfig@bottom=\skip67
+(/usr/local/texlive/2020/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip65
+\subfig@bottom=\skip66
 )
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/optidef\optidef.
-sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/optidef/optidef.sty
 Package: optidef 2019/04/23 - version=3.1, Package for defining optimization pr
 oblems
 
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/environ\environ.
-sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/environ/environ.sty
 Package: environ 2014/05/04 v0.3 A new way to define environments
 
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/trimspaces\trims
-paces.sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/trimspaces/trimspaces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/xifthen\xifthen.
-sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/xifthen/xifthen.sty
 Package: xifthen 2015/11/05 v1.4.0 Extended ifthen features
 
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
-Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/ifmtarg\ifmtarg.
-sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/ifmtarg/ifmtarg.sty
 Package: ifmtarg 2018/04/16 v1.2b check for an empty argument
 ))
-\widthInit=\skip68
+(/usr/local/texlive/2020/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count269
 )
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.st
-y
-Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2020-03-06 L3 programming layer (loader) 
 
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\col
-or.cfg
+(/usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count270
+\l__pdf_internal_box=\box57
+))
+Package: xparse 2020-03-06 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count271
+\g__xparse_grabber_int=\count272
+\l__xparse_m_args_int=\count273
+\l__xparse_v_nesting_int=\count274
+)
+\widthInit=\skip67
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package xcolor Info: Driver file: pdftex.def on input line 227.
-
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcol
-or.ltx)
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1357.
-Package xcolor Info: Model `RGB' extended on input line 1369.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1371.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1372.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1373.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 )
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/amscls\amsthm.st
-y
-Package: amsthm 2020/05/29 v2.20.6
-\thm@style=\toks27
-\thm@bodyfont=\toks28
-\thm@headfont=\toks29
-\thm@notefont=\toks30
-\thm@headpunct=\toks31
-\thm@preskip=\skip69
-\thm@postskip=\skip70
-\thm@headsep=\skip71
-\dth@everypar=\toks32
-LaTeX Info: Redefining \qed on input line 273.
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2017/10/31 v2.20.4
+\thm@style=\toks26
+\thm@bodyfont=\toks27
+\thm@headfont=\toks28
+\thm@notefont=\toks29
+\thm@headpunct=\toks30
+\thm@preskip=\skip68
+\thm@postskip=\skip69
+\thm@headsep=\skip70
+\dth@everypar=\toks31
+LaTeX Info: Redefining \qed on input line 274.
 )
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/comment\comment.
-sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/comment/comment.sty
 \CommentStream=\write4
- Excluding comment 'comment')
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlaye
-r\tikz.sty
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\p
-gf.sty
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pg
-frcs.sty
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\
-pgfutil-common.tex
-\pgfutil@everybye=\toks33
-\pgfutil@tempdima=\dimen172
-\pgfutil@tempdimb=\dimen173
-)
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\
-pgfutil-latex.def
-\pgfutil@abb=\box64
-)
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\
-pgfrcs.code.tex
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revisi
-on.tex)
-Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
+
+Excluding comment 'comment')
+(/usr/local/texlive/2020/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x
+\pgfutil@everybye=\toks32
+\pgfutil@tempdima=\dimen166
+\pgfutil@tempdimb=\dimen167
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-li
+sts.tex))
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box58
+(/usr/local/texlive/2020/texmf-dist/tex/latex/ms/everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 ))
-Package: pgf 2023-01-15 v3.1.10 (3.1.10)
-
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\p
-gfcore.sty
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\
-pgfsys.sty
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlaye
-r\pgfsys.code.tex
-Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
-
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\
-pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks34
-\pgfkeys@temptoks=\toks35
-
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\
-pgfkeyslibraryfiltered.code.tex
-\pgfkeys@tmptoks=\toks36
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2020/01/08 v3.1.5b (3.1.5b)
 ))
-\pgf@x=\dimen174
-\pgf@y=\dimen175
-\pgf@xa=\dimen176
-\pgf@ya=\dimen177
-\pgf@xb=\dimen178
-\pgf@yb=\dimen179
-\pgf@xc=\dimen180
-\pgf@yc=\dimen181
-\pgf@xd=\dimen182
-\pgf@yd=\dimen183
+Package: pgf 2020/01/08 v3.1.5b (3.1.5b)
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2020/01/08 v3.1.5b (3.1.5b)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks33
+\pgfkeys@temptoks=\toks34
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.c
+ode.tex
+\pgfkeys@tmptoks=\toks35
+))
+\pgf@x=\dimen168
+\pgf@y=\dimen169
+\pgf@xa=\dimen170
+\pgf@ya=\dimen171
+\pgf@xb=\dimen172
+\pgf@yb=\dimen173
+\pgf@xc=\dimen174
+\pgf@yc=\dimen175
+\pgf@xd=\dimen176
+\pgf@yd=\dimen177
 \w@pgf@writea=\write5
 \r@pgf@reada=\read2
-\c@pgf@counta=\count289
-\c@pgf@countb=\count290
-\c@pgf@countc=\count291
-\c@pgf@countd=\count292
-\t@pgf@toka=\toks37
-\t@pgf@tokb=\toks38
-\t@pgf@tokc=\toks39
-\pgf@sys@id@count=\count293
+\c@pgf@counta=\count275
+\c@pgf@countb=\count276
+\c@pgf@countc=\count277
+\c@pgf@countd=\count278
+\t@pgf@toka=\toks36
+\t@pgf@tokb=\toks37
+\t@pgf@tokc=\toks38
+\pgf@sys@id@count=\count279
 
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlaye
-r\pgf.cfg
-File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2020/01/08 v3.1.5b (3.1.5b)
 )
 Driver file for pgf: pgfsys-pdftex.def
 
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlaye
-r\pgfsys-pdftex.def
-File: pgfsys-pdftex.def 2023-01-15 v3.1.10 (3.1.10)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.d
+ef
+File: pgfsys-pdftex.def 2020/01/08 v3.1.5b (3.1.5b)
 
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlaye
-r\pgfsys-common-pdf.def
-File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+df.def
+File: pgfsys-common-pdf.def 2020/01/08 v3.1.5b (3.1.5b)
 )))
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlaye
-r\pgfsyssoftpath.code.tex
-File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfsyssoftpath@smallbuffer@items=\count294
-\pgfsyssoftpath@bigbuffer@items=\count295
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+code.tex
+File: pgfsyssoftpath.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfsyssoftpath@smallbuffer@items=\count280
+\pgfsyssoftpath@bigbuffer@items=\count281
 )
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlaye
-r\pgfsysprotocol.code.tex
-File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+code.tex
+File: pgfsysprotocol.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ))
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer
-\pgfcore.code.tex
-Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2020/01/08 v3.1.5b (3.1.5b)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen178
+\pgfmath@count=\count282
+\pgfmath@box=\box59
+\pgfmath@toks=\toks39
+\pgfmath@stack@operand=\toks40
+\pgfmath@stack@operation=\toks41
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+tex
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+.code.tex)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+nometric.code.tex)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+m.code.tex)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+rison.code.tex)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+code.tex)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+.code.tex)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+code.tex)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
+erarithmetics.code.tex)))
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count283
+)) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+de.tex
+File: pgfcorepoints.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@picminx=\dimen179
+\pgf@picmaxx=\dimen180
+\pgf@picminy=\dimen181
+\pgf@picmaxy=\dimen182
+\pgf@pathminx=\dimen183
+\pgf@pathmaxx=\dimen184
+\pgf@pathminy=\dimen185
+\pgf@pathmaxy=\dimen186
+\pgf@xx=\dimen187
+\pgf@xy=\dimen188
+\pgf@yx=\dimen189
+\pgf@yy=\dimen190
+\pgf@zx=\dimen191
+\pgf@zy=\dimen192
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+ruct.code.tex
+File: pgfcorepathconstruct.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@path@lastx=\dimen193
+\pgf@path@lasty=\dimen194
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+.code.tex
+File: pgfcorepathusage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@shorten@end@additional=\dimen195
+\pgf@shorten@start@additional=\dimen196
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+de.tex
+File: pgfcorescopes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfpic=\box60
+\pgf@hbox=\box61
+\pgf@layerbox@main=\box62
+\pgf@picture@serial@count=\count284
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+ate.code.tex
+File: pgfcoregraphicstate.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgflinewidth=\dimen197
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+ations.code.tex
+File: pgfcoretransformations.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@pt@x=\dimen198
+\pgf@pt@y=\dimen199
+\pgf@pt@temp=\dimen256
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+e.tex
+File: pgfcorequick.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+ode.tex
+File: pgfcoreobjects.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+ssing.code.tex
+File: pgfcorepathprocessing.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+de.tex
+File: pgfcorearrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfarrowsep=\dimen257
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+e.tex
+File: pgfcoreshade.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@max=\dimen258
+\pgf@sys@shading@range@num=\count285
+\pgf@shadingcount=\count286
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+e.tex
+File: pgfcoreimage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfma
-th.code.tex
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfma
-thutil.code.tex)
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfma
-thparser.code.tex
-\pgfmath@dimen=\dimen184
-\pgfmath@count=\count296
-\pgfmath@box=\box65
-\pgfmath@toks=\toks40
-\pgfmath@stack@operand=\toks41
-\pgfmath@stack@operation=\toks42
-)
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfma
-thfunctions.code.tex)
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfma
-thfunctions.basic.code.tex)
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfma
-thfunctions.trigonometric.code.tex)
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfma
-thfunctions.random.code.tex)
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfma
-thfunctions.comparison.code.tex)
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfma
-thfunctions.base.code.tex)
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfma
-thfunctions.round.code.tex)
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfma
-thfunctions.misc.code.tex)
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfma
-thfunctions.integerarithmetics.code.tex)
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfma
-thcalc.code.tex)
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfma
-thfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count297
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+code.tex
+File: pgfcoreexternal.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfexternal@startupbox=\box63
 ))
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfin
-t.code.tex)
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer
-\pgfcorepoints.code.tex
-File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@picminx=\dimen185
-\pgf@picmaxx=\dimen186
-\pgf@picminy=\dimen187
-\pgf@picmaxy=\dimen188
-\pgf@pathminx=\dimen189
-\pgf@pathmaxx=\dimen190
-\pgf@pathminy=\dimen191
-\pgf@pathmaxy=\dimen192
-\pgf@xx=\dimen193
-\pgf@xy=\dimen194
-\pgf@yx=\dimen195
-\pgf@yy=\dimen196
-\pgf@zx=\dimen197
-\pgf@zy=\dimen198
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+de.tex
+File: pgfcorelayers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer
-\pgfcorepathconstruct.code.tex
-File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@path@lastx=\dimen199
-\pgf@path@lasty=\dimen256
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+ncy.code.tex
+File: pgfcoretransparency.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer
-\pgfcorepathusage.code.tex
-File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@shorten@end@additional=\dimen257
-\pgf@shorten@start@additional=\dimen258
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+code.tex
+File: pgfcorepatterns.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer
-\pgfcorescopes.code.tex
-File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfpic=\box66
-\pgf@hbox=\box67
-\pgf@layerbox@main=\box68
-\pgf@picture@serial@count=\count298
-)
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer
-\pgfcoregraphicstate.code.tex
-File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgflinewidth=\dimen259
-)
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer
-\pgfcoretransformations.code.tex
-File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@pt@x=\dimen260
-\pgf@pt@y=\dimen261
-\pgf@pt@temp=\dimen262
-)
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer
-\pgfcorequick.code.tex
-File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer
-\pgfcoreobjects.code.tex
-File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer
-\pgfcorepathprocessing.code.tex
-File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer
-\pgfcorearrows.code.tex
-File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfarrowsep=\dimen263
-)
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer
-\pgfcoreshade.code.tex
-File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@max=\dimen264
-\pgf@sys@shading@range@num=\count299
-\pgf@shadingcount=\count300
-)
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer
-\pgfcoreimage.code.tex
-File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer
-\pgfcoreexternal.code.tex
-File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfexternal@startupbox=\box69
-)
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer
-\pgfcorelayers.code.tex
-File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer
-\pgfcoretransparency.code.tex
-File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer
-\pgfcorepatterns.code.tex
-File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer
-\pgfcorerdf.code.tex
-File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.
+tex
+File: pgfcorerdf.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )))
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pg
-fmoduleshapes.code.tex
-File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfnodeparttextbox=\box70
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
+e.tex
+File: pgfmoduleshapes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfnodeparttextbox=\box64
 )
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pg
-fmoduleplot.code.tex
-File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
+tex
+File: pgfmoduleplot.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibilit
-y\pgfcomp-version-0-65.sty
-Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
-\pgf@nodesepstart=\dimen265
-\pgf@nodesepend=\dimen266
+(/usr/local/texlive/2020/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-0-65.sty
+Package: pgfcomp-version-0-65 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@nodesepstart=\dimen259
+\pgf@nodesepend=\dimen260
 )
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibilit
-y\pgfcomp-version-1-18.sty
-Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-1-18.sty
+Package: pgfcomp-version-1-18 2020/01/08 v3.1.5b (3.1.5b)
 ))
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pg
-ffor.sty
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pg
-fkeys.sty
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\
-pgfkeys.code.tex))
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath
-.sty
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfma
-th.code.tex))
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\
-pgffor.code.tex
-Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
-\pgffor@iter=\dimen267
-\pgffor@skip=\dimen268
-\pgffor@stack=\toks43
-\pgffor@toks=\toks44
+(/usr/local/texlive/2020/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2020/01/08 v3.1.5b (3.1.5b)
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+\pgffor@iter=\dimen261
+\pgffor@skip=\dimen262
+\pgffor@stack=\toks42
+\pgffor@toks=\toks43
 ))
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendla
-yer/tikz\tikz.code.tex
-Package: tikz 2023-01-15 v3.1.10 (3.1.10)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
+e.tex
+Package: tikz 2020/01/08 v3.1.5b (3.1.5b)
 
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\
-pgflibraryplothandlers.code.tex
-File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@plot@mark@count=\count301
-\pgfplotmarksize=\dimen269
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
+dlers.code.tex
+File: pgflibraryplothandlers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@plot@mark@count=\count287
+\pgfplotmarksize=\dimen263
 )
-\tikz@lastx=\dimen270
-\tikz@lasty=\dimen271
-\tikz@lastxsaved=\dimen272
-\tikz@lastysaved=\dimen273
-\tikz@lastmovetox=\dimen274
-\tikz@lastmovetoy=\dimen275
-\tikzleveldistance=\dimen276
-\tikzsiblingdistance=\dimen277
-\tikz@figbox=\box71
-\tikz@figbox@bg=\box72
-\tikz@tempbox=\box73
-\tikz@tempbox@bg=\box74
-\tikztreelevel=\count302
-\tikznumberofchildren=\count303
-\tikznumberofcurrentchild=\count304
-\tikz@fig@count=\count305
+\tikz@lastx=\dimen264
+\tikz@lasty=\dimen265
+\tikz@lastxsaved=\dimen266
+\tikz@lastysaved=\dimen267
+\tikz@lastmovetox=\dimen268
+\tikz@lastmovetoy=\dimen269
+\tikzleveldistance=\dimen270
+\tikzsiblingdistance=\dimen271
+\tikz@figbox=\box65
+\tikz@figbox@bg=\box66
+\tikz@tempbox=\box67
+\tikz@tempbox@bg=\box68
+\tikztreelevel=\count288
+\tikznumberofchildren=\count289
+\tikznumberofcurrentchild=\count290
+\tikz@fig@count=\count291
 
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pg
-fmodulematrix.code.tex
-File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfmatrixcurrentrow=\count306
-\pgfmatrixcurrentcolumn=\count307
-\pgf@matrix@numberofcolumns=\count308
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
+e.tex
+File: pgfmodulematrix.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfmatrixcurrentrow=\count292
+\pgfmatrixcurrentcolumn=\count293
+\pgf@matrix@numberofcolumns=\count294
 )
-\tikz@expandcount=\count309
+\tikz@expandcount=\count295
 
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendla
-yer/tikz/libraries\tikzlibrarytopaths.code.tex
-File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )))
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/pgfplots\pgfplot
-s.sty
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfpl
-ots.revision.tex)
-Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/pgfplots/pgfplots.sty
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+Package: pgfplots 2020/02/29 v1.17 Data Visualization (1.17)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
+\t@pgfplots@toka=\toks44
+\t@pgfplots@tokb=\toks45
+\t@pgfplots@tokc=\toks46
+\pgfplots@tmpa=\dimen272
+\c@pgfplots@coordindex=\count296
+\c@pgfplots@scanlineindex=\count297
 
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfpl
-ots.code.tex
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfpl
-otscore.code.tex
-\t@pgfplots@toka=\toks45
-\t@pgfplots@tokb=\toks46
-\t@pgfplots@tokc=\toks47
-\pgfplots@tmpa=\dimen278
-\c@pgfplots@coordindex=\count310
-\c@pgfplots@scanlineindex=\count311
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric
+.code.tex))
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.c
+ode.tex)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplot
+soldpgfsupp_loader.code.tex
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.cod
+e.tex))
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code
+.tex
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
+liststructure.code.tex)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
+liststructureext.code.tex)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
+array.code.tex
+\c@pgfplotsarray@tmp=\count298
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
+matrix.code.tex)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstable
+shared.code.tex
+\c@pgfplotstable@counta=\count299
+\t@pgfplotstable@a=\toks47
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
+deque.code.tex)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.co
+de.tex
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.da
+ta.code.tex))
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb
+.code.tex)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplot
+s.surfshading.code.tex
+\c@pgfplotslibrarysurf@no=\count300
 
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\p
-gfplotssysgeneric.code.tex))
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\
-pgfplotslibrary.code.tex)
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/oldpg
-fcompatib\pgfplotsoldpgfsupp_loader.code.tex
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\
-pgflibraryfpu.code.tex)
-Package pgfplots: loading complementary utilities for your pgf version...
-\t@pgf@toka=\toks48
-\t@pgf@tokb=\toks49
-\t@pgf@tokc=\toks50
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots
+.surfshading.pgfsys-pdftex.def)))
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.
+code.tex
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.cod
+e.tex))
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.c
+ode.tex)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.c
+ode.tex
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandle
+r.code.tex
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.
+code.tex)))
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.
+tex)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessin
+g.code.tex)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.cod
+e.tex)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.
+tex)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.te
+x)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarydecorations.code.tex
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/modules/pgfmoduledecoration
+s.code.tex
+\pgfdecoratedcompleteddistance=\dimen273
+\pgfdecoratedremainingdistance=\dimen274
+\pgfdecoratedinputsegmentcompleteddistance=\dimen275
+\pgfdecoratedinputsegmentremainingdistance=\dimen276
+\pgf@decorate@distancetomove=\dimen277
+\pgf@decorate@repeatstate=\count301
+\pgfdecorationsegmentamplitude=\dimen278
+\pgfdecorationsegmentlength=\dimen279
+)
+\tikz@lib@dec@box=\box69
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarydecorations.pathmorphing.code.tex
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
+brarydecorations.pathmorphing.code.tex))
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarydecorations.pathreplacing.code.tex
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
+brarydecorations.pathreplacing.code.tex))
+\pgfplots@numplots=\count302
+\pgfplots@xmin@reg=\dimen280
+\pgfplots@xmax@reg=\dimen281
+\pgfplots@ymin@reg=\dimen282
+\pgfplots@ymax@reg=\dimen283
+\pgfplots@zmin@reg=\dimen284
+\pgfplots@zmax@reg=\dimen285
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryplotmarks.code.tex
+File: tikzlibraryplotmarks.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/oldpg
-fcompatib\pgfplotsoldpgfsupp_pgfutil-common-lists.tex))
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\
-pgfplotsutil.code.tex
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/lists
-tructure\pgfplotsliststructure.code.tex)
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/lists
-tructure\pgfplotsliststructureext.code.tex)
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/lists
-tructure\pgfplotsarray.code.tex
-\c@pgfplotsarray@tmp=\count312
-)
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/lists
-tructure\pgfplotsmatrix.code.tex)
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/numta
-ble\pgfplotstableshared.code.tex
-\c@pgfplotstable@counta=\count313
-\t@pgfplotstable@a=\toks51
-)
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/lists
-tructure\pgfplotsdeque.code.tex)
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\
-pgfplotsbinary.code.tex
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\
-pgfplotsbinary.data.code.tex))
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\
-pgfplotsutil.verb.code.tex)
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\
-pgflibrarypgfplots.surfshading.code.tex
-\c@pgfplotslibrarysurf@no=\count314
-
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\p
-gflibrarypgfplots.surfshading.pgfsys-pdftex.def)))
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\
-pgfplotscolormap.code.tex
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\
-pgfplotscolor.code.tex))
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfpl
-otsstackedplots.code.tex)
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfpl
-otsplothandlers.code.tex
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfpl
-otsmeshplothandler.code.tex
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfpl
-otsmeshplotimage.code.tex)))
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfpl
-ots.scaling.code.tex)
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfpl
-otscoordprocessing.code.tex)
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfpl
-ots.errorbars.code.tex)
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfpl
-ots.markers.code.tex)
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfpl
-otsticks.code.tex)
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfpl
-ots.paths.code.tex)
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendla
-yer/tikz/libraries\tikzlibrarydecorations.code.tex
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pg
-fmoduledecorations.code.tex
-\pgfdecoratedcompleteddistance=\dimen279
-\pgfdecoratedremainingdistance=\dimen280
-\pgfdecoratedinputsegmentcompleteddistance=\dimen281
-\pgfdecoratedinputsegmentremainingdistance=\dimen282
-\pgf@decorate@distancetomove=\dimen283
-\pgf@decorate@repeatstate=\count315
-\pgfdecorationsegmentamplitude=\dimen284
-\pgfdecorationsegmentlength=\dimen285
-)
-\tikz@lib@dec@box=\box75
-)
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendla
-yer/tikz/libraries\tikzlibrarydecorations.pathmorphing.code.tex
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/
-decorations\pgflibrarydecorations.pathmorphing.code.tex))
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendla
-yer/tikz/libraries\tikzlibrarydecorations.pathreplacing.code.tex
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/
-decorations\pgflibrarydecorations.pathreplacing.code.tex))
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\
-tikzlibrarypgfplots.contourlua.code.tex)
-\pgfplots@numplots=\count316
-\pgfplots@xmin@reg=\dimen286
-\pgfplots@xmax@reg=\dimen287
-\pgfplots@ymin@reg=\dimen288
-\pgfplots@ymax@reg=\dimen289
-\pgfplots@zmin@reg=\dimen290
-\pgfplots@zmax@reg=\dimen291
-)
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendla
-yer/tikz/libraries\tikzlibraryplotmarks.code.tex
-File: tikzlibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
-
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\
-pgflibraryplotmarks.code.tex
-File: pgflibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmar
+ks.code.tex
+File: pgflibraryplotmarks.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )))
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\mathrsf
-s.sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
 Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
 \symrsfs=\mathgroup6
 )
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count317
-\float@exts=\toks52
-\float@box=\box76
-\@float@everytoks=\toks53
-\@floatcapt=\box77
-) (C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/tools\bm.sty
-Package: bm 2022/01/05 v1.2f Bold Symbol Support (DPC/FMi)
+\c@float@type=\count303
+\float@exts=\toks48
+\float@box=\box70
+\@float@everytoks=\toks49
+\@floatcapt=\box71
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2019/07/24 v1.2d Bold Symbol Support (DPC/FMi)
 \symboldoperators=\mathgroup7
 \symboldletters=\mathgroup8
 \symboldsymbols=\mathgroup9
-Package bm Info: No bold for \OMX/cmex/m/n, using \pmb.
-Package bm Info: No bold for \U/msa/m/n, using \pmb.
-Package bm Info: No bold for \U/msb/m/n, using \pmb.
-Package bm Info: No bold for \U/rsfs/m/n, using \pmb.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 149.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
+LaTeX Info: Redefining \bm on input line 209.
 )
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/multirow\bigstru
-t.sty
-Package: bigstrut 2021/03/15 v2.8 Provide larger struts in tabulars
-\bigstrutjot=\dimen292
+(/usr/local/texlive/2020/texmf-dist/tex/latex/multirow/bigstrut.sty
+Package: bigstrut 2019/05/31 v2.5 Provide larger struts in tabulars
+\bigstrutjot=\dimen286
 )
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/algorithm2e\algo
-rithm2e.sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
 Package: algorithm2e 2017/07/18 v5.2 algorithms environments
-\c@AlgoLine=\count318
-\algocf@hangindent=\skip72
+\c@AlgoLine=\count304
+\algocf@hangindent=\skip71
 
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/ifoddpage\ifoddp
-age.sty
-Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
-\c@checkoddpage=\count319
+(/usr/local/texlive/2020/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
+\c@checkoddpage=\count305
 )
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/tools\xspace.sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/relsize\relsize.
-sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/relsize/relsize.sty
 Package: relsize 2013/03/29 ver 4.1
 )
-\skiptotal=\skip73
-\skiplinenumber=\skip74
-\skiprule=\skip75
-\skiphlne=\skip76
-\skiptext=\skip77
-\skiplength=\skip78
-\algomargin=\skip79
-\skipalgocfslide=\skip80
-\algowidth=\dimen293
-\inoutsize=\dimen294
-\inoutindent=\dimen295
-\interspacetitleruled=\dimen296
-\interspacealgoruled=\dimen297
-\interspacetitleboxruled=\dimen298
-\algocf@ruledwidth=\skip81
-\algocf@inoutbox=\box78
-\algocf@inputbox=\box79
-\AlCapSkip=\skip82
-\AlCapHSkip=\skip83
-\algoskipindent=\skip84
-\algocf@nlbox=\box80
-\algocf@hangingbox=\box81
-\algocf@untilbox=\box82
-\algocf@skipuntil=\skip85
-\algocf@capbox=\box83
-\algocf@lcaptionbox=\skip86
-\algoheightruledefault=\skip87
-\algoheightrule=\skip88
-\algotitleheightruledefault=\skip89
-\algotitleheightrule=\skip90
-\c@algocfline=\count320
-\c@algocfproc=\count321
-\c@algocf=\count322
-\algocf@algoframe=\box84
-\algocf@algobox=\box85
+\skiptotal=\skip72
+\skiplinenumber=\skip73
+\skiprule=\skip74
+\skiphlne=\skip75
+\skiptext=\skip76
+\skiplength=\skip77
+\algomargin=\skip78
+\skipalgocfslide=\skip79
+\algowidth=\dimen287
+\inoutsize=\dimen288
+\inoutindent=\dimen289
+\interspacetitleruled=\dimen290
+\interspacealgoruled=\dimen291
+\interspacetitleboxruled=\dimen292
+\algocf@ruledwidth=\skip80
+\algocf@inoutbox=\box72
+\algocf@inputbox=\box73
+\AlCapSkip=\skip81
+\AlCapHSkip=\skip82
+\algoskipindent=\skip83
+\algocf@nlbox=\box74
+\algocf@hangingbox=\box75
+\algocf@untilbox=\box76
+\algocf@skipuntil=\skip84
+\algocf@capbox=\box77
+\algocf@lcaptionbox=\skip85
+\algoheightruledefault=\skip86
+\algoheightrule=\skip87
+\algotitleheightruledefault=\skip88
+\algotitleheightrule=\skip89
+\c@algocfline=\count306
+\c@algocfproc=\count307
+\c@algocf=\count308
+\algocf@algoframe=\box78
+\algocf@algobox=\box79
 )
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometr
-y.sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.s
-ty
+(/usr/local/texlive/2020/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.st
-y
-Package: iftex 2022/02/03 v1.0f TeX engine tests
+(/usr/local/texlive/2020/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
 ))
-\Gm@cnth=\count323
-\Gm@cntv=\count324
-\c@Gm@tempcnt=\count325
-\Gm@bindingoffset=\dimen299
-\Gm@wd@mp=\dimen300
-\Gm@odd@mp=\dimen301
-\Gm@even@mp=\dimen302
-\Gm@layoutwidth=\dimen303
-\Gm@layoutheight=\dimen304
-\Gm@layouthoffset=\dimen305
-\Gm@layoutvoffset=\dimen306
-\Gm@dimlist=\toks54
-
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometr
-y.cfg))
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumite
-m.sty
+\Gm@cnth=\count309
+\Gm@cntv=\count310
+\c@Gm@tempcnt=\count311
+\Gm@bindingoffset=\dimen293
+\Gm@wd@mp=\dimen294
+\Gm@odd@mp=\dimen295
+\Gm@even@mp=\dimen296
+\Gm@layoutwidth=\dimen297
+\Gm@layoutheight=\dimen298
+\Gm@layouthoffset=\dimen299
+\Gm@layoutvoffset=\dimen300
+\Gm@dimlist=\toks50
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
-\labelindent=\skip91
-\enit@outerparindent=\dimen307
-\enit@toks=\toks55
-\enit@inbox=\box86
-\enit@count@id=\count326
-\enitdp@description=\count327
+\labelindent=\skip90
+\enit@outerparindent=\dimen301
+\enit@toks=\toks51
+\enit@inbox=\box80
+\enit@count@id=\count312
+\enitdp@description=\count313
 )
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
-Package: array 2022/09/04 v2.5g Tabular extension package (FMi)
-\col@sep=\dimen308
-\ar@mcellbox=\box87
-\extrarowheight=\dimen309
-\NC@list=\toks56
-\extratabsurround=\skip92
-\backup@length=\skip93
-\ar@cellbox=\box88
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tools/array.sty
+Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
+\col@sep=\dimen302
+\ar@mcellbox=\box81
+\extrarowheight=\dimen303
+\NC@list=\toks52
+\extratabsurround=\skip91
+\backup@length=\skip92
+\ar@cellbox=\box82
 )
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multiro
-w.sty
-Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
-\multirow@colwidth=\skip94
-\multirow@cntb=\count328
-\multirow@dima=\skip95
+(/usr/local/texlive/2020/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
+\multirow@colwidth=\skip93
+\multirow@cntb=\count314
+\multirow@dima=\skip94
 )
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/colortbl\colortb
-l.sty
-Package: colortbl 2022/06/20 v1.0f Color table columns (DPC)
-\everycr=\toks57
-\minrowclearance=\skip96
-\rownum=\count329
+(/usr/local/texlive/2020/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
+\everycr=\toks53
+\minrowclearance=\skip95
 )
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.
-sty
-Package: caption 2023/03/12 v3.6j Customizing captions (AR)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2020/01/03 v3.4h Customizing captions (AR)
 
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3
-.sty
-Package: caption3 2023/03/12 v2.4 caption3 kernel (AR)
-\caption@tempdima=\dimen310
-\captionmargin=\dimen311
-\caption@leftmargin=\dimen312
-\caption@rightmargin=\dimen313
-\caption@width=\dimen314
-\caption@indent=\dimen315
-\caption@parindent=\dimen316
-\caption@hangindent=\dimen317
+(/usr/local/texlive/2020/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/01/03 v1.8h caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 61.
+\captionmargin=\dimen304
+\captionmargin@=\dimen305
+\captionwidth=\dimen306
+\caption@tempdima=\dimen307
+\caption@indent=\dimen308
+\caption@parindent=\dimen309
+\caption@hangindent=\dimen310
 Package caption Info: elsarticle document class detected.
-
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption-
-elsarticle.sto
-File: caption-elsarticle.sto 2020/08/22 v2.0 Adaption of the caption package to
- the elsarticle document class (AR)
-))
-\c@caption@flags=\count330
-\c@continuedfloat=\count331
+)
+\c@caption@flags=\count315
+\c@continuedfloat=\count316
 Package caption Info: float package is loaded.
 Package caption Info: subfigure package is loaded.
 )
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcapti
-on.sty
-Package: subcaption 2023/02/19 v1.6 Sub-captions (AR)
-LaTeX Info: Redefining \subref on input line 191.
-Package subcaption Info: The counter `subfigure' was already defined by
-(subcaption)             an unknown document class or package on input line 239
-.
-Package subcaption Info: The counter `subtable' was already defined by
-(subcaption)             an unknown document class or package on input line 239
-.
+(/usr/local/texlive/2020/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2020/01/22 v1.3d Sub-captions (AR)
+
+
+/usr/local/texlive/2020/texmf-dist/tex/latex/caption/subcaption.sty:62: Package
+ subcaption Error: This package can't be used in cooperation
+(subcaption)                with the subfigure package.
+
+See the subcaption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.62 \subcaption@CheckCompatibility
+                                   
+? 
 )
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/threeparttable\t
-hreeparttable.sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/threeparttable/threeparttable.sty
 Package: threeparttable 2003/06/13  v 3.0
-\@tempboxb=\box89
+\@tempboxb=\box83
 )
-\c@remark=\count332
-\c@notation=\count333
-\c@prop=\count334
+\c@remark=\count317
+\c@notation=\count318
+\c@prop=\count319
 
 
 LaTeX Warning: Unused global option(s):
     [1p.].
 
-(latest_version.aux)
+(./latest_version.aux)
 \openout1 = `latest_version.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
 
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp
--pdf.mkii
+(/usr/local/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count335
-\scratchdimen=\dimen318
-\scratchbox=\box90
-\nofMPsegments=\count336
-\nofMParguments=\count337
-\everyMPshowfont=\toks58
-\MPscratchCnt=\count338
-\MPscratchDim=\dimen319
-\MPnumerator=\count339
-\makeMPintoPDFobject=\count340
-\everyMPtoPDFconversion=\toks59
-)
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\eps
-topdf-base.sty
+\scratchcounter=\count320
+\scratchdimen=\dimen311
+\scratchbox=\box84
+\nofMPsegments=\count321
+\nofMParguments=\count322
+\everyMPshowfont=\toks54
+\MPscratchCnt=\count323
+\MPscratchDim=\dimen312
+\MPnumerator=\count324
+\makeMPintoPDFobject=\count325
+\everyMPtoPDFconversion=\toks55
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopd
-f-sys.cfg
-File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+(/usr/local/texlive/2020/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
 ))
+ABD: EveryShipout initializing macros
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
-ick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into 
+ick labels; missing features). Consider writing \pgfplotsset{compat=1.17} into 
 your preamble.
- on input line 99.
+ on input line 104.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1054,30 +961,28 @@ your preamble.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: threeparttable package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 130
+LaTeX Font Info:    Trying to load font information for U+msa on input line 135
 .
-
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 130
+LaTeX Font Info:    Trying to load font information for U+msb on input line 135
 .
 
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+rsfs on input line 13
-0.
+5.
 
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.f
-d
+(/usr/local/texlive/2020/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
-30.
+35.
 
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
-File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
+(/usr/local/texlive/2020/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 Overfull \hbox (2.22168pt too wide) has occurred while \output is active
 [] 
@@ -1086,23 +991,22 @@ Overfull \hbox (2.22168pt too wide) has occurred while \output is active
 [1
 
 
-{C:/Users/Justo Puerto/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 [2]
 LaTeX Font Info:    Trying to load font information for T1+cmss on input line 1
-43.
+48.
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/base/t1cmss.fd
+File: t1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+) [3]
+(./figures/Example_ Problems_ First Figure.tex
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmss.fd
-File: t1cmss.fd 2022/07/10 v2.5l Standard LaTeX font definitions
-)
-[3] (figures/Example_ Problems_ First Figure.tex
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendla
-yer/tikz/libraries\tikzlibraryarrows.code.tex
-File: tikzlibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
-
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\
-pgflibraryarrows.code.tex
-File: pgflibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\arrowsize=\dimen320
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
+code.tex
+File: pgflibraryarrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\arrowsize=\dimen313
 ))
 Overfull \hbox (9.44376pt too wide) in paragraph at lines 52--53
  [][] 
@@ -1118,42 +1022,46 @@ Overfull \hbox (9.44376pt too wide) in paragraph at lines 132--133
  [][] 
  []
 
-) [4] [5] (figures/Example_ H-SPP-S_ Second Figure A.tex) [6] [7] [8]
-Overfull \hbox (6.05168pt too wide) detected at line 339
-[]\OML/cmm/m/it/10 P[] \OMS/cmsy/m/n/10 2 U[] ([]) []
+) [4] [5] (./figures/Example_ H-SPP-S_ Second Figure A.tex) [6] [7] [8]
+Overfull \hbox (6.05168pt too wide) detected at line 344
+\OML/cmm/m/it/10 P[] \OMS/cmsy/m/n/10 2 U[] ([]) []
  []
 
 [9] [10]
-Overfull \hbox (17.22168pt too wide) in paragraph at lines 421--435
+Overfull \hbox (17.22168pt too wide) in paragraph at lines 427--441
 []$[]$ $[]$ 
  []
 
-[11] [12] [13] (figures/Example_ H-SPP-S_ Dominating.tex) [14] [15]
-Overfull \hbox (38.42998pt too wide) detected at line 664
-[]
- []
+[11] [12] [13] (./figures/Example_ H-SPP-S_ Dominating.tex
 
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-Overfull \hbox (4.5606pt too wide) detected at line 683
+) [14] [15]
+Overfull \hbox (38.42998pt too wide) detected at line 670
 []
  []
 
 [16]
-Overfull \hbox (15.40367pt too wide) detected at line 697
-[]
- []
-
-
-Overfull \hbox (22.32634pt too wide) detected at line 732
+Overfull \hbox (4.5606pt too wide) detected at line 689
 []
  []
 
 [17]
-Overfull \hbox (23.72523pt too wide) detected at line 755
+Overfull \hbox (15.40367pt too wide) detected at line 703
 []
  []
 
-[18] (figures/Example_ Problems_ Solution.tex
+
+Overfull \hbox (22.32634pt too wide) detected at line 738
+[]
+ []
+
+[18]
+Overfull \hbox (23.72523pt too wide) detected at line 761
+[]
+ []
+
+[19] (./figures/Example_ Problems_ Solution.tex
 Overfull \hbox (9.44376pt too wide) in paragraph at lines 51--53
  [][] 
  []
@@ -1168,75 +1076,75 @@ Overfull \hbox (9.44376pt too wide) in paragraph at lines 173--175
  [][] 
  []
 
-) [19]
-<figures/example_satellite.png, id=95, 255.95625pt x 255.95625pt>
+) [20]
+<figures/example_satellite.png, id=99, 255.95625pt x 255.95625pt>
 File: figures/example_satellite.png Graphic file (type png)
 <use figures/example_satellite.png>
-Package pdftex.def Info: figures/example_satellite.png  used on input line 796.
+Package pdftex.def Info: figures/example_satellite.png  used on input line 804.
 
 (pdftex.def)             Requested size: 135.89174pt x 135.89049pt.
-<figures/example_block.png, id=97, 255.95625pt x 255.95625pt>
+<figures/example_block.png, id=101, 255.95625pt x 255.95625pt>
 File: figures/example_block.png Graphic file (type png)
 <use figures/example_block.png>
-Package pdftex.def Info: figures/example_block.png  used on input line 796.
+Package pdftex.def Info: figures/example_block.png  used on input line 804.
 (pdftex.def)             Requested size: 135.89174pt x 135.89049pt.
-<figures/example_solution.png, id=98, 255.95625pt x 255.95625pt>
+<figures/example_solution.png, id=102, 255.95625pt x 255.95625pt>
 File: figures/example_solution.png Graphic file (type png)
 <use figures/example_solution.png>
-Package pdftex.def Info: figures/example_solution.png  used on input line 796.
+Package pdftex.def Info: figures/example_solution.png  used on input line 804.
 (pdftex.def)             Requested size: 135.89174pt x 135.89049pt.
-<figures/cones.png, id=99, 787.44188pt x 490.08093pt>
+<figures/cones.png, id=103, 787.44188pt x 490.08093pt>
 File: figures/cones.png Graphic file (type png)
 <use figures/cones.png>
-Package pdftex.def Info: figures/cones.png  used on input line 890.
+Package pdftex.def Info: figures/cones.png  used on input line 898.
 (pdftex.def)             Requested size: 339.72592pt x 211.43362pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[20 <./figures/example_satellite.png> <./figures/example_block.png> <./figures/
+[21 <./figures/example_satellite.png> <./figures/example_block.png> <./figures/
 example_solution.png>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-(figures/Preprocessing - First case.tex
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendla
-yer/tikz/libraries\tikzlibrarycalc.code.tex
-File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+(./figures/Preprocessing - First case.tex
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendla
-yer/tikz/libraries\tikzlibrarymatrix.code.tex
-File: tikzlibrarymatrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarymatrix.code.tex
+File: tikzlibrarymatrix.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendla
-yer/tikz/libraries\tikzlibrarypositioning.code.tex
-File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) [21 <./figures/cones.png>] [22] [23]
-Overfull \hbox (38.2824pt too wide) detected at line 1042
+) [22 <./figures/cones.png>] [23] [24]
+Overfull \hbox (38.2824pt too wide) detected at line 1050
 []
  []
 
-[24] (figures/Fixing_Variables.tex) [25] [26] [27] [28]
-(figures/runtime_boxplot_first_experiment.tex
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendla
-yer/tikz/libraries\tikzlibrarypatterns.code.tex
-File: tikzlibrarypatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+[25] (./figures/Fixing_Variables.tex) [26] [27] [28] [29] [30]
+(./figures/runtime_boxplot_first_experiment.tex
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarypatterns.code.tex
+File: tikzlibrarypatterns.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\
-pgflibrarypatterns.code.tex
-File: pgflibrarypatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/libraries/pgflibrarypattern
+s.code.tex
+File: pgflibrarypatterns.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ))
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendla
-yer/tikz/libraries\tikzlibraryshapes.arrows.code.tex
-File: tikzlibraryshapes.arrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.arrows.code.tex
+File: tikzlibraryshapes.arrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 
-(C:\Users\Justo Puerto\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/
-shapes\pgflibraryshapes.arrows.code.tex
-File: pgflibraryshapes.arrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.arrows.code.tex
+File: pgflibraryshapes.arrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ))
 
 Package pgfplots Warning: Ignoring illegal input argument ymin=-0.05: cannot ap
@@ -1252,68 +1160,60 @@ ply log. on input line 828.
  [warning /pgfplots/warning/illegal user argument in log axis]
 Package pgfplots info on input line 828: Using 'lua backend=false' for axis: ym
 ode=log unsupported (yet).
+) (./gap_boxplot_first_experiment.tex
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) (gap_boxplot_first_experiment.tex
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-) [29] [30] [31] (latest_version.bbl [32] [33]) [34] (latest_version.aux) ) 
+) [31] [32] (./latest_version.bbl [33] [34]) [35] (./latest_version.aux) ) 
 Here is how much of TeX's memory you used:
- 31945 strings out of 476331
- 785964 string characters out of 5784425
- 1987660 words of memory out of 5000000
- 51779 multiletter control sequences out of 15000+600000
- 537706 words of font info for 101 fonts, out of 8000000 for 9000
+ 30707 strings out of 480608
+ 739357 string characters out of 5903629
+ 1526113 words of memory out of 5000000
+ 46001 multiletter control sequences out of 15000+600000
+ 557757 words of font info for 93 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,28n,88p,2343b,2346s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:
-\Users\Justo Puerto\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecb
-i1000.pk> <C:\Users\Justo Puerto\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/
-ec/dpi600\ecbx0700.pk> <C:\Users\Justo Puerto\AppData\Local\MiKTeX\fonts/pk/ljf
-our/jknappen/ec/dpi600\ecrm0500.pk> <C:\Users\Justo Puerto\AppData\Local\MiKTeX
-\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\Justo Puerto\AppData
-\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss0800.pk> <C:\Users\Justo P
-uerto\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss1000.pk> <C:\
-Users\Justo Puerto\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm
-0600.pk> <C:\Users\Justo Puerto\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/e
-c/dpi600\ectt0800.pk> <C:\Users\Justo Puerto\AppData\Local\MiKTeX\fonts/pk/ljfo
-ur/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\Justo Puerto\AppData\Local\MiKTeX\
-fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk> <C:\Users\Justo Puerto\AppData\
-Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\Justo Pu
-erto\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti0800.pk> <C:\U
-sers\Justo Puerto\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti0
-600.pk> <C:\Users\Justo Puerto\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
-/dpi600\ecrm0700.pk> <C:\Users\Justo Puerto\AppData\Local\MiKTeX\fonts/pk/ljfou
-r/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\Justo Puerto\AppData\Local\MiKTeX\f
-onts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk><C:/Users/Justo Puerto/AppData/Lo
-cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><C:/Users/Justo 
-Puerto/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
-<C:/Users/Justo Puerto/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
-s/cm/cmbx7.pfb><C:/Users/Justo Puerto/AppData/Local/Programs/MiKTeX/fonts/type1
-/public/amsfonts/cm/cmex10.pfb><C:/Users/Justo Puerto/AppData/Local/Programs/Mi
-KTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Justo Puerto/AppData/L
-ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/Justo P
-uerto/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C
-:/Users/Justo Puerto/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
-cm/cmmi7.pfb><C:/Users/Justo Puerto/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmmi8.pfb><C:/Users/Justo Puerto/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/Justo Puerto/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb><C:/Users/Jus
-to Puerto/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pf
-b><C:/Users/Justo Puerto/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
-nts/cm/cmr5.pfb><C:/Users/Justo Puerto/AppData/Local/Programs/MiKTeX/fonts/type
-1/public/amsfonts/cm/cmr7.pfb><C:/Users/Justo Puerto/AppData/Local/Programs/MiK
-TeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Justo Puerto/AppData/Lo
-cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/Justo Pu
-erto/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:
-/Users/Justo Puerto/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
-m/cmsy7.pfb><C:/Users/Justo Puerto/AppData/Local/Programs/MiKTeX/fonts/type1/pu
-blic/amsfonts/symbols/msbm10.pfb>
-Output written on latest_version.pdf (34 pages, 874321 bytes).
+ 82i,28n,138p,2341b,2346s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr
+/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/l
+ocal/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/lo
+cal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/lo
+cal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/loc
+al/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/local
+/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/
+texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/t
+exlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/tex
+live/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texli
+ve/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive
+/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2
+020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2
+020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/local/texli
+ve/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive
+/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/20
+20/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2020/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2020/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2020/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020/texmf-d
+ist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2020/tex
+mf-dist/fonts/type1/public/cm-super/sfbi1000.pfb></usr/local/texlive/2020/texmf
+-dist/fonts/type1/public/cm-super/sfbx0700.pfb></usr/local/texlive/2020/texmf-d
+ist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2020/texmf-dis
+t/fonts/type1/public/cm-super/sfrm0500.pfb></usr/local/texlive/2020/texmf-dist/
+fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2020/texmf-dist/fo
+nts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2020/texmf-dist/font
+s/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2020/texmf-dist/fonts/
+type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2020/texmf-dist/fonts/ty
+pe1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2020/texmf-dist/fonts/type
+1/public/cm-super/sfss0800.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/
+public/cm-super/sfss1000.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/pu
+blic/cm-super/sfti0600.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/publ
+ic/cm-super/sfti0800.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public
+/cm-super/sfti1000.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/c
+m-super/sftt0800.pfb>
+Output written on latest_version.pdf (35 pages, 977752 bytes).
 PDF statistics:
- 653 PDF objects out of 1000 (max. 8388607)
+ 269 PDF objects out of 1000 (max. 8388607)
+ 188 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  33 words of extra memory for PDF output out of 10000 (max. 10000000)
 

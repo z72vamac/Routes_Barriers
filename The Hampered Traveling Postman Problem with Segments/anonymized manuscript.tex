@@ -12,9 +12,12 @@
 \usepackage{optidef}
 \usepackage{xcolor}
 \usepackage[normalem]{ulem}
+%\usepackage{float}
 \usepackage{amsthm}
 \usepackage{comment}
 %\usepackage[numbers]{natbib}
+\usepackage{natbib}
+%\usepackage{apacite}
 \usepackage{tikz}
 \usepackage{pgfplots}
 \usepackage{mathrsfs}
@@ -33,14 +36,15 @@
 \usepackage{multirow}
 \usepackage{colortbl}
 \setlength{\extrarowheight}{.5ex}
+\usepackage{caption}
+\usepackage{subcaption}
+
 
 
 \usepackage{threeparttable}
 
 \usepackage[utf8]{inputenc}
 
-\usepackage{setspace}
-\doublespacing
 
 
 \DeclareMathOperator*{\argmax}{arg\,max}
@@ -88,8 +92,9 @@
 
 \definecolor{armygreen}{rgb}{0.19, 0.53, 0.43}
 \definecolor{atomictangerine}{rgb}{1.0, 0.6, 0.4}
-\newcommand{\JP}[1]{{\color{armygreen}#1}}
-\newcommand{\CV}[1]{{\color{red}#1}}
+%\newcommand{\JP}[1]{{\color{armygreen}#1}}
+\newcommand{\JP}[1]{{\color{blue}#1}}
+\newcommand{\CV}[1]{{\color{blue}#1}}
 \newcommand{\segment}[2]{\overline{#1#2}}
 \newcommand{\determinant}[3]{\det({#1|#2#3})}
 
@@ -128,33 +133,37 @@
 	\end{frontmatter}
 	
 	\section{Introduction}
-	Routing problems are considered classical problems at the core of combinatorial optimisation. Among them, the Travelling Salesman Problem (TSP) is one of its most important representations, and it has been studied extensively in many different forms. The problem is well known to be NP-hard. Its analysis has led in the last decades to methodological advances and new optimisation techniques that have allowed solving real life instances that few years ago were beyond solvable limits. The TSP has been studied in its geometric and pure combinatorial forms because of its algorithmic and practical implications. One very interesting extension arises when we require the tour to visit a set of regions rather than points. This version of the problem is called the TSP with Neighbours (see  \citet{arkin_approximation_1994}) which is APX-hard to approximate even for regions that are (intersecting) line segments.  They can represent regions that the drone must reach and where customers are willing to pick up the orders (they can be seen as uniform probability densities) in the delivery industry. Moreover, they can also be used for modelling some areas that must be inspected by the drone (whenever visiting a point of these areas, it suffices to consider them as inspected).  On the other hand, the graphic TSP (see \citet{moemke_approximating_2011}), where distances are measures by geodesics (shortest paths in the respective metric space), has also attracted the attention of many researchers since it models, in a natural way, TSP routes among forbidden barriers, robot motion planning and automatic navigation in computer games. 
+	Routing problems are considered classical problems at the core of combinatorial optimisation. Among them, the Travelling Salesman Problem (TSP) is one of its most important representations, and it has been studied extensively in many different forms. The problem is \JP{well-known} to be NP-hard. Its analysis has led in the last decades to methodological advances and new optimisation techniques that have allowed solving real life instances that few years ago were beyond solvable limits. The TSP has been studied in its geometric and pure combinatorial forms because of its algorithmic and practical implications. One very interesting extension arises when we require the tour to visit a set of regions rather than points. This version of the problem is called the TSP with Neighbours (see  \citet{arkin1994a}) which is APX-hard to approximate even for regions that are (intersecting) line segments.  They can represent regions that the drone must reach and where customers are willing to pick up the orders (they can be seen as uniform probability densities) in the delivery industry. Moreover, they can also be used for modelling some areas that must be inspected by the drone (whenever visiting a point of these areas, it suffices to consider them as inspected).  On the other hand, the graphic TSP (see \citet{t.moemke22}), where distances are measures by geodesics (shortest paths in the respective metric space), has also attracted the attention of many researchers since it models, in a natural way, TSP routes among forbidden barriers, robot motion planning and automatic navigation in computer games. 
 	
 	For the above mentioned reasons, it is very important to analyse the mathematical implications of barriers to the geometry and computation of routes in a continuous space. Beyond the mathematical relevance due to the intrinsic difficulty of the resulting models (non-convexities), the importance of this topic also comes from its many real-life applications and, more specifically, drone delivery with uniformly distributed demand and drone inspection and surveillance in urban areas with buildings or similar barriers.  Most of the classical methods in route design are based on an underlying network structure. Our approach is essentially different since, on top of assuming the existence of barriers, we also assume that the locations of targets to be visited are uniformly distributed in neighbourhoods, giving rise to challenging problems in the continuous space. Nevertheless, the resulting problems still retain geometric elements that must be exploited to partially overcome the difficulties of solution approaches and algorithms in the design of routes among neighbourhoods with barriers.
 	
-	The well-known Travelling Salesman Problem with Neighbourhoods (TSPN) was introduced by \citet{arkin_approximation_1994}. These authors addressed this problem by proposing heuristic procedures that construct tours and prove that the length of these tours is within a constant factor of the length of an optimal tour. In \citet{gentilini_travelling_2013}, authors formulate this problem as a non-convex mixed integer non-linear program (MINLP) that yields a convex nonlinear program when the discrete variables are fixed. Moreover, \citet{yuan_towards_2017} combine strategically metaheuristics and classical TSP solvers to produce high quality solutions for the TSPN with arbitrary neighbourhoods. In \citet{glock_spatial_2022}, the concept of spatial coverage in routing and path planning is unified and defined, and a categorisation scheme of related problems is introduced. Other classical combinatorial problems, such as the Minimum Spanning Tree (MST) or the Crossing Postman Problem (XPP), which have been extended to deal with neighbourhoods, are developed in \citet{blanco_minimum_2017} and \citet{puerto_routing_2022}, respectively. 
+	The well-known Travelling Salesman Problem with Neighbourhoods (TSPN) was introduced by \citet{arkin1994a}. These authors addressed this problem by proposing heuristic procedures that construct tours and prove that the length of these tours is within a constant factor of the length of an optimal tour. In \citet{gentilini2013}, authors formulate this problem as a non-convex mixed integer non-linear program (MINLP) that yields a convex nonlinear program when the discrete variables are fixed. Moreover, \citet{yuan2017} combine strategically metaheuristics and classical TSP solvers to produce high quality solutions for the TSPN with arbitrary neighbourhoods. In \citet{glock2023}, the concept of spatial coverage in routing and path planning is unified and defined, and a categorisation scheme of related problems is introduced. Other classical combinatorial problems, such as the Minimum Spanning Tree (MST) or the Crossing Postman Problem (XPP), which have been extended to deal with neighbourhoods, are developed in \citet{blanco2017} and \citet{puerto2022c}, respectively. 
 	
-	In \citet{mennell_heuristics_2009}, the Close-Enough Travelling Salesman problem was introduced. This problem is a particular case of the TSPN where the neighbourhoods are represented by circles. In that dissertation, the author also performed extensive computational experiments by solving instances developed by them. The authors of \citet{coutinho_branch-and-bound_2016} proposed an exact algorithm based on branch-and-bound and second-order cone programming. Finally, a metaheuristic approach was developed that computes the upper and lower bounds of the optimal solution value. This metaheuristic used a discretization scheme and the Carousel Greedy algorithm to obtain high-quality solutions (see \citet{carrabs_adaptive_2020} for more details).
+	In \citet{mennell2009a}, the Close-Enough Travelling Salesman problem was introduced. This problem is a particular case of the TSPN where the neighbourhoods are represented by circles. In that dissertation, the author also performed extensive computational experiments by solving instances developed by them. The authors of \citet{coutinho2016} proposed an exact algorithm based on branch-and-bound and second-order cone programming. Finally, a metaheuristic approach was developed that computes the upper and lower bounds of the optimal solution value. This metaheuristic used a discretization scheme and the Carousel Greedy algorithm to obtain high-quality solutions (see \citet{carrabs2020} for more details).
 	
-	As far as we are concerned, the use of barriers in location problems has been widely considered (see \citet{klamroth_single-facility_2002}) but the corresponding barrier routing problem has attracted less attention in the field of Operations Research. In spite of that, one can find connections with some problems in the area of computational geometry, such as the shortest path problem in polygons and the touring polytopes problem (see \citet{mitchell_shortest_2017}), in navigation games competition as, for instance, the Physical Travelling Salesman Problem (see \citet{perez_solving_2014}), or in robot motion planning (see \citet{hwang_potential_1992} and \citet{laumond_motion_1994}).  Different complexity results are known, and many effective heuristic algorithms have been developed for specific classes of problems. However, as far as we know, in all cases targets are points and no exact algorithms are provided. Moreover, at times, these problems can appear as subproblems of some other combinatorial problems, so that one would like to embed them into some mathematical programming formulation. Nevertheless, we are not aware of any mathematical programming formulation for these problems that permits it to be considered as a building block of more complex/integrated problems in real life applications, even without requiring target to be neighbourhoods.
+	As far as we are concerned, the use of barriers in location problems has been widely considered (see \citet{klamroth2002a}) but the corresponding barrier routing problem has attracted less attention in the field of Operations Research. In spite of that, one can find connections with some problems in the area of computational geometry, such as the shortest path problem in polygons and the touring polytopes problem (see \citet{mitchell2017a}), in navigation games competition as, for instance, the Physical Travelling Salesman Problem (see \citet{d.perez2014}), or in robot motion planning (see \citet{y.k.hwang1992} and \citet{j..-p.laumond1994}).  Different complexity results are known, and many effective heuristic algorithms have been developed for specific classes of problems. However, as far as we know, in all cases targets are points and no exact algorithms are provided. Moreover, at times, these problems can appear as subproblems of some other combinatorial problems, so that one would like to embed them into some mathematical programming formulation. Nevertheless, we are not aware of any mathematical programming formulation for these problems that permits it to be considered as a building block of more complex/integrated problems in real life applications, even without requiring target to be neighbourhoods.
 	
 	Our goal in this paper is to deal with the TSP with Neighbourhoods and barriers that we call the Hampered Traveling Salesman with Neighbourhoods (\TSPN ). As commented above, each one of these two elements (neighbourhoods and barriers) makes the problem difficult. Thus, mixing both together results in a new problem that, as far as we know, has not been addressed before, but that has a lot of applications in the delivery industry and inspection and surveillance activities, as justified previously. Moreover, it also has implications from the methodological point of view because introduces non-fixed elements in network representation and the issue of obtacles (barriers) in the solution space in the same problem.
 	
 	Our contribution is to provide exact mathematical programming formulations for the problem assuming polygonal barriers and neighbourhoods that are second-order cone (SOC) representable. These hypotheses give rise to mixed integer SOC formulations that we preprocess and strengthen with valid inequalities. In our way to the formulations we deal with the associated Hampered Shortest Path Problem with Neighbourhoods (\SPPN ) which is used as a building block for the more difficult \TSPN. Although we prove that the \SPPN \ is polynomially solvable, we also give a formulation for this problem that highlights the constraints necessary for \TSPN. The respective \TSPN \ is NP-hard. We give exact formulations using a geodesic shortest-path representation that allows us to solve medium-sized instances of this class of problems. Our computational tests show the difficulty of handling barriers and neighbourhoods together, but also that our formulation is useful for problems with 75 neighbourhoods and a range between 125-145 barriers.
 	
 	
-	The paper is organised into 8 sections. The first section is the introduction. In the second section, the problems to be dealt with are described, and the notation followed in the rest of the paper is set. Section \ref{section:formulations} develops formulations for the problems defined in the manuscript. These initial formulations are later reformulated using finite dominating sets described in the paper.
+	The paper is organised into \sout{8} \CV{6} sections. The first section is the introduction. In the second section, the problems to be dealt with are described, and the notation followed in the rest of the paper is set. Section \ref{section:formulations} develops formulations for the problems defined in the manuscript. These initial formulations are later reformulated using finite dominating sets described in the paper.
 	Section \ref{section:strengthening}  strengthens these formulations by preprocessing variables, developing families of valid inequalities to be added to the formulations and proposing some variable-fixing strategies. A computational experience is reported in Section \ref{section:experiments}. The paper ends with a section devoted to conclusions and extensions, where some interesting further research connected with the problems addressed in this paper is discussed.
 	
 	
 	\section{Preliminaries and Problems'  Description \label{section:description}}
+	
 	This section is devoted to setting the hypotheses that describe the framework where we analyse the considered problems.
-	We will deal with two problems in this paper: the Hampered Shortest Path Problem with Neighbourhoods \SPPN \ and the Hampered Travelling Salesman Problem with Neighbourhoods \TSPN. Since we have in mind their applications to the drone delivery problem with uniformly distributed demand in regions and inspection problems, at times, we will refer to the moving object as \textit{drone}. In both problems considered, we denote by $\mathcal{B}$ the set of line segments that model the barriers and adopt the assumptions listed below.
+	We will deal with two problems in this paper: the Hampered Shortest Path Problem with Neighbourhoods \SPPN \ and the Hampered Travelling Salesman Problem with Neighbourhoods \TSPN. Since we have in mind their applications to the drone delivery problem with uniformly distributed demand in regions and inspection problems, at times, we will refer to the moving object as \textit{drone}. 
+	
+	\CV{\subsection{Assumptions and notation}}
+	In both problems considered, we denote by $\mathcal{B}$ the set of line segments that model the barriers and adopt the assumptions listed below.
 	
 	\begin{enumerate}[label=\textbf{A\arabic*},ref=\textbf{A\arabic*}]
 		\item \label{A1}The line segments of $\mathcal B$ are located in a general position, i.e., the endpoints of these segments are not aligned. Although it is possible to model the aligned case, one can always slightly modify one of the endpoints so that the segments are not aligned.
 		\item The line segments of $\mathcal B$ are open sets, that is, it is possible that the drone visits the endpoints of the segments, but entering into its interior is not allowed. Observe that without loss of generality, we can always slightly enlarge these segments to make them open.
-		\item \label{A3}If there are two overlapping barriers, we assume that there is only one barrier given by the union of them.
+		\item \label{A3}If there are two \CV{aligned} overlapping barriers, we assume that there is only one barrier \sout{given by the union of} \CV{containing both of} them.
 		% \item \label{A4}There is no rectilinear path joining two neighbourhoods without crossing an obstacle.
 	\end{enumerate}
 	
@@ -165,6 +174,9 @@
 	\end{enumerate} 
 	This problem is called the Hampered Traveling Salesman Problem with Hidden Neighbourhoods \TSPHN. The consideration of this more constrained subproblem appears as a natural extension of the \SPPN. Indeed, in \SPPN, the shortest path that joins two neighbourhoods is sought by assuming \ref{A4}. Otherwise, it would be trivially solved by finding the standard shortest path between both neighbourhoods since no obstacles would block its use.
 	
+	\CV{Figures \ref{fig:spp}, \ref{fig:tsph} and \ref{fig:tsp} show an example of each \JP{one} of the three problems that are being considered, respectively. Figure \ref{fig:spp} shows an instance of the \SPPN, where the blue neighbourhood represents the source, the green one represents the target, and the red line segments show the barriers that the drone cannot cross. In Figure \ref{fig:tsph}, an instance of the \TSPHN \  is shown, where the neighbourhoods are balls and the barriers are, again, the red line segments. Finally, Figure \ref{fig:tsp} illustrates an example of the \TSPN, where the orange and blue balls can be joined by a rectilinear path.}
+	
+	\input{figures/Example_ Problems_ First Figure}
 	%In \SPPN, we have a source neighbourhood $N_S\subset\mathbb R^2$ and a target neighbourhood $N_T\subset\mathbb R^2$, which we assume to be convex sets and a set $\mathcal B$ of opened line segments located in general position that plays the role of barriers that the drone cannot cross, i.e., the drone can visit the endpoints of these barriers but it cannot be located in the interior points of the barriers. Note that, it is rational to assume that if there are two barriers that have a portion of them in common, it is only considered the smallest line segment that contains both barriers. The aim of the \SPPN is to find the best pair of points $(P_{S}, P_{T})\in N_S\times N_T$ in the source and target neighbourhoods that minimize the length of the path that joins both points without crossing any barrier of $\mathcal B$. In this problem, it is implicitly assumed that there is not a rectilinear path to go from $N_S$ to $N_T$, otherwise, the problem becomes straightforward and the solution is the minimum distance between both neighbourhoods. 
 	
 	To simplify the presentation, we introduce some general notation used throughout the paper.
@@ -185,6 +197,8 @@
 		The sign of $\determinant{P^1}{P^2}{P^3}$ gives the orientation of the point $P^1$ with respect to the line segment $\segment{P^2}{P^3}.$ Note that $\determinant{P^1}{P^2}{P^3}\neq 0$ by \ref{A1}. 
 	\end{itemize}
 	
+	\CV{Once defined the problems treated in this work, the following subsections describe the construction of the \emph{visibility graphs} that are used to develop some mathematical programming formulations that solve the problem exactly. These objects represent the set of possible rectilinear paths the drone can \JP{follow} without crossing any barrier (see, e.g., \cite{orourke2017}, for more details). For these problems, the visibility graphs are not fixed. They depend on the points selected in the neighbourhoods, as shown in Figures \ref{fig:graph1} and \ref{fig:graph2}}.
+	
 	
 	\subsection{Description of the Hampered Shortest Path Problem with Neighbourhoods}\label{subsection:descriptionHSPPN}
 	In \SPPN, we have a source neighbourhood $N_S\subset\mathbb R^2$ and a target neighbourhood $N_T\subset\mathbb R^2$, which we assume to be second-order cone-representable sets and a set $\mathcal B$ of line segments that play the role of barriers that the drone cannot cross. 
@@ -192,20 +206,25 @@
 	The goal of the \SPPN \ is to find the best pair of points $(P_{S}, P_{T})\in N_S\times N_T$ in the source and target neighbourhoods that minimise the length of the path that joins both points without crossing any barrier of $\mathcal B$ and assuming \ref{A1}-\ref{A4}. To state the model,  we define the following sets:
 	\begin{itemize}
 		\item $\VS=\{P_S\}$. Set composed by the point selected in the source neighbourhood $N_S$.
-		\item $\VB=\{P^1_B, P^2_B:B=\overline{P^1_B P^2_B}\in \mathcal B\}$. Set of vertices that come from the endpoints of the barriers in the problem.
+		\item $\VB=\{P^1_B, P^2_B:B=\overline{P^1_B P^2_B}\in \mathcal B\}$. Set of \sout{vertices that come from the} endpoints of the barriers in the problem.
 		\item $\VT=\{P^{}_T\}$. Set composed by the point selected in the target neighbourhood $N_T$.
 		\item $\ES=\{(P_S, P^i_{B}):P^i_B\in V_\B\text{ and } \overline{P_SP^i_B}\cap B''=\emptyset,\forall B''\in\B,\:i=1,2\}$. Set of edges formed by the lines that join the selected point in the source neighbourhood $N_S$ and each endpoint on the barriers that do not cross any other barrier in $\B$.
-		\item $\EB=\{(P^{i}_B, P^{j}_{B'}):P^i_B, P^j_{B'}\in \VB \text{ and } \overline{P^i_B P^j_{B'}}\cap B''=\emptyset,\:\forall B''\in\mathcal B,\:i, j=1,2\}$. Set of edges formed by the line segments that join two vertices of $V_{\mathcal B}$ and do not cross any other barrier in $\B$.
+		\item $\EB=\{(P^{i}_B, P^{j}_{B'}):P^i_B, P^j_{B'}\in \VB \text{ and } \overline{P^i_B P^j_{B'}}\cap B''=\emptyset,\:\forall B''\in\mathcal B,\:i, j=1,2\}$. Set of edges formed by the line segments that join two \sout{vertices} \CV{endnodes} of $V_{\mathcal B}$ and do not cross any other barrier in $\B$.
 		\item $\ET=\{(P^i_{B}, P^{}_T):P^i_B\in V_\B\text{ and } \overline{P^i_BP^{}_T}\cap B''=\emptyset,\forall B''\in\B,\:i=1,2\}$. Set of edges formed by the line segments that join the selected point in the target neighbourhood $N_T$ and every endpoint on the barriers that do not cross any other barrier in $\B$.
 	\end{itemize} 
 	
-	The above sets allow us to define the graph $\GSPP= (\VSPP, \ESPP)$ induced by barriers and neighbourhoods, where $\VSPP=\VS\cup \VB\cup\VT$ and $\ESPP=\ES\cup\EB \cup\ET$. 
+	The above sets allow us to define the \CV{visibility} graph $\GSPP= (\VSPP, \ESPP)$ induced by barriers and neighbourhoods, where $\VSPP=\VS\cup \VB\cup\VT$ and $\ESPP=\ES\cup\EB \cup\ET$. 
+	
+	Figures \ref{fig:graph1} and \ref{fig:graph2} show how the \CV{visibility} graph $\GSPP$ is generated for an instance of the \SPPN. The blue dashed line segments represent the edges of $\ES$, the green dashed lines, the edges of $\ET$ and the red dashed lines represent the edges of $\EB$. 
+	
+	\input{figures/Example_ H-SPP-S_ Second Figure A}
 	%	It is interesting to note that this graph can be split into two parts: a fixed graph $G_\B=(\VB,\EB)$ whose edges can be computed using the Remark \ref{rem:determinants} and the sets $\VS$, $\ES$, $\VT$ and $\ET$ that depend on where the points $P_S$ and $P^{}_T$ are located as shown in Figure \ref{fig:graph}.  The \CV{two subfigures} show how the graph $G$ is generated. The blue dashed line segments represent the edges of $\ES$, the green dashed lines, the edges of $\ET$ and the red dashed lines, the edges of $\EB$. A special case that can be remarked occurs when the neighbourhoods are points. In that case, the induced graph is completely fixed, and it is only necessary to find which edges are included by keeping in mind that there can not have crossings. This idea is exploited in Section \ref{section:reformulation}.
 	
 	%\textcolor{red}{Me estoy dando cuenta que nos pueden decir que para qué tenemos en cuenta todo el conjunto si realmente se pueden coger los puntos de la frontera mas cerca a cada uno de los puntos por donde puede salir de las barreras. Es cierto que solo ocurre con el SPP. En el caso del TSP esto no es cierto.}
 	
 	%	\input{figures/Example_ H-SPP-S_ Second Figure A}
 	
+	\CV{A special case that can be highlighted occurs when the neighbourhoods, $N_S$ and $N_T$, are points. In that case, the induced graph is completely fixed and it is only necessary to find which edges are included by keeping in mind that the graph must be planar, i.e., without crossings. This idea is later exploited in Subsection \ref{section:reformulation}.}
 	
 	\subsection{Description of the Hampered Travelling Salesman Problem with Hidden Neighbourhoods\label{ssec:TSPHN}}
 	The \TSPHN \ is an extension of the \SPPN \ where the neighbourhood set $\mathcal N$ is considered to play the role of source and target in the \SPPN \ and, moreover, a set of given targets must be visited. The aim of the \TSPHN \ is to find the shortest tour that visits each neighbourhood $N\in\mathcal N$ exactly once without crossing any barrier $B\in\mathcal B$ and assuming again \ref{A1}-\ref{A4}. 
@@ -214,37 +233,33 @@
 	
 	\begin{itemize}
 		\item $\VN=\{P_N:N\in\mathcal N\}$. Set of points selected in the neighbourhoods $\mathcal N$ to be visited.
-		\item $\VB=\{P^1_B, P^2_B:B=\overline{P^1_B P^2_B}\in \mathcal B\}$. Set of vertices of the barriers of the problem.
+		\item $\VB=\{P^1_B, P^2_B:B=\overline{P^1_B P^2_B}\in \mathcal B\}$. Set of \JP{endpoints \sout{vertices}} of the barriers of the problem.
 		\item $\EN=\{(P_N, P^i_{B}):P_N\in\VN, P^i_B\in V_\B\text{ and } \overline{P_NP^i_B}\cap B''=\emptyset,\forall B''\in\B,\:i=1,2\}$. Set of edges formed by line segments that join each point selected in the neighbourhoods of $\mathcal N$ with each endpoint on the barriers and do not cross any barrier in $\B$.
 		\item $\EB=\{(P^{i}_B, P^{j}_{B'}):P^i_B, P^j_{B'}\in \VB \text{ and } \overline{P^i_B P^j_{B'}}\cap B''=\emptyset,\:\forall B''\in\mathcal B,\:i, j=1,2\}$. Set of edges formed by line segments that join two vertices of $V_{\mathcal B}$ and do not cross any barrier in $\B$.
 	\end{itemize} 
 	
-	Following the same idea as before, we consider the graph $\GTSPH=(\VTSPH,\ETSPH)$ induced by barriers and neighbourhoods, where $\VTSPH=\VN\cup\VB$ and $\ETSPH=\EN\cup\EB$.
+	Following the same idea as before, we consider the \CV{visibility} graph $\GTSPH=(\VTSPH,\ETSPH)$ induced by barriers and neighbourhoods, where $\VTSPH=\VN\cup\VB$ and $\ETSPH=\EN\cup\EB$.
 	
 	%Note that, in this case, it may be also interesting to consider this problem without imposing assumption \ref{A4}. This more general version is called the Hampered Traveling Salesman Problem with Visible neighbourhoods \TSPN. 
 	
 	\subsection{Description of the Hampered Travelling Salesman Problem with Neighbourhoods}
 	For the general case, barriers are not required to completely separate all neighbourhoods, i.e., when moving from one neighbourhood to another, sometimes it is possible to follow a straight line without crossing any barrier. The main difference lies in the description of the edges of the graph induced by the neighbourhoods and endpoints of the barriers.
 	
-	By following the same approach that before, the sets that describe the graph in this case are:
+	By following the same approach that before, the sets that describe the \JP{visibility} graph in this case are:
 	
 	\begin{itemize}
 		\item $\VN=\{P_N:N\in\mathcal N\}$. Set of points in the neighbourhoods $\mathcal N$ that must be visited.
-		\item $\VB=\{P^1_B, P^2_B:B=\overline{P^1_B P^2_B}\in \mathcal B\}$. Set of vertices of the barriers of the problem.
+		\item $\VB=\{P^1_B, P^2_B:B=\overline{P^1_B P^2_B}\in \mathcal B\}$. Set of \JP{endpoints \sout{vertices}} of the barriers of the problem.
 		\item $V_{\rm TSP} = \VN \cup \VB$.
 		\item $E_{\rm TSP}=\{(P, P'):P, P' \in V_{TSP} \text{ and } \overline{PP'}\cap B''=\emptyset,\forall B''\in\B\}$. Set of edges formed by the line segments that join every pair of points in $V_{TSP}$ that do not cross any barrier.
 	\end{itemize} 
-	
-	Figure \ref{fig:initialdata} shows an example of each of the three problems that are being considered. The picture on the left shows an instance of the \SPPN, where the blue neighbourhood represents the source, the green represents the target, and the red line segments show the barriers that the drone cannot cross. In the centre picture, an instance of the \TSPHN \  is shown, where the neighbourhoods are balls and the barriers are, again, the red line segments. Finally, the picture to the right illustrates an example of the \TSPN, where the orange and blue balls can be joined by a rectilinear path.
-	
-	\input{figures/Example_ H-SPP-S_ First Figure}
 	
 	\section{MINLP Formulations}\label{section:formulations}
 	
 	This section proposes a mixed integer nonlinear programming formulation for the problems described in Section \ref{section:description}. First of all, we present the conic programming representation of the neighbourhoods and distance. Then,  we set the constraints that check if a segment is included in the set of edges $E_X$ with $X\in \{SPP, TSPH, TSP\}$. Finally, the formulations for the \SPPN, \TSPHN \ and \TSPN \ are described.
 	
 	We would like to remark that having a mathematical programming representation for the \SPPN \ is very important, even though we will prove in the following that this problem can be solved with a polynomial-time combinatorial algorithm. Indeed, we will need this type of representation to address some NP-hard problems that require computing shortest paths as building blocks, such as, for example, the location problem with barriers and 
-	neighbours and the \TSPN. Therefore, we will start to provide two different mathematical programming formulations for the \SPPN \ capable of being embedded in more complex problems.
+	neighbours and the \TSPN. Therefore, we will start \JP{providing} two different mathematical programming formulations for the \SPPN \ capable of being embedded in more complex problems.
 	
 	
 	First, we introduce the decision variables that represent the problem. These are summarised in Table \ref{table:variables}.
@@ -272,6 +287,20 @@
 	\end{table}
 	
 	\subsection{Conic programming constraints in the models}
+	\CV{
+		Let $\|\cdot\|_2$ denote the standard Euclidean norm derived from the dot product in $\mathbb R^n$, i.e., $\|u\|_2= (u^t u)^{1/2}$. The second-order cone (or Lorentz cone) of dimension $k+1$ is defined as:
+		
+		$$\mathcal L^{k+1}=\{(x, y)\in\mathbb R^k\times\mathbb R : \|x\|_2\leq y\}.$$
+		
+		Then, a second-order cone constraint is defined as
+		\begin{equation*}
+			\|A_ix-b_i\|_2\leq c_i^tx -d_i \Leftrightarrow (A_ix-b_i, c_i^t x-d_i)\in \mathcal L^{k_i+1},\quad i=1,\ldots,m,
+		\end{equation*}
+		
+		where $A_i\in\mathbb R^{k_i\times n} , b_i\in\mathbb R^{k_i}, c_i\in \mathbb R^n$ and $d_i\in \mathbb R$ are the problem parameters. 
+		
+		Second-order cone constraints can be used to represent common convex \JP{constraints}. If $A_i\equiv 0$ and $b_i\equiv 0$,  for some $i\in 1,\ldots, m$, the corresponding second-order cone constraint is reduced to a linear \JP{one}. On the other hand, if $c_i\equiv 0$ and $d_i\leq 0$, the constraint is reduced to a convex quadratic constraint that can represent ellipsoids or hyperbolic constraints (see \citet{lobo1998a} and \citet{boyd2004} for more information). The advantages of second-order constraints are the fully symmetric duality, heavily utilised by solution algorithms, the existence of polynomial-time interior point methods and its extremely powerful \JP{modeling possibilities} \citep{nesterov1994a}. }
+	
 	In the two problems considered, namely \SPPN \ and \TSPN, there exist two second-order cone constraints that model the distance between pairs of points $P$ and $Q$, as well as the representation of neighbourhoods where the points can be chosen.
 	
 	\newcommand{\dvar}[2]{d(#1#2)}
@@ -296,7 +325,7 @@
 	%\end{equation}
 	where $A_N^i, b_N^i, c_N^i$ and $d_N^i$ are the constraints parameters, $i$ and $nc_N$ denotes the number of constraints that appear in the block associated with the neighbourhood $N$.
 	
-	It is remarkable that these inequalities can model the special case of linear constraints (for $A_N^{i}, b_N^i\equiv 0$), ellipsoids and hyperbolic constraints (see \citet{lobo_applications_1998} and \citet{boyd_convex_2004} for more information).
+	%	It is remarkable that these inequalities can model the special case of linear constraints (for $A_N^{i}, b_N^i\equiv 0$), ellipsoids and hyperbolic constraints (see \citet{lobo_applications_1998} and \citet{boyd_convex_2004} for more information).
 	
 	These type of elements could be extended further to unions of SOC representable sets by introducing binary variables. Each one determines the set where the point chosen to visit the union of these SOC representable sets is located.
 	
@@ -312,14 +341,13 @@
 		\right.
 	\end{equation}
 	where $U_N^j$ is a big M constant on the maximal distance between two points in the union of sets.
-	The reader may observe that \eqref{eq:nC} can be replaced by \eqref{eq:uC} without altering the validity of the formulations. However, for the sake of simplicity, only the SOC-representable sets are considered in the paper.
+	\CV{The reader may observe that \eqref{eq:nC} can be replaced by \eqref{eq:uC} without altering the validity of the formulations. However, for the sake of simplicity, only the SOC-representable sets are considered in the paper.}
 	
 	%	\textcolor{red}{Puede ser muy interesante el caso 3D pero quizás en otro trabajo, no?}
 	
 	\subsection{Checking whether a segment is an edge of the induced graph}
 	
-	The goal of this subsection is to provide a test to check whether, given two arbitrary vertices $P, Q\in V_X$, the edge $(P, Q)\in E_X$, with $X\in\{SPP, TSPH, TSP\}$, that is, whether the line segment $\overline{PQ}$ does not intersect any barrier of $\mathcal B$. The following well-known computational geometry result can be used to check if two line segments intersect.
-	
+	The goal of this subsection is to provide a test to check whether, given two arbitrary vertices $P, Q\in V_X$, the edge $(P, Q)\in E_X$, with $X\in\{SPP, TSPH, TSP\}$, that is, whether the line segment $\overline{PQ}$ does not intersect any barrier of $\mathcal B$. The following well-known computational geometry result \CV{described, among others, in \cite{boissonnat2000},} can be used to check if two line segments intersect.
 	
 	\begin{remark}\label{rem:determinants}
 		Let $\overline{PQ}$ and $B=\overline{P_B^1P_B^2}\in\mathcal B$ be two different line segments. 
@@ -338,6 +366,8 @@
 		\end{equation*}
 		then $\overline{PQ}$ and $B$ do not intersect.
 	\end{remark}
+	
+	\CV{If the sign of $\determinant{P}{P_B^1}{P_B^2}$ is the same than $\determinant{Q}{P_B^1}{P_B^2}$, then, the orientation of $P$ and $Q$ with respect to the segment $\segment{P_B^1}{P_B^2}$ is the same. It means that both points lie in the same half-plane generated by the line that contains this segment.} 
 	
 	
 	%	\input{figures/Example_ H-SPP-S_ Second Figure B}
@@ -362,6 +392,10 @@
 	\end{align*}
 	
 	\noindent where $L$ and $U$ are the lower and upper bounds of the value of the corresponding determinants, respectively. If a determinant is positive, then $\alpha$ must be one to make the second inequality feasible. Analogously, if the determinant is not positive, $\alpha$ must be zero to enforce the correct condition.
+	
+	\JP{Assuming the possibility of going directly between neighbourhoods leads us to include product of continuous variables in the determinants of  constraints \eqref{eq:alphaC}. These products make our formulation for the \TSPN \ to become non-convex. However, in the \TSPHN, since two of the three arguments of each determinant are fixed, the $\alpha$ constraints become linear. This important difference motivates the computational comparison between the two formulations in Section \ref{section:experiments}.}
+	
+	
 	
 	\newcommand{\betamas}[4]{\beta(#1#2|#3#4)}
 	%\newcommand{\betamenos}[4]{\beta^{-}(#1#2|#3#4)}
@@ -440,14 +474,14 @@
 	If there is, at least, a barrier $B''\in\B$ that intersects the segment $\overline{PQ}$, then $\deltacheck{P}{Q}{P^1_{B''}}{P^2_{B''}}$ is zero and the second inequality forces $\varepsilon$ to be zero because the right hand side is fractional and the first inequality is nonpositive. Nevertheless, if no barrier intersects the segment $\segment{P}{Q}$, then $\varepsilon$ is equal to one, because the left-hand side of the first inequality is one and the right-hand side of the second inequality is also one. 
 	
 	Based on the description above, we can identify the set of actual edges of the graph $G$ using the variables $\varepsilon$ as follows:
-	$$ E_X = \{(P, Q):P,Q\in V_X\wedge\varepsilonvar{P}{Q}=1, P\neq Q\}, \quad X\in \{SPP,TSPH,TSP\}.$$
+	$$ E_X = \{(P, Q):P,Q\in V_X\CV{,} \varepsilonvar{P}{Q}=1, P\neq Q\}, \quad X\in \{SPP,TSPH,TSP\}.$$
 	
 	This representation of $E_X$ with $X\in \{SPP,TSPH,TSP\}$ will be exploited in the formulations described in the following subsections. 
 	
 	
-	It is interesting to note that $\EB$ is a fixed set whose edges can be computed using Remark \ref{rem:determinants}. Then, the variables $\varepsilon$ can be prefixed in advance. However, the edges in $E_X\setminus \EB$ depend on the points selected in the neighbourhoods, as shown in Figure \ref{fig:graph}.  The two subfigures show how the graph $\GSPP$ is generated. The blue dashed line segments represent the edges of $\ES$, the green dashed lines, the edges of $\ET$ and the red dashed lines represent the edges of $\EB$. A special case that can be highlighted occurs when the neighbourhoods, $N_S$ and $N_T$, are points. In that case, the induced graph is completely fixed and it is only necessary to find which edges are included by keeping in mind that the graph must be planar, i.e., without crossings. This idea is later exploited in Subsection \ref{section:reformulation}.
+	It is interesting to note that $\EB$ is a fixed set whose edges can be computed using Remark \ref{rem:determinants}. Then, the variables $\varepsilon$ can be prefixed in advance. However, the edges in $E_X\setminus \EB$ depend on the points selected in the neighbourhoods, \CV{as explained before. }
 	
-	\input{figures/Example_ H-SPP-S_ Second Figure A}
+	
 	%	\subsection{A formulation for the \SPPN}
 	%	The main goal of the \SPPN\  is to solve a shortest path problem in the undirected graph induced by the endpoints of the barriers and the neighbourhoods. 
 	%\input{figures/Example_ H-SPP-S_ Second Figure B}
@@ -491,9 +525,9 @@
 		%		\addConstraint{\eqref{eq:dC}, \eqref{eq:nC}.}{ }
 	\end{mini*}
 	
-	The objective function minimises the length of the path followed by the drone at the edges of the induced graph $\GSPP$. The first constraints are the flow conservation constraints that ensure the path is connected, the second constraints represent the sets $\ES$ and $\ET$ and the third ones state that the selected points must be in their respective neighbourhoods.
+	The objective function minimises the length of the path followed by the drone at the edges of the induced graph $\GSPP$. \JP{The first constraints are the flow conservation constraints that ensure connectivity (they will be also used in the formulations of the \TSPN),} the second constraints represent the sets $\ES$ and $\ET$ and the third ones state that the selected points must be in their respective neighbourhoods. \CV{Figure \ref{fig:solution_spp} reports the optimal solution for the example of the \SPPN\xspace.}
 	
-	\input{figures/Example_ H-SPP-S_ Solution}
+	%	\input{figures/Example_ H-SPP-S_ Solution}
 	
 	\subsubsection{Reformulating the \SPPN}\label{section:reformulation}
 	The formulation for the \SPPN \ presented above can be simplified taking into account the following observation.
@@ -513,11 +547,26 @@
 		as claimed.
 	\end{proof}
 	\noindent
-	Therefore, we can compute, \textit{`a priori'},  the sets $N_S^*$ and $N_T^*$ by solving a convex problem for each endpoint of the barriers:
-	\begin{align*}
-		N_S^*&=\{P_S(P_B^i):P_S(P_B^i)=\argmin_{P_S\in N_S} \|P_S - P_B^i\|\text{ and }\varepsilonvar{P_S}{P_B^i}=1\},\\
-		N_T^*&=\{P_T(P_B^i):P_T(P_B^i)=\argmin_{P_T\in N_T} \|P_B^i - P_T\|\text{ and }\varepsilonvar{P_B^i}{P_T}=1\}.
-	\end{align*}
+	
+	
+	%	Therefore, we can compute, \textit{`a priori'},  the sets $N_S^*$ and $N_T^*$ by solving a convex problem for each endpoint of the barriers:
+	%	\begin{align*}
+		%		N_S^*&=\{P_S(P_B^i):P_S(P_B^i)=\argmin_{P_S\in N_S} \|P_S - P_B^i\|\text{ and }\varepsilonvar{P_S}{P_B^i}=1\},\\
+		%		N_T^*&=\{P_T(P_B^i):P_T(P_B^i)=\argmin_{P_T\in N_T} \|P_B^i - P_T\|\text{ and }\varepsilonvar{P_B^i}{P_T}=1\}.
+		%	\end{align*}
+	\CV{
+		Therefore, we can compute, \textit{`a priori'},  the sets $N_X^*$, $X\in\{S,T\}$. For each $P_B^i\in\VB$, the corresponding point in the source neighbourhood $P_X(P_B^i)$ is computed by solving the following convex problem:
+		\begin{argmini*}
+			{P_X\in N_X}{d(P_XP_B^i)}
+			{}{P_X(P_B^i)=}\label{eq:computing_n}\tag{$N_X^*$}
+			\addConstraint{\eqref{eq:alphaC},\eqref{eq:betaC},\eqref{eq:gammaC},\eqref{eq:deltaC},}{\quad\forall P_B^1, P_B^2\in \VB}
+			\addConstraint{\eqref{eq:varepsilonC}}{}
+			\addConstraint{\varepsilonvar{P_X}{P_B^i}=1}
+			\addConstraint{	\|P_X - P_B^i\|\leq \dvar{P_X}{P_B^i}.}{}
+		\end{argmini*}
+		
+		Then, the visibility graph is constructed by means of these dominating sets.
+		This graph, required to address the new formulation, uses the previous graph $\GSPP$ \CV{in which} we increase the new edges that connect the initial and terminal points $P_S\in N_S$ and $P_T\in N_T$, respectively, with the corresponding points in $N_S^*$ and $N_T^*$. Moreover, we also augment the edges connecting the points in the dominating sets with the extreme points of the segments where the minimal distances are attained. The reader may note that since the optimisation model minimises the overall distance, in an optimal solution $P_S$ must belong to $N_S^*$ and $P_T$ to $N_T^*$.}
 	
 	%	Moreover, the points chosen in the solution, $P_S$ and $P_T$, can be represented by \CV{the constraints \eqref{eq:nCs} for the point $P_S$ in $N_S$ and \eqref{eq:nCt} for $P_T$ in $N_T$}:
 	
@@ -536,12 +585,9 @@
 			%	\end{align*}
 		%	\end{minipage}
 	
-	\bigskip
+	%	\bigskip
 	
-	
-	
-	The graph required to address the new formulation uses the previous graph $\GSPP$ and then we increase the new edges that connect the initial and terminal points $P_S\in N_S$ and $P_T\in N_T$, respectively, with the corresponding points in $N_S^*$ and $N_T^*$. Moreover, we also augment the edges connecting the points in the dominating sets with the extreme points of the segments where the minimal distances are attained. The reader may note that since the optimisation model minimises the overall distance, in an optimal solution $P_S$ must belong to $N_S^*$ and $P_T$ to $N_T^*$.
-	Therefore, the following sets are needed to build the new graph induced by the dominating sets.
+	Therefore, the following sets are needed to build the new \CV{visibility} graph induced by the dominating sets.
 	\begin{itemize}
 		\item $V_S^*=N^*_S$. Dominating set of points associated with the neighbourhood $N_S$.
 		\item $V_T^*=N^*_T$. Dominating set of points associated with the neighbourhood $N_T$.
@@ -555,7 +601,7 @@
 	We define the graph $\GSPPS=(\VSPPS, \ESPPS)$, where $\VSPPS=V^*_S\cup\VSPP\cup V^*_T$ and $\ESPPS=E^*_S\cup\EB\cup E^*_T.$
 	
 	
-	The major advantage of this approach is that, once the sets $N_S^*$ and $N_T^*$ are calculated beforehand, the entire graph $\GSPPS$ is fixed because the incident edges can be computed for each point $P_S(P_B^i)$ and $P_T(P_B^i)$, $P_B^i\in V_{\mathcal B}$, separately. Figure \ref{fig:dominatingset} shows how the dominating sets $N_S^*$ and $N_T^*$ are calculated for an instance of the \SPPN.
+	The major advantage of this approach is that, once the sets $N_S^*$ and $N_T^*$ are calculated beforehand, the entire graph $\GSPPS$ is fixed because the incident edges can be computed for each point $P_S(P_B^i)$ and $P_T(P_B^i)$, $P_B^i\in V_{\mathcal B}$, separately. Figure \ref{fig:dominatingset} shows how the dominating sets $N_S^*$ and $N_T^*$ are calculated for an instance of the \SPPN. 
 	
 	\input{figures/Example_ H-SPP-S_ Dominating}
 	
@@ -574,15 +620,15 @@
 		\addConstraint{\eqref{eq:nC}}{\quad\forall P\in \VS\cup\VT.}
 	\end{mini*}
 	
-	
+	\JP{Let us assume that the finite dominating sets $N^*_{S}$ and $N^*_{T}$ are given.}
 	\begin{prop}
 		Let $n=|\cal B|$. The \SPPN \ can be solved in polynomial time $O(n^3)$.
 	\end{prop}
 	\begin{proof}
-		The proof follows using the finite dominating sets $N^*_{S}$ and $N^*_{T}$. First, it is clear that the cardinality of these finite dominating sets is $O(n)$ since there is one point in each set for each vertex of a segment in $\cal B$. Next, we recall that given a set of polygonal obstacles with $O(n)$ vertices, the shortest linear size map from any given point can be computed in 
-		$O(n\log n)$ time. Once you have that map, finding the shortest path to any other point in the region is done in $O(n)$ time \citep{mitchell_shortest_2017}. Therefore, the \SPPN \ can be solved as follows.
+		The proof follows using the finite dominating sets $N^*_{S}$ and $N^*_{T}$. First, it is clear that the cardinality of these finite dominating sets is $O(n)$ since there is one point in each set for each  \JP{endpoint} of a segment in $\cal B$. Next, we recall that given a set of polygonal obstacles with $O(n)$ vertices, the shortest linear size map from any given point can be computed in 
+		$O(n\log n)$ time. Once you have that map, finding the shortest path to any other point in the region is done in $O(n)$ time \citep{mitchell2017a}. Therefore, the \SPPN \ can be solved as follows.
 		
-		For each point $P_S(P_B^i) \in N^*_S$ we compute the shortest path map of linear size and solve the problem of the shortest path with respect to all $O(n)$ points in $N^*_T$. In general, this operation takes $O(n\log n + n^2)$. The same operation has to be repeated for all $O(n)$ points in $N^*_S$. Therefore, the overall complexity to solve \SPPN is $O(n^3)$.
+		For each point $P_S(P_B^i) \in N^*_S$ we compute the shortest path map of linear size and solve the problem of the shortest path with respect to all $O(n)$ points in $N^*_T$. In general, this operation takes $O(n\log n + n^2)$. The same operation has to be repeated for all $O(n)$ points in $N^*_S$. \JP{The best among all those paths is the shortest path from $S$ to $T$.} Therefore, the overall complexity to solve \SPPN \ is $O(n^3)$.
 		
 	\end{proof}		
 	
@@ -590,14 +636,15 @@
 	\subsection{A formulation for the \TSPHN}
 	
 	
-	The rationale of the formulation for the \TSPHN \ is to consider the variant called Steiner TSP (STSP) (see \citet{letchford_compact_2013}), where some nodes in $\VB$ do not have to be visited, but if necessary, they can be visited more than once. 
+	The rationale of the formulation for the \TSPHN \ is to consider the variant called Steiner TSP (STSP) (see \citet{letchford2013}). \CV{In this problem, the task is to find a minimal cost route that visits a set of required nodes ($\VN$). During the route, vertices ($\VTSPH$) can be visited more than once, and edges ($\ETSPH$) may be traversed more than once.}
 	
-	It is well known that it is possible to convert any instance of the STSP into an instance of the standard TSP, by computing the shortest paths between every pair of required nodes, when these nodes are fixed. However, in our problem, since the points in the neighbourhoods are not fixed, this simplification cannot be applied to obtain an optimal solution for the \TSPHN, although it may produce an approximation to generate lower bounds for the \TSPHN.
+	%	It is well known that it is possible to convert any instance of the STSP into an instance of the standard TSP, by computing the shortest paths between every pair of required nodes, when these nodes are fixed. However, in our problem, since the points in the neighbourhoods are not fixed, this simplification cannot be applied to obtain an optimal solution for the \TSPHN, although it may produce an approximation to generate lower bounds for the \TSPHN.
 	
+	It is well-known that it is possible to convert any instance of the STSP into an instance of the standard TSP, by computing the shortest paths between every pair of required nodes, when these nodes are fixed. However, in our problem, since the points in the neighbourhoods are not fixed, \CV{the \SPPN} cannot be \CV{used directly} to \CV{derive} an optimal solution for the \TSPHN, although it may produce \CV{a good} approximation to generate lower bounds for the \TSPHN \ \CV{that allows to solve larger instances}.
 	
 	\newcommand{\gvar}[2]{g(#1#2)}
 	
-	Our approach relies on adjusting a single-commodity flow formulation to ensure connectivity. We can assume that the neighbourhood $N_1$ is required and that the drone departs from that depot (assuming that it is $N_1$) with $|\mathcal N|-1$ units of commodity. The idea is that the model must deliver one unit of commodity to each of the required neighbourhoods. Then, for each edge $(P, Q)\in \ETSPH$, we define the following variables:
+	\JP{Similarly as in the \SPPN, we use a single-commodity flow formulation to ensure connectivity. We can assume that the neighbourhood $N_1$ is required and that the drone departs from that depot (assuming that it is $N_1$) with $|\mathcal N|-1$ units of commodity and  one unit of commodity must be delivered to each neighbourhood. Then, for each edge $(P, Q)\in \ETSPH$, we define the following variables:}
 	
 	
 	\begin{itemize}
@@ -620,9 +667,9 @@
 		\addConstraint{\eqref{eq:nC}}{\quad\forall P_N\in \VN.}
 	\end{mini*}
 	
-	The first group of constraints imposes that the drone departs from each neighbourhood. The second block of constraints is the flow-conservation constraints. The third inequalities ensure that one unit of commodity is delivered to each of the required neighbourhood. The fourth ensures that the fictitious nodes at the end of the barriers do not consume commodity. Finally, the last inequalities enforce that some commodity goes throughout an edge only if this edge is used in the tour. The inequalities \eqref{eq:alphaC}, \eqref{eq:betaC}, \eqref{eq:gammaC}, \eqref{eq:deltaC}, \eqref{eq:varepsilonC}, \eqref{eq:yC}, \eqref{eq:dC}, \eqref{eq:nC} require the variables of the problem to be well defined.
+	The first group of constraints imposes that the drone departs from each neighbourhood. The second block of constraints is the flow-conservation constraints. The third inequalities ensure that one unit of commodity is delivered to each of the required neighbourhood. The fourth ensures that the fictitious nodes at the end of the barriers do not consume commodity. Finally, the last inequalities enforce that some commodity goes throughout an edge only if this edge is used in the tour. The inequalities \eqref{eq:alphaC}, \eqref{eq:betaC}, \eqref{eq:gammaC}, \eqref{eq:deltaC}, \eqref{eq:varepsilonC}, \eqref{eq:yC}, \eqref{eq:dC}, \eqref{eq:nC} require the variables of the problem to be well defined. \CV{Figure \ref{fig:solution_tsph} shows the optimal solution for the example of the \TSPHN\xspace.}
 	
-	\input{figures/Example_ H-TSP-S_ Solution}
+	%	\input{figures/Example_ H-TSPH-S_ Solution}
 	
 	\begin{prop}
 		The \TSPHN \ is NP-complete.
@@ -719,10 +766,40 @@
 		%		\end{itemize} 
 	
 	The formulation described above is analogous to those detailed in \eqref{form:H-TSPHN}.
-	The difference between the set of edges in the \TSPN \ with respect to the graph in \TSPHN \ is that, in the former case, the edges that join each pair of neighbourhoods must be considered. This fact leads to including the product of continuous variables in the constraints $\alpha$ of the model that represent the determinants that determine whether the segment joining the two variable points in the neighbourhoods crosses any barrier or not. These products make the problem a non-convex, quadratically constrained program.
+	The difference between the set of edges in the \TSPN \ with respect to the graph in \TSPHN \ is that, in the former case, the edges that join each pair of neighbourhoods must be considered. This fact leads to including the product of continuous variables in the constraints $\alpha$ of the model that represent the determinants that determine whether the segment joining the two variable points in the neighbourhoods crosses any barrier or not. These products make the problem a non-convex, quadratically constrained program. \CV{In Figure \ref{fig:solution_tsp}, the optimal solution for the example of the \TSPN\xspace is represented. It shows a direct path joining the blue and orange neighbourhoods.}
+	
+	\input{figures/Example_ Problems_ Solution}
 	
 	
-	
+	\CV{
+		\subsubsection{Real-world scenario}
+		In this subsection,	we include an example from a real neighbourhood of the city map of Cordoba in the south of Spain. In order to make surveillance drone activities in some parks of the district, the neighbourhoods, represented as circles, must be visited by the drone by taking into account buildings that can not be crossed. Figure \ref{fig:realworld1} shows a part of the district that contains three parks that must be inspected and the buildings the drone cannot cross. Figure \ref{fig:realworld2} represents a block view that includes, in a simpler way, the barriers and neighbourhoods that must be visited. Finally, the optimal solution for the \TSPN \ for this real scenario is given by the \JP{tour} included in Figure \ref{fig:realworld3}. 
+		
+		The data describing this case study can be downloaded from \citet{puerto2023a}.
+		
+		\begin{figure}
+			\centering
+			\begin{minipage}{0.3\linewidth}
+				\centering
+				\caption{Satellite view for the real-world scenario}
+				\includegraphics[width=1\linewidth]{figures/example_satellite}
+				\label{fig:realworld1}
+			\end{minipage}
+			\begin{minipage}{0.3\linewidth}
+				\centering
+				\caption{Block view for the real-world scenario}
+				\includegraphics[width=1\linewidth]{figures/example_block}
+				\label{fig:realworld2}
+			\end{minipage}
+			\begin{minipage}{0.3\linewidth}
+				\centering
+				\caption{Optimal solution for the real-world scenario}
+				\includegraphics[width=1\linewidth]{figures/example_solution}
+				\label{fig:realworld3}
+			\end{minipage}
+		\end{figure}
+		
+	}
 	%\textcolor{red}{¿Solucion del problema del TSP propuesto en el dibujo? }
 	
 	%Note that this problem is not convex because the determinants that model the orientation of the points to check if there exist crossings produce product of variables. 
@@ -841,7 +918,7 @@
 	$$r_N:P_N^1+\lambda\overrightarrow{P_N^1P_N^2},\qquad\lambda\in\mathbb R.$$
 	
 	
-	\begin{algorithm}[H]
+	\begin{algorithm}[h!]
 		\caption{Checking computationally whether $(P^{}_N, P^i_B)\not\in \EN$ when $N$ is a segment.}
 		\label{alg:Algorithm1}
 		\SetKwInOut{Input}{Initialization}\SetKwInOut{Output}{output}
@@ -985,6 +1062,7 @@ In this subsection, the geometry of the problem is exploited to fix the variable
 
 \input{figures/Fixing_Variables}
 
+
 \section{Computational experiments}\label{section:experiments}
 This section is devoted to studying the performance of \eqref{form:H-TSPHN} and \eqref{form:H-TSPN} formulations proposed in Section \ref{section:formulations}. In the first subsection, the procedure for generating the considered random instances is described. The second subsection details the experiments that have been conducted. The third subsection reports the results obtained in these experiments.
 
@@ -1007,7 +1085,7 @@ To generate the instances of our experiments, we assume assumptions \ref{A1}-\re
 	Under assumptions \ref{A1}-\ref{A4}, the maximum number of balls that can be considered in \TSPHN \ is $O(n^2)$.
 \end{prop}
 \begin{proof}
-	The proof is based on the properties of the visibility graph $VG(\cal B)$ of the barrier configuration in $\cal B$ \citep{mitchell_shortest_2017}:  It is clear that the maximum number of balls coincides with the number of faces, $f_{VG(\cal B)}$, of $VG(\cal B)$.  Recall that the number of vertices in $\cal B$ is $n$. Next, by the Euler formula, the number of faces $f_{VG(\cal B)}$ is $2+E_{VG(\cal B)}-n$. Since $E_{VG(\cal B)}=O(n^2)$, it follows that $f_{VG(\cal B)}=O(n^2)$.
+	\CV{Let $G_{\mathcal B}=(\VB, \EB)$ the visibility graph of the barrier configuration in $\mathcal B$. The proof is based on the properties of this visibility graph described in \cite{mitchell2017a}, \JP{where it is proven that for a graph with $n$ vertices $\EB =O(n^2)$.}.  It is clear that the maximum number of balls coincides with the number of faces, $f_{G_{\mathcal B}}$, of $G_{\mathcal B}$.  Recall that the number of vertices in $\cal B$ is $n$. Next, by the Euler formula, the number of faces $f_{G_{\mathcal B}}$ is $2+E_{G_{\mathcal B}}-n$. Since $\EB=O(n^2)$, it follows that $f_{G_{\mathcal B}}=O(n^2)$.}
 \end{proof}
 
 Algorithm \ref{alg:Algorithm3} describes a general way to construct instances where neighbourhoods are balls.
@@ -1064,6 +1142,7 @@ Algorithm \ref{alg:Algorithm3} describes a general way to construct instances wh
 	Generate neighbourhoods around $points$ and include them in $\mathcal N$. 
 \end{algorithm}
 
+\CV{The two following subsections develop Steps 2 and 3 of the Algorithm \ref{alg:Algorithm3}, respectively. Specifically, the Algorithm \ref{alg:Algorithm4}, related with Step 2, details how barriers are generated assuming \ref{A1}-\ref{A4}, while the Algorithm \ref{alg:Algorithm5}, related with Step 3, describes the way neighbourhoods are designed. In practice, Algorithms \ref{alg:Algorithm3}, \ref{alg:Algorithm4} and \ref{alg:Algorithm5} are implemented to be run sequentially and generate the battery of instances used for testing the formulations.}
 
 \subsubsection*{Barriers generation}
 In this subsection, we focus on how to generate line segments located in general position without crossings. The idea is to build bisectors that separate each pair of points in the set $points$. The initial length of each bisector is $r_{\text{init}}$. This length is reduced until it does not intersect any of the previously generated line segments. The Algorithm \ref{alg:Algorithm4} reports the pseudocode to generate barriers.
@@ -1113,32 +1192,38 @@ The first case is used to study the performance of the models \TSPHN \ and \TSPN
 		Set the ball $N$ whose centre is $P$ and radii is $radii$. \\
 		Include $N$ in $\mathcal N$.}
 	%}
-\end{algorithm}
-
-The line segments instances are generated by randomly selecting two diametrically opposite points in the boundary of the balls instances obtained with Algorithm \ref{alg:Algorithm5}.
-
-
-The second case focuses on the effectiveness of the exact model for the \TSPN \ in terms of \emph{overlapping ratio} of the circles. This ratio, introduced in \cite{mennell_heuristics_2009}, is calculated by dividing the average radius of the neighbourhood sets by the length of the longest side of $R$. \cite{mennell_heuristics_2009} shows that the higher the overlaping ratio, the higher the difficulty of the instance. Algorithm \ref{alg:Algorithm5} is slightly modified by setting a fixed value for $radii$, based on instances considered in \cite{behdani_integer-programming-based_2014}.
-
-
-%	To generate the instances when the neighbourhoods are segments, we can take the balls built in the previous procedure and draw a random angle that determines which point and its diametrically opposite point are selected as the endpoints of the line segment.
-
-% \textcolor{red}{Quizás evitar el uso $n$ sea adecuado para evitar confusiones}
-\subsection{Configuration of the experiments}
-In this work, two experiments are designed to study the behaviour of the models \TSPHN \ and \TSPN. In the first experiment, we generate five instances for each number of randomly-sized neighbourhoods in $|\mathcal N|\in\{5, 10, 20, 30, 50, 60, 65, 70, 75, 80, 100\}$ within $R=[0,100]\times[0, 100]$. These neighbourhoods are balls and line segments that have been created using the Algorithm \ref{alg:Algorithm5}. For each instance, we run the models with and without strengthening the formulations.
-
-In the second experiment, based on \cite{behdani_integer-programming-based_2014}, we generate five instances with a number $N$ in $|\mathcal N|\in\{6, 8, 10, 12, 14, 16, 18, 20\}$ of fixed circles. The centres are drawn in $R=[0, 0]\times[16, 10]$. The fixed $radii$ considered are $0.25$, $0.5$, and $1$. Therefore, the overlap ratios are $0.015625$, $0.03125$ and $0.0625$, respectively. We run \TSPN \ with strengthening to see the performance of our methods when neighbourhoods overlap.
-
-Formulations are coded in Python 3.9.2 (\citet{van_rossum_python_2009}) and solved in Gurobi 9.1.2 (\citet{gurobi_optimization_llc_gurobi_2022}) on an AMD® Epyc 7402p 8-core processor.
-
-The values obtained by solver that are reported in our tables are:
-
-\begin{itemize}
+	\end{algorithm}
+	
+	The line segments instances are generated by randomly selecting two diametrically opposite points in the boundary of the balls instances obtained with Algorithm \ref{alg:Algorithm5}.
+	
+	
+	The second case focuses on the effectiveness of the exact model for the \TSPN \ in terms of \emph{overlapping ratio} of the circles. This ratio, introduced in \cite{mennell2009a}, is calculated by dividing the average radius of the neighbourhood sets by the length of the longest side of $R$. \cite{mennell2009a} shows that the higher the overlaping ratio, the higher the difficulty of the instance. Algorithm \ref{alg:Algorithm5} is slightly modified by setting a fixed value for $radii$, based on instances considered in \cite{behdani2014}.
+	
+	\JP{The data of all the instances used in all our computational experiments can be downloaded from \citet{puerto2023a}.}
+	
+	%	To generate the instances when the neighbourhoods are segments, we can take the balls built in the previous procedure and draw a random angle that determines which point and its diametrically opposite point are selected as the endpoints of the line segment.
+	
+	% \textcolor{red}{Quizás evitar el uso $n$ sea adecuado para evitar confusiones}
+	\subsection{Configuration of the experiments}
+	In this work, \CV{three} experiments are designed to study the behaviour of the models \TSPHN \ and \TSPN. 
+	
+	In the first experiment, we construct five instances for each number of randomly-sized neighbourhoods in $|\mathcal N|\in\{5, 10, 20, 30, 50, 60, 65, 70, 75, 80, 100\}$ within $R=[0,100]\times[0, 100]$. These neighbourhoods are balls and line segments that have been created using the Algorithm \ref{alg:Algorithm5}. \CV{In addition, barriers are generated according to Algorithm \ref{alg:Algorithm4}. \boldsymbol{$|\mathcal B|$} reports the average number of barriers generated for each experiment.} For each instance, we run the models with and without strengthening the formulations.
+	
+	\CV{In the second experiment, we generate \CV{ten instances} with a number $|\mathcal N| = 10$ of fixed circles of $radii$ equals to 0.5. The centres are drawn in $R=[0, 0]\times[16, 10]$. We run \TSPN \ considering removing edges, variable fixing and big M estimation in a separate way to know the marginal contribution of each of these strengthening methods to improve the behaviour of the solver.} 
+	
+	In the \CV{third} experiment, based on \cite{behdani2014}, we generate \CV{ten instances} with a number $|\mathcal N|\in\{6, 8, 10, 12, 14, 16, 18, 20\}$ of fixed circles. The centres are drawn in $R=[0, 0]\times[16, 10]$. The fixed $radii$ considered are $0.25$, $0.5$, and $1$. Therefore, the overlap ratios are $0.015625$, $0.03125$ and $0.0625$, respectively. We run \TSPN \ with strengthening to see the performance of our methods when neighbourhoods overlap.
+	
+	Formulations are coded in Python 3.9.2 (\citet{vanrossum2009}) and solved in Gurobi 9.1.2 (\citet{gurobioptimizationllc2022}) on an AMD® Epyc 7402p 8-core processor.
+	
+	The values obtained by the solver that are reported in our tables are:
+	
+	\begin{itemize}
 \item \boldsymbol{$\#Found$}: number of instances in which the solver finds a feasible solution.
 \item \boldsymbol{$Gap$}: gap between the best incumbent solution with respect to the best bound found by the solver. It is computed as $Gap=(upper\, bound - lower\, bound)/lower\, bound$.
-\item \boldsymbol{$Time_{model}$}: time spent by the solver to obtain the best solution found.
-\item \boldsymbol{$Time_{prepro}$}: time spent by Python to set up the model, including the strengthening of the formulation.
-\item \boldsymbol{$Time_{total}$}: overall time to solve the model.
+\item \boldsymbol{$Time_{model}$}: time \CV{(in seconds)} spent by the solver to obtain the best solution found.
+\CV{\item \boldsymbol{$Time_{marginal}$}: time \CV{(in seconds)} spent by Python to set up the model, including only a strengthening subprocess.}
+\item \boldsymbol{$Time_{prepro}$}: time \CV{(in seconds)} spent by Python to set up the model, including all the strengthening process.
+\item \boldsymbol{$Time_{total}$}: overall time \CV{(in seconds)} to solve the model.
 \end{itemize}
 
 For all the experiments, a time limit of 1 hour of solver time was set in the branch-and-bound procedure.
@@ -1146,135 +1231,12 @@ For all the experiments, a time limit of 1 hour of solver time was set in the br
 
 
 \subsection{Results of the experiments}
+
+
 We report the results of the first experiment in Table \ref{table:results}. The layout is organised in 3 blocks of columns. The first block describes the parameters of the problem: number of neighbourhoods $|\mathcal{N}|$, if \ref{A4} is assumed or not (\TSPHN\xspace vs \TSPN), if strengthening is considered, and the number of barriers. The second and third blocks describe the average results obtained with the solver for circles and segments, respectively. 
 
 %	typology of neighbourhood used in the experiment (Balls or Segments), the third one (strengthening)  informs whether the strengthening is being applied or not (True or False). The next three blocks include information  on the number of barriers ($|\mathcal{B}|$), the  gap at termination (Gap) defined as $Gap=(upper\, bound - lower\, bound)/lower\, bound$, and the computing time (Runtime). The block $|\mathcal{B}|$ indicates the minimum and maximum number of barriers considered in each of the instances for each fixed number $|\mathcal{N}|$ of neighbours. The block Gap contains three columns reporting the average (mean), minimum (min), and maximum (max) gaps of the ten instances considered for each combination of parameters. Analogously, the block Runtime also includes three columns reporting the average (mean), minimum (min) and maximum (max) computing time of the ten instances considered for each combination of parameters.
 %	By rows, Table \ref{table:results} reports results for instances with a number of neigbourhoods $|\mathcal{N}|$ in the set $\{5,10,20,30,50,80,100\}$. For each value of $|\mathcal{N}|$  we report results for two typologies of neigbourhoods, namely Balls and Segments, without strengthening (False) and with strengthening (True).
-
-
-Analysing the results in Table \ref{table:results}, we first observe that solving the problem considering balls as neighbourhoods is harder than solving with segments. Next, we also observe that this approach solves to optimality all instances for circles up to $|\mathcal{N}|=30$ with strengthening for the \TSPHN \ problem. However, if we do not strengthen the formulation, the solver always reports gap for all the instances with circles. The same behaviour can be seen for the \TSPN \xspace up to $|\mathcal{N}|=30$. Nevertheless, for sizes $|\mathcal{N}|$ in 50-75, both formulations start to differ in the number of instances in which the solver can find a feasible solution. For the \TSPHN, the reader may observe that strengthening does not improve the gap within the time limit. However, in the \TSPN, strengthening does increase the number of instances in which the solver finds a solution and the fraction of gaps certified after the execution time. Anyway, whenever a feasible solution is found, the maximum average gap that is reported with strengthening is $0.35$. Finally, for sizes 80 and 100, the solver cannot find any solution for any of the models, regardless of whether strengthening is considered or not. In terms of execution time, we can conclude that strengthening always improves both the time to obtain the optimal solution ($\boldsymbol{Time_{model}}$) and the time the computer takes to load all the variables and constraints of the model ($\boldsymbol{Time_{prepro}}$). This difference is more appreciable in the \TSPHN, as the reader can notice in the aggregation of these two columns in ($\boldsymbol{Time_{total}}$). This fact can be explained in terms of the number of barriers: the higher the number of barriers, the larger the number of variables that can be fixed beforehand. On the other hand, we can observe that Gurobi can report the optimal solution for almost all segment instances generated by solving the strengthened versions of the \TSPHN\xspace and \TSPN. In addition, the time spent to solve all these instances is lower than the time limit. However, the time to load and strengthen the model is very similar to that for circle instances.
-
-In Figures \ref{fig:Fig4} and \ref{fig:Fig5}, the reader can compare, at a glance, the time that the solver spent to obtain the best solution found and the gap between this solution and the best bound found by the solver. We can conclude that strengthening improves significantly the time spent by Gurobi to get the optimal solution and instances with circles are harder to be solved than those with segments, in terms of time and final gap.
-
-%	In addition, both typologies of instances, up to $|\mathcal{N}|=50$, are almost solved by obtaining a small average gap. %and also almost all for balls leaving always a gap less than or equal to  1\%. 
-%	We also observe that the use of strengthening helps in solving the instances since in those cases where they are not solved to optimality the gap and the runtime are reduced. The situation for $|\mathcal{N}|\in \{80,100\}$ is slightly different. For $|\mathcal{N}|=80$ and balls as neighbourhoods, the strengthening time takes more than an hour so that no results can be reported whereas without strengthening the formulations are always able to find solutions with average gaps of ($\le 0.6$) within one hour of computing time.  % For segments we see that the use of strengthening helps and the gaps are smaller within the time limit. 
-%	Finally, for the case of $|\mathcal{N}|=100$ balls as neighbourhoods, none of the configurations with or without strengthening is capable to find a feasible solution in 3600 seconds. The behaviour is different for segments. In this case, both configurations provide feasible solutions. In the last case, the use of strengthening is rather heavy and consumes most of the 3600 seconds of computing time. This can be observed in the final gaps. The case without strengthening reports better gaps, as leaving more time to the solver to find better solutions, and the average gap is $0.53$ rather than $0.81$ for the case with strengthening.
-%	
-%% Table generated by Excel2LaTeX from sheet 'Hoja1'
-%\begin{table}[htbp]
-%	\centering
-%	\caption{Add caption}
-%	\resizebox{\textwidth}{!}{
-%	\begin{tabular}{|c|c|c||cc|ccc|ccc|}
-	%		\hline
-	%		$\bm{|\mathcal N|}$ & \textbf{Typology} & \textbf{strengthening} & \multicolumn{2}{c|}{$\bm{|\mathcal B|}$} & \multicolumn{3}{c|}{\textbf{Gap}} & \multicolumn{3}{c|}{\textbf{Runtime}} \bigstrut[t]\\
-	%		&       &       & \textbf{min} & \textbf{max} & \textbf{mean} & \textbf{min} & \textbf{max} & \textbf{mean} & \textbf{min} & \textbf{max} \bigstrut[b]\\
-	%		\hline
-	%		\hline
-	%		\multirow{4}[4]{*}{5} & \multirow{2}[2]{*}{Ball} & False & 8     & 11    & 0     & 0     & 0     & 2.46  & 1.2   & 8.05 \bigstrut[t]\\
-	%		&       & True  & 8     & 11    & 0     & 0     & 0     & 1.63  & 0.81  & 2.49 \bigstrut[b]\\
-	%		\cline{2-11}          & \multirow{2}[2]{*}{Segment} & False & 8     & 11    & 0     & 0     & 0     & 1.35  & 0.82  & 2.52 \bigstrut[t]\\
-	%		&       & True  & 8     & 11    & 0     & 0     & 0     & 1.09  & 0.79  & 1.41 \bigstrut[b]\\
-	%		\hline
-	%		\hline
-	%		\multirow{4}[4]{*}{10} & \multirow{2}[2]{*}{Ball} & False & 15    & 21    & 0     & 0     & 0     & 13.43 & 7.85  & 27.68 \bigstrut[t]\\
-	%		&       & True  & 15    & 21    & 0     & 0     & 0     & 6.22  & 3.61  & 11.85 \bigstrut[b]\\
-	%		\cline{2-11}          & \multirow{2}[2]{*}{Segment} & False & 15    & 21    & 0     & 0     & 0     & 7.41  & 5.04  & 9.23 \bigstrut[t]\\
-	%		&       & True  & 15    & 21    & 0     & 0     & 0     & 4.54  & 3.15  & 5.7 \bigstrut[b]\\
-	%		\hline
-	%		\hline
-	%		\multirow{4}[4]{*}{20} & \multirow{2}[2]{*}{Ball} & False & 35    & 40    & 0     & 0     & 0     & 132.22 & 58.21 & 225.89 \bigstrut[t]\\
-	%		&       & True  & 35    & 40    & 0     & 0     & 0     & 45.86 & 20.32 & 104.49 \bigstrut[b]\\
-	%		\cline{2-11}          & \multirow{2}[2]{*}{Segment} & False & 35    & 40    & 0     & 0     & 0     & 97.25 & 40.06 & 166.67 \bigstrut[t]\\
-	%		&       & True  & 35    & 40    & 0     & 0     & 0     & 38.47 & 15.77 & 66.05 \bigstrut[b]\\
-	%		\hline
-	%		\hline
-	%		\multirow{4}[4]{*}{30} & \multirow{2}[2]{*}{Ball} & False & 49    & 60    & 0     & 0     & 0     & 373.32 & 246.51 & 639.97 \bigstrut[t]\\
-	%		&       & True  & 49    & 60    & 0     & 0     & 0     & 127.15 & 53.08 & 219.85 \bigstrut[b]\\
-	%		\cline{2-11}          & \multirow{2}[2]{*}{Segment} & False & 49    & 60    & 0     & 0     & 0     & 414.11 & 156.76 & 979.68 \bigstrut[t]\\
-	%		&       & True  & 49    & 60    & 0     & 0     & 0     & 112.68 & 50.66 & 182.82 \bigstrut[b]\\
-	%		\hline
-	%		\hline
-	%		\multirow{4}[4]{*}{50} & \multirow{2}[2]{*}{Ball} & False & 79    & 91    & 0     & 0     & 0.01  & 1634.35 & 603.48 & 3605.13 \bigstrut[t]\\
-	%		&       & True  & 79    & 91    & 0     & 0     & 0     & 553.93 & 181.13 & 1599.18 \bigstrut[b]\\
-	%		\cline{2-11}          & \multirow{2}[2]{*}{Segment} & False & 79    & 91    & 0     & 0     & 0.01  & 1618.95 & 855.65 & 3604.93 \bigstrut[t]\\
-	%		&       & True  & 79    & 91    & 0     & 0     & 0     & 523.08 & 152.08 & 1548.64 \bigstrut[b]\\
-	%		\hline
-	%		\hline
-	%		\multirow{4}[4]{*}{80} & \multirow{2}[2]{*}{Ball} & False & 125   & 145   & -     & -     & -     & -     & -     & - \bigstrut[t]\\
-	%		&       & True  & 125   & 145   & 0.01  & 0     & 0.02  & 3110.68 & 1976.01 & 3601.13 \bigstrut[b]\\
-	%		\cline{2-11}          & \multirow{2}[2]{*}{Segment} & False & 125   & 145   & -     & -     & -     & -     & -     & - \bigstrut[t]\\
-	%		&       & True  & 125   & 145   & 0.01  & 0     & 0.03  & 2835.09 & 1663.53 & 3601.26 \bigstrut[b]\\
-	%		\hline
-	%	\end{tabular}}%
-%	\label{tab:addlabel}%
-%\end{table}%
-
-%	% Table generated by Excel2LaTeX from sheet 'Hoja1'
-%	\begin{table}[htbp]
-%		\centering
-%		\caption{Table of computational results obtained with the formulation \eqref{form:H-TSPHN}}
-%		\resizebox{\textwidth}{!}{
-	%			\begin{tabular}{|c|c|c||cc|ccc|ccc|}
-		%				\hline
-		%				$\bm{|\mathcal N|}$ & \textbf{neighbourhood} & \textbf{strengthening} & \multicolumn{2}{c|}{$\bm{|\mathcal B|}$} & \multicolumn{3}{c|}{\textbf{Gap}} & \multicolumn{3}{c|}{\textbf{Runtime}} \bigstrut[t]\\
-		%				&       &       & \textbf{min} & \textbf{max} & \textbf{mean} & \textbf{min} & \textbf{max} & \textbf{mean} & \textbf{min} & \textbf{max} \bigstrut[b]\\
-		%				\hline
-		%				\hline
-		%				\multirow{4}[4]{*}{5} & \multirow{2}[2]{*}{Ball} & False & \multirow{4}[4]{*}{8} & \multirow{4}[4]{*}{11} & 0.05  & 0     & 0.55  & 371.84 & 2.96  & 3600 \bigstrut[t]\\
-		%				&       & True  &       &       & 0     & 0     & 0     & 3.46  & 1.4   & 13 \bigstrut[b]\\
-		%				\cline{2-3}\cline{6-11}          & \multirow{2}[2]{*}{Segment} & False &       &       & 0.08  & 0     & 0.49  & 1085.48 & 0.68  & 3600 \bigstrut[t]\\
-		%				&       & True  &       &       & 0     & 0     & 0     & 1.44  & 0.6   & 2.46 \bigstrut[b]\\
-		%				\hline
-		%				\hline
-		%				\multirow{4}[4]{*}{10} & \multirow{2}[2]{*}{Ball} & False & \multirow{4}[4]{*}{15} & \multirow{4}[4]{*}{21} & 0.17  & 0     & 0.86  & 998.71 & 59.09 & 3600 \bigstrut[t]\\
-		%				&       & True  &       &       & 0     & 0     & 0     & 36.66 & 10.72 & 87.29 \bigstrut[b]\\
-		%				\cline{2-3}\cline{6-11}          & \multirow{2}[2]{*}{Segment} & False &       &       & 0.33  & 0     & 0.86  & 1460.31 & 16.78 & 3600 \bigstrut[t]\\
-		%				&       & True  &       &       & 0     & 0     & 0     & 8.53  & 2.66  & 12.25 \bigstrut[b]\\
-		%				\hline
-		%				\hline
-		%				\multirow{4}[4]{*}{20} & \multirow{2}[2]{*}{Ball} & False & \multirow{4}[4]{*}{35} & \multirow{4}[4]{*}{40} & 0.06  & 0.02  & 0.1   & 3600  & 3600  & 3600 \bigstrut[t]\\
-		%				&       & True  &       &       & 0     & 0     & 0.01  & 1424.85 & 140.54 & 3600 \bigstrut[b]\\
-		%				\cline{2-3}\cline{6-11}          & \multirow{2}[2]{*}{Segment} & False &       &       & 0     & 0     & 0.02  & 1430.13 & 166.89 & 3600 \bigstrut[t]\\
-		%				&       & True  &       &       & 0     & 0     & 0     & 198.9 & 30.75 & 426.55 \bigstrut[b]\\
-		%				\hline
-		%				\hline
-		%				\multirow{4}[4]{*}{30} & \multirow{2}[2]{*}{Ball} & False & \multirow{4}[4]{*}{49} & \multirow{4}[4]{*}{60} & 0.12  & 0     & 0.93  & 3566.2 & 3246.53 & 3600 \bigstrut[t]\\
-		%				&       & True  &       &       & 0     & 0     & 0.02  & 2146.17 & 314.65 & 3600 \bigstrut[b]\\
-		%				\cline{2-3}\cline{6-11}          & \multirow{2}[2]{*}{Segment} & False &       &       & 0     & 0     & 0.01  & 2119.06 & 315.56 & 3600 \bigstrut[t]\\
-		%				&       & True  &       &       & 0     & 0     & 0     & 1140.02 & 353.73 & 3209.94 \bigstrut[b]\\
-		%				\hline
-		%				\hline
-		%				\multirow{4}[4]{*}{50} & \multirow{2}[2]{*}{Ball} & False & \multirow{4}[4]{*}{79} & \multirow{4}[4]{*}{91} & 0.09  & 0.02  & 0.19  & 3600  & 3600  & 3600 \bigstrut[t]\\
-		%				&       & True  &       &       & 0.08  & 0.01  & 0.21  & 3600  & 3600  & 3600 \bigstrut[b]\\
-		%				\cline{2-3}\cline{6-11}          & \multirow{2}[2]{*}{Segment} & False &       &       & 0.02  & 0.01  & 0.09  & 3600  & 3600  & 3600 \bigstrut[t]\\
-		%				&       & True  &       &       & 0.02  & 0     & 0.1   & 2956.24 & 2053.62 & 3600 \bigstrut[b]\\
-		%				\hline
-		%				\hline
-		%				\multirow{4}[4]{*}{80} & \multirow{2}[2]{*}{Ball} & False & \multirow{4}[4]{*}{125} & \multirow{4}[4]{*}{145} & 0.6   & 0.42  & 0.79  & 3600  & 3600  & 3600 \bigstrut[t]\\
-		%				&       & True  &       &       & -     & -     & -     & -     & -     & - \bigstrut[b]\\
-		%				\cline{2-3}\cline{6-11}          & \multirow{2}[2]{*}{Segment} & False &       &       & 0.16  & 0.03  & 0.62  & 3600  & 3600  & 3600 \bigstrut[t]\\
-		%				&       & True  &       &       & 0.61  & 0.01  & 1     & 3600  & 3600  & 3600 \bigstrut[b]\\
-		%				\hline
-		%				\hline
-		%				\multirow{4}[4]{*}{100} & \multirow{2}[2]{*}{Ball} & False & \multirow{4}[4]{*}{156} & \multirow{4}[4]{*}{178} & -     & -     & -     & -     & -     & - \bigstrut[t]\\
-		%				&       & True  &       &       & -     & -     & -     & -     & -     & - \bigstrut[b]\\
-		%				\cline{6-11}          & \multirow{2}[2]{*}{Segment} & False &       &       & 0.53  & 0.02  & 0.99  & 3600  & 3600  & 3600 \bigstrut[t]\\
-		%				&       & True  &       &       & 0.81  & 0.5   & 1     & 3600  & 3600  & 3600 \bigstrut[b]\\
-		%				\hline
-		%		\end{tabular}}%
-%		\label{table:results}%
-%	\end{table}%
-
-%	The same behaviour is also observed in Figure 9. The left subfigure reports the boxplot diagram for the experiments with segments as neighbourhoods, whereas the right one reports the boxplot diagram for balls as neighbourhoods. We see that strengthening always helps since the corresponding boxes are below those without strengthening, whenever the problems are solved well. Moreover,  we also observe in those cases where the model solves the instances  $|\mathcal{N}|\le 50$, that the problem with balls is harder than with segments since the boxes in the left subfigure are below the ones in the right subfigure.
-%	
-
-
-
-
-
-\input{figures/runtime_boxplot_first_experiment}
-\input{gap_boxplot_first_experiment}
 
 % Table generated by Excel2LaTeX from sheet 'Sheet1'
 \begin{table}[htbp]
@@ -1344,7 +1306,170 @@ In Figures \ref{fig:Fig4} and \ref{fig:Fig5}, the reader can compare, at a glanc
 \label{table:results}%
 \end{table}%
 
-In Table \ref{table:results_smith}, we detail the values obtained with Gurobi for the second experiment. The first block reports the size of the instances and the average number of barriers for each size. The other three blocks describe the features reported by the solver to compare the efficiency of the model for $radii$ equals to 0.25, 0.5 and 1, respectively. For the smallest $radii$, all the instances are almost solved to optimality reporting a maximum average gap of 0.03 for $|\mathcal N|=20$. In the instances with $radii=0.5$, the number of feasible solutions found starts to decrease from size 16. In terms of the gap, from $|\mathcal N|=14$, the solver is unable to find the optimal solution because it reaches the time limit. In any case, the maximum average gap for these instances is 0.32 for the largest size. Finally, for $radii=1$, only instances with $|\mathcal N|=6$ are solved to optimality. For sizes 10, 12 and 14, the solver only finds a feasible solution for one half of the instances, approximately. However, it cannot find any solution for $|\mathcal N|\geq 16$. The results obtained for these instances lead us to conclude that the larger the radii of the neighbourhood, the higher the complexity to be solved. This conclusion is in line with the existing trend in the literature, as exposed in \citet{puerto_routing_2022} or \citet{blanco_minimum_2017}.
+Analysing the results in Table \ref{table:results}, we first observe that solving the problem considering balls as neighbourhoods is harder than solving with segments. Next, we also observe that this approach solves to optimality all instances for circles up to $|\mathcal{N}|=30$ with strengthening for the \TSPHN \ problem. However, if we do not strengthen the formulation, the solver always reports gap for all the instances with circles. The same behaviour can be seen for the \TSPN \xspace up to $|\mathcal{N}|=30$. Nevertheless, for sizes $|\mathcal{N}|$ in 50-75, both formulations start to differ in the number of instances in which the solver can find a feasible solution. For the \TSPHN, the reader may observe that strengthening does not improve the gap within the time limit. However, in the \TSPN, strengthening does increase the number of instances in which the solver finds a solution and the fraction of gaps certified after the execution time. Anyway, whenever a feasible solution is found, the maximum average gap that is reported with strengthening is $0.35$. Finally, for sizes 80 and 100, the solver cannot find any solution for any of the models, regardless of whether strengthening is considered or not. In terms of execution time, we can conclude that strengthening always improves both the time to obtain the optimal solution ($\boldsymbol{Time_{model}}$) and the time the computer takes to load all the variables and constraints of the model ($\boldsymbol{Time_{prepro}}$). This difference is more appreciable in the \TSPHN, as the reader can notice in the aggregation of these two columns in ($\boldsymbol{Time_{total}}$). This fact can be explained in terms of the number of barriers: the higher the number of barriers, the larger the number of variables that can be fixed beforehand. On the other hand, we can observe that Gurobi can report the optimal solution for almost all segment instances generated by solving the strengthened versions of the \TSPHN\xspace and \TSPN. In addition, the time spent to solve all these instances is lower than the time limit. However, the time to load and strengthen the model is very similar to that for circle instances.
+
+In Figures \ref{fig:Fig4} and \ref{fig:Fig5}, the reader can compare, at a glance, the time that the solver spent to obtain the best solution found and the gap between this solution and the best bound found by the solver. We can conclude that strengthening improves significantly the time spent by Gurobi to get the optimal solution and instances with circles are harder to be solved than those with segments, in terms of time and final gap.
+
+\input{figures/runtime_boxplot_first_experiment}
+\input{gap_boxplot_first_experiment}
+
+
+%Once strengthening techniques are applied in a joint way, in the second experiment, we want to study the effect of each of these procedures described in Section \ref{section:strengthening} to determine which helps the most to find the optimal solution. The computational results of this experiment are summarised in Table \ref{table:results_marginal}. The first block reports the number of neighbourhoods and the average number of barriers for the instances. The second block, the distinction between these three procedures, including the case in which any of them are used. Finally, the third block details the critical values in terms of number of feasible solutions found, gap and time consuming obtained with the solver in the resolution of the instances.
+\JP{Once we have validated in our first set of experiments that the proposed strengthening techniques are useful, we want to test their individual contribution to that improvement. For this reason, we have  designed a second experiment to assess the usefulness of each individual strengthenings: edge removing, variable fixing and Big-M estimation. In this case, we have considered a representative set of instances with $|\mathcal{N}|=10$ and an average number of barriers $|\mathcal{B}|=18$ and we have compared the performance of the plain formulation without any improvement and with each one of the strengthenings at a time.
+%% Table generated by Excel2LaTeX from sheet 'Sheet1'
+%\begin{table}[htbp]
+%	\centering
+%	\caption{Computational results \JP{for assessing the usefulness of different strenghthenings}}
+%	\resizebox{\linewidth}{!}{
+	%	\begin{tabular}{cc|ccc|cccc}
+		%		\boldsymbol{$|\mathcal N|$} & \boldsymbol{$|\mathcal B|$} & \boldsymbol{$Edge \ removing$} & \boldsymbol{$Variable \ fixing$} & \boldsymbol{$Big \ M \ estimation$} & \boldsymbol{$\#Found$} & \boldsymbol{$Gap$} & \boldsymbol{$Time_{model}$} & \boldsymbol{$Time_{marginal}$} \bigstrut[b]\\
+		%		\hline
+		%		\multirow{4}[2]{*}{10} & \multirow{4}[2]{*}{18} & no & no & no & 10 & 0.34 & 3600 & 0 \bigstrut[t]\\
+		%		&   & yes & no & no & 10 & 0.29 & 2643.25 & 2.25 \\
+		%		&   & no & yes & no & 10 & 0.41 & 2920.99 & 5.30 \\
+		%		&   & no & no & yes & 10 & 0.08 & 2863.76 & 5.30 \\
+		%		\hline
+		%	\end{tabular}}%
+%	\label{table:results_marginal}%
+%\end{table}%
+
+% Table generated by Excel2LaTeX from sheet 'Sheet1'
+\begin{table}[htbp]
+	\centering
+	\caption{Computational results \JP{for assessing the usefulness of different strenghthenings}}
+	\resizebox{\linewidth}{!}{
+		\begin{tabular}{cc|ccc|cccccccccc}
+			\multirow{2}[3]{*}{\boldsymbol{$|\mathcal N|$}} & \multirow{2}[3]{*}{\boldsymbol{$|\mathcal B|$}} & \multirow{2}[3]{*}{\boldsymbol{$Edge \ removing$}} & \multirow{2}[3]{*}{\boldsymbol{$Variable \ fixing$}} & \multirow{2}[3]{*}{\boldsymbol{$Big \ M \ estimation$}} & \multirow{1}[3]{*}{\boldsymbol{$\#Found$}} & \multicolumn{3}{c}{\boldsymbol{$Gap$}} & \multicolumn{3}{c}{\boldsymbol{$Time_{model}$}} & \multicolumn{3}{c}{\boldsymbol{$Time_{marginal}$}} \bigstrut[b]\\
+			\cline{7-15}      &   &   &   &   &   & \textbf{mean} & \textbf{min} & \textbf{max} & \textbf{mean} & \textbf{min} & \textbf{max} & \textbf{mean} & \textbf{min} & \textbf{max} \bigstrut\\
+			\hline
+			\multirow{4}[2]{*}{10} & \multirow{4}[2]{*}{18} & yes & no & no & 10 & 0.29 & 0 & 0.87 & 2643.25 & 46.93 & 3600 & 3.05 & 1.56 & 3.12 \bigstrut[t]\\
+			&   & no & yes & no & 10 & 0.41 & 0 & 1 & 2920.99 & 50.99 & 3600 & 5.30 & 3.41 & 7.71 \\
+			&   & no & no & yes & 10 & 0.08 & 0 & 0.32 & 2863.76 & 227.67 & 3600 & 5.30 & 3.41 & 7.71 \\
+			&   & no & no & no & 10 & 0.34 & 0.08 & 0.67 & 3600 & 3600 & 3600 & 2.25 & 1.45 & 3.02 \bigstrut[b]\\
+			\hline
+	\end{tabular}}%
+	\label{table:results_marginal}%
+\end{table}%
+
+
+
+In Table \ref{table:results_marginal}, the reader may observe that each one of the improvements separately speeds the solver up to find the optimal solution in less computing time, for those instances in which the best solution is obtained within the time limit. In addition, if none of the three preprocessings is considered, the solver does not find  optimal solutions for any of the instances and  the best gap for the any of the instances, in this case, is 0.08. Analyzing the qualitative effect of the variable fixing, one can observe that, at times, its use worsen the gaps with respect to the plain model. This can be due to the overlapping with the preprocessing techniques that the solver applies internally to simplify the model before executing its branch and bound algorithms. In spite of that, from the results reported in Table \ref{table:results_marginal}, we observe that applying each strengthening separately always decreases the computing time and improves the average gap for most of the instances. Therefore, we can conclude that the combination of these three enhancements  improves the solver performance. This supports the combination of all of them in our computational experience. }
+
+
+%	In addition, both typologies of instances, up to $|\mathcal{N}|=50$, are almost solved by obtaining a small average gap. %and also almost all for balls leaving always a gap less than or equal to  1\%. 
+%	We also observe that the use of strengthening helps in solving the instances since in those cases where they are not solved to optimality the gap and the runtime are reduced. The situation for $|\mathcal{N}|\in \{80,100\}$ is slightly different. For $|\mathcal{N}|=80$ and balls as neighbourhoods, the strengthening time takes more than an hour so that no results can be reported whereas without strengthening the formulations are always able to find solutions with average gaps of ($\le 0.6$) within one hour of computing time.  % For segments we see that the use of strengthening helps and the gaps are smaller within the time limit. 
+%	Finally, for the case of $|\mathcal{N}|=100$ balls as neighbourhoods, none of the configurations with or without strengthening is capable to find a feasible solution in 3600 seconds. The behaviour is different for segments. In this case, both configurations provide feasible solutions. In the last case, the use of strengthening is rather heavy and consumes most of the 3600 seconds of computing time. This can be observed in the final gaps. The case without strengthening reports better gaps, as leaving more time to the solver to find better solutions, and the average gap is $0.53$ rather than $0.81$ for the case with strengthening.
+%	
+%% Table generated by Excel2LaTeX from sheet 'Hoja1'
+%\begin{table}[htbp]
+%	\centering
+%	\caption{Add caption}
+%	\resizebox{\textwidth}{!}{
+%	\begin{tabular}{|c|c|c||cc|ccc|ccc|}
+	%		\hline
+	%		$\bm{|\mathcal N|}$ & \textbf{Typology} & \textbf{strengthening} & \multicolumn{2}{c|}{$\bm{|\mathcal B|}$} & \multicolumn{3}{c|}{\textbf{Gap}} & \multicolumn{3}{c|}{\textbf{Runtime}} \bigstrut[t]\\
+	%		&       &       & \textbf{min} & \textbf{max} & \textbf{mean} & \textbf{min} & \textbf{max} & \textbf{mean} & \textbf{min} & \textbf{max} \bigstrut[b]\\
+	%		\hline
+	%		\hline
+	%		\multirow{4}[4]{*}{5} & \multirow{2}[2]{*}{Ball} & False & 8     & 11    & 0     & 0     & 0     & 2.46  & 1.2   & 8.05 \bigstrut[t]\\
+	%		&       & True  & 8     & 11    & 0     & 0     & 0     & 1.63  & 0.81  & 2.49 \bigstrut[b]\\
+	%		\cline{2-11}          & \multirow{2}[2]{*}{Segment} & False & 8     & 11    & 0     & 0     & 0     & 1.35  & 0.82  & 2.52 \bigstrut[t]\\
+	%		&       & True  & 8     & 11    & 0     & 0     & 0     & 1.09  & 0.79  & 1.41 \bigstrut[b]\\
+	%		\hline
+	%		\hline
+	%		\multirow{4}[4]{*}{10} & \multirow{2}[2]{*}{Ball} & False & 15    & 21    & 0     & 0     & 0     & 13.43 & 7.85  & 27.68 \bigstrut[t]\\
+	%		&       & True  & 15    & 21    & 0     & 0     & 0     & 6.22  & 3.61  & 11.85 \bigstrut[b]\\
+	%		\cline{2-11}          & \multirow{2}[2]{*}{Segment} & False & 15    & 21    & 0     & 0     & 0     & 7.41  & 5.04  & 9.23 \bigstrut[t]\\
+	%		&       & True  & 15    & 21    & 0     & 0     & 0     & 4.54  & 3.15  & 5.7 \bigstrut[b]\\
+	%		\hline
+	%		\hline
+	%		\multirow{4}[4]{*}{20} & \multirow{2}[2]{*}{Ball} & False & 35    & 40    & 0     & 0     & 0     & 132.22 & 58.21 & 225.89 \bigstrut[t]\\
+	%		&       & True  & 35    & 40    & 0     & 0     & 0     & 45.86 & 20.32 & 104.49 \bigstrut[b]\\
+	%		\cline{2-11}          & \multirow{2}[2]{*}{Segment} & False & 35    & 40    & 0     & 0     & 0     & 97.25 & 40.06 & 166.67 \bigstrut[t]\\
+	%		&       & True  & 35    & 40    & 0     & 0     & 0     & 38.47 & 15.77 & 66.05 \bigstrut[b]\\
+	%		\hline
+	%		\hline
+	%		\multirow{4}[4]{*}{30} & \multirow{2}[2]{*}{Ball} & False & 49    & 60    & 0     & 0     & 0     & 373.32 & 246.51 & 639.97 \bigstrut[t]\\
+	%		&       & True  & 49    & 60    & 0     & 0     & 0     & 127.15 & 53.08 & 219.85 \bigstrut[b]\\
+	%		\cline{2-11}          & \multirow{2}[2]{*}{Segment} & False & 49    & 60    & 0     & 0     & 0     & 414.11 & 156.76 & 979.68 \bigstrut[t]\\
+	%		&       & True  & 49    & 60    & 0     & 0     & 0     & 112.68 & 50.66 & 182.82 \bigstrut[b]\\
+	%		\hline
+	%		\hline
+	%		\multirow{4}[4]{*}{50} & \multirow{2}[2]{*}{Ball} & False & 79    & 91    & 0     & 0     & 0.01  & 1634.35 & 603.48 & 3605.13 \bigstrut[t]\\
+	%		&       & True  & 79    & 91    & 0     & 0     & 0     & 553.93 & 181.13 & 1599.18 \bigstrut[b]\\
+	%		\cline{2-11}          & \multirow{2}[2]{*}{Segment} & False & 79    & 91    & 0     & 0     & 0.01  & 1618.95 & 855.65 & 3604.93 \bigstrut[t]\\
+	%		&       & True  & 79    & 91    & 0     & 0     & 0     & 523.08 & 152.08 & 1548.64 \bigstrut[b]\\
+	%		\hline
+	%		\hline
+	%		\multirow{4}[4]{*}{80} & \multirow{2}[2]{*}{Ball} & False & 125   & 145   & -     & -     & -     & -     & -     & - \bigstrut[t]\\
+	%		&       & True  & 125   & 145   & 0.01  & 0     & 0.02  & 3110.68 & 1976.01 & 3601.13 \bigstrut[b]\\
+	%		\cline{2-11}          & \multirow{2}[2]{*}{Segment} & False & 125   & 145   & -     & -     & -     & -     & -     & - \bigstrut[t]\\
+	%		&       & True  & 125   & 145   & 0.01  & 0     & 0.03  & 2835.09 & 1663.53 & 3601.26 \bigstrut[b]\\
+	%		\hline
+	%	\end{tabular}}%
+	%	\label{tab:addlabel}%
+	%\end{table}%
+	
+	%	% Table generated by Excel2LaTeX from sheet 'Hoja1'
+	%	\begin{table}[htbp]
+%		\centering
+%		\caption{Table of computational results obtained with the formulation \eqref{form:H-TSPHN}}
+%		\resizebox{\textwidth}{!}{
+	%			\begin{tabular}{|c|c|c||cc|ccc|ccc|}
+		%				\hline
+		%				$\bm{|\mathcal N|}$ & \textbf{neighbourhood} & \textbf{strengthening} & \multicolumn{2}{c|}{$\bm{|\mathcal B|}$} & \multicolumn{3}{c|}{\textbf{Gap}} & \multicolumn{3}{c|}{\textbf{Runtime}} \bigstrut[t]\\
+		%				&       &       & \textbf{min} & \textbf{max} & \textbf{mean} & \textbf{min} & \textbf{max} & \textbf{mean} & \textbf{min} & \textbf{max} \bigstrut[b]\\
+		%				\hline
+		%				\hline
+		%				\multirow{4}[4]{*}{5} & \multirow{2}[2]{*}{Ball} & False & \multirow{4}[4]{*}{8} & \multirow{4}[4]{*}{11} & 0.05  & 0     & 0.55  & 371.84 & 2.96  & 3600 \bigstrut[t]\\
+		%				&       & True  &       &       & 0     & 0     & 0     & 3.46  & 1.4   & 13 \bigstrut[b]\\
+		%				\cline{2-3}\cline{6-11}          & \multirow{2}[2]{*}{Segment} & False &       &       & 0.08  & 0     & 0.49  & 1085.48 & 0.68  & 3600 \bigstrut[t]\\
+		%				&       & True  &       &       & 0     & 0     & 0     & 1.44  & 0.6   & 2.46 \bigstrut[b]\\
+		%				\hline
+		%				\hline
+		%				\multirow{4}[4]{*}{10} & \multirow{2}[2]{*}{Ball} & False & \multirow{4}[4]{*}{15} & \multirow{4}[4]{*}{21} & 0.17  & 0     & 0.86  & 998.71 & 59.09 & 3600 \bigstrut[t]\\
+		%				&       & True  &       &       & 0     & 0     & 0     & 36.66 & 10.72 & 87.29 \bigstrut[b]\\
+		%				\cline{2-3}\cline{6-11}          & \multirow{2}[2]{*}{Segment} & False &       &       & 0.33  & 0     & 0.86  & 1460.31 & 16.78 & 3600 \bigstrut[t]\\
+		%				&       & True  &       &       & 0     & 0     & 0     & 8.53  & 2.66  & 12.25 \bigstrut[b]\\
+		%				\hline
+		%				\hline
+		%				\multirow{4}[4]{*}{20} & \multirow{2}[2]{*}{Ball} & False & \multirow{4}[4]{*}{35} & \multirow{4}[4]{*}{40} & 0.06  & 0.02  & 0.1   & 3600  & 3600  & 3600 \bigstrut[t]\\
+		%				&       & True  &       &       & 0     & 0     & 0.01  & 1424.85 & 140.54 & 3600 \bigstrut[b]\\
+		%				\cline{2-3}\cline{6-11}          & \multirow{2}[2]{*}{Segment} & False &       &       & 0     & 0     & 0.02  & 1430.13 & 166.89 & 3600 \bigstrut[t]\\
+		%				&       & True  &       &       & 0     & 0     & 0     & 198.9 & 30.75 & 426.55 \bigstrut[b]\\
+		%				\hline
+		%				\hline
+		%				\multirow{4}[4]{*}{30} & \multirow{2}[2]{*}{Ball} & False & \multirow{4}[4]{*}{49} & \multirow{4}[4]{*}{60} & 0.12  & 0     & 0.93  & 3566.2 & 3246.53 & 3600 \bigstrut[t]\\
+		%				&       & True  &       &       & 0     & 0     & 0.02  & 2146.17 & 314.65 & 3600 \bigstrut[b]\\
+		%				\cline{2-3}\cline{6-11}          & \multirow{2}[2]{*}{Segment} & False &       &       & 0     & 0     & 0.01  & 2119.06 & 315.56 & 3600 \bigstrut[t]\\
+		%				&       & True  &       &       & 0     & 0     & 0     & 1140.02 & 353.73 & 3209.94 \bigstrut[b]\\
+		%				\hline
+		%				\hline
+		%				\multirow{4}[4]{*}{50} & \multirow{2}[2]{*}{Ball} & False & \multirow{4}[4]{*}{79} & \multirow{4}[4]{*}{91} & 0.09  & 0.02  & 0.19  & 3600  & 3600  & 3600 \bigstrut[t]\\
+		%				&       & True  &       &       & 0.08  & 0.01  & 0.21  & 3600  & 3600  & 3600 \bigstrut[b]\\
+		%				\cline{2-3}\cline{6-11}          & \multirow{2}[2]{*}{Segment} & False &       &       & 0.02  & 0.01  & 0.09  & 3600  & 3600  & 3600 \bigstrut[t]\\
+		%				&       & True  &       &       & 0.02  & 0     & 0.1   & 2956.24 & 2053.62 & 3600 \bigstrut[b]\\
+		%				\hline
+		%				\hline
+		%				\multirow{4}[4]{*}{80} & \multirow{2}[2]{*}{Ball} & False & \multirow{4}[4]{*}{125} & \multirow{4}[4]{*}{145} & 0.6   & 0.42  & 0.79  & 3600  & 3600  & 3600 \bigstrut[t]\\
+		%				&       & True  &       &       & -     & -     & -     & -     & -     & - \bigstrut[b]\\
+		%				\cline{2-3}\cline{6-11}          & \multirow{2}[2]{*}{Segment} & False &       &       & 0.16  & 0.03  & 0.62  & 3600  & 3600  & 3600 \bigstrut[t]\\
+		%				&       & True  &       &       & 0.61  & 0.01  & 1     & 3600  & 3600  & 3600 \bigstrut[b]\\
+		%				\hline
+		%				\hline
+		%				\multirow{4}[4]{*}{100} & \multirow{2}[2]{*}{Ball} & False & \multirow{4}[4]{*}{156} & \multirow{4}[4]{*}{178} & -     & -     & -     & -     & -     & - \bigstrut[t]\\
+		%				&       & True  &       &       & -     & -     & -     & -     & -     & - \bigstrut[b]\\
+		%				\cline{6-11}          & \multirow{2}[2]{*}{Segment} & False &       &       & 0.53  & 0.02  & 0.99  & 3600  & 3600  & 3600 \bigstrut[t]\\
+		%				&       & True  &       &       & 0.81  & 0.5   & 1     & 3600  & 3600  & 3600 \bigstrut[b]\\
+		%				\hline
+		%		\end{tabular}}%
+%		\label{table:results}%
+%	\end{table}%
+
+%	The same behaviour is also observed in Figure 9. The left subfigure reports the boxplot diagram for the experiments with segments as neighbourhoods, whereas the right one reports the boxplot diagram for balls as neighbourhoods. We see that strengthening always helps since the corresponding boxes are below those without strengthening, whenever the problems are solved well. Moreover,  we also observe in those cases where the model solves the instances  $|\mathcal{N}|\le 50$, that the problem with balls is harder than with segments since the boxes in the left subfigure are below the ones in the right subfigure.
+%
+
+In Table \ref{table:results_smith}, we detail the values obtained with Gurobi for the \CV{third} experiment. The first block reports the size of the instances and the average number of barriers for each size. The other three blocks describe the features reported by the solver to compare the efficiency of the model for $radii$ equals to 0.25, 0.5 and 1, respectively. For the smallest $radii$, all the instances are almost solved to optimality reporting a maximum average gap of 0.03 for $|\mathcal N|=20$. In the instances with $radii=0.5$, the number of feasible solutions found starts to decrease from size 16. In terms of the gap, from $|\mathcal N|=14$, the solver is unable to find the optimal solution because it reaches the time limit. In any case, the maximum average gap for these instances is 0.32 for the largest size. Finally, for $radii=1$, only instances with $|\mathcal N|=6$ are solved to optimality. For sizes 10, 12 and 14, the solver only finds a feasible solution for one half of the instances, approximately. However, it cannot find any solution for $|\mathcal N|\geq 16$. The results obtained for these instances lead us to conclude that the larger the radii of the neighbourhood, the higher the complexity to be solved. This conclusion is in line with the existing trend in the literature, as exposed in \citet{puerto2022c} or \citet{blanco2017}.
 
 % Table generated by Excel2LaTeX from sheet 'Sheet1'
 \begin{table}[htbp]
@@ -1382,7 +1507,9 @@ All the above-mentioned problems are natural extensions of the ones considered i
 %\section*{Acknowledgements}
 %This research has been partially supported by the Agencia Estatal de Investigación (AEI) and the European Regional Development Fund (ERDF): PID2020-114594GB-C21; and Regional Government of Andalusia: project P18-FR-1422.
 
+%\bibliographystyle{apa}
 \bibliographystyle{apa}
+%\bibliographystyle{chicagourl}
 \bibliography{bibliography.bib}
 
 \end{document}
